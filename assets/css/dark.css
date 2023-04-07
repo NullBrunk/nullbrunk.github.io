@@ -156,7 +156,7 @@
 }
 
 .fakeScreen {
-  background-color: #040b14 !important;
+  background-color: #212431 !important;
   box-sizing: border-box;
   width: 90%;
   height: 80%;
@@ -168,5 +168,5 @@
   border-bottom-right-radius: 5px;
 
   background: #252523;
-  box-shadow: -10px -10px 30px #252523, 10px 10px 30px rgba(70, 70, 82, 0.4);
+  box-shadow: -10px -10px 30px #020912, 10px 10px 30px #212431;
 }
