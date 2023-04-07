@@ -128,20 +128,20 @@
   position: relative;
   top: 6px;
   left: 6px;
-  background-color: #ff3b47;
+  background-color: #ff0010;
   display: inline-block;
   box-shadow: -1px -1px 15px #273037, 10px 10px 30px rgba(174, 174, 192, 0.4);
 }
 
 .fakeMinimize {
   left: 11px;
-  background-color: rgb(255, 184, 66);
+  background-color: rgb(255, 159, 0);
   /* border-color: #9d802c; */
 }
 
 .fakeZoom {
   left: 16px;
-  background-color: #00d742;
+  background-color: #00ff4e;
   /* border-color: #049931; */
 }
 
