@@ -9,7 +9,6 @@ const app = () => {
 
   userInput = document.getElementById("userInput");
   terminalOutput = document.getElementById("terminalOutput");
-  document.getElementById("keyboard").focus();
 
 };
 
