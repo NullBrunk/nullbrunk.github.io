@@ -28,6 +28,7 @@ const execute = function executeCommand(input) {
   if (input === "help") {
     terminalOutput.innerHTML = `<div class="terminal-line">
     
+    <strong class="blue">links:</strong> Show a list of useful links<br>
     <strong class="blue">clear:</strong> Clear the screen<br>
     <strong class="blue">echo:</strong>  Display something<br>
     <strong class="blue">help:</strong>  Display this help message<br>
@@ -49,6 +50,18 @@ const execute = function executeCommand(input) {
   else if (input.startsWith('echo')){
     terminalOutput.innerHTML = `<div class="terminal-line">
 ${input.split("echo")[1]}</div>`;
+
+   
+  }
+  
+  else if (input == 'links')){
+    terminalOutput.innerHTML = `<div class="terminal-line">
+ <a href="https://root-me.org/Brunk">Root-Me</a>
+ <a href="https://github.com/NullBrunk">Github</a>
+ <a href="https://ctftime.org/user/157453">CTFtime</a>
+  
+ 
+</div>`;
 
    
   }
