@@ -134,7 +134,6 @@ class Terminal extends HTMLElement {
       <div class="fakeButtons fakeZoom"></div>
     </div>
     <div class="fakeScreen">
-      <div class="terminal-window primary-bg" onclick="document.getElementById('dummyKeyboard').focus();">
         <div class="terminal-output" id="terminalOutput">
           <div class="terminal-line">
             <span class="help-msg">Type <span class="help">"help"</span> to get started.</span>
