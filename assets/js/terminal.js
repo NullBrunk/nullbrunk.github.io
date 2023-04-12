@@ -54,7 +54,7 @@ ${input.split("echo")[1]}</div>`;
    
   }
   
-  else if (input == 'links')){
+  else if (input == 'links'){
     terminalOutput.innerHTML = `<div class="terminal-line">
  <a href="https://root-me.org/Brunk">Root-Me</a>
  <a href="https://github.com/NullBrunk">Github</a>
