@@ -443,8 +443,15 @@ In addition to my development skills, I have over four years of experience in De
   <script src="assets/js/main.js"></script>
 
 <script>
-  scrollTo(0, 1000)
-  scrollTo(0, 0)
+  scrollTo(0, 100);
+
+  function sleep (time) {
+    return new Promise((resolve) => setTimeout(resolve, time));
+  }
+
+  sleep(1000).then(() => {
+    scrollTo(0, 0);
+  });
 </script>
 </body>
 
