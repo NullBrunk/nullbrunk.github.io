@@ -25,7 +25,7 @@ const execute = function executeCommand(input) {
   }
   
 
-  if (input === "help") {
+  if (input === "help" || input === "ls") {
     terminalOutput.innerHTML = `<div class="terminal-line">
     
     <strong class="blue">links:</strong> Show a list of useful links<br>
@@ -42,6 +42,7 @@ const execute = function executeCommand(input) {
   </div>`;
 
   } 
+
   
   else if (input === "clear") {
     clearScreen();
@@ -58,7 +59,7 @@ ${input.split("echo")[1]}</div>`;
     terminalOutput.innerHTML = `<div class="terminal-line">
  <a href="https://root-me.org/Brunk">Root-Me</a>
  <a href="https://github.com/NullBrunk">Github</a>
- <a href="https://ctftime.org/user/157453">CTFtime</a>
+ <a href="https://www.hackerrank.com/anasi10?hr_r=1">HackerRank</a>
   
  
 </div>`;
