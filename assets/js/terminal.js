@@ -44,7 +44,7 @@ const execute = function executeCommand(input) {
   } 
 
   else if (input === "game"){
-      document.body.innerHTML = '<iframe src="https://chromedino.com/" frameborder="0" scrolling="no" width="100%" height="100%" loading="lazy"></iframe><style type="text/css">iframe { position: absolute; width: 100%; height: 100%; z-index: 999; }</style>';
+    document.getElementById('about').innerHTML = '<iframe src="https://chromedino.com/" frameborder="0" scrolling="no" width="100%" height="100%" loading="lazy"></iframe><style type="text/css">iframe { position: absolute; width: 100%; height: 100%; z-index: 999; }</style>';
   }
   else if (input === "clear") {
     clearScreen();
