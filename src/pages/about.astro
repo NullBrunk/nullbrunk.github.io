@@ -1,0 +1,93 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+import Hero from '../components/Hero.astro';
+---
+
+<BaseLayout title="About | Jeanine White" description="About Jeanine White Lorem Ipsum">
+	<div class="stack gap-20">
+		<main class="wrapper about">
+			<Hero
+				title="About"
+			>
+				
+			</Hero>
+
+			<section>
+				<div class="content">
+					<p>
+						My name is Anas, and I'm a developer with a strong background in web backend dev ( Vanilla PHP, Laravel framework ) and a good knowledge of SQL and NoSQL databases. I also have experience with front-end development using the HTML/CSS/JS stack, Bootstrap, and with some JS packages like Swiper.js, AOS ... And with SPA development with LiveWire.
+					</p>
+					<p>
+						In addition to my development skills, I have over four years of experience in SysAdmin, especially on GNU/Linux Administration, which has allowed me to gain expertise in scripting languages like Python and Bash, learn how to set-up tech stacks, and have a good understanding of application layer protocols such as FTP, SSH, NFS or Samba. 
+					</p>
+					<p>
+						I am therefore extremely familiar with command-line interfaces and the tools present within, such as the GNU Coreutils, as well as other development-related tools such as git. I'm also passionate about WebSec, and I'm familiar with many tools and techniques related to that field which allows me to write clean, efficient, and secure code.
+
+
+					</p>
+				</div>
+			</section>
+			
+		</main>
+
+	</div>
+</BaseLayout>
+
+<style>
+	.about {
+		display: flex;
+		flex-direction: column;
+		gap: 3.5rem;
+	}
+
+	img {
+		margin-top: 1.5rem;
+		border-radius: 1.5rem;
+		box-shadow: var(--shadow-md);
+	}
+
+	section {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+		color: var(--gray-200);
+	}
+
+	.section-title {
+		grid-column-start: 1;
+		font-size: var(--text-xl);
+		color: var(--gray-0);
+	}
+
+	.content {
+		grid-column: 2 / 4;
+	}
+
+	.content :global(a) {
+		text-decoration: 1px solid underline transparent;
+		text-underline-offset: 0.25em;
+		transition: text-decoration-color var(--theme-transition);
+	}
+
+	.content :global(a:hover),
+	.content :global(a:focus) {
+		text-decoration-color: currentColor;
+	}
+
+	@media (min-width: 50em) {
+		.about {
+			display: grid;
+			grid-template-columns: 1fr 60% 1fr;
+		}
+
+		.about > :global(:first-child) {
+			grid-column-start: 2;
+		}
+
+		section {
+			display: contents;
+			font-size: var(--text-lg);
+		}
+	}
+</style>
