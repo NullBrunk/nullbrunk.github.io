@@ -5,10 +5,11 @@ img: /assets/works/phpchat.png
 img_alt: An image of a php webchat
 description: An interactive WebChat in PHP and JS  
 tags:
-  - Rest-API
-  - AJAX
-  - Vanilla JS
+  - AJAX Request
   - PHP-native
+  - Vanilla JS
+  - Rest-API
+  - Dynamic
 ---
 
 

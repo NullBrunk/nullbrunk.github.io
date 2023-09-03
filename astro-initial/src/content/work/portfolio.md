@@ -5,7 +5,7 @@ img: /assets/works/portfolio.png
 img_alt: An image of my portfolio
 description: My personal portfolio built with Astro
 tags:
-  - Dev
-  - Astro
+  - HTML/CSS/JS 
   - Frontend
+  - Astro
 ---

@@ -6,8 +6,9 @@ img_alt: An image of an ecommerce client
 description: An E-Commerce website developed in Laravel  
 tags:
   - E-Commerce
-  - Livewire
+  - Bootstrap
   - Laravel
+  - Livewire
 ---
 
 This is my first project with Laravel, and is still under construction.
