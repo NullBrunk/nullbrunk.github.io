@@ -1,49 +1,178 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-
+import Icon from '../components/Icon.astro';
 import Hero from '../components/Hero.astro';
 ---
 
 <BaseLayout title="About" description="About">
 	<div class="stack gap-20">
-		<main class="wrapper about" style="grid-template-columns: 0 !important;">
+		<main class="wrapper" style="grid-template-columns: 0 !important;">
 			<Hero>
 				
 			</Hero>
 
+			<style>
+				.dashed {
+					position: relative;
+					padding-bottom: 25px;
+					font-size: 45px;
+				}
+
+				.dashed::after {
+					content: "";
+					position: absolute;
+					display: block;
+					width: 50px;
+					height: 3px;
+					background: #c561f6;
+					bottom: 16px;
+					left: 0;
+				}
+
+				#passions {
+					display: flex;
+				}
+
+				.passion {
+					text-decoration: none;
+					background: #283044;
+					display: flex;
+					flex-direction: column;
+					width: 20vw;
+					height: 200px;
+					text-align: center;
+					transition: all 0.3s ease-out 0s;
+					margin: 25px;
+					border-radius: 5px;
+				}
+
+				.passion-icon {
+					width: 64px;
+					height: 64px;
+					background: #c561f6;
+					border-radius: 5px;
+					display: flex;
+					transform-style: preserve-3d;
+					margin: auto;
+					margin-bottom: 30px;
+
+				}
+
+				.passion-icon::before {
+					position: absolute;
+					content: "";
+					left: -8px;
+					top: -8px;
+					height: 100%;
+					width: 100%;
+					background: rgba(255, 255, 255, 0.15);
+					border-radius: 5px;
+					transition: all 0.3s ease-out 0s;
+					transform: translateZ(-1px);
+				}
+
+				.passion-icon i {
+					margin: auto;
+					color: white;
+				}
+
+				.passion p {
+					padding-bottom: 5px;
+					text-decoration: none;
+					color: white;
+				}
+
+				.passion:hover {
+					background-color: var(--accent-regular);
+					color: white;
+				}
+				.passion:hover .passion-icon {
+					background-color: white;
+				}
+				.passion:hover .passion-icon i {
+					color: var(--accent-regular);
+				}
+				.mt0 {
+					padding-bottom: 15px;
+				}
+
+				@media(max-width: 800px) {
+					#passions {
+					display: block;
+				}
+
+				#passions .passion {
+					width: calc(100% - 50px)
+				}
+				}
+			</style>
+
 			<section>
 				<div class="content">
+					<h2 class="dashed">About</h2>
 
-					    <p>I am a passionate web developer with a robust background in backend development, specializing in Vanilla PHP and the Laravel framework. Over the years, I have successfully led various projects, including:</p>
-					
-					    <ul>
-					        <li><strong>RESTful APIs:</strong> Designed and implemented APIs for seamless communication between different applications.</li>
-					        <li><strong>E-commerce Websites:</strong> Developed robust online shopping platforms for a seamless user experience.</li>
-					        <li><strong>Interactive Real-time Chats:</strong> Created engaging chat applications to enhance user interaction.</li>
-					        <li><strong>Monitoring Websites:</strong> Implemented websites for real-time monitoring and reporting.</li>
-					    </ul>
-					    <br>
-					
-					    <p>In addition to my backend expertise, I bring extensive experience in front-end development, where I am adept at working with:</p>
-					
-					    <ul>
-					        <li><strong>HTML/CSS/JS Stack:</strong> Proficient in crafting visually appealing and responsive user interfaces.</li>
-					        <li><strong>JavaScript Packages:</strong> Utilized popular packages such as Swiper.js, AOS, HTMX, among others.</li>
-					        <li><strong>Single Page Application:</strong> Expertise in building dynamic and responsive SPAs.</li>
-					    </ul>
-					    <br>
+					<div style="padding: 25px 0px;">
+						Hello everyone, my name is Anas. I'am above all a web developer with a good background in web backend development, specializing in Vanilla PHP and Laravel framework, with which I have developed various projects such as RESTful APIs, e-commerce websites, interactive real-time chats, monitoring websites, and so on.
+						<br>
+						I have proficient knowledges of SQL and NoSQL languages while bringing extensive experience in front-end development, adeptly working with the HTML/CSS/JS stack, Bootstrap, and various JavaScript packages like Swiper.js, AOS, HTMX, among others. 
+						<br>
+						In addition to my development skills, I boast over four years of experience in SysAdmin, particularly in GNU/Linux Administration. This has equipped me with a deep understanding of scripting languages like Python and Bash, along with proficiency in setting up comprehensive tech stacks.
+						My familiarity with command-line interfaces is extensive, encompassing tools like the GNU Coreutils, and I am adept at utilizing various development-related tools, including Git. 
+						</div>  
 
-					    <p>Beyond development, I have over four years of experience in SysAdmin, particularly in GNU/Linux Administration. My skills include:</p>
+					<h2 class="dashed" style="padding-top: 40px;">Passions</h2>
+					<div id="passions">
+				
+				<a class="passion" href="https://github.com/nullbrunk" target="_blank">
+					<div class="passion-icon">
+						<i>
+							<Icon icon="web" size="1.33em" />
+						</i>
+					</div>
+					<p class="mt0">
+						Website development
+					</p>
+					<div class="mt0"></div>
+				</a>
+
+				<a class="passion" href="#" target="_blank">
+					<div class="passion-icon">
+						<i>
+							<Icon icon="server" size="1.33em" />
+						</i>
+					</div>
+					<p class="mt0">
+						SysAdmin / DevOps
+					</p>
+					<div class="mt0"></div>
+				</a>
+
+				<a class="passion" href="https://root-me.org/nullbrunk" target="_blank">
+					<div class="passion-icon">
+						<i>
+							<Icon icon="terminal-window" size="1.33em" />
+						</i>
+					</div>
+					<p class="mt0">
+						Offensive WebSec
+					</p>
+					<div class="mt0"></div>
 					
-					    <ul>
-					        <li><strong>Scripting Languages:</strong> Proficient in Python and Bash for automation and system management.</li>
-					        <li><strong>Tech Stack Setup:</strong> Experienced in configuring comprehensive tech stacks for optimal performance.</li>
-					        <li><strong>Application Layer Protocols:</strong> Well-versed in protocols like FTP, SSH, NFS, and Samba for seamless website deployment.</li>
-					    </ul>
-					   <br>
-					    <p>My familiarity with command-line interfaces extends to tools like the GNU Coreutils, and I am skilled in using various development-related tools, including Git.</p>
-					 <br>
-					    <p>Explore my <a href="/work/">projects</a> to learn more about my journey and skills. I am excited about contributing to innovative projects and taking on new exciting challenges. Let's build something amazing together!</p>
+				</a>
+
+				<a class="passion" href="#" target="_blank">
+					<div class="passion-icon">
+						<i>
+							<Icon icon="list" size="1.33em" />
+						</i>
+					</div>
+					<p class="mt0">
+						Reading / Studying
+					</p>
+					<div class="mt0"></div>
+
+				</a>
+			</div>
 
 				</div>
 			</section>
