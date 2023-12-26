@@ -13,13 +13,13 @@ tags:
 
 This project was my first project with the Laravel framework. I wanted to create a dynamic E-Commerce website, so i choosed to use the Laravel/Livewire tech stack. Additionally, i used vanilla JS, some library like HTMX, and Bootstrap for the front end part. Here is a general overview.
 
-#### General overview
+#### 🗺️ General overview
 
 <video controls style="width: 100%;">
   <source src="https://github.com/NullBrunk/E-Commerce/assets/125673909/bb256fa4-6ef4-47b1-a745-e0b5a1dc62ae" type="video/mp4" />
 </video>
 
-#### Login
+#### 🔐 Login
 
 We use Livewire to have a dynamic validation, and bootstrap for the front-end effects.
 
@@ -27,30 +27,30 @@ We use Livewire to have a dynamic validation, and bootstrap for the front-end ef
   <source src="https://github.com/NullBrunk/E-Commerce/assets/125673909/a15e4a32-3035-49fa-99bc-f834218a315c" type="video/mp4" />
 </video>
 
-#### Product
+#### 🛒 Product
 
 <video controls style="width: 100%;">
   <source src="https://github.com/NullBrunk/E-Commerce/assets/125673909/7ed51d3a-2cf4-4c0e-b333-465cd6b7f975" type="video/mp4" />
 </video>
 
-#### Comments
+#### 📝 Comments
 <video controls style="width: 100%;">
   <source src="https://github.com/NullBrunk/E-Commerce/assets/125673909/0465e9bc-2540-4ce4-a304-d05e39500112" type="video/mp4" />
 </video>
 
-#### Settings
+#### ⚙️ Settings
 <video controls style="width: 100%;">
   <source src="https://github.com/NullBrunk/E-Commerce/assets/125673909/4c6b2c51-15af-4138-8fd4-639f08370a90" type="video/mp4" />
 </video>
 
-#### Payment
+#### 💳 Payment
 
 Here, we use livewire for the Cart page, and vanilla javascript for the "basic" cart.
 <video controls style="width: 100%;">
   <source src="https://github.com/NullBrunk/E-Commerce/assets/125673909/75af32a3-3840-4cac-a018-9f6a3c27a972" type="video/mp4" />
 </video>
 
-#### Chatbox
+#### 💬 Chatbox
 Chatbox & dynamic notifications
 
 <video controls style="width: 100%;">
@@ -58,5 +58,5 @@ Chatbox & dynamic notifications
 </video>
 
 
-
-**Source code :** https://github.com/NullBrunk/
+#### 📂 Source code
+Source code is being accessible here <a href="https://github.com/NullBrunk/E-Commerce">E-Commerce</a>

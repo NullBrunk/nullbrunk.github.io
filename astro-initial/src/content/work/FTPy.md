@@ -11,7 +11,8 @@ tags:
   - FTP
 ---
 
-This is a project in python3 that involves having good knowledges in socket and in general system administration concepts. It's basically an FTP client written in python3 that allows to do simple operation like getting a file, putting file, moving into the differents folders, listing etc.
+This python3 project involves having good knowledges in socket and in general system administration concepts. It's basically an FTP client written in python3 that allows to do simple operation like getting a file, putting file, moving into the differents folders, listing etc.
 <br>
 
-**Source code :** https://github.com/NullBrunk/FTPy 
+#### 📂 Source code
+Source code is being accessible here <a href="https://github.com/NullBrunk/FTPy">FTPy</a>
