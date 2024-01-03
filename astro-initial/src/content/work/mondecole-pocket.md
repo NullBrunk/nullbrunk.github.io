@@ -12,4 +12,3 @@ tags:
 
 - Coming soon
 
-**Test it :** https://mondecolepocket.com/

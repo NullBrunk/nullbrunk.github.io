@@ -11,8 +11,35 @@ tags:
   - FTP
 ---
 
-This python3 project involves having good knowledges in socket and in general system administration concepts. It's basically an FTP client written in python3 that allows to do simple operation like getting a file, putting file, moving into the differents folders, listing etc.
+<div align="center">  
+    <br/>  
+
+![GitHub top language](https://img.shields.io/github/languages/top/NullBrunk/FTPy?style=for-the-badge)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/m/NullBrunk/FTPy?style=for-the-badge)
+![repo size](https://img.shields.io/github/repo-size/NullBrunk/FTPy?style=for-the-badge)
+</div>
+
+
+I have always enjoyed scripting; thus, Python was one of the first languages I had the opportunity to learn. This project is essentially a simplified FTP client, which, through an established socket, allows connecting and performing FTP exchanges, such as sending, retrieving, or deleting a file.
 <br>
 
+
+#### 🗺️ Overview  
+![ftpydemo](https://github.com/NullBrunk/FTPy/assets/125673909/ebe09f66-622a-4d32-b26d-d1b3176d556f)
+
+
+#### 💻 Command
+This section details the various commands supported by the FTP script in the form of a changelog.
+
+```bash
+# [1.0] - 12 mai 2023
+- Implemented login (USER, PASS)
+
+# [1.1] - 13 mai 2023
+- Implemented ls (with LIST and PASV mode)
+- Implemented mkdir (MKD), pwd (PWD), cd (CWD), rm (DELE), chmod (SITE CHMOD), get (RETR), put (STOR)
+```
+
+
 #### 📂 Source code
-Source code is being accessible here <a href="https://github.com/NullBrunk/FTPy">FTPy</a>
+Source code is being accessible here <a href="https://github.com/NullBrunk/FTPy" target="_blank">FTPy</a>

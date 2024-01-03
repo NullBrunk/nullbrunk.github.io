@@ -6,6 +6,7 @@ img_alt: An image of my portfolio
 description: My personal portfolio built with Astro
 tags:
   - HTML/CSS/JS 
+  - Portfolio
   - Frontend
   - Astro
 ---

@@ -11,7 +11,17 @@ tags:
   - Livewire
 ---
 
-This project was my first project with the Laravel framework. I wanted to create a dynamic E-Commerce website, so i choosed to use the Laravel/Livewire tech stack. Additionally, i used vanilla JS, some library like HTMX, and Bootstrap for the front end part. Here is a general overview.
+<div align="center">
+  <br/>    
+  
+  ![GitHub top language](https://img.shields.io/github/languages/top/NullBrunk/E-Commerce?style=for-the-badge)
+  ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/NullBrunk/E-Commerce?style=for-the-badge)
+  ![repo size](https://img.shields.io/github/repo-size/NullBrunk/E-Commerce?style=for-the-badge)
+
+</div>
+
+This project was my first project with the Laravel framework. I wanted to create a dynamic E-Commerce website, so i choosed to use the Laravel/Livewire tech stack. Additionally, i used vanilla JS, some library like HTMX, and Bootstrap for the front end part. 
+I have also chosen to create a real-time chat with the help of the Pusher websocket.
 
 #### 🗺️ General overview
 
@@ -45,18 +55,18 @@ We use Livewire to have a dynamic validation, and bootstrap for the front-end ef
 
 #### 💳 Payment
 
-Here, we use livewire for the Cart page, and vanilla javascript for the "basic" cart.
+Here, we use livewire for the Cart page, and vanilla javascript for the "basic" cart. Finally, i have chosen to use Stripe for the payment part.
 <video controls style="width: 100%;">
   <source src="https://github.com/NullBrunk/E-Commerce/assets/125673909/75af32a3-3840-4cac-a018-9f6a3c27a972" type="video/mp4" />
 </video>
 
 #### 💬 Chatbox
-Chatbox & dynamic notifications
+With the help of pusher and livewire, we have a real-time chat.
 
 <video controls style="width: 100%;">
   <source src="https://github.com/NullBrunk/E-Commerce/assets/125673909/574b7ca6-082b-4857-97e0-82db359b1f99" type="video/mp4" />
 </video>
 
 
-#### 📂 Source code
-Source code is being accessible here <a href="https://github.com/NullBrunk/E-Commerce">E-Commerce</a>
+#### 📂 Source/Installation
+- The source code and installation instructions are accessible <a href="https://github.com/NullBrunk/E-Commerce" target="_blank">here</a>.

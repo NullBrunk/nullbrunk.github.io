@@ -12,14 +12,25 @@ tags:
   - Dynamic
 ---
 
+<div align="center">
+  <br/>    
+  
+  ![GitHub top language](https://img.shields.io/github/languages/top/NullBrunk/PHPMonitor?style=for-the-badge)
+  ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/NullBrunk/PHPMonitor?style=for-the-badge)
+  ![repo size](https://img.shields.io/github/repo-size/NullBrunk/PHPMonitor?style=for-the-badge)
 
-This is my second project in vanilla PHP, and is accessible here http://webchat-1.000webhostapp.com/. <br>
-In order to gain experience with Restful-API development and some concepts like interactivity, responsive UI, and so on, i made a PHPChat with a backend based on an Restful-API to manage authentication and messages, and a front-end part in vanilla javascript with AJAX Request.  
+  <br>
+</div>
+
+
+In order to gain experience with Restful-API development and some concepts like interactivity, responsive UI, and so on, i made a <a href="http://webchat-1.000webhostapp.com/">PHPChat</a> with a backend based on a PHP Restful-API to manage authentication and messages, coupled with a MariaDB database.
+<br><br>
+The front-end part, on the other hand, is entirely handled by **JavaScript** with AJAX Requests, and by **Bootstrap + Vanilla CSS** for the CSS part.
 
 #### 🔐 Login
 <img src="https://github.com/NullBrunk/PHPChat/assets/125673909/ea198379-ee30-421b-8bf9-d4c9a8c84274" style="width: 100%;" />
 
-As you can see here, the validation is dynamic, the user type something, hit the submit button and JavaScript + the PHP API do the rest.
+As you may noticed here, the validation is dynamic, the user type something, hit the submit button and JavaScript + the PHP API do the rest.
 
 #### 💬 Chat 
 <img src="https://github.com/NullBrunk/PHPChat/assets/125673909/b14b05ed-f002-489e-b568-db3ab0a5cb9b" style="width: 100%;" />
