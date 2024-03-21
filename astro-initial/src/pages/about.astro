@@ -112,19 +112,19 @@ import Hero from '../components/Hero.astro';
 					<h2 class="dashed">About</h2>
 
 					<div style="padding: 25px 0px;">
-						Hello everyone, my name is Anas. I'am above all a web developer with a good background in web backend development, specializing in Vanilla PHP and Laravel framework, with which I have developed various projects such as RESTful APIs, e-commerce websites, interactive real-time chats, monitoring websites, and so on.
-						<br>
-						I have proficient knowledges of SQL and NoSQL languages while bringing extensive experience in front-end development, adeptly working with the HTML/CSS/JS stack, Bootstrap, and various JavaScript packages like Swiper.js, AOS, HTMX, among others. 
-						<br>
-						In addition to my development skills, I boast over four years of experience in SysAdmin, particularly in GNU/Linux Administration. This has equipped me with a deep understanding of scripting languages like Python and Bash, along with proficiency in setting up comprehensive tech stacks.
-						My familiarity with command-line interfaces is extensive, encompassing tools like the GNU Coreutils, and I am adept at utilizing various development-related tools, including Git. 
+						Hello everyone, my name is Anas. I'am above all a web developer with a good background in web backend development, specializing in <b>Vanilla-PHP and the Laravel framework</b>, with which I have developed various projects such as RESTful APIs, e-commerce websites, interactive real-time chats, monitoring websites, and so on.
+						<br><br>
+						I have proficient knowledges of <b>SQL and NoSQL</b> languages while bringing extensive experience in front-end development, adeptly working with the <b>HTML/CSS/JS stack, Bootstrap, TailwindCSS</b>, and various JavaScript packages like <b>Swiper.js, AOS, HTMX</b>, among others. 
+						<br><br>
+						I boast over four years of experience in SysAdmin, particularly with <b>GNU/Linux</b>. This has equipped me with a deep understanding of scripting languages like <b>Python and Bash</b>, along with proficiency in setting up comprehensive tech stacks.
+						My familiarity with command-line interfaces is extensive, encompassing tools like the GNU Coreutils, and various development-related tools, including <b>Git</b>. 
 					</div>  
 
 					
 					</div>
 
 					
-						<h2 class="dashed" style="padding-top: 60px;">Achievements</h2>
+						<h2 id="achievements" class="dashed" style="padding-top: 60px;">Achievements</h2>
 						<div id="passions">
 						
 							<div style="padding-top: 10px">
@@ -171,7 +171,7 @@ import Hero from '../components/Hero.astro';
 								<div class="mt0"></div>
 							</a>
 			
-							<a class="passion" href="#" target="_blank">
+							<a class="passion" href="https://github.com/nullbrunk" target="_blank">
 								<div class="passion-icon">
 									<i>
 										<Icon icon="server" size="1.33em" />
@@ -196,7 +196,7 @@ import Hero from '../components/Hero.astro';
 								
 							</a>
 			
-							<a class="passion" href="#" target="_blank">
+							<a class="passion" href="#achievements">
 								<div class="passion-icon">
 									<i>
 										<Icon icon="list" size="1.33em" />
@@ -275,5 +275,13 @@ import Hero from '../components/Hero.astro';
 			display: contents;
 			font-size: var(--text-lg);
 		}
+	}
+
+	b {
+		background: linear-gradient(315deg, #e7bdfb, #c561f6);
+		background-clip: border-box;
+		background-clip: border-box;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
 	}
 </style>
