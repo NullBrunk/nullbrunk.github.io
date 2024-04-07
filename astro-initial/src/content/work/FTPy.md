@@ -20,7 +20,7 @@ tags:
 </div>
 
 
-I have always enjoyed scripting; thus, Python was one of the first languages I had the opportunity to learn. This project is essentially a simplified FTP client, which, through an established socket, allows connecting and performing FTP exchanges, such as sending, retrieving, or deleting a file.
+I have always enjoyed scripting; thus, Python was one of the first languages I had the opportunity to learn. This project is basically a simplified FTP client, which, through an established socket, allows connecting and performing FTP exchanges, such as sending, retrieving, or deleting a file.
 <br>
 
 
@@ -33,13 +33,18 @@ This section details the various commands supported by the FTP script in the for
 
 ```bash
 # [1.0] - 12 mai 2023
-- Implemented login (USER, PASS)
+- First commit
+- Implemented authentication (USER, PASS)
 
 # [1.1] - 13 mai 2023
 - Implemented ls (with LIST and PASV mode)
 - Implemented mkdir (MKD), pwd (PWD), cd (CWD), rm (DELE), chmod (SITE CHMOD), get (RETR), put (STOR)
+
+# [1.2] - 14 mai 2023
+- Added the License (GPL 3)
+- Refactored
 ```
 
 
-#### 📂 Source code
+#### 📂 Source
 Source code is being accessible here <a href="https://github.com/NullBrunk/FTPy" target="_blank">FTPy</a>

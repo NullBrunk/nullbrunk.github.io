@@ -19,7 +19,7 @@ tags:
 
 </div>
 
-This is one of my first project in PHP. In order to gain experience with the langage itself, and with the basics CRUD operations, i choosed to create a simple morpion game.
+This is one of my first project in PHP. In order to gain experience with the langage itself, and with the basics CRUD operations, I have chosen to create a simple morpion game.
 <br>
 You can test it <a href="https://brunkmorpion.000webhostapp.com/" target="_blank">here</a>.
 
