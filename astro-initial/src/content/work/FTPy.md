@@ -47,4 +47,5 @@ This section details the various commands supported by the FTP script in the for
 
 
 #### 📂 Source
-Source code is being accessible here <a href="https://github.com/NullBrunk/FTPy" target="_blank">FTPy</a>
+The source code and installation instructions are accessible <a href="https://github.com/NullBrunk/FTPy" target="_blank">here</a>
+

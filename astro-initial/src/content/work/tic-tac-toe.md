@@ -24,5 +24,7 @@ This is one of my first project in PHP. In order to gain experience with the lan
 You can test it <a href="https://brunkmorpion.000webhostapp.com/" target="_blank">here</a>.
 
 #### 📂 Source/Installation
-- The source code and installation instructions are accessible <a href="https://github.com/NullBrunk/PHPMorpion" target="_blank">here</a>.
+The source code and installation instructions are accessible <a href="https://github.com/NullBrunk/PHPMorpion" target="_blank">here</a>.
+
+You'll also find a Dockerfile there if you want to test the application locally.
 

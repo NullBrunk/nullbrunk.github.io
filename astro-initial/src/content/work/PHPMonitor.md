@@ -67,4 +67,8 @@ All pages of this project are responsive, meaning they adapt to the screen size 
 
 
 #### 📂 Source
-- The source code and installation instructions are accessible <a href="https://github.com/NullBrunk/PHPMonitor" target="_blank">here</a>.
+
+The source code and installation instructions are accessible <a href="https://github.com/NullBrunk/PHPMonitor" target="_blank">here</a>
+
+You'll also find a Dockerfile there if you want to test the application locally.
+
