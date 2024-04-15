@@ -49,5 +49,5 @@ The validation of the entered password is also dynamic.
 
 The source code and installation instructions are accessible <a href="https://github.com/NullBrunk/PHPChat" target="_blank">here</a>
 
-You'll also find a Dockerfile there if you want to test the application locally.
+You'll also find a docker-compose file there if you want to test the application locally.
 
