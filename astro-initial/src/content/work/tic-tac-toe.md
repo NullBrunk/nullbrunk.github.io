@@ -1,6 +1,6 @@
 ---
 title: Morpion
-publishDate: 2023-09-01 20:53:18
+publishDate: 2023-09-01 01:53:18
 img: /assets/works/morpion.png
 img_alt: An image of a morpion game
 description: A noughts and crosses game in PHP 

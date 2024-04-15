@@ -1,6 +1,6 @@
 ---
 title: E-Commerce
-publishDate: 2023-09-01 21:53:10
+publishDate: 2023-09-01 06:53:10
 img: /assets/works/commerce.png
 img_alt: An image of an ecommerce client
 description: An E-Commerce website developed in Laravel  
