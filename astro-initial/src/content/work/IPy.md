@@ -14,9 +14,9 @@ tags:
 <div align="center">  
     <br/>  
 
-![GitHub top language](https://img.shields.io/github/languages/top/NullBrunk/FTPy?style=for-the-badge)
-![GitHub commit activity](https://img.shields.io/github/commit-activity/m/NullBrunk/FTPy?style=for-the-badge)
-![repo size](https://img.shields.io/github/repo-size/NullBrunk/FTPy?style=for-the-badge)
+![GitHub top language](https://img.shields.io/github/languages/top/NullBrunk/IPy?style=for-the-badge)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/m/NullBrunk/IPy?style=for-the-badge)
+![repo size](https://img.shields.io/github/repo-size/NullBrunk/IPy?style=for-the-badge)
 </div>
 
 
