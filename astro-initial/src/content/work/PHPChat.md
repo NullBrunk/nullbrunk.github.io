@@ -8,7 +8,7 @@ tags:
   - AJAX Request
   - PHP-native
   - Vanilla JS
-  - Rest-API
+  - API
   - Dynamic
 ---
 
@@ -23,24 +23,33 @@ tags:
 </div>
 
 
-In order to gain experience with Restful-API development and some concepts like interactivity, designing a responsive UI, and so on, i made a PHPChat with a backend based on a PHP Restful-API to manage authentication and messages, coupled with a MariaDB database.
+In order to gain experience with API development and some concepts like interactivity, designing a responsive UI, and so on, i made a PHPChat with a backend based on a PHP API to manage authentication and messages, coupled with a MariaDB database.
 <br><br>
 The front-end part, on the other hand, is entirely handled by **JavaScript** with AJAX requests, and by **Bootstrap + Vanilla CSS** for the CSS part.
 
 #### 🔐 Login
-<img src="https://github.com/NullBrunk/PHPChat/assets/125673909/ea198379-ee30-421b-8bf9-d4c9a8c84274" style="width: 100%;" />
 
-As you may noticed, the validation is dynamic. The user types something, hit the submit button and JavaScript + the PHP API do the rest.
+<video controls style="width: 100%;">
+  <source src="https://github.com/NullBrunk/PHPChat/assets/125673909/d5de75cd-9410-4fae-b0c1-2001a0a46c63" type="video/mp4" />
+</video>
+
+As you may noticed, the validation is done with AJAX, so it's dynamic.
 
 #### 💬 Chat 
-<img src="https://github.com/NullBrunk/PHPChat/assets/125673909/b14b05ed-f002-489e-b568-db3ab0a5cb9b" style="width: 100%;" />
 
-Here, the post message is not dynamic, so the \<form\> is directly post to the API. However, the update and delete fonctionnalities are dynamic, JS updates/removes the element from the DOM (front-side) and does an AJAX request to the API to update/remove it from the database (backend-side).
+<video controls style="width: 100%;">
+  <source src="https://github.com/NullBrunk/PHPChat/assets/125673909/57a08d7c-36eb-4879-a80d-c4a467fbe4b5" type="video/mp4" />
+</video>
+
+The \<form\> is directly posted to the API. However, the update and delete fonctionnalities are dynamic; JS updates/removes the element from the DOM (frontend) and does an AJAX request to the API to update/remove it from the database (backend).
 
 #### ⚙️ Settings page
-<img src="https://github.com/NullBrunk/PHPChat/assets/125673909/672b8596-6146-4404-b13e-da1b2b09927a" style="width: 100%;" />
 
-The validation of the entered password is also dynamic.
+<video controls style="width: 100%;">
+  <source src="https://github.com/NullBrunk/PHPChat/assets/125673909/8b722d85-87a6-4c55-b98c-7414ab3b9157" type="video/mp4" />
+</video>
+
+The validation of the entered password is also done witj AJAX, so it's dynamic.
 
 <br>
 
