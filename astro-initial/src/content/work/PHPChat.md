@@ -23,7 +23,7 @@ tags:
 </div>
 
 
-In order to gain experience with Restful-API development and some concepts like interactivity, designing a responsive UI, and so on, i made a <a href="http://webchat-1.000webhostapp.com/">PHPChat</a> with a backend based on a PHP Restful-API to manage authentication and messages, coupled with a MariaDB database.
+In order to gain experience with Restful-API development and some concepts like interactivity, designing a responsive UI, and so on, i made a PHPChat with a backend based on a PHP Restful-API to manage authentication and messages, coupled with a MariaDB database.
 <br><br>
 The front-end part, on the other hand, is entirely handled by **JavaScript** with AJAX requests, and by **Bootstrap + Vanilla CSS** for the CSS part.
 
