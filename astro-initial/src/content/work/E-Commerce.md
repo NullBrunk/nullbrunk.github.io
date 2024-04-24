@@ -72,7 +72,7 @@ Usage of Pusher.JS and Livewire for the Real-time webchat.
 
 
 #### 📂 Source
-Source code is being accessible here <a href="https://github.com/NullBrunk/E-Commerce" target="_blank">here</a>.
+The source code and installation instructions are accessible <a href="https://github.com/NullBrunk/E-Commerce" target="_blank">here</a>.
 
 You'll also find a docker-compose file there if you want to test the application locally.
 
