@@ -25,6 +25,27 @@ This project was undertaken when I already had quite a bit of experience with La
 Oh, by the way, L3T stands for Laravel Tic-Tac-Toe.
 
 
+#### 📚 Deep overview
+
+##### 🔐 Login
+<video controls style="width: 100%;">
+  <source src="https://github.com/NullBrunk/L3T/assets/125673909/40b49521-a41a-461f-84d5-cc5afc80548a" type="video/mp4" />
+</video>
+
+
+##### 🎮 Game
+<video controls style="width: 100%;">
+  <source src="https://github.com/NullBrunk/L3T/assets/125673909/36b9744f-9cc4-4b43-a498-6d57776c94d8" type="video/mp4" />
+</video>
+
+
+##### 👤 Profile
+<video controls style="width: 100%;">
+  <source src="https://github.com/NullBrunk/L3T/assets/125673909/5f220014-9120-4f12-84a0-4b60636b99b3" type="video/mp4" />
+</video>
+
+
+
 #### 📂 Source
 Source code is being accessible here <a href="https://github.com/NullBrunk/L3T" target="_blank">here</a>.
 
