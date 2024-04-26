@@ -96,14 +96,30 @@ import Hero from '../components/Hero.astro';
 					padding-bottom: 15px;
 				}
 
-				@media(max-width: 800px) {
-					#passions {
-					display: block;
+				.pres {
+					box-shadow: none !important;
+					height: 54px;
+					margin-top: 1rem !important;
 				}
 
-				#passions .passion {
-					width: calc(100% - 50px)
+				h4 {
+					margin-top: 21px;
+					margin-bottom: 10px;
+  					font-size: 26px;
 				}
+
+				.icon-container {
+					margin-bottom: 20px;
+				}
+
+				@media(max-width: 800px) {
+					#passions {
+						display: block;
+					}
+
+					#passions .passion {
+						width: calc(100% - 50px)
+					}
 				}
 			</style>
 
@@ -111,26 +127,70 @@ import Hero from '../components/Hero.astro';
 				<div class="content">
 					<h2 class="dashed">About</h2>
 
-					<div style="padding: 25px 0px;">
-						Hello everyone, my name is Anas. I am above all a web developer with a good background in web backend development, 
-						specializing in <b>Vanilla-PHP</b> and the <b>Laravel</b> Framework. 
-						<br><br>
-						I also have proficient knowledge of <b>SQL and NoSQL (especially Redis)</b> languages while bringing extensive experience in front-end development, 
-						adeptly working with <b>Livewire, Bootstrap, TailwindCSS</b>, and various JavaScript packages like <b>Swiper.js, ChartJS, 
-						HTMX</b>, among others. 
-						<br><br>
-						My experience with those different technologies, combined with expertise in the HTML/CSS/JS stack have helped me complete various projects. 
-						These include an e-commerce site, a real-time multiplayer tic-tac-toe game, a dynamic chat app, a monitoring website, 
-						and more.
-						<br><br>						
+
+					<h4>Backend</h4>
+					<div>
+						Hello everyone, my name is Anas. I am a web developer with a strong background in web backend development, 
+						specializing in <b>Vanilla-PHP</b> and the <b>Laravel</b> Framework with <b>Livewire</b>. Additionally, I have proficient knowledge of 
+						<b>SQL and NoSQL</b>, which allows me to build robust backends.
+						<div style="margin-bottom: 30px;">
+							<img class="pres" src="/icons/php.png" alt="">
+							<img class="pres" src="/icons/laravel.png" alt="">
+							<img class="pres" src="/icons/livewire.png" alt="">
+
+
+							<img style="margin-left: 15px;" class="pres" src="/icons/mysql.png" alt="">
+							<img class="pres" src="/icons/sqlite.png" alt="">
+							<img class="pres" src="/icons/redis.png" alt="">
+						</div>
+					</div>
+
+					<h4>Frontend</h4>
+					<div>
+						I also have extensive experience in front-end development, adeptly working with CSS frameworks such as 
+						<b>Bootstrap</b> and <b>TailwindCSS</b>. 
+						I have worked with a variety of JavaScript packages including <b>Swiper.js, ChartJS, HTMX, and Pusher</b>, among others. 
+						These experiences have enabled me to build modern, dynamic, and aesthetically pleasing frontends.
+
+						<div class="icon-container">
+							<img class="pres" src="/icons/HTML.png" alt="">
+							<img class="pres" src="/icons/CSS.png" alt="">
+							<img class="pres" src="/icons/js.png" alt="">
+							<img style="margin-left: 15px;" class="pres" src="/icons/bootstrap.png" alt="">
+							<img class="pres" src="/icons/tailwind.png" alt="">
+
+							<img style="margin-left: 15px;" class="pres" src="/icons/npm.png" alt="">
+							<img class="pres" src="/icons/swiper.png" alt="">
+							<img class="pres" src="/icons/chartjs.png" alt="">
+							<img class="pres" src="/icons/htmx.png" alt="">
+							<img class="pres" src="/icons/pusher.png" alt="">
+						</div>
+						My experience with these different technologies has been crucial in completing various projects, such as 
+						an e-commerce website, a real-time multiplayer tic-tac-toe game, a dynamic chat app, a monitoring website, 
+						and <a href="http://localhost:4321/work/">more</a>.
+					</div>
+
+					<h4 style="margin-top: 35px;">SysAdmin</h4>
+					<div>
 						Beyond that, I'm also a huge fan of SysAdmin and DevOps. Currently pursuing a Bachelor's degree in Networking and Telecommunication, 
-						so I work with <b>GNU/Linux</b> on a daily basis, and I am very familiar with it. This experience has given me proficiency in setting up complex tech stacks, 
-						notably with tools like <b>Docker</b>. I also have extensive familiarity with command-line interfaces (particularly with Bash), including well known and popular 
-						tools tools like <b>Composer, NPM, Docker and GIT</b>.					
-					</div>  
+						I work with <b>GNU/Linux</b> on a daily basis. Therefore, I am very familiar with different package managers, 
+						tools (<b>Docker, git</b>), application layer services (<b>DHCP, FTP, SSH, SMB</b>), and command line interfaces (<b>bash, zsh</b>). 
+						<div class="icon-container">
+							<img class="pres" src="/icons/arch.png" alt="">
+							<img class="pres" src="/icons/debian.png" alt="">
+							<img class="pres" src="/icons/ubuntu.png" alt="">
+							
+							<img style="margin-left: 15px;" class="pres" src="/icons/docker.png" alt="">
+							<img class="pres" src="/icons/git.png" alt="">
+							<img style="margin-left: 15px;" class="pres" src="/icons/bash.png" alt="">
+						</div>
+					</div>
+						
+
+
+				</div>  
 
 					
-					</div>
 
 					
 						<h2 id="achievements" class="dashed" style="padding-top: 60px;">Achievements</h2>
