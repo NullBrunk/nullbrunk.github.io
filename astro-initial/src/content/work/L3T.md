@@ -28,20 +28,33 @@ Oh, by the way, L3T stands for Laravel Tic-Tac-Toe.
 #### 📚 Deep overview
 
 ##### 🔐 Login
+
+###### Without 2FA
 <video controls style="width: 100%;">
-  <source src="https://github.com/NullBrunk/L3T/assets/125673909/40b49521-a41a-461f-84d5-cc5afc80548a" type="video/mp4" />
+  <source src="https://github.com/NullBrunk/L3T/assets/125673909/4e45c561-f96e-4cac-abd6-c36c21e59f8a" type="video/mp4" />
+</video>
+
+###### With 2FA
+
+<video controls style="width: 100%;">
+  <source src="https://github.com/NullBrunk/L3T/assets/125673909/9f2c6736-50f9-430a-acf2-32e84edfed9f" type="video/mp4" />
 </video>
 
 
 ##### 🎮 Game
 <video controls style="width: 100%;">
-  <source src="https://github.com/NullBrunk/L3T/assets/125673909/36b9744f-9cc4-4b43-a498-6d57776c94d8" type="video/mp4" />
+  <source src="https://github.com/NullBrunk/L3T/assets/125673909/5f2f5d09-5f43-4f88-a914-0beb7f21e110" type="video/mp4" />
 </video>
 
 
 ##### 👤 Profile
 <video controls style="width: 100%;">
-  <source src="https://github.com/NullBrunk/L3T/assets/125673909/5f220014-9120-4f12-84a0-4b60636b99b3" type="video/mp4" />
+  <source src="https://github.com/NullBrunk/L3T/assets/125673909/34c88f92-5a71-4fc4-a4f4-ff60364aa4db" type="video/mp4" />
+</video>
+
+##### 📱 Responsive
+<video controls style="width: 100%;">
+  <source src="https://github.com/NullBrunk/L3T/assets/125673909/48261adf-0760-405b-a9f4-ab905fcd627c" type="video/mp4" />
 </video>
 
 
