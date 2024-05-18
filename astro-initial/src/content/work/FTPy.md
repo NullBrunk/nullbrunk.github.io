@@ -20,30 +20,12 @@ tags:
 </div>
 
 
-I have always enjoyed scripting; thus, Python was one of the first languages I had the opportunity to learn. This project is basically a simplified FTP client, which, through an established socket, allows connecting and performing FTP exchanges, such as sending, retrieving, or deleting a file.
+This project is basically a simplified FTP client, which, through an established socket, allows connecting and performing FTP exchanges, such as sending, retrieving, or deleting a file.
 <br>
 
 
 #### 🗺️ Overview  
 ![ftpydemo](https://github.com/NullBrunk/FTPy/assets/125673909/ebe09f66-622a-4d32-b26d-d1b3176d556f)
-
-
-#### 💻 Command
-This section details the various commands supported by the FTP script in the form of a changelog.
-
-```bash
-# [1.0] - 12 mai 2023
-- First commit
-- Implemented authentication (USER, PASS)
-
-# [1.1] - 13 mai 2023
-- Implemented ls (with LIST and PASV mode)
-- Implemented mkdir (MKD), pwd (PWD), cd (CWD), rm (DELE), chmod (SITE CHMOD), get (RETR), put (STOR)
-
-# [1.2] - 14 mai 2023
-- Added the License (GPL 3)
-- Refactored
-```
 
 
 #### 📂 Source

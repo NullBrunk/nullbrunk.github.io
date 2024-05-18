@@ -1,13 +1,13 @@
 ---
-title: L3T
+title: Tic-tac-toe
 publishDate: 2023-09-01 06:53:10
 img: /assets/works/L3T.png
 img_alt: An image of an the tictactoe
 description: A Laravel real-time multiplayer Tic-Tac-Toe game
 tags:
-  - Tic-tac-toe
+  - TOTP TFA 
   - Multiplayer
-  - Ral-time
+  - Real-time
   - Laravel
   - Livewire
 ---
@@ -21,9 +21,7 @@ tags:
 
 </div>
 
-This project was undertaken when I already had quite a bit of experience with Laravel and Livewire. I had previously developed a tic-tac-toe game in PHP, but it was neither real-time nor multiplayer: both players had to be behind the same PC. With this tic-tac-toe game, upon generating a game session, a link is generated which can be sent to anyone. From there, you can challenge the opposing player with real-time updates to your board.
-Oh, by the way, L3T stands for Laravel Tic-Tac-Toe.
-
+Created using the **Laravel/Livewire** stack, this web app allows multiplayer, real-time tic-tac-toe gameplay. The project is secured with email address validation and the option to use 2FA (TOTP). 
 
 #### 📚 Deep overview
 
@@ -34,8 +32,8 @@ Oh, by the way, L3T stands for Laravel Tic-Tac-Toe.
   <source src="https://github.com/NullBrunk/L3T/assets/125673909/5e55c58b-e841-4126-9835-955c106f4eac" type="video/mp4" />
 </video>
 
-###### With 2FA
 
+###### With 2FA
 <video controls style="width: 100%;">
   <source src="https://github.com/NullBrunk/L3T/assets/125673909/333c661b-7209-4f23-bf6a-5b249cba063e" type="video/mp4" />
 </video>
@@ -60,7 +58,7 @@ Oh, by the way, L3T stands for Laravel Tic-Tac-Toe.
 
 
 #### 📂 Source
-The source code and installation instructions are accessible <a href="https://github.com/NullBrunk/L3T" target="_blank">here</a>.
+The source code and installation instructions are accessible <a href="https://github.com/NullBrunk/Tic-tac-toe" target="_blank">here</a>.
 
 You'll also find a docker-compose file there if you want to test the application locally.
 

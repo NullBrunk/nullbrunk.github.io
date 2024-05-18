@@ -25,7 +25,7 @@ tags:
 
 In order to gain experience with API development and some concepts like interactivity, designing a responsive UI, and so on, i made a PHPChat with a backend based on a PHP API to manage authentication and messages, coupled with a MariaDB database.
 <br><br>
-The front-end part, on the other hand, is entirely handled by **JavaScript** with AJAX requests, and by **Bootstrap + Vanilla CSS** for the CSS part.
+On the other hand, the front-end is entirely handled by **JavaScript** with AJAX requests, and by **Bootstrap + Vanilla CSS** for the CSS part.
 
 #### 🔐 Login
 
@@ -41,7 +41,7 @@ As you may noticed, the validation is done with AJAX, so it's dynamic.
   <source src="https://github.com/NullBrunk/PHPChat/assets/125673909/57a08d7c-36eb-4879-a80d-c4a467fbe4b5" type="video/mp4" />
 </video>
 
-The \<form\> is directly posted to the API. However, the update and delete fonctionnalities are dynamic; JS updates/removes the element from the DOM (frontend) and does an AJAX request to the API to update/remove it from the database (backend).
+The \<form\> is directly posted to the API. However, the update and delete fonctionnalities are done in JavaScript with AJAX requests.
 
 #### ⚙️ Settings page
 
@@ -49,7 +49,7 @@ The \<form\> is directly posted to the API. However, the update and delete fonct
   <source src="https://github.com/NullBrunk/PHPChat/assets/125673909/8b722d85-87a6-4c55-b98c-7414ab3b9157" type="video/mp4" />
 </video>
 
-The validation of the entered password is also done witj AJAX, so it's dynamic.
+The validation of the entered password is also done with AJAX requests.
 
 <br>
 

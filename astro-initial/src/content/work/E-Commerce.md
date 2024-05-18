@@ -35,13 +35,11 @@ I also used the Pusher websocket to create real-time notifications.
 ##### 🔐 Login
 
 Livewire is used for the dynamic validation, and bootstrap for the front-end effects.
-
 <video controls style="width: 100%;">
   <source src="https://github.com/NullBrunk/E-Commerce/assets/125673909/a15e4a32-3035-49fa-99bc-f834218a315c" type="video/mp4" />
 </video>
 
 ##### 🛒 Product
-
 <video controls style="width: 100%;">
   <source src="https://github.com/NullBrunk/E-Commerce/assets/125673909/7ed51d3a-2cf4-4c0e-b333-465cd6b7f975" type="video/mp4" />
 </video>
@@ -57,7 +55,6 @@ Livewire is used for the dynamic validation, and bootstrap for the front-end eff
 </video>
 
 ##### 💳 Payment
-
 I chose to use Livewire for the Cart page, and vanilla javascript for the "basic" cart, and Stripe for the payment part.
 <video controls style="width: 100%;">
   <source src="https://github.com/NullBrunk/E-Commerce/assets/125673909/75af32a3-3840-4cac-a018-9f6a3c27a972" type="video/mp4" />
