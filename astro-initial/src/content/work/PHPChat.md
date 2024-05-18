@@ -1,5 +1,5 @@
 ---
-title: Chat
+title: Dynamic PHP WebChat
 publishDate: 2023-09-01 05:53:18
 img: /assets/works/phpchat.png
 img_alt: An image of a php webchat

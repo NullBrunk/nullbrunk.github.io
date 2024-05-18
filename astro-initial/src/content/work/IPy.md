@@ -1,5 +1,5 @@
 ---
-title: IPy
+title: Simple IP configuration tool
 publishDate: 2023-09-01 02:53:00
 img: /assets/works/ipy.png
 img_alt: An image of the IPy tool

@@ -1,5 +1,5 @@
 ---
-title: Tic-tac-toe
+title: Full-featured multiplayer morpion game
 publishDate: 2023-09-01 06:53:10
 img: /assets/works/L3T.png
 img_alt: An image of an the tictactoe

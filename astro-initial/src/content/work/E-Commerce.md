@@ -1,5 +1,5 @@
 ---
-title: E-Commerce
+title: Laravel full-featured E-Commerce website
 publishDate: 2023-09-01 06:53:10
 img: /assets/works/commerce.png
 img_alt: An image of an ecommerce client
