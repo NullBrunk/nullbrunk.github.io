@@ -15,6 +15,7 @@ import Hero from '../components/Hero.astro';
 				.dashed {
 					position: relative;
 					padding-bottom: 25px;
+					margin-top: 30px;
 					font-size: 45px;
 				}
 
@@ -29,69 +30,7 @@ import Hero from '../components/Hero.astro';
 					left: 0;
 				}
 
-				#passions {
-					display: flex;
-				}
-
-				.passion {
-					text-decoration: none;
-					background: #283044;
-					display: flex;
-					flex-direction: column;
-					width: 20vw;
-					height: 200px;
-					text-align: center;
-					transition: all 0.3s ease-out 0s;
-					margin: 25px;
-					border-radius: 5px;
-				}
-
-				.passion-icon {
-					width: 64px;
-					height: 64px;
-					background: #c561f6;
-					border-radius: 5px;
-					display: flex;
-					transform-style: preserve-3d;
-					margin: auto;
-					margin-bottom: 30px;
-
-				}
-
-				.passion-icon::before {
-					position: absolute;
-					content: "";
-					left: -8px;
-					top: -8px;
-					height: 100%;
-					width: 100%;
-					background: rgba(255, 255, 255, 0.15);
-					border-radius: 5px;
-					transition: all 0.3s ease-out 0s;
-					transform: translateZ(-1px);
-				}
-
-				.passion-icon i {
-					margin: auto;
-					color: white;
-				}
-
-				.passion p {
-					padding-bottom: 5px;
-					text-decoration: none;
-					color: white;
-				}
-
-				.passion:hover {
-					background-color: var(--accent-regular);
-					color: white;
-				}
-				.passion:hover .passion-icon {
-					background-color: white;
-				}
-				.passion:hover .passion-icon i {
-					color: var(--accent-regular);
-				}
+				
 				.mt0 {
 					padding-bottom: 15px;
 				}
@@ -120,15 +59,15 @@ import Hero from '../components/Hero.astro';
 				}
 
 				.icon-container div img {
-					height: 54px;
-					width: 54px;
+					height: 70px;
+					width: 70px;
 					margin: auto;
 				}
 
 				.icon-container div p {
 					text-align: center;
-					font-size: 13px;
-					font-weight: 900;
+					font-size: 15px;
+					font-weight: 100;
 				}
 
 
@@ -215,33 +154,7 @@ import Hero from '../components/Hero.astro';
 					<h4>Backend</h4>
 					<div>
 						I am a web developer with a strong background in web backend development, specializing in <b>Vanilla-PHP</b> and the <b>Laravel</b> Framework with 
-						<b>Livewire</b>. Additionally, I have proficient knowledge of 
-						<b>SQL and NoSQL</b>, which allows me to build robust backends.
-						<div class="icon-container" style="margin-bottom: 30px;">
-
-							<div>
-								<img class="pres" src="/icons/laravel.png" alt="">
-								<p>Laravel</p>
-							</div>
-							<div>
-								<img class="pres" src="/icons/livewire.png" alt="">
-								<p>Livewire</p>
-							</div>
-							<div>
-								<img class="pres" src="/icons/php.png" alt="">
-								<p>PHP</p>
-							</div>
-
-
-							<div style="margin-left: 15px;">
-								<img class="pres" src="/icons/mysql.png" alt="">
-								<p>MySQL</p>
-							</div>
-							<div>
-								<img class="pres" src="/icons/redis.png" alt="">
-								<p>Redis</p>
-							</div>
-						</div>
+						<b>Livewire</b>. Consequently, I am well-versed in the PHP ecosystem and have extensive experience with <b>Composer</b>. Additionally, I have proficient knowledge of <b>SQL and NoSQL</b>, which allows me to build robust backends.
 					</div>
 
 					<h4>Frontend</h4>
@@ -249,66 +162,102 @@ import Hero from '../components/Hero.astro';
 						I also have extensive experience in front-end development, adeptly working with CSS frameworks such as 
 						<b>Bootstrap</b> and <b>TailwindCSS</b>. 
 						I have worked with a variety of JavaScript packages including <b>Swiper.js, ChartJS, HTMX, and Pusher</b>, among others. 
-
-						<div class="icon-container">
-							<div>
-								<img class="pres" src="/icons/HTML.png" alt="">
-								<p>HTML</p>
-							</div>
-							<div>
-								<img class="pres" src="/icons/CSS.png" alt="">
-								<p>CSS</p>
-							</div>
-							<div>
-								<img class="pres" src="/icons/js.png" alt="">
-								<p>JS</p>
-							</div>
-
-							<div style="margin-left: 15px;">
-								<img class="pres" src="/icons/bootstrap.png" alt="">
-								<p>Bootstrap</p>
-							</div>
-							<div>
-								<img class="pres" src="/icons/tailwind.png" alt="">
-								<p>Tailwind</p>
-							</div>
-
-							<div style="margin-left: 15px;">
-								<img  class="pres" src="/icons/npm.png" alt="">
-								<p>NPM</p>
-							</div>
-							<div>
-								<img class="pres" src="/icons/swiper.png" alt="">
-								<p>Swiper</p>
-							</div>
-							<div>
-								<img class="pres" src="/icons/chartjs.png" alt="">
-								<p>Chart.JS</p>
-							</div>
-							<div>
-								<img class="pres" src="/icons/htmx.png" alt="">
-								<p>HTMX</p>
-							</div>
-							<div>
-								<img class="pres" src="/icons/pusher.png" alt="">
-								<p>Pusher</p>
-							</div>
-						</div>
+						Therefore, I have good knowledges of <b>NPM</b>
 					</div>
 
 					<h4 style="margin-top: 35px;">SysAdmin</h4>
 					<div>
 						Beyond that, I'm also a huge fan of SysAdmin and DevOps. Currently pursuing a Bachelor's degree in Networking, 
 						I work with <b>GNU/Linux</b> on a daily basis. Therefore, I am very familiar with different package managers, 
-						tools (<b>Docker, git</b>), application layer services (<b>DHCP, HTTP, FTP, SSH, SMB ...</b>), and command line interfaces (<b>bash, zsh ..</b>). 
+						tools (<b>Docker, docker-compose, git</b>), application layer services (<b>DHCP, HTTP, FTP, SSH, SMB ...</b>), and command line interfaces (<b>bash, zsh ..</b>). 
+					</div>
+					
+				</div>  
+
+				
+				<h2 id="achievements" class="dashed" style="padding-top: 60px;">Skills</h2>
+				<div id="skills">
+					<h4>Backend</h4>
+					<div class="icon-container" style="margin-bottom: 30px;">
+						<div>
+							<img class="pres" src="/icons/laravel.png" alt="">
+							<p>Laravel</p>
+						</div>
+						<div>
+							<img class="pres" src="/icons/livewire.png" alt="">
+							<p>Livewire</p>
+						</div>
+						<div>
+							<img class="pres" src="/icons/php.png" alt="">
+							<p>PHP</p>
+						</div>
+						<div style="margin-left: 20px;">
+							<img class="pres" src="/icons/mysql.png" alt="">
+							<p>MySQL</p>
+						</div>
+						<div>
+							<img class="pres" src="/icons/redis.png" alt="">
+							<p>Redis</p>
+						</div>
+					</div>
+
+
+					<h4 style="margin-top: 35px;">Frontend</h4>
+					<div class="icon-container">
+						<div>
+							<img class="pres" src="/icons/bootstrap.png" alt="">
+							<p>Bootstrap</p>
+						</div>
+						<div>
+							<img class="pres" src="/icons/tailwind.png" alt="">
+							<p>Tailwind</p>
+						</div>
+
+						<div style="margin-left: 20px;">
+							<img  class="pres" src="/icons/npm.png" alt="">
+							<p>NPM</p>
+						</div>						
+						<div>
+							<img  class="pres" src="/icons/vite.png" alt="">
+							<p>Vite</p>
+						</div>
+
+						<div style="margin-left: 20px;">
+							<img class="pres" src="/icons/swiper.png" alt="">
+							<p>Swiper</p>
+						</div>
+						<div>
+							<img class="pres" src="/icons/chartjs.png" alt="">
+							<p>Chart.JS</p>
+						</div>
+						<div>
+							<img class="pres" src="/icons/htmx.png" alt="">
+							<p>HTMX</p>
+						</div>
+						<div>
+							<img class="pres" src="/icons/pusher.png" alt="">
+							<p>Pusher</p>
+						</div>
+					</div>
+
+					<h4 style="margin-top: 35px;">SysAdmin</h4>
+					<div>
 						<div class="icon-container">
 							<div>
 								<img class="pres" src="/icons/docker.png" alt="">
 								<p>Docker</p>
 							</div>
 							<div>
+								<img class="pres" src="/icons/github.svg" alt="">
+								<p>Github</p>
+							</div>
+							<div>
 								<img class="pres" src="/icons/git.png" alt="">
 								<p>Git</p>
+							</div>
+							<div>
+								<img class="pres" src="/icons/rpi.svg" alt="">
+								<p>RPI</p>
 							</div>
 							<div>
 								<img class="pres" src="/icons/bash.png" alt="">
@@ -316,10 +265,32 @@ import Hero from '../components/Hero.astro';
 							</div>
 						</div>
 					</div>
-				</div>  
 
-				
-				
+
+					<h4 style="margin-top: 35px;">Daily usage</h4>
+					<div>
+						<div class="icon-container">
+							<div>
+								<img class="pres" src="/icons/archlinux.svg" alt="">
+								<p>Arch</p>
+							</div>
+							<div>
+								<img class="pres" src="/icons/phpstorm.svg" alt="">
+								<p>PHPStorm</p>
+							</div>
+							<div>
+								<img class="pres" src="/icons/md.svg" alt="">
+								<p>MD</p>
+							</div>
+							<div>
+								<img class="pres" src="/icons/latex.svg" alt="">
+								<p>Latex</p>
+							</div>
+
+						</div>
+					</div>
+
+				</div>
 			
 					
 				<h2 id="achievements" class="dashed" style="padding-top: 60px;">Achievements</h2>
