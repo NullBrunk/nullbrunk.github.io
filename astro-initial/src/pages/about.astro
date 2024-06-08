@@ -141,6 +141,70 @@ import Hero from '../components/Hero.astro';
 						width: calc(100% - 50px)
 					}
 				}
+
+				.about {
+					display: flex;
+					flex-direction: column;
+					gap: 3.5rem;
+				}
+
+				img {
+					margin-top: 1.5rem;
+					border-radius: 1.5rem;
+					box-shadow: var(--shadow-md);
+				}
+
+				section {
+					display: flex;
+					flex-direction: column;
+					gap: 0.5rem;
+					color: var(--gray-200);
+				}
+
+				.section-title {
+					grid-column-start: 1;
+					font-size: var(--text-xl);
+					color: var(--gray-0);
+				}
+
+				.content {
+					grid-column: 2 / 4;
+				}
+
+				.content :global(a) {
+					text-decoration: 1px solid underline transparent;
+					text-underline-offset: 0.25em;
+					transition: text-decoration-color var(--theme-transition);
+				}
+
+				.content :global(a:hover),
+				.content :global(a:focus) {
+					text-decoration-color: currentColor;
+				}
+
+				@media (min-width: 50em) {
+					.about {
+						display: grid;
+						grid-template-columns: 1fr 60% 1fr;
+					}
+
+					.about > :global(:first-child) {
+						grid-column-start: 2;
+					}
+
+					section {
+						display: contents;
+						font-size: var(--text-lg);
+					}
+				}
+
+				b {
+					background: linear-gradient(315deg, #e7bdfb, #c561f6);
+					background-clip: border-box;
+					background-clip: border-box;
+					-webkit-background-clip: text;
+					-webkit-text-fill-color: transparent;
+				}
 			</style>
 
 			<section>
@@ -252,172 +316,50 @@ import Hero from '../components/Hero.astro';
 							</div>
 						</div>
 					</div>
-						
-
-
 				</div>  
 
+				
+				
+			
 					
-
-					
-						<h2 id="achievements" class="dashed" style="padding-top: 60px;">Achievements</h2>
-						<div id="passions">
-						
-							<div style="padding-top: 10px">
-								<h5>Winner of the 2023/2024 Secu'RT event</h5>
-								<div>
-									<img src="/assets/achievements/securt.jpg" style="height: 600px;" alt=""> <br>
-									An event at the Nord Franche-Comté IUT with a solo CTF competition from 7:00 PM to 11:15 PM among students from different cohorts of the networking and telecommunications Bachelors in Montbéliard, which I won.
-								</div>
-
-								<div style="margin-top: 50px;"></div>
-									<h5>Owner of three Cisco CCNA certification</h5>
-									<div>
-										<p style="margin-top: 30px;">
-											Networking Essentials Fall - 2023 <br>
-											<img src="/assets/achievements/networking.png" style="height: 300px;" alt="">
-										</p>
-
-										<p style="margin-top: 30px;">
-											Introduction to cybersecurity - 2023 <br>
-											<img src="/assets/achievements/cyber.png" style="height: 300px;" alt="">
-										</p>
-										
-										<p style="margin-top: 30px;">
-											IoT Fundamentals - 2023 <br>
-											<img src="/assets/achievements/iot.png" style="height: 300px;" alt="">
-										</p>
-								</div>
-							</div>
-
+				<h2 id="achievements" class="dashed" style="padding-top: 60px;">Achievements</h2>
+				<div id="passions">
+					<div style="padding-top: 10px">
+						<h5>Winner of the 2023/2024 Secu'RT event</h5>
+						<div>
+							<img src="/assets/achievements/securt.jpg" style="height: 600px;" alt=""> <br>
+							An event at the Nord Franche-Comté IUT with a solo CTF competition from 7:00 PM to 11:15 PM among students from different cohorts of the networking and telecommunications Bachelors in Montbéliard, which I won.
 						</div>
 
-
-						<h2 class="dashed" style="padding-top: 40px;">Passions</h2>
-						<div id="passions">
-							<a class="passion" href="https://github.com/nullbrunk" target="_blank">
-								<div class="passion-icon">
-									<i>
-										<Icon icon="web" size="1.33em" />
-									</i>
-								</div>
-								<p class="mt0">
-									Website development
-								</p>
-								<div class="mt0"></div>
-							</a>
-			
-							<a class="passion" href="https://github.com/nullbrunk" target="_blank">
-								<div class="passion-icon">
-									<i>
-										<Icon icon="server" size="1.33em" />
-									</i>
-								</div>
-								<p class="mt0">
-									SysAdmin / DevOps
-								</p>
-								<div class="mt0"></div>
-							</a>
-			
-							<a class="passion" href="https://root-me.org/nullbrunk" target="_blank">
-								<div class="passion-icon">
-									<i>
-										<Icon icon="terminal-window" size="1.33em" />
-									</i>
-								</div>
-								<p class="mt0">
-									Offensive WebSec
-								</p>
-								<div class="mt0"></div>
+						<div style="margin-top: 50px;"></div>
+							<h5>Owner of three Cisco CCNA certification</h5>
+							<div>
+								<table>
+									<tbody>
+										<tr>
+											<td><li>Networking Essentials Fall</li></td>
+											<td><b>91%</b></td>
+										</tr>
+										<tr>
+											<td><li>Introduction to cybersecurity&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li></td>
+											<td><b>95%</b></td>
+										</tr>
+										<tr>
+											<td><li>IoT Fundamentals</li></td>
+											<td><b>84%</b></td>
+										</tr>
+									</tbody>
+								</table>
 								
-							</a>
-			
-							<a class="passion" href="#achievements">
-								<div class="passion-icon">
-									<i>
-										<Icon icon="list" size="1.33em" />
-									</i>
-								</div>
-								<p class="mt0">
-									Reading / Studying
-								</p>
-								<div class="mt0"></div>
-			
-							</a>
+
 						</div>
 					</div>
 
-
-					
+				</div>		
 			</section>
-
+			<div style="margin-bottom: 60px;"></div>
 		</main>
 
 	</div>
 </BaseLayout>
 
-<style>
-	.about {
-		display: flex;
-		flex-direction: column;
-		gap: 3.5rem;
-	}
-
-	img {
-		margin-top: 1.5rem;
-		border-radius: 1.5rem;
-		box-shadow: var(--shadow-md);
-	}
-
-	section {
-		display: flex;
-		flex-direction: column;
-		gap: 0.5rem;
-		color: var(--gray-200);
-	}
-
-	.section-title {
-		grid-column-start: 1;
-		font-size: var(--text-xl);
-		color: var(--gray-0);
-	}
-
-	.content {
-		grid-column: 2 / 4;
-	}
-
-	.content :global(a) {
-		text-decoration: 1px solid underline transparent;
-		text-underline-offset: 0.25em;
-		transition: text-decoration-color var(--theme-transition);
-	}
-
-	.content :global(a:hover),
-	.content :global(a:focus) {
-		text-decoration-color: currentColor;
-	}
-
-	@media (min-width: 50em) {
-		.about {
-			display: grid;
-			grid-template-columns: 1fr 60% 1fr;
-		}
-
-		.about > :global(:first-child) {
-			grid-column-start: 2;
-		}
-
-		section {
-			display: contents;
-			font-size: var(--text-lg);
-		}
-	}
-
-	b {
-		background: linear-gradient(315deg, #e7bdfb, #c561f6);
-		background-clip: border-box;
-		background-clip: border-box;
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-	}
-</style>
