@@ -40,16 +40,19 @@ Livewire is used for the dynamic validation, and bootstrap for the front-end eff
 </video>
 
 ##### 🛒 Product
+The drag & drop functionnality is done with filepond, a Markdown-like editor is available for the description section.
 <video controls style="width: 100%;">
   <source src="https://github.com/NullBrunk/E-Commerce/assets/125673909/7ed51d3a-2cf4-4c0e-b333-465cd6b7f975" type="video/mp4" />
 </video>
 
 ##### 📝 Comments
+A Markdown-like editor is available for the feedback section. as well as a product/comment rating system.
 <video controls style="width: 100%;">
   <source src="https://github.com/NullBrunk/E-Commerce/assets/125673909/0465e9bc-2540-4ce4-a304-d05e39500112" type="video/mp4" />
 </video>
 
 ##### ⚙️ Settings
+Update your profile picture, password, delete your account ...
 <video controls style="width: 100%;">
   <source src="https://github.com/NullBrunk/E-Commerce/assets/125673909/4c6b2c51-15af-4138-8fd4-639f08370a90" type="video/mp4" />
 </video>
@@ -61,7 +64,7 @@ I chose to use Livewire for the Cart page, and vanilla javascript for the "basic
 </video>
 
 ##### 💬 Chatbox
-Usage of Pusher.JS and Livewire for the Real-time webchat.
+The dynamic notification component is updated with the Pusher websocket + livewire.
 <video controls style="width: 100%;">
   <source src="https://github.com/NullBrunk/E-Commerce/assets/125673909/574b7ca6-082b-4857-97e0-82db359b1f99" type="video/mp4" />
 </video>
