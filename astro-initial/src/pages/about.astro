@@ -12,6 +12,9 @@ import Hero from '../components/Hero.astro';
 			</Hero>
 
 			<style>
+				p {
+					font-weight: 600 !important;
+				}
 				.dashed {
 					position: relative;
 					padding-bottom: 25px;
@@ -25,7 +28,7 @@ import Hero from '../components/Hero.astro';
 					display: block;
 					width: 50px;
 					height: 3px;
-					background: #c561f6;
+					background: var(--accent-dark);
 					bottom: 16px;
 					left: 0;
 				}
@@ -39,12 +42,6 @@ import Hero from '../components/Hero.astro';
 					box-shadow: none !important;
 					height: 54px;
 					margin-top: 1rem !important;
-				}
-
-				h4 {
-					margin-top: 21px;
-					margin-bottom: 10px;
-  					font-size: 26px;
 				}
 
 				.icon-container {
@@ -138,11 +135,25 @@ import Hero from '../components/Hero.astro';
 				}
 
 				b {
-					background: linear-gradient(315deg, #e7bdfb, #c561f6);
+					font-weight: 600;
+				}
+
+				h4 {
+					font-weight: 600;
+					
+					margin-top: 35px;
+					margin-bottom: 10px;
+  					font-size: 26px;
+				}
+
+				.bolder {
+					background: linear-gradient(315deg, #e7bdfb, var(--accent-dark));
 					background-clip: border-box;
 					background-clip: border-box;
 					-webkit-background-clip: text;
 					-webkit-text-fill-color: transparent;
+
+					font-weight: 900;
 				}
 			</style>
 
@@ -151,21 +162,21 @@ import Hero from '../components/Hero.astro';
 					<h2 class="dashed">About</h2>
 
 
-					<h4>Backend</h4>
+					<h4 class="bolder">Backend</h4>
 					<div>
 						I am a web developer with a strong background in web backend development, specializing in <b>Vanilla-PHP</b> and the <b>Laravel</b> Framework with 
 						<b>Livewire</b>. Consequently, I am well-versed in the PHP ecosystem and have extensive experience with <b>Composer</b>. Additionally, I have proficient knowledge of <b>SQL and NoSQL</b>, which allows me to build robust backends.
 					</div>
 
-					<h4>Frontend</h4>
+					<h4 class="bolder">Frontend</h4>
 					<div>
 						I also have extensive experience in front-end development, adeptly working with CSS frameworks such as 
 						<b>Bootstrap</b> and <b>Tailwind</b>. 
-						I have worked with a variety of JavaScript packages including <b>Swiper.js, ChartJS, HTMX, and Pusher</b>, among others. I'm currenly learning <b>React</b>. 
-						<br>Therefore, I have good knowledges of <b>NPM</b> and <b>Vite.Js</b>.
+						I have worked with a variety of JavaScript packages including <b>Swiper.js, ChartJS, HTMX, and Pusher</b>, among others. <br>
+						I'm currenly learning <b>React</b>. Therefore, I also have good knowledges of <b>NPM</b> and of the <b>Vite.Js</b> bundler.
 					</div>
 
-					<h4 style="margin-top: 35px;">SysAdmin</h4>
+					<h4 class="bolder">SysAdmin</h4>
 					<div>
 						Beyond that, I'm also a huge fan of SysAdmin and DevOps. Currently pursuing a Bachelor's degree in Networking, 
 						I work with <b>GNU/Linux</b> on a daily basis. Therefore, I am very familiar with different package managers, 
@@ -275,7 +286,7 @@ import Hero from '../components/Hero.astro';
 							</div>
 
 							<div style="margin-left: 20px;">
-								<img class="pres" src="/icons/python.svg" alt="">
+								<img class="pres" src="/icons/python.png" alt="">
 								<p>Python</p>
 							</div>
 							<div>
@@ -293,37 +304,35 @@ import Hero from '../components/Hero.astro';
 					
 				<h2 id="achievements" class="dashed" style="padding-top: 60px;">Achievements</h2>
 				<div id="passions">
-					<div style="padding-top: 10px">
-						<h5>Winner of the 2023/2024 Secu'RT event</h5>
-						<div>
-							<img src="/assets/achievements/securt.jpg" style="height: 600px;" alt=""> <br>
-							An event at the Nord Franche-Comté IUT with a solo CTF competition from 7:00 PM to 11:15 PM among students from different cohorts of the networking and telecommunications Bachelors in Montbéliard, which I won.
-						</div>
-
-						<div style="margin-top: 50px;"></div>
-							<h5>Owner of three Cisco CCNA certification</h5>
+					<div>
+						<div></div>
+							<h4 style="margin-top: 35px;">Owner of four Cisco CCNA certification</h4>
 							<div>
 								<table>
 									<tbody>
 										<tr>
-											<td><li>Networking Essentials Fall</li></td>
+											<td><li><b class="bolder">CCNA</b> Networking Essentials Fall</li></td>
 											<td><b>91%</b></td>
 										</tr>
 										<tr>
-											<td><li>Introduction to cybersecurity&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li></td>
+											<td><li><b class="bolder">CCNA</b> Introduction to cybersecurity&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li></td>
 											<td><b>95%</b></td>
 										</tr>
 										<tr>
-											<td><li>IoT Fundamentals</li></td>
+											<td><li><b class="bolder">CCNA</b> IoT Fundamentals</li></td>
 											<td><b>84%</b></td>
 										</tr>
 										<tr>
-											<td><li>CCNAv7 M1 Spring</li></td>
+											<td><li><b class="bolder">CCNAv7</b> M1 Spring</li></td>
 											<td><b>79%</b></td>
 										</tr>
 									</tbody>
 								</table>
-								
+
+								<h4>Winner of the 2023/2024 Secu'RT event</h4>
+								<div>
+									<li>A cybersecurity event at the Nord Franche-Comté IUT with a solo CTF competition which I won.</li>
+								</div>
 
 						</div>
 					</div>

@@ -41,6 +41,7 @@ import Icon from './Icon.astro';
 
 	.skills p {
 		color: var(--gray-400);
+		font-size: 15px;
 	}
 
 	@media (min-width: 50em) {
@@ -53,6 +54,10 @@ import Icon from './Icon.astro';
 			display: grid;
 			grid-template-columns: repeat(3, 1fr);
 			gap: 5rem;
+		}
+
+		.theme-dark .skills {
+			background: #0a0c12;
 		}
 
 		.skills h2 {
