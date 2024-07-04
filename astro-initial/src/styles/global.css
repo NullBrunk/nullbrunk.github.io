@@ -119,6 +119,7 @@ html,
 body {
 	height: 100%;
 	overflow-x: hidden;
+	scroll-behavior: smooth;
 }
 
 body {
@@ -278,4 +279,14 @@ h5 {
 
 p {
 	font-size: 20px;
+}
+
+.blur {
+	height: 12rem;
+	width: 12rem;
+	background-color: #6842ff;
+	filter: blur(100px);
+	border-radius: 100px;
+	z-index: 0;
+	position: absolute;
 }

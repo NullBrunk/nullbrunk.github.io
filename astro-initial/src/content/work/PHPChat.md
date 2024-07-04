@@ -27,7 +27,7 @@ In order to gain experience with API development and some concepts like interact
 <br><br>
 On the other hand, the front-end is entirely handled by **JavaScript** with AJAX requests, and by **Bootstrap + Vanilla CSS** for the CSS part.
 
-#### 🔐 Login
+### 🔐 Login
 
 <video controls style="width: 100%;">
   <source src="https://github.com/NullBrunk/PHPChat/assets/125673909/d5de75cd-9410-4fae-b0c1-2001a0a46c63" type="video/mp4" />
@@ -35,7 +35,7 @@ On the other hand, the front-end is entirely handled by **JavaScript** with AJAX
 
 As you may noticed, the validation is done with AJAX, so it's dynamic.
 
-#### 💬 Chat 
+### 💬 Chat 
 
 <video controls style="width: 100%;">
   <source src="https://github.com/NullBrunk/PHPChat/assets/125673909/57a08d7c-36eb-4879-a80d-c4a467fbe4b5" type="video/mp4" />
@@ -43,7 +43,7 @@ As you may noticed, the validation is done with AJAX, so it's dynamic.
 
 The \<form\> is directly posted to the API. However, the update and delete fonctionnalities are done in JavaScript with AJAX requests.
 
-#### ⚙️ Settings page
+### ⚙️ Settings page
 
 <video controls style="width: 100%;">
   <source src="https://github.com/NullBrunk/PHPChat/assets/125673909/8b722d85-87a6-4c55-b98c-7414ab3b9157" type="video/mp4" />

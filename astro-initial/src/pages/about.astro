@@ -65,8 +65,12 @@ import Hero from '../components/Hero.astro';
 					text-align: center;
 					font-size: 15px;
 					font-weight: 100;
+					color: var(--gray-200);
 				}
 
+				a {
+					text-decoration: none;
+				}
 
 				@media(max-width: 800px) {
 					#passions {
@@ -155,6 +159,15 @@ import Hero from '../components/Hero.astro';
 
 					font-weight: 900;
 				}
+
+				.card {
+					border: 1px solid rgba(255,255,255, 0.25);
+				background-color: rgba(30, 31, 48, 0.30);
+				box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+				padding: 10px 25px;
+				font-weight: 700;
+				border-radius: 20px;
+				}
 			</style>
 
 			<section>
@@ -162,13 +175,13 @@ import Hero from '../components/Hero.astro';
 					<h2 class="dashed">About</h2>
 
 
-					<h4 class="bolder">Backend</h4>
+					<h4 class="bolder"><a href="#backend">Backend</a></h4>
 					<div>
 						I am a web developer with a strong background in web backend development, specializing in <b>Vanilla-PHP</b> and the <b>Laravel</b> Framework with 
 						<b>Livewire</b>. Consequently, I am well-versed in the PHP ecosystem and have extensive experience with <b>Composer</b>. Additionally, I have proficient knowledge of <b>SQL and NoSQL</b>, which allows me to build robust backends.
 					</div>
 
-					<h4 class="bolder">Frontend</h4>
+					<h4 class="bolder"><a href="#frontend">Frontend</a></h4>
 					<div>
 						I also have extensive experience in front-end development, adeptly working with CSS frameworks such as 
 						<b>Bootstrap</b> and <b>Tailwind</b>. 
@@ -176,7 +189,7 @@ import Hero from '../components/Hero.astro';
 						I'm currenly learning <b>React</b>. Therefore, I also have good knowledges of <b>NPM</b> and of the <b>Vite.Js</b> bundler.
 					</div>
 
-					<h4 class="bolder">SysAdmin</h4>
+					<h4 class="bolder"><a href="#devops">DevOps</a></h4>
 					<div>
 						Beyond that, I'm also a huge fan of SysAdmin and DevOps. Currently pursuing a Bachelor's degree in Networking, 
 						I work with <b>GNU/Linux</b> on a daily basis. Therefore, I am very familiar with different package managers, 
@@ -186,113 +199,172 @@ import Hero from '../components/Hero.astro';
 				</div>  
 
 				
-				<h2 id="achievements" class="dashed" style="padding-top: 60px;">Skills</h2>
+				<h2 class="dashed" style="padding-top: 60px;">Skills</h2>
 				<div id="skills">
-					<h4>Backend</h4>
+					<h4 id="backend">Backend</h4>
 					<div class="icon-container" style="margin-bottom: 30px;">
-						<div>
-							<img class="pres" src="/icons/laravel.png" alt="">
-							<p>Laravel</p>
-						</div>
-						<div>
-							<img class="pres" src="/icons/livewire.png" alt="">
-							<p>Livewire</p>
-						</div>
-						<div>
-							<img class="pres" src="/icons/java.svg" alt="">
-							<p>Java</p>
-						</div>
-						<div>
-							<img class="pres" src="/icons/php.png" alt="">
-							<p>PHP</p>
-						</div>
+						<a href="https://laravel.com/docs/10.x/" target="_blank">
+							<div>
+								<img class="pres" src="/icons/laravel.png" alt="">
+								<p>Laravel</p>
+							</div>
+						</a>
 
+						<a href="https://laravel-livewire.com/docs/2.x/quickstart" target="_blank">
+							<div>
+								<img class="pres" src="/icons/livewire.png" alt="">
+								<p>Livewire</p>
+							</div>
+						</a>
 
-						<div style="margin-left: 25px;">
-							<img class="pres" src="/icons/mysql.png" alt="">
-							<p>MySQL</p>
-						</div>
-						<div>
-							<img class="pres" src="/icons/redis.png" alt="">
-							<p>Redis</p>
-						</div>
+						<a href="https://docs.oracle.com/en/java/javase/22/docs/api/index.html" target="_blank">
+							<div>
+								<img class="pres" src="/icons/java.svg" alt="">
+								<p>Java</p>
+							</div>
+						</a>
+
+						<a href="https://www.php.net/manual/fr/" target="_blank">
+							<div>
+								<img class="pres" src="/icons/php.png" alt="">
+								<p>PHP</p>
+							</div>
+						</a>
+
+						<a href="https://dev.mysql.com/doc/" target="_blank">
+							<div style="margin-left: 25px;">
+								<img class="pres" src="/icons/mysql.png" alt="">
+								<p>MySQL</p>
+							</div>
+						</a>
+
+						<a href="https://redis.io/docs/latest/" target="_blank">
+							<div>
+								<img class="pres" src="/icons/redis.png" alt="">
+								<p>Redis</p>
+							</div>
+						</a>
 					</div>
 
 
-					<h4 style="margin-top: 35px;">Frontend</h4>
+					<h4 id="frontend" style="margin-top: 35px;">Frontend</h4>
 					<div class="icon-container">
-						<div>
-							<img class="pres" src="/icons/bootstrap.png" alt="">
-							<p>Bootstrap</p>
-						</div>
-						<div>
-							<img class="pres" src="/icons/tailwind.png" alt="">
-							<p>Tailwind</p>
-						</div>
+						<a target="_blank" href="https://getbootstrap.com/docs/5.3/getting-started/introduction/">
+							<div>
+								<img class="pres" src="/icons/bootstrap.png" alt="">
+								<p>Bootstrap</p>
+							</div>
+						</a>
+						
+						<a target="_blank" href="https://tailwindcss.com/docs/installation">
+							<div>
+								<img class="pres" src="/icons/tailwind.png" alt="">
+								<p>Tailwind</p>
+							</div>
+						</a>
 
-						<div style="margin-left: 20px;">
-							<img  class="pres" src="/icons/npm.png" alt="">
-							<p>NPM</p>
-						</div>						
-						<div>
-							<img  class="pres" src="/icons/vite.png" alt="">
-							<p>Vite</p>
-						</div>
+						<a target="_blank" href="https://www.npmjs.com/">
+							<div style="margin-left: 20px;">
+								<img  class="pres" src="/icons/npm.png" alt="">
+								<p>NPM</p>
+							</div>						
+						</a>
+						
+						<a target="_blank" href="https://vitejs.dev/guide/">
+							<div>
+								<img  class="pres" src="/icons/vite.png" alt="">
+								<p>Vite</p>
+							</div>
+						</a>
 
-						<div style="margin-left: 20px;">
-							<img class="pres" src="/icons/js.png" alt="">
-							<p>JS</p>
-						</div>
-						<div>
-							<img class="pres" src="/icons/react.svg" alt="">
-							<p>React</p>
-						</div>
-						<div style="margin-left: 20px;">
-							<img class="pres" src="/icons/swiper.png" alt="">
-							<p>Swiper</p>
-						</div>
-						<div>
-							<img class="pres" src="/icons/chartjs.png" alt="">
-							<p>Chart.JS</p>
-						</div>
-						<div>
-							<img class="pres" src="/icons/htmx.png" alt="">
-							<p>HTMX</p>
-						</div>
-						<div>
-							<img class="pres" src="/icons/pusher.png" alt="">
-							<p>Pusher</p>
-						</div>
+						<a target="_blank" href="https://developer.mozilla.org/fr/docs/Web/JavaScript">
+							<div style="margin-left: 20px;">
+								<img class="pres" src="/icons/js.png" alt="">
+								<p>JS</p>
+							</div>
+						</a>
+
+						<a target="_blank" href="https://fr.react.dev/reference/react">
+							<div>
+								<img class="pres" src="/icons/react.svg" alt="">
+								<p>React</p>
+							</div>
+						</a>
+
+						<a target="_blank" href="https://swiperjs.com/get-started">
+							<div style="margin-left: 20px;">
+								<img class="pres" src="/icons/swiper.png" alt="">
+								<p>Swiper</p>
+							</div>
+						</a>
+
+						<a target="_blank" href="https://www.chartjs.org/docs/latest/">
+							<div>
+								<img class="pres" src="/icons/chartjs.png" alt="">
+								<p>Chart.JS</p>
+							</div>
+						</a>
+
+						<a target="_blank" href="https://htmx.org/docs/">
+							<div>
+								<img class="pres" src="/icons/htmx.png" alt="">
+								<p>HTMX</p>
+							</div>
+						</a>
+
+						<a target="_blank" href="https://pusher.com/docs/">
+							<div>
+								<img class="pres" src="/icons/pusher.png" alt="">
+								<p>Pusher</p>
+							</div>
+						</a>
 					</div>
 
-					<h4 style="margin-top: 35px;">SysAdmin</h4>
+					<h4 id="devops" style="margin-top: 35px;">DevOps</h4>
 					<div>
 						<div class="icon-container">
-							<div>
-								<img class="pres" src="/icons/docker.png" alt="">
-								<p>Docker</p>
-							</div>
-							<div>
-								<img class="pres" src="/icons/github.svg" alt="">
-								<p>Github</p>
-							</div>
-							<div>
-								<img class="pres" src="/icons/git.png" alt="">
-								<p>Git</p>
-							</div>
-							<div>
-								<img class="pres" src="/icons/rpi.svg" alt="">
-								<p>RPI</p>
-							</div>
+							<a target="_blank" href="https://docs.docker.com/manuals/">
+								<div>
+									<img class="pres" src="/icons/docker.png" alt="">
+									<p>Docker</p>
+								</div>
+							</a>
 
-							<div style="margin-left: 20px;">
-								<img class="pres" src="/icons/python.png" alt="">
-								<p>Python</p>
-							</div>
-							<div>
-								<img class="pres" src="/icons/bash.png" alt="">
-								<p>Bash</p>
-							</div>
+							<a target="_blank" href="https://docs.github.com/fr">
+								<div>
+									<img class="pres" src="/icons/github.svg" alt="">
+									<p>Github</p>
+								</div>
+							</a>
+
+							<a target="_blank" href="https://git-scm.com/docs">
+								<div>
+									<img class="pres" src="/icons/git.png" alt="">
+									<p>Git</p>
+								</div>
+							</a>
+
+							<a target="_blank" href="https://www.raspberrypi.com/documentation/">
+								<div>
+									<img class="pres" src="/icons/rpi.svg" alt="">
+									<p>RPI</p>
+								</div>
+							</a>
+
+							<a target="_blank" href="https://docs.python.org/3/">
+								<div style="margin-left: 20px;">
+									<img class="pres" src="/icons/python.png" alt="">
+									<p>Python</p>
+								</div>
+							</a>
+
+							<a target="_blank" href="https://linux.die.net/man/">
+								<div>
+									<img class="pres" src="/icons/bash.png" alt="">
+									<p>Bash</p>
+								</div>
+							</a>
+							
 						</div>
 					</div>
 

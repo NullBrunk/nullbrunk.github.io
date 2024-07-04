@@ -76,12 +76,6 @@ import Icon from './Icon.astro';
 			const setTheme = (dark: boolean) => {
 				document.documentElement.classList[dark ? 'add' : 'remove']('theme-dark');
 				button.setAttribute('aria-pressed', String(dark));
-			
-				if(dark) {
-					document.querySelector(".skills").style.background="#0a0c12"; 
-				} else {
-					document.querySelector(".skills").style.background="";
-				}
 			};
 
 			// Toggle the theme when a user clicks the button.

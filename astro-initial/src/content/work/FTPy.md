@@ -1,5 +1,5 @@
 ---
-title: Python3 simple FTP client
+title: Python3 FTP client
 publishDate: 2023-09-01 03:53:00
 img: /assets/works/ftpy.png
 img_alt: An image of an ftp client
@@ -24,10 +24,10 @@ This project is basically a simplified FTP client, which, through an established
 <br>
 
 
-#### 🗺️ Overview  
+### 🗺️ Overview  
 ![ftpydemo](https://github.com/NullBrunk/FTPy/assets/125673909/ebe09f66-622a-4d32-b26d-d1b3176d556f)
 
 
-#### 📂 Source
+### 📂 Source
 The source code and installation instructions are accessible <a href="https://github.com/NullBrunk/FTPy" target="_blank">here</a>
 
