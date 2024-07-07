@@ -6,7 +6,7 @@ img_alt: An image of an the tictactoe
 description: React dynamic to-do list with tailwind frontend
 tags:
   - React.js
-  - Tailwind
+  - TailwindCSS
   - LocalStorage
   - Vite.JS
   - NPM

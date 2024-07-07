@@ -5,10 +5,12 @@ img: /assets/works/phpmonitor.png
 img_alt: An image of the PHP monitoring website
 description: Monitoring webapp with real-time display of system metrics 
 tags:
+  - API
   - Monitoring
-  - Tailwind
+  - TailwindCSS
   - Chart.js
   - PHP
+  - Docker
 ---
 
 <div align="center">

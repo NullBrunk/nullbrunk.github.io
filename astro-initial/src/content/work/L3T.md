@@ -3,13 +3,14 @@ title: Morpion
 publishDate: 2023-09-01 06:53:10
 img: /assets/works/L3T.png
 img_alt: An image of an the tictactoe
-description: A Laravel full-featured multiplayer Tic-Tac-Toe game
+description: Laravel real-time multiplayer Tic-Tac-Toe game 
 tags:
   - TOTP TFA 
   - Multiplayer
   - Real-time
   - Laravel
   - Livewire
+  - Docker
 ---
 
 <div align="center">
