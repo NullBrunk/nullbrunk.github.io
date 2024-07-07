@@ -1,5 +1,5 @@
 ---
-title: Real-time monitoring webapp
+title: Monitor.php
 publishDate: 2023-09-01 04:53:00
 img: /assets/works/phpmonitor.png
 img_alt: An image of the PHP monitoring website

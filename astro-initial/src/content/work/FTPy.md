@@ -1,5 +1,5 @@
 ---
-title: Python3 FTP client
+title: FTPy
 publishDate: 2023-09-01 03:53:00
 img: /assets/works/ftpy.png
 img_alt: An image of an ftp client

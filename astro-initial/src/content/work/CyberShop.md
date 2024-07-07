@@ -1,6 +1,6 @@
 ---
-title: Laravel full-featured E-Commerce website
-publishDate: 2023-09-01 06:53:10
+title: CyberShop
+publishDate: 2023-11-01 06:53:10
 img: /assets/works/commerce.png
 img_alt: An image of an ecommerce client
 description: An E-Commerce website written in Laravel  
