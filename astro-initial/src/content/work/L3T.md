@@ -1,6 +1,6 @@
 ---
-title: Morpion
-publishDate: 2023-09-01 06:53:10
+title: Laravel Morpion
+publishDate: 2019-01-01 04:53:00
 img: /assets/works/L3T.png
 img_alt: An image of an the tictactoe
 description: Laravel real-time multiplayer Tic-Tac-Toe game 

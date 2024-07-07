@@ -1,6 +1,6 @@
 ---
-title: Monitor.php
-publishDate: 2023-09-01 04:53:00
+title: PHP Monitoring
+publishDate: 2019-08-01 06:53:10
 img: /assets/works/phpmonitor.png
 img_alt: An image of the PHP monitoring website
 description: Monitoring webapp with real-time display of system metrics 

@@ -1,6 +1,6 @@
 ---
-title: Todo.js 
-publishDate: 2023-10-01 06:53:10
+title: React Todo.js 
+publishDate: 2022-10-01 06:53:10
 img: /assets/works/todo.png
 img_alt: An image of an the tictactoe
 description: React dynamic to-do list with tailwind frontend
