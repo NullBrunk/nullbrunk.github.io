@@ -1,6 +1,6 @@
 ---
 title: PHP Chat
-publishDate: 2020-09-01 05:53:18
+publishDate: 2022-09-01 05:53:18
 img: /assets/works/phpchat.png
 img_alt: An image of the php web chat
 description: Interactive webchat written in PHP/JS  
