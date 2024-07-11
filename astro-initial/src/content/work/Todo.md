@@ -26,7 +26,7 @@ tags:
 To gain more experience with React and the localStorage API, I developed a dynamic to-do app with various features such as a search bar, a checkbox to hide completed tasks, and more. Tasks are stored in localStorage, ensuring that all modifications are persisted. Finally, the frontend is built using Tailwind.
 <br><br>
 <video controls style="width: 100%;">
-  <source src="https://github.com/NullBrunk/Todo.js/assets/125673909/f31d6643-542c-49a4-aaed-edb72beb84ac" type="video/mp4" />
+  <source src="https://github.com/NullBrunk/Todo.js/assets/125673909/7cad5568-015f-4513-b549-e5904830fbcc" type="video/mp4" />
 </video>
 
 <br>
@@ -34,6 +34,6 @@ To gain more experience with React and the localStorage API, I developed a dynam
 ### 📂 Source
 The source code and installation instructions are accessible <a href="https://github.com/NullBrunk/Todo.js" target="_blank">here</a>.
 
-You can also test it direly <a href="react-todo-0.netlify.app" target="_blank">in here</a>.
+You can also test it direly <a href="https://react-todo-0.netlify.app" target="_blank">in here</a>.
 
 
