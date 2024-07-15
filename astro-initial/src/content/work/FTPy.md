@@ -12,11 +12,7 @@ tags:
 ---
 
 <div align="center">  
-    <br/>  
-
-![GitHub top language](https://img.shields.io/github/languages/top/NullBrunk/FTPy?style=for-the-badge)
-![GitHub commit activity](https://img.shields.io/github/commit-activity/m/NullBrunk/FTPy?style=for-the-badge)
-![repo size](https://img.shields.io/github/repo-size/NullBrunk/FTPy?style=for-the-badge)
+  <img class="work-icons python-border" src="/icons/python.png">
 </div>
 
 

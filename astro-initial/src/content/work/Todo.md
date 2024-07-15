@@ -12,14 +12,10 @@ tags:
   - NPM
 ---
 <div align="center">
-   
-
-![GitHub top language](https://img.shields.io/github/languages/top/NullBrunk/Todo.js?style=for-the-badge)
-![GitHub commit activity](https://img.shields.io/github/commit-activity/m/NullBrunk/Todo.js?style=for-the-badge)
-![repo size](https://img.shields.io/github/repo-size/NullBrunk/Todo.js?style=for-the-badge)
-
+  <img class="work-icons vite-border" src="/icons/vite.png">
+  <img class="work-icons react-border" src="/icons/react.svg">
+  <img class="work-icons tailwind-border" src="/icons/tailwind.png">
 </div>
-<br>
 
 ### 📚 General overview
 
@@ -34,6 +30,6 @@ To gain more experience with React and the localStorage API, I developed a dynam
 ### 📂 Source
 The source code and installation instructions are accessible <a href="https://github.com/NullBrunk/Todo.js" target="_blank">here</a>.
 
-You can also test it direly <a href="https://react-todo-0.netlify.app" target="_blank">in here</a>.
+You can also test it directly <a href="https://react-todo-0.netlify.app" target="_blank">in here</a>.
 
 

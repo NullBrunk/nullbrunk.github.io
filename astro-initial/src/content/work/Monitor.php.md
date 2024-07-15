@@ -14,12 +14,11 @@ tags:
 ---
 
 <div align="center">
-  <br/>    
-  
-  ![GitHub top language](https://img.shields.io/github/languages/top/NullBrunk/Monitor.php?style=for-the-badge)
-  ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/NullBrunk/Monitor.php?style=for-the-badge)
-  ![repo size](https://img.shields.io/github/repo-size/NullBrunk/Monitor.php?style=for-the-badge)
-
+ <img class="work-icons" src="/icons/php.png">
+ <img class="work-icons" src="/icons/js.png">
+ <img class="work-icons chartjs-border" src="/icons/chartjs.png">
+ <img class="work-icons tailwind-border" src="/icons/tailwind.png">
+ <img class="work-icons" src="/icons/docker.png">
 </div>
 
 To gain more experience in object-oriented development in PHP, as well as in API development and in the usage of AJAX requests, i developed a **monitoring website** that displays information in real-time.

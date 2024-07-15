@@ -13,12 +13,15 @@ tags:
 ---
 
 <div align="center">
-  <br/>    
-  
-  ![GitHub top language](https://img.shields.io/github/languages/top/NullBrunk/CyberShop?style=for-the-badge)
-  ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/NullBrunk/CyberShop?style=for-the-badge)
-  ![repo size](https://img.shields.io/github/repo-size/NullBrunk/CyberShop?style=for-the-badge)
-
+ <img class="work-icons laravel-border" src="/icons/laravel.png">
+ <img class="work-icons livewire-border" src="/icons/livewire.png">
+ <img class="work-icons" src="/icons/js.png">
+ <img class="work-icons htmx-border" src="/icons/htmx.png">
+ <img class="work-icons swiper-border" src="/icons/swiper.png">
+ <img class="work-icons" src="/icons/pusher.png">
+ <img class="work-icons" src="/icons/bootstrap.png">
+ <img class="work-icons" src="/icons/mysql.png">
+ <img class="work-icons" src="/icons/docker.png">
 </div>
 
 This project was my first project with the Laravel framework. I wanted to create a dynamic E-Commerce website, so I choose to use the Laravel/Livewire tech stack. Additionally, I used vanilla JS, some library like HTMX and Swiper, and Bootstrap for the front end part. 

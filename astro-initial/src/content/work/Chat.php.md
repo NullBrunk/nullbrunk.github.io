@@ -9,17 +9,16 @@ tags:
   - PHP
   - REST API
   - WebChat
+  - Bootstrap5
   - Docker
 ---
 
 <div align="center">
-  <br/>    
-  
-  ![GitHub top language](https://img.shields.io/github/languages/top/NullBrunk/Chat.php?style=for-the-badge)
-  ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/NullBrunk/Chat.php?style=for-the-badge)
-  ![repo size](https://img.shields.io/github/repo-size/NullBrunk/Chat.php?style=for-the-badge)
-
-  <br>
+  <img class="work-icons" src="/icons/php.png">
+  <img class="work-icons" src="/icons/js.png">
+  <img class="work-icons" src="/icons/bootstrap.png">
+  <img class="work-icons" src="/icons/mysql.png">
+  <img class="work-icons" src="/icons/docker.png">
 </div>
 
 

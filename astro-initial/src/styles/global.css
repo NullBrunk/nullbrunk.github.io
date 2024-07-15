@@ -290,3 +290,46 @@ p {
 	z-index: 0;
 	position: absolute;
 }
+
+.work-icons {
+	border: 2px solid white !important;
+  	border-radius: 15px !important;
+	width: 54px;
+	margin-left: 5px;
+}
+
+.tailwind-border {
+	border: 2px solid #1dbeba !important;
+}
+
+.chartjs-border {
+	border: 2px solid #fd777a !important;
+}
+
+.laravel-border {
+	border: 2px solid #ec2c22 !important;
+}
+
+.htmx-border {
+	border: 2px solid #3d74dd !important;
+}
+
+.livewire-border {
+	border: 2px solid #fb70a9 !important;
+}
+
+.swiper-border {
+	border: 2px solid #0080ff !important;;
+}
+
+.react-border {
+	border: 2px solid #00d8ff !important;
+}
+
+.vite-border {
+	border: 2px solid #ac50fe !important;
+}
+
+.python-border {
+	border: 2px solid #3677ac !important;
+}
