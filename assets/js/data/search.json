@@ -1,0 +1,72 @@
+[
+  
+  {
+    "title": "Todo.js",
+    "url": "/posts/todo-js/",
+    "categories": "Programming, Web Dev",
+    "tags": "programming",
+    "date": "2023-05-11 16:00:00 +0000",
+    
+
+
+
+
+
+    
+    "snippet": "General overviewTo gain more experience with React and the localStorage API, I developed a dynamic to-do app with various features such as a search bar, a checkbox to hide completed tasks, and more...",
+    "content": "General overviewTo gain more experience with React and the localStorage API, I developed a dynamic to-do app with various features such as a search bar, a checkbox to hide completed tasks, and more. Tasks are stored in localStorage, ensuring that all modifications are persisted. Finally, the frontend is built using Tailwind.          SourceThe source code and installation instructions are accessible here.You can also test it directly in here."
+  },
+  
+  {
+    "title": "FTPy",
+    "url": "/posts/ftpy/",
+    "categories": "Programming, Hacking tools",
+    "tags": "programming",
+    "date": "2023-05-11 16:00:00 +0000",
+    
+
+
+
+
+
+    
+    "snippet": "This project is basically a simplified FTP client, which, through an established socket, allows connecting and performing FTP exchanges, such as sending, retrieving, or deleting a file.OverviewComm...",
+    "content": "This project is basically a simplified FTP client, which, through an established socket, allows connecting and performing FTP exchanges, such as sending, retrieving, or deleting a file.OverviewCommandsAuth  USER  PASSInteraction with files  PASV  LIST (ls)  RETR (get)  STOR (put)Interaction with filesystem  CD (cd)  PWD (pwd)  MKD (mkdir)  DELE (rm)  CHMOD (chmod)SourceThe source code and installation instructions are accessible here"
+  },
+  
+  {
+    "title": "Laravel Cybershop",
+    "url": "/posts/laravel-ecommerce/",
+    "categories": "Programming, Web Dev",
+    "tags": "programming",
+    "date": "2023-04-23 16:00:00 +0000",
+    
+
+
+
+
+
+    
+    "snippet": "This project was my first project with the Laravel framework. I wanted to create a dynamic E-Commerce website, so I choose to use the Laravel/Livewire tech stack. Additionally, I used vanilla JS, s...",
+    "content": "This project was my first project with the Laravel framework. I wanted to create a dynamic E-Commerce website, so I choose to use the Laravel/Livewire tech stack. Additionally, I used vanilla JS, some library like HTMX and Swiper, and Bootstrap for the front end part. I also used the Pusher websocket to create real-time notifications.General overviewThe products are sorted by categories. Each category has its own search bar, and there is a general search bar that searches across all categories. On the product display pages, you can see the products, their names, categories, prices, and average rating.          LoginYou can create an account with whatever email address you want, but you’ll need to validate it by clicking on the link sent by email. You can reset your password using the same email address.          As you can see, livewire is used for the dynamic validation here.ProductYou can sell a product by adding it in the “market” section. Give it a name, a price, a category, and a main image. You can also add secondary images. Finally, a MD-like editor is available for the product description (bold, italic, list, strikethrough text, links and so on).The drag &amp; drop functionnality is done with filepond.js.          CommentsYou can leave a comment on any product by adding a title, a rating, and your comment. Again, a markdown-like editor is available to help you style your text. Finally, you can “heart” other people’s comments.          SettingsYou can customize your profile by changing your profile picture, email, or password. There is also a profile page displaying the products you are selling, the number of hearts your comments have received, your average product rating, the number of comments you have made, and a list of your recent comments.          PaymentWhen you add a product to your cart, it appears in the small dynamic cart icon in the navbar. Clicking on this cart icon takes you to a more detailed page where you also have the option to buy by making the payment (we have chosen to use Stripe).          I chose Livewire for the dynamic cart page.ChatboxThere is a chat that allows you to interact with sellers or other clients. It is dynamic and supports sending messages as well as images. Additionally, the notification component in the navbar uses WebSockets, making it real-time. Therefore, you will receive notifications instantly as they happen.          The dynamic notification component is updated using livewire + pusher.js websocket.SourceThe source code and installation instructions are accessible here.You’ll also find a docker-compose file there if you want to test the application locally."
+  },
+  
+  {
+    "title": "PHP Chat",
+    "url": "/posts/php-webchat/",
+    "categories": "Programming, Web Dev",
+    "tags": "programming",
+    "date": "2023-02-16 16:00:00 +0000",
+    
+
+
+
+
+
+    
+    "snippet": "In order to gain experience with API development and some concepts like interactivity, designing a responsive UI, and so on, i made a PHP chat with a backend based on a PHP API to manage authentica...",
+    "content": "In order to gain experience with API development and some concepts like interactivity, designing a responsive UI, and so on, i made a PHP chat with a backend based on a PHP API to manage authentication and messages, coupled with a MariaDB database.On the other hand, the front-end is entirely handled by JavaScript with AJAX requests, and by Bootstrap + Vanilla CSS for the CSS part.Login          As you may noticed, the validation is done with AJAX, so it’s dynamic.Chat          The &lt;form&gt; is directly posted to the API. However, the update and delete fonctionnalities are done in JavaScript with AJAX requests.Settings page          The validation of the entered password is also done with AJAX requests.SourceThe source code and installation instructions are accessible hereYou’ll also find a docker-compose file there if you want to test the application locally."
+  }
+  
+]
+

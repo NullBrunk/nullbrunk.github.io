@@ -1,0 +1,127 @@
+
+
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <id>http://localhost:4000/</id>
+  <title>NullBrunk</title>
+  <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
+  <updated>2024-12-25T21:20:47+00:00</updated>
+  <author>
+    <name>Anas</name>
+    <uri>http://localhost:4000/</uri>
+  </author>
+  <link rel="self" type="application/atom+xml" href="http://localhost:4000/feed.xml"/>
+  <link rel="alternate" type="text/html" hreflang="en"
+    href="http://localhost:4000/"/>
+  <generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator>
+  <rights> © 2024 Anas </rights>
+  <icon>/assets/img/favicons/favicon.ico</icon>
+  <logo>/assets/img/favicons/favicon-96x96.png</logo>
+
+
+  
+  <entry>
+    <title>Todo.js</title>
+    <link href="http://localhost:4000/posts/todo-js/" rel="alternate" type="text/html" title="Todo.js" />
+    <published>2023-05-11T16:00:00+00:00</published>
+  
+    <updated>2023-05-11T16:00:00+00:00</updated>
+  
+    <id>http://localhost:4000/posts/todo-js/</id>
+    <content type="text/html" src="http://localhost:4000/posts/todo-js/" />
+    <author>
+      <name>anas</name>
+    </author>
+
+  
+    
+    <category term="Programming" />
+    
+    <category term="Web Dev" />
+    
+  
+
+  <summary>React dynamic to-do list, tailwind frontend, localstorage DB</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>FTPy</title>
+    <link href="http://localhost:4000/posts/ftpy/" rel="alternate" type="text/html" title="FTPy" />
+    <published>2023-05-11T16:00:00+00:00</published>
+  
+    <updated>2023-05-11T16:00:00+00:00</updated>
+  
+    <id>http://localhost:4000/posts/ftpy/</id>
+    <content type="text/html" src="http://localhost:4000/posts/ftpy/" />
+    <author>
+      <name>anas</name>
+    </author>
+
+  
+    
+    <category term="Programming" />
+    
+    <category term="Hacking tools" />
+    
+  
+
+  <summary>FTP client written in Python3</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>Laravel Cybershop</title>
+    <link href="http://localhost:4000/posts/laravel-ecommerce/" rel="alternate" type="text/html" title="Laravel Cybershop" />
+    <published>2023-04-23T16:00:00+00:00</published>
+  
+    <updated>2023-04-23T16:00:00+00:00</updated>
+  
+    <id>http://localhost:4000/posts/laravel-ecommerce/</id>
+    <content type="text/html" src="http://localhost:4000/posts/laravel-ecommerce/" />
+    <author>
+      <name>anas</name>
+    </author>
+
+  
+    
+    <category term="Programming" />
+    
+    <category term="Web Dev" />
+    
+  
+
+  <summary>E-Commerce webapp written with Laravel and Livewire</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>PHP Chat</title>
+    <link href="http://localhost:4000/posts/php-webchat/" rel="alternate" type="text/html" title="PHP Chat" />
+    <published>2023-02-16T16:00:00+00:00</published>
+  
+    <updated>2023-02-16T16:00:00+00:00</updated>
+  
+    <id>http://localhost:4000/posts/php-webchat/</id>
+    <content type="text/html" src="http://localhost:4000/posts/php-webchat/" />
+    <author>
+      <name>anas</name>
+    </author>
+
+  
+    
+    <category term="Programming" />
+    
+    <category term="Web Dev" />
+    
+  
+
+  <summary>Interactive webchat written in PHP/JS with AJAX</summary>
+
+  </entry>
+
+</feed>
+
+
