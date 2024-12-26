@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>NullBrunk</title>
   <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
-  <updated>2024-12-26T15:28:50+00:00</updated>
+  <updated>2024-12-26T15:33:49+00:00</updated>
   <author>
     <name>Anas</name>
     <uri>http://localhost:4000/</uri>
@@ -102,7 +102,7 @@
     <link href="http://localhost:4000/posts/ftpy/" rel="alternate" type="text/html" title="FTPy" />
     <published>2023-05-11T16:00:00+00:00</published>
   
-    <updated>2023-05-11T16:00:00+00:00</updated>
+    <updated>2024-12-26T15:29:23+00:00</updated>
   
     <id>http://localhost:4000/posts/ftpy/</id>
     <content type="text/html" src="http://localhost:4000/posts/ftpy/" />
