@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>NullBrunk</title>
   <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
-  <updated>2024-12-26T15:10:54+00:00</updated>
+  <updated>2024-12-26T15:28:50+00:00</updated>
   <author>
     <name>Anas</name>
     <uri>http://localhost:4000/</uri>
@@ -20,14 +20,40 @@
 
   
   <entry>
-    <title>arpspoofer</title>
-    <link href="http://localhost:4000/posts/wpsh/" rel="alternate" type="text/html" title="arpspoofer" />
+    <title>wpsh</title>
+    <link href="http://localhost:4000/posts/wpsh/" rel="alternate" type="text/html" title="wpsh" />
     <published>2024-12-21T16:00:00+00:00</published>
   
     <updated>2024-12-21T16:00:00+00:00</updated>
   
     <id>http://localhost:4000/posts/wpsh/</id>
     <content type="text/html" src="http://localhost:4000/posts/wpsh/" />
+    <author>
+      <name>anas</name>
+    </author>
+
+  
+    
+    <category term="Programming" />
+    
+    <category term="Hacking tools" />
+    
+  
+
+  <summary>WordPress reverse shell exploit</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>arpspoofer</title>
+    <link href="http://localhost:4000/posts/arpspoofer/" rel="alternate" type="text/html" title="arpspoofer" />
+    <published>2024-11-28T16:00:00+00:00</published>
+  
+    <updated>2024-11-28T16:00:00+00:00</updated>
+  
+    <id>http://localhost:4000/posts/arpspoofer/</id>
+    <content type="text/html" src="http://localhost:4000/posts/arpspoofer/" />
     <author>
       <name>anas</name>
     </author>
@@ -119,32 +145,6 @@
   
 
   <summary>E-Commerce webapp written with Laravel and Livewire</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>PHP Chat</title>
-    <link href="http://localhost:4000/posts/php-webchat/" rel="alternate" type="text/html" title="PHP Chat" />
-    <published>2023-02-16T16:00:00+00:00</published>
-  
-    <updated>2023-02-16T16:00:00+00:00</updated>
-  
-    <id>http://localhost:4000/posts/php-webchat/</id>
-    <content type="text/html" src="http://localhost:4000/posts/php-webchat/" />
-    <author>
-      <name>anas</name>
-    </author>
-
-  
-    
-    <category term="Programming" />
-    
-    <category term="Web Dev" />
-    
-  
-
-  <summary>Interactive webchat written in PHP/JS with AJAX</summary>
 
   </entry>
 
