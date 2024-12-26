@@ -86,23 +86,6 @@
   },
   
   {
-    "title": "CVE-2011-2523 POC",
-    "url": "/posts/vsftpdexploit/",
-    "categories": "Programming, Hacking tools",
-    "tags": "programming, hacking",
-    "date": "2022-06-02 16:00:00 +0000",
-    
-
-
-
-
-
-    
-    "snippet": "🚀 UsageThis poc script allows you to exploit the CVE-2011-2523 (VsFTPd 2.3.4 Backdoor Command Execution)POC script help menuSourceThe source code and installation instructions are accessible here.",
-    "content": "🚀 UsageThis poc script allows you to exploit the CVE-2011-2523 (VsFTPd 2.3.4 Backdoor Command Execution)POC script help menuSourceThe source code and installation instructions are accessible here."
-  },
-  
-  {
     "title": "arpspoofer",
     "url": "/posts/arpspoofer/",
     "categories": "Programming, Hacking tools",
