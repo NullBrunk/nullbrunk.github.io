@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>NullBrunk</title>
   <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
-  <updated>2024-12-25T21:20:47+00:00</updated>
+  <updated>2024-12-26T13:07:00+00:00</updated>
   <author>
     <name>Anas</name>
     <uri>http://localhost:4000/</uri>
@@ -20,11 +20,37 @@
 
   
   <entry>
+    <title>arpspoofer</title>
+    <link href="http://localhost:4000/posts/wpsh/" rel="alternate" type="text/html" title="arpspoofer" />
+    <published>2024-12-21T16:00:00+00:00</published>
+  
+    <updated>2024-12-21T16:00:00+00:00</updated>
+  
+    <id>http://localhost:4000/posts/wpsh/</id>
+    <content type="text/html" src="http://localhost:4000/posts/wpsh/" />
+    <author>
+      <name>anas</name>
+    </author>
+
+  
+    
+    <category term="Programming" />
+    
+    <category term="Hacking tools" />
+    
+  
+
+  <summary>ARP Cache Poisoning tool</summary>
+
+  </entry>
+
+  
+  <entry>
     <title>Todo.js</title>
     <link href="http://localhost:4000/posts/todo-js/" rel="alternate" type="text/html" title="Todo.js" />
-    <published>2023-05-11T16:00:00+00:00</published>
+    <published>2024-07-04T16:00:00+00:00</published>
   
-    <updated>2023-05-11T16:00:00+00:00</updated>
+    <updated>2024-07-04T16:00:00+00:00</updated>
   
     <id>http://localhost:4000/posts/todo-js/</id>
     <content type="text/html" src="http://localhost:4000/posts/todo-js/" />
@@ -62,7 +88,7 @@
     
     <category term="Programming" />
     
-    <category term="Hacking tools" />
+    <category term="Networking" />
     
   
 

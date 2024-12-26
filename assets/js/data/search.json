@@ -1,11 +1,28 @@
 [
   
   {
+    "title": "arpspoofer",
+    "url": "/posts/wpsh/",
+    "categories": "Programming, Hacking tools",
+    "tags": "programming, hacking",
+    "date": "2024-12-21 16:00:00 +0000",
+    
+
+
+
+
+
+    
+    "snippet": "🚀 UsageThis script allows you to exploit a WordPress instance to obtain a reverse shell by editing the 404.php theme page. It requires the username and password of a valid WordPress administrator. ...",
+    "content": "🚀 UsageThis script allows you to exploit a WordPress instance to obtain a reverse shell by editing the 404.php theme page. It requires the username and password of a valid WordPress administrator. Once authenticated, the script establishes a reverse shell, granting access to the remote instance.wpsh help menuSourceThe source code and installation instructions are accessible here."
+  },
+  
+  {
     "title": "Todo.js",
     "url": "/posts/todo-js/",
     "categories": "Programming, Web Dev",
     "tags": "programming",
-    "date": "2023-05-11 16:00:00 +0000",
+    "date": "2024-07-04 16:00:00 +0000",
     
 
 
@@ -20,8 +37,8 @@
   {
     "title": "FTPy",
     "url": "/posts/ftpy/",
-    "categories": "Programming, Hacking tools",
-    "tags": "programming",
+    "categories": "Programming, Networking",
+    "tags": "programming, networking",
     "date": "2023-05-11 16:00:00 +0000",
     
 
@@ -66,6 +83,40 @@
     
     "snippet": "In order to gain experience with API development and some concepts like interactivity, designing a responsive UI, and so on, i made a PHP chat with a backend based on a PHP API to manage authentica...",
     "content": "In order to gain experience with API development and some concepts like interactivity, designing a responsive UI, and so on, i made a PHP chat with a backend based on a PHP API to manage authentication and messages, coupled with a MariaDB database.On the other hand, the front-end is entirely handled by JavaScript with AJAX requests, and by Bootstrap + Vanilla CSS for the CSS part.Login          As you may noticed, the validation is done with AJAX, so it’s dynamic.Chat          The &lt;form&gt; is directly posted to the API. However, the update and delete fonctionnalities are done in JavaScript with AJAX requests.Settings page          The validation of the entered password is also done with AJAX requests.SourceThe source code and installation instructions are accessible hereYou’ll also find a docker-compose file there if you want to test the application locally."
+  },
+  
+  {
+    "title": "CVE-2011-2523 POC",
+    "url": "/posts/vsftpdexploit/",
+    "categories": "Programming, Hacking tools",
+    "tags": "programming, hacking",
+    "date": "2022-06-02 16:00:00 +0000",
+    
+
+
+
+
+
+    
+    "snippet": "🚀 UsageThis poc script allows you to exploit the CVE-2011-2523 (VsFTPd 2.3.4 Backdoor Command Execution)POC script help menuSourceThe source code and installation instructions are accessible here.",
+    "content": "🚀 UsageThis poc script allows you to exploit the CVE-2011-2523 (VsFTPd 2.3.4 Backdoor Command Execution)POC script help menuSourceThe source code and installation instructions are accessible here."
+  },
+  
+  {
+    "title": "arpspoofer",
+    "url": "/posts/arpspoofer/",
+    "categories": "Programming, Hacking tools",
+    "tags": "programming, hacking",
+    "date": "2021-11-28 16:00:00 +0000",
+    
+
+
+
+
+
+    
+    "snippet": "🚀 UsageThis tool allows you to perform an ARP cache poisoning attacks between two targets (a victim and a gateway) on a local network. It manipulates the ARP tables of the victims to redirect netwo...",
+    "content": "🚀 UsageThis tool allows you to perform an ARP cache poisoning attacks between two targets (a victim and a gateway) on a local network. It manipulates the ARP tables of the victims to redirect network traffic through the attacker, enabling interception or modification of data.  In the help menu, you can see -g GATEWAY and -t TARGET. However, if you want to capture traffic between two victims without one of them being the gateway, you can still use this tool with -g TARGET1 and -t TARGET2.arpspoofer help menuSourceThe source code and installation instructions are accessible here."
   }
   
 ]
