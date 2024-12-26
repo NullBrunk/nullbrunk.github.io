@@ -35,17 +35,17 @@
 <meta property="og:locale" content="en" />
 <meta name="description" content="ARP Cache Poisoning tool" />
 <meta property="og:description" content="ARP Cache Poisoning tool" />
-<link rel="canonical" href="http://localhost:4000/posts/wpsh/" />
-<meta property="og:url" content="http://localhost:4000/posts/wpsh/" />
+<link rel="canonical" href="http://localhost:4000/posts/arpspoofer/" />
+<meta property="og:url" content="http://localhost:4000/posts/arpspoofer/" />
 <meta property="og:site_name" content="NullBrunk" />
-<meta property="og:image" content="http://localhost:4000/assets/img/projects/wpsh.png" />
+<meta property="og:image" content="http://localhost:4000/assets/img/projects/arpspoofer.png" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2024-12-21T16:00:00+00:00" />
+<meta property="article:published_time" content="2021-11-28T16:00:00+00:00" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta property="twitter:image" content="http://localhost:4000/assets/img/projects/wpsh.png" />
+<meta property="twitter:image" content="http://localhost:4000/assets/img/projects/arpspoofer.png" />
 <meta property="twitter:title" content="arpspoofer" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Anas","url":"https://github.com/NullBrunk/"},"dateModified":"2024-12-21T16:00:00+00:00","datePublished":"2024-12-21T16:00:00+00:00","description":"ARP Cache Poisoning tool","headline":"arpspoofer","image":"http://localhost:4000/assets/img/projects/wpsh.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/wpsh/"},"url":"http://localhost:4000/posts/wpsh/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Anas","url":"https://github.com/NullBrunk/"},"dateModified":"2021-11-28T16:00:00+00:00","datePublished":"2021-11-28T16:00:00+00:00","description":"ARP Cache Poisoning tool","headline":"arpspoofer","image":"http://localhost:4000/assets/img/projects/arpspoofer.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/arpspoofer/"},"url":"http://localhost:4000/posts/arpspoofer/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -758,13 +758,13 @@
 
 <time
   
-  data-ts="1734796800"
+  data-ts="1638115200"
   data-df="ll"
   
     data-bs-toggle="tooltip" data-bs-placement="bottom"
   
 >
-  Dec 21, 2024
+  Nov 28, 2021
 </time>
 
       </span>
@@ -780,7 +780,7 @@
         
 
         <div class="mt-3 mb-3">
-          <a href="/assets/img/projects/wpsh.png" class="popup img-link preview-img shimmer"><img src="/assets/img/projects/wpsh.png"  alt="Preview Image" width="1200" height="630"  loading="lazy"></a></div>
+          <a href="/assets/img/projects/arpspoofer.png" class="popup img-link preview-img shimmer"><img src="/assets/img/projects/arpspoofer.png"  alt="Preview Image" width="1200" height="630"  loading="lazy"></a></div>
       
 
       <div class="d-flex justify-content-between">
@@ -825,7 +825,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="60 words"
+  title="100 words"
 >
   <em>1 min</em> read</span>
 
@@ -860,13 +860,19 @@
 
   <div class="content">
     <h2 id="-usage"><span class="me-2">🚀 Usage</span><a href="#-usage" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
-<p>This script allows you to exploit a WordPress instance to obtain a reverse shell by editing the 404.php theme page. It requires the username and password of a valid WordPress administrator. Once authenticated, the script establishes a reverse shell, granting access to the remote instance.</p>
+<p>This tool allows you to perform an ARP cache poisoning attacks between two targets (a <code class="language-plaintext highlighter-rouge">victim</code> and a <code class="language-plaintext highlighter-rouge">gateway</code>) on a local network. It manipulates the ARP tables of the victims to redirect network traffic through the attacker, enabling interception or modification of data.</p>
 
-<p><a href="https://github.com/user-attachments/assets/82b28668-0dec-4bb3-a572-7e12c7b39806" class="popup img-link  shimmer"><img src="https://github.com/user-attachments/assets/82b28668-0dec-4bb3-a572-7e12c7b39806" alt="image" loading="lazy"></a>
-<em>wpsh help menu</em></p>
+<blockquote class="prompt-tip">
+  <p>In the help menu, you can see <code class="language-plaintext highlighter-rouge">-g GATEWAY</code> and <code class="language-plaintext highlighter-rouge">-t TARGET</code>. However, if you want to capture traffic between two victims without one of them being the gateway, you can still use this tool with <code class="language-plaintext highlighter-rouge">-g TARGET1</code> and <code class="language-plaintext highlighter-rouge">-t TARGET2</code>.</p>
+</blockquote>
+
+<p><br /></p>
+
+<p><a href="https://github.com/user-attachments/assets/c642eccc-908d-43bf-846b-f8f3425105fe" class="popup img-link  shimmer"><img src="https://github.com/user-attachments/assets/c642eccc-908d-43bf-846b-f8f3425105fe" alt="image" loading="lazy"></a>
+<em>arpspoofer help menu</em></p>
 
 <h2 id="source"><span class="me-2">Source</span><a href="#source" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
-<p>The source code and installation instructions are accessible <a href="https://github.com/NullBrunk/wpsh" target="_blank">here</a>.</p>
+<p>The source code and installation instructions are accessible <a href="https://github.com/NullBrunk/arpspoofer" target="_blank">here</a>.</p>
 
 
   </div>
@@ -931,21 +937,21 @@
 
       
 
-      <a href="https://twitter.com/intent/tweet?text=arpspoofer%20-%20NullBrunk&url=http%3A%2F%2Flocalhost%3A4000%2Fposts%2Fwpsh%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
+      <a href="https://twitter.com/intent/tweet?text=arpspoofer%20-%20NullBrunk&url=http%3A%2F%2Flocalhost%3A4000%2Fposts%2Farpspoofer%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
         <i class="fa-fw fa-brands fa-square-x-twitter"></i>
       </a>
     
 
       
 
-      <a href="https://www.facebook.com/sharer/sharer.php?title=arpspoofer%20-%20NullBrunk&u=http%3A%2F%2Flocalhost%3A4000%2Fposts%2Fwpsh%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
+      <a href="https://www.facebook.com/sharer/sharer.php?title=arpspoofer%20-%20NullBrunk&u=http%3A%2F%2Flocalhost%3A4000%2Fposts%2Farpspoofer%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
         <i class="fa-fw fab fa-facebook-square"></i>
       </a>
     
 
       
 
-      <a href="https://t.me/share/url?url=http%3A%2F%2Flocalhost%3A4000%2Fposts%2Fwpsh%2F&text=arpspoofer%20-%20NullBrunk" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
+      <a href="https://t.me/share/url?url=http%3A%2F%2Flocalhost%3A4000%2Fposts%2Farpspoofer%2F&text=arpspoofer%20-%20NullBrunk" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
         <i class="fa-fw fab fa-telegram"></i>
       </a>
     
@@ -1167,79 +1173,79 @@
   
 
   
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
     
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
 
 
 
@@ -1253,6 +1259,34 @@
   <aside id="related-posts" aria-labelledby="related-label">
     <h3 class="mb-4" id="related-label">Further Reading</h3>
     <nav class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 mb-4">
+      
+        <article class="col">
+          <a href="/posts/wpsh/" class="post-preview card h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1734796800"
+  data-df="ll"
+  
+>
+  Dec 21, 2024
+</time>
+
+              <h4 class="pt-0 my-2">arpspoofer</h4>
+              <div class="text-muted">
+                <p>ARP Cache Poisoning tool</p>
+              </div>
+            </div>
+          </a>
+        </article>
       
         <article class="col">
           <a href="/posts/vsftpdexploit/" class="post-preview card h-100">
@@ -1277,34 +1311,6 @@
               <h4 class="pt-0 my-2">CVE-2011-2523 POC</h4>
               <div class="text-muted">
                 <p>VsFTPd 2.3.4 Backdoor Command Execution</p>
-              </div>
-            </div>
-          </a>
-        </article>
-      
-        <article class="col">
-          <a href="/posts/arpspoofer/" class="post-preview card h-100">
-            <div class="card-body">
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1638115200"
-  data-df="ll"
-  
->
-  Nov 28, 2021
-</time>
-
-              <h4 class="pt-0 my-2">arpspoofer</h4>
-              <div class="text-muted">
-                <p>ARP Cache Poisoning tool</p>
               </div>
             </div>
           </a>
@@ -1352,19 +1358,19 @@
   
 
   
-    <a
-      href="/posts/todo-js/"
-      class="btn btn-outline-primary"
-      aria-label="Older"
-    >
-      <p>Todo.js</p>
-    </a>
+    <div class="btn btn-outline-primary disabled" aria-label="Older">
+      <p>-</p>
+    </div>
   
 
   
-    <div class="btn btn-outline-primary disabled" aria-label="Newer">
-      <p>-</p>
-    </div>
+    <a
+      href="/posts/vsftpdexploit/"
+      class="btn btn-outline-primary"
+      aria-label="Newer"
+    >
+      <p>CVE-2011-2523 POC</p>
+    </a>
   
 </nav>
 
