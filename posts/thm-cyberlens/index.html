@@ -1257,7 +1257,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="844 words"
+  title="845 words"
 >
   <em>4 min</em> read</span>
 
@@ -1469,7 +1469,7 @@ msf6 exploit<span class="o">(</span>windows/http/apache_tika_jp2_jscript<span cl
 
 <h2 id="privesc"><span class="me-2">Privesc</span><a href="#privesc" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 
-<p>Since we are already in Metasploit, let’s use the integrated <code class="language-plaintext highlighter-rouge">post/multi/recon/local_exploit_suggester</code>. To do this, let’s start by backgrounding the meterpreter session by pressing <code class="language-plaintext highlighter-rouge">Ctrl + Z</code>, then run the following commands:</p>
+<p>Since we are already in Metasploit, let’s use the integrated <code class="language-plaintext highlighter-rouge">post/multi/recon/local_exploit_suggester</code>. To do this, let’s start by backgrounding the meterpreter session by pressing <code class="language-plaintext highlighter-rouge">Ctrl + Z</code>, then let’s run the following commands:</p>
 
 <div class="language-bash highlighter-rouge"><div class="code-header">
         <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span>
@@ -1486,7 +1486,7 @@ msf6 post<span class="o">(</span>multi/recon/local_exploit_suggester<span class=
 <p><a href="/assets/img/writeups/thm/cyberlens/privesc_enum.png" class="popup img-link  shimmer"><img src="/assets/img/writeups/thm/cyberlens/privesc_enum.png" alt="privesc_enum" loading="lazy"></a>
 <em>Metasploit’s local_exploit_suggester in action</em></p>
 
-<p>The scan reveals several vulnerabilities, but only one is explicitly marked as “vulnerable” (and not simply as “appears to be vulnerable”). You can learn more about the “Always Install Elevated” feature on the <a href="https://learn.microsoft.com/en-us/windows/win32/msi/alwaysinstallelevated">Microsoft official doc</a> and read <a href="https://dmcxblue.gitbook.io/red-team-notes/privesc/unquoted-service-path">this ressource</a> for an <em>Attacker perspective</em>.</p>
+<p>The scan reveals several vulnerabilities, but only one is explicitly marked as “vulnerable” <em>(and not simply as “appears to be vulnerable”)</em>. You can learn more about the “Always Install Elevated” feature on the <a href="https://learn.microsoft.com/en-us/windows/win32/msi/alwaysinstallelevated">Microsoft official doc</a> and read <a href="https://dmcxblue.gitbook.io/red-team-notes/privesc/unquoted-service-path">this ressource</a> for an <em>Attacker perspective</em>.</p>
 
 <blockquote>
   <p>Users with limited privileges can exploit this feature by creating a Windows Installer installation package (MSI) that</p>
@@ -1522,7 +1522,7 @@ msf6 exploit<span class="o">(</span>windows/local/always_install_elevated<span c
 msf6 exploit<span class="o">(</span>windows/local/always_install_elevated<span class="o">)</span> <span class="o">&gt;</span> <span class="nb">set </span>LPORT 9999
 msf6 exploit<span class="o">(</span>windows/local/always_install_elevated<span class="o">)</span> <span class="o">&gt;</span> run
 </pre></td></tr></tbody></table></code></div></div>
-<p><a href="/assets/img/writeups/thm/cyberlens/privesc_enum.png" class="popup img-link  shimmer"><img src="/assets/img/writeups/thm/cyberlens/privesc_enum.png" alt="exploit_root" loading="lazy"></a>
+<p><a href="/assets/img/writeups/thm/cyberlens/root.txt.png" class="popup img-link  shimmer"><img src="/assets/img/writeups/thm/cyberlens/root.txt.png" alt="exploit_root" loading="lazy"></a>
 <em>And we rooted the room</em></p>
 
 <h1 id="conclusion">Conclusion</h1>
