@@ -30,22 +30,26 @@
 
   <!-- Begin Jekyll SEO tag v2.8.0 -->
 <meta name="generator" content="Jekyll v4.3.4" />
-<meta property="og:title" content="hacking" />
+<meta property="og:title" content="Todo.js" />
+<meta name="author" content="Anas" />
 <meta property="og:locale" content="en" />
-<meta name="description" content="A minimal, responsive and feature-rich Jekyll theme for technical writing." />
-<meta property="og:description" content="A minimal, responsive and feature-rich Jekyll theme for technical writing." />
-<link rel="canonical" href="http://localhost:4000/tags/hacking/" />
-<meta property="og:url" content="http://localhost:4000/tags/hacking/" />
+<meta name="description" content="React dynamic to-do list, tailwind frontend, localstorage DB" />
+<meta property="og:description" content="React dynamic to-do list, tailwind frontend, localstorage DB" />
+<link rel="canonical" href="http://localhost:4000/posts/todojs/" />
+<meta property="og:url" content="http://localhost:4000/posts/todojs/" />
 <meta property="og:site_name" content="NullBrunk" />
-<meta property="og:type" content="website" />
-<meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="hacking" />
+<meta property="og:image" content="http://localhost:4000/assets/img/projects/todojs.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-07-04T16:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="http://localhost:4000/assets/img/projects/todojs.png" />
+<meta property="twitter:title" content="Todo.js" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","description":"A minimal, responsive and feature-rich Jekyll theme for technical writing.","headline":"hacking","url":"http://localhost:4000/tags/hacking/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Anas","url":"https://github.com/NullBrunk/"},"dateModified":"2024-07-04T16:00:00+00:00","datePublished":"2024-07-04T16:00:00+00:00","description":"React dynamic to-do list, tailwind frontend, localstorage DB","headline":"Todo.js","image":"http://localhost:4000/assets/img/projects/todojs.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/todojs/"},"url":"http://localhost:4000/posts/todojs/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
-  <title>hacking | NullBrunk
+  <title>Todo.js | NullBrunk
   </title>
 
   <!--
@@ -109,9 +113,16 @@
   <!-- 3rd-party Dependencies -->
 
   
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tocbot@4.32.2/dist/tocbot.min.css">
   
 
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/loading-attribute-polyfill@2.1.1/dist/loading-attribute-polyfill.min.css">
+  
+
+  
+    <!-- Image Popup -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox@3.3.0/dist/css/glightbox.min.css">
   
 
   <!-- Scripts -->
@@ -127,6 +138,13 @@
 <!-- layout specified -->
 
 
+  
+
+  
+    <!-- image lazy-loading & popup & clipboard -->
+    
+  
+
 
 
 
@@ -176,9 +194,37 @@
 
   
 
+  
+    
+
+    
+
+  
+
+  
+    
+
+    
+
+  
+
+  
+    
+
+    
+
+  
+
+  
+    
+
+    
+
+  
 
 
-  <script defer src="https://cdn.jsdelivr.net/combine/npm/simple-jekyll-search@1.10.0/dest/simple-jekyll-search.min.js,npm/dayjs@1.11.13/dayjs.min.js,npm/dayjs@1.11.13/locale/en.js,npm/dayjs@1.11.13/plugin/relativeTime.js,npm/dayjs@1.11.13/plugin/localizedFormat.js"></script>
+
+  <script defer src="https://cdn.jsdelivr.net/combine/npm/simple-jekyll-search@1.10.0/dest/simple-jekyll-search.min.js,npm/loading-attribute-polyfill@2.1.1/dist/loading-attribute-polyfill.umd.min.js,npm/glightbox@3.3.0/dist/js/glightbox.min.js,npm/clipboard@2.0.11/dist/clipboard.min.js,npm/dayjs@1.11.13/dayjs.min.js,npm/dayjs@1.11.13/locale/en.js,npm/dayjs@1.11.13/plugin/relativeTime.js,npm/dayjs@1.11.13/plugin/localizedFormat.js,npm/tocbot@4.32.2/dist/tocbot.min.js"></script>
 
 
 
@@ -186,11 +232,15 @@
 
 
 
-<script defer src="/assets/js/dist/misc.min.js"></script>
+<script defer src="/assets/js/dist/post.min.js"></script>
 
 
 
 <!-- Pageviews -->
+
+  
+
+  
 
 
 
@@ -224,44 +274,55 @@
       </li>
       <!-- the real tabs -->
       
-        <li class="nav-item">
-          <a href="/categories/" class="nav-link">
-            <i class="fa-fw fas fa-stream"></i>
-            
+          
+          <li class="nav-item">
+            <a href="/tools/" class="nav-link">
+              <i class="fa-fw fas fas fa-code"></i>
+              
 
-            <span>CATEGORIES</span>
-          </a>
-        </li>
+              <span>TOOLS</span>
+            </a>
+          </li>
+        
         <!-- .nav-item -->
       
-        <li class="nav-item">
-          <a href="/tags/" class="nav-link">
-            <i class="fa-fw fas fa-tags"></i>
-            
+          
+          <li class="nav-item">
+            <a href="/prog/" class="nav-link">
+              <i class="fa-fw fas fa-screwdriver-wrench"></i>
+              
 
-            <span>TAGS</span>
-          </a>
-        </li>
+              <span>PROG</span>
+            </a>
+          </li>
+        
         <!-- .nav-item -->
       
-        <li class="nav-item">
-          <a href="/tools/" class="nav-link">
-            <i class="fa-fw fas fa-screwdriver-wrench"></i>
-            
+          
+          <li class="nav-item">
+            <a href="/tags/" class="nav-link">
+              <i class="fa-fw fas fa-tags"></i>
+              
 
-            <span>TOOLS</span>
-          </a>
-        </li>
+              <span>TAGS</span>
+            </a>
+          </li>
+        
         <!-- .nav-item -->
       
-        <li class="nav-item">
-          <a href="/about/" class="nav-link">
-            <i class="fa-fw fas fa-info-circle"></i>
-            
+          
+          <li class="nav-item">
+            <a href="/about/" class="nav-link">
+              <i class="fa-fw fas fa-info-circle"></i>
+              
 
-            <span>ABOUT</span>
-          </a>
-        </li>
+              <span>ABOUT</span>
+            </a>
+          </li>
+        
+        <!-- .nav-item -->
+      
+        
         <!-- .nav-item -->
       
     </ul>
@@ -369,134 +430,467 @@
 
     <div id="main-wrapper" class="d-flex justify-content-center">
       <div class="container d-flex flex-column px-xxl-5">
-        <!-- The Top Bar -->
-
-<header id="topbar-wrapper" aria-label="Top Bar">
-  <div
-    id="topbar"
-    class="d-flex align-items-center justify-content-between px-lg-3 h-100"
-  >
-    <nav id="breadcrumb" aria-label="Breadcrumb">
-      
-
-      
-        
-          
-            <span>
-              <a href="/">Home</a>
-            </span>
-
-          
-        
-          
-            <span>
-              <a href="/tags/">Tags</a>
-            </span>
-          
-        
-          
-            
-              <span>hacking</span>
-            
-
-          
-        
-      
-    </nav>
-    <!-- endof #breadcrumb -->
-
-    <button type="button" id="sidebar-trigger" class="btn btn-link">
-      <i class="fas fa-bars fa-fw"></i>
-    </button>
-
-    <div id="topbar-title">
-      Tag
-    </div>
-
-    <button type="button" id="search-trigger" class="btn btn-link">
-      <i class="fas fa-search fa-fw"></i>
-    </button>
-
-   
-    <button type="button" class="btn btn-link text-decoration-none" id="search-cancel">Cancel</button>
-  </div>
-</header>
-
+        <!--  include topbar.html lang=lang -->
 
         <div class="row flex-grow-1">
           <main aria-label="Main Content" class="col-12 col-lg-11 col-xl-9 px-md-4">
             
+              <!-- Refactor the HTML structure -->
+
+
+
+<!--
+  In order to allow a wide table to scroll horizontally,
+  we suround the markdown table with `<div class="table-wrapper">` and `</div>`
+-->
+
+
+
+<!--
+  Fixed kramdown code highlight rendering:
+  https://github.com/penibelst/jekyll-compress-html/issues/101
+  https://github.com/penibelst/jekyll-compress-html/issues/71#issuecomment-188144901
+-->
+
+
+
+<!-- Change the icon of checkbox -->
+
+
+
+<!-- Handle images -->
+
+
+
+
+  
+  
+
+  
+    
+      
+      
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+
+    <!-- take out classes -->
+    
+
+    
+    
+
+    
+
+    
+      
+    
+
+    <!-- lazy-load images -->
+    
+
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
+
+      
+        <!-- create the image wrapper -->
+        
+
+        
+        
+      
+    
+
+    <!-- combine -->
+    
+  
+
+  
+
+
+<!-- Add header for code snippets -->
+
+
+
+<!-- Create heading anchors -->
+
+
+
+
+
+  
+  
+
+  
+    
+    
+
+    
+      
+        
+        
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+
+    
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+
+
+
+
+<!-- return -->
+
+
+
+
+
+
+
+
+
+
+<header id="topbar-wrapper" aria-label="Top Bar">
+    <div id="topbar" class="d-flex align-items-center justify-content-between h-100" >
+        <nav id="breadcrumb" aria-label="Breadcrumb">
+            <span><a href="/">Home</a></span>
+             
+
+            
+                <span>
+                 <a href="/categories/web-dev/">Web Dev</a>
+                </span>
+            
+                <span>
+                 <a href="/categories/react/">React</a>
+                </span>
+            
+
+             
+             
+            
+
+            
+             
+            
+            <span>Todo.js</span>
+        </nav>
+    </div>
+</header>
+
+<article class="px-1" data-toc="true">
+  <header>
+    <h1 data-toc-skip>Todo.js</h1>
+    
+      <p class="post-desc fw-light mb-4">React dynamic to-do list, tailwind frontend, localstorage DB</p>
+    
+
+    <div class="post-meta text-muted">
+      <!-- published date -->
+      <span>
+        Posted
+        <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1720108800"
+  data-df="ll"
+  
+    data-bs-toggle="tooltip" data-bs-placement="bottom"
+  
+>
+  Jul  4, 2024
+</time>
+
+      </span>
+
+      <!-- lastmod date -->
+      
+
+      
+        
+        
+        
+
+        
+
+        <div class="mt-3 mb-3">
+          <a href="/assets/img/projects/todojs.png" class="popup img-link preview-img shimmer"><img src="/assets/img/projects/todojs.png"  alt="Preview Image" width="1200" height="630"  loading="lazy"></a></div>
+      
+
+      <div class="d-flex justify-content-between">
+        <!-- author(s) -->
+        <span>
+          
+
+          By
+
+          <em>
+            
               
+                <a href="https://github.com/NullBrunk/">Anas</a>
+                
+              
+            
+          </em>
+        </span>
+
+        <div>
+          <!-- pageviews -->
+          
+
+          <!-- read time -->
+          <!-- Calculate the post's reading time, and display the word count in tooltip -->
 
 
 
-<article class="px-1">
-  
-    
-
-
-
-<div id="page-tag">
-  <h1 class="ps-lg-2">
-    <i class="fa fa-tag fa-fw text-muted"></i>
-    hacking
-    <span class="lead text-muted ps-2">2</span>
-  </h1>
-  <ul class="content ps-0">
-    
-      <li class="d-flex justify-content-between px-md-3">
-        <a href="/posts/wpsh/">wpsh</a>
-        <span class="dash flex-grow-1"></span>
-        <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
+<!-- words per minute -->
 
 
 
 
-<time
-  
-    class="text-muted small text-nowrap"
-  
-  data-ts="1735142400"
-  data-df="ll"
-  
+
+
+
+
+
+
+<!-- return element -->
+<span
+  class="readtime"
+  data-bs-toggle="tooltip"
+  data-bs-placement="bottom"
+  title="70 words"
 >
-  Dec 25, 2024
-</time>
+  <em>1 min</em> read</span>
 
-      </li>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  
+    <div id="toc-bar" class="d-flex align-items-center justify-content-between invisible">
+      <span class="label text-truncate">Todo.js</span>
+      <button type="button" class="toc-trigger btn me-1">
+        <i class="fa-solid fa-list-ul fa-fw"></i>
+      </button>
+    </div>
+
+    <button id="toc-solo-trigger" type="button" class="toc-trigger btn btn-outline-secondary btn-sm">
+      <span class="label ps-2 pe-1">Contents</span>
+      <i class="fa-solid fa-angle-right fa-fw"></i>
+    </button>
+
+    <dialog id="toc-popup" class="p-0">
+      <div class="header d-flex flex-row align-items-center justify-content-between">
+        <div class="label text-truncate py-2 ms-4">Todo.js</div>
+        <button id="toc-popup-close" type="button" class="btn mx-1 my-1 opacity-75">
+          <i class="fas fa-close"></i>
+        </button>
+      </div>
+      <div id="toc-popup-content" class="px-4 py-3 pb-4"></div>
+    </dialog>
+  
+
+  <div class="content">
+    <h2 id="general-overview"><span class="me-2">General overview</span><a href="#general-overview" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+
+<p>To gain more experience with React and the localStorage API, I developed a dynamic to-do app with various features such as a search bar, a checkbox to hide completed tasks, and more. Tasks are stored in localStorage, ensuring that all modifications are persisted. Finally, the frontend is built using Tailwind.
+<br /></p>
+
+<p>
+  <video class="embed-video file embed-video-custom" src="https://github.com/NullBrunk/Todo.js/assets/125673909/7cad5568-015f-4513-b549-e5904830fbcc" controls="">
     
-      <li class="d-flex justify-content-between px-md-3">
-        <a href="/posts/arpspoofer/">arpspoofer</a>
-        <span class="dash flex-grow-1"></span>
-        <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
+  </video>
   
-    class="text-muted small text-nowrap"
-  
-  data-ts="1732809600"
-  data-df="ll"
-  
->
-  Nov 28, 2024
-</time>
+</p>
 
-      </li>
+<h2 id="source"><span class="me-2">Source</span><a href="#source" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<p>The source code and installation instructions are accessible <a href="https://github.com/NullBrunk/Todo.js" target="_blank">here</a>.</p>
+
+<p>You can also test it directly <a href="https://react-todo-0.netlify.app" target="_blank">in here</a>.</p>
+
+
+  </div>
+
+  <div class="post-tail-wrapper text-muted">
+    <!-- categories -->
     
-  </ul>
+      <div class="post-meta mb-3">
+        <i class="far fa-folder-open fa-fw me-1"></i>
+        
+          <a href="/categories/web-dev/">Web Dev</a>,
+          <a href="/categories/react/">React</a>
+      </div>
+    
+
+    <!-- tags -->
+    
+
+    <div
+      class="
+        post-tail-bottom
+        d-flex justify-content-between align-items-center mt-5 pb-2
+      "
+    >
+      <div class="license-wrapper">
+        
+          
+
+          This post is licensed under 
+        <a href="https://creativecommons.org/licenses/by/4.0/">
+          CC BY 4.0
+        </a>
+         by the author.
+        
+      </div>
+
+      <!-- Post sharing snippet -->
+
+<div class="share-wrapper d-flex align-items-center">
+  <span class="share-label text-muted">Share</span>
+  <span class="share-icons">
+    
+    
+    
+
+    
+
+      
+
+      <a href="https://twitter.com/intent/tweet?text=Todo.js%20-%20NullBrunk&url=http%3A%2F%2Flocalhost%3A4000%2Fposts%2Ftodojs%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
+        <i class="fa-fw fa-brands fa-square-x-twitter"></i>
+      </a>
+    
+
+      
+
+      <a href="https://www.facebook.com/sharer/sharer.php?title=Todo.js%20-%20NullBrunk&u=http%3A%2F%2Flocalhost%3A4000%2Fposts%2Ftodojs%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
+        <i class="fa-fw fab fa-facebook-square"></i>
+      </a>
+    
+
+      
+
+      <a href="https://t.me/share/url?url=http%3A%2F%2Flocalhost%3A4000%2Fposts%2Ftodojs%2F&text=Todo.js%20-%20NullBrunk" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
+        <i class="fa-fw fab fa-telegram"></i>
+      </a>
+    
+
+    <button
+      id="copy-link"
+      aria-label="Copy link"
+      class="btn small"
+      data-bs-toggle="tooltip"
+      data-bs-placement="top"
+      title="Copy link"
+      data-title-succeed="Link copied successfully!"
+    >
+      <i class="fa-fw fas fa-link pe-none fs-6"></i>
+    </button>
+  </span>
 </div>
 
-  
+    </div>
+    <!-- .post-tail-bottom -->
+  </div>
+  <!-- div.post-tail-wrapper -->
 </article>
+
 
             
           </main>
@@ -541,7 +935,7 @@
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/thm-cyberlens/">TryHackMe | CyberLens</a>
+          <a href="/posts/thm-cyberlens/">CyberLens</a>
         </li>
       
         
@@ -555,7 +949,7 @@
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/todo-js/">Todo.js</a>
+          <a href="/posts/todojs/">Todo.js</a>
         </li>
       
     </ul>
@@ -584,30 +978,6 @@
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
       
         
         
@@ -671,11 +1041,6 @@
     
     
     
-  
-    
-    
-    
-    
       
         
         
@@ -691,58 +1056,6 @@
     
     
       
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
     
   
     
@@ -778,18 +1091,6 @@
     
     
       
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
     
   
     
@@ -828,16 +1129,10 @@
     <div class="d-flex flex-wrap mt-3 mb-1 me-3">
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/programming/">programming</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/hacking/">hacking</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/hacking-tools/">hacking-tools</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/metasploit/">metasploit</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/networking/">networking</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/tryhackme/">tryhackme</a>
@@ -858,12 +1153,157 @@
             </div>
 
             
+              
+              
+
+
+
+
+
+
+  <div class="toc-border-cover z-3"></div>
+  <section id="toc-wrapper" class="invisible position-sticky ps-0 pe-4 pb-4">
+    <h2 class="panel-heading ps-3 pb-1 mb-0">Contents</h2>
+    <nav id="toc"></nav>
+  </section>
+
+
+            
           </aside>
         </div>
 
         <div class="row">
           <!-- tail -->
           <div id="tail-wrapper" class="col-12 col-lg-11 col-xl-9 px-md-4">
+            
+              
+              <!-- Recommend the other 3 posts according to the tags and categories of the current post. -->
+
+<!-- The total size of related posts -->
+
+
+<!-- An random integer that bigger than 0 -->
+
+
+<!-- Equals to TAG_SCORE / {max_categories_hierarchy} -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+
+
+
+
+
+
+
+
+
+
+  <aside id="related-posts" aria-labelledby="related-label">
+    <h3 class="mb-4" id="related-label">Further Reading</h3>
+    <nav class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 mb-4">
+      
+        <article class="col">
+          <a href="/posts/laravel-ecommerce/" class="post-preview card h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1682265600"
+  data-df="ll"
+  
+>
+  Apr 23, 2023
+</time>
+
+              <h4 class="pt-0 my-2">Laravel Cybershop</h4>
+              <div class="text-muted">
+                <p>E-Commerce webapp written with Laravel and Livewire</p>
+              </div>
+            </div>
+          </a>
+        </article>
+      
+        <article class="col">
+          <a href="/posts/php-webchat/" class="post-preview card h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1676563200"
+  data-df="ll"
+  
+>
+  Feb 16, 2023
+</time>
+
+              <h4 class="pt-0 my-2">PHP Chat</h4>
+              <div class="text-muted">
+                <p>Interactive webchat written in PHP/JS with AJAX</p>
+              </div>
+            </div>
+          </a>
+        </article>
+      
+    </nav>
+  </aside>
+  <!-- #related-posts -->
+
+
             
 
             <!-- The Footer -->
@@ -931,30 +1371,6 @@
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
       
         
         
@@ -1018,11 +1434,6 @@
     
     
     
-  
-    
-    
-    
-    
       
         
         
@@ -1038,58 +1449,6 @@
     
     
       
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
     
   
     
@@ -1125,18 +1484,6 @@
     
     
       
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
     
   
     
@@ -1175,16 +1522,10 @@
     <div class="d-flex flex-wrap mt-3 mb-1 me-3">
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/programming/">programming</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/hacking/">hacking</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/hacking-tools/">hacking-tools</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/metasploit/">metasploit</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/networking/">networking</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/tryhackme/">tryhackme</a>
@@ -1247,6 +1588,11 @@
     
 
     <!-- Embedded scripts -->
+
+    
+      
+      <!-- The comments switcher -->
+
 
     
 

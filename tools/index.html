@@ -32,17 +32,17 @@
 <meta name="generator" content="Jekyll v4.3.4" />
 <meta property="og:title" content="Tools" />
 <meta property="og:locale" content="en" />
-<meta name="description" content="I’ve wrote a lot of tools and participated in a lot of projects, here is a short overview:" />
-<meta property="og:description" content="I’ve wrote a lot of tools and participated in a lot of projects, here is a short overview:" />
+<meta name="description" content="A minimal, responsive and feature-rich Jekyll theme for technical writing." />
+<meta property="og:description" content="A minimal, responsive and feature-rich Jekyll theme for technical writing." />
 <link rel="canonical" href="http://localhost:4000/tools/" />
 <meta property="og:url" content="http://localhost:4000/tools/" />
 <meta property="og:site_name" content="NullBrunk" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2024-12-28T02:15:26+00:00" />
+<meta property="article:published_time" content="2024-12-28T21:07:46+00:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Tools" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-12-28T02:15:26+00:00","datePublished":"2024-12-28T02:15:26+00:00","description":"I’ve wrote a lot of tools and participated in a lot of projects, here is a short overview:","headline":"Tools","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/tools/"},"url":"http://localhost:4000/tools/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-12-28T21:07:46+00:00","datePublished":"2024-12-28T21:07:46+00:00","description":"A minimal, responsive and feature-rich Jekyll theme for technical writing.","headline":"Tools","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/tools/"},"url":"http://localhost:4000/tools/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -112,12 +112,7 @@
   
 
   
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/loading-attribute-polyfill@2.1.1/dist/loading-attribute-polyfill.min.css">
-  
 
-  
-    <!-- Image Popup -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox@3.3.0/dist/css/glightbox.min.css">
   
 
   <!-- Scripts -->
@@ -133,13 +128,6 @@
 <!-- layout specified -->
 
 
-  
-
-  
-    <!-- image lazy-loading & popup & clipboard -->
-    
-  
-
 
 
 
@@ -161,30 +149,9 @@
 
   
 
-  
-    
-
-    
-
-  
-
-  
-    
-
-    
-
-  
-
-  
-    
-
-    
-
-  
 
 
-
-  <script defer src="https://cdn.jsdelivr.net/combine/npm/simple-jekyll-search@1.10.0/dest/simple-jekyll-search.min.js,npm/loading-attribute-polyfill@2.1.1/dist/loading-attribute-polyfill.umd.min.js,npm/glightbox@3.3.0/dist/js/glightbox.min.js,npm/clipboard@2.0.11/dist/clipboard.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/combine/npm/simple-jekyll-search@1.10.0/dest/simple-jekyll-search.min.js"></script>
 
 
 
@@ -192,7 +159,7 @@
 
 
 
-<script defer src="/assets/js/dist/page.min.js"></script>
+<script defer src="/assets/js/dist/commons.min.js"></script>
 
 
 
@@ -230,44 +197,55 @@
       </li>
       <!-- the real tabs -->
       
-        <li class="nav-item">
-          <a href="/categories/" class="nav-link">
-            <i class="fa-fw fas fa-stream"></i>
-            
+          
+          <li class="nav-item active">
+            <a href="/tools/" class="nav-link">
+              <i class="fa-fw fas fas fa-code"></i>
+              
 
-            <span>CATEGORIES</span>
-          </a>
-        </li>
+              <span>TOOLS</span>
+            </a>
+          </li>
+        
         <!-- .nav-item -->
       
-        <li class="nav-item">
-          <a href="/tags/" class="nav-link">
-            <i class="fa-fw fas fa-tags"></i>
-            
+          
+          <li class="nav-item">
+            <a href="/prog/" class="nav-link">
+              <i class="fa-fw fas fa-screwdriver-wrench"></i>
+              
 
-            <span>TAGS</span>
-          </a>
-        </li>
+              <span>PROG</span>
+            </a>
+          </li>
+        
         <!-- .nav-item -->
       
-        <li class="nav-item active">
-          <a href="/tools/" class="nav-link">
-            <i class="fa-fw fas fa-screwdriver-wrench"></i>
-            
+          
+          <li class="nav-item">
+            <a href="/tags/" class="nav-link">
+              <i class="fa-fw fas fa-tags"></i>
+              
 
-            <span>TOOLS</span>
-          </a>
-        </li>
+              <span>TAGS</span>
+            </a>
+          </li>
+        
         <!-- .nav-item -->
       
-        <li class="nav-item">
-          <a href="/about/" class="nav-link">
-            <i class="fa-fw fas fa-info-circle"></i>
-            
+          
+          <li class="nav-item">
+            <a href="/about/" class="nav-link">
+              <i class="fa-fw fas fa-info-circle"></i>
+              
 
-            <span>ABOUT</span>
-          </a>
-        </li>
+              <span>ABOUT</span>
+            </a>
+          </li>
+        
+        <!-- .nav-item -->
+      
+        
         <!-- .nav-item -->
       
     </ul>
@@ -375,53 +353,7 @@
 
     <div id="main-wrapper" class="d-flex justify-content-center">
       <div class="container d-flex flex-column px-xxl-5">
-        <!-- The Top Bar -->
-
-<header id="topbar-wrapper" aria-label="Top Bar">
-  <div
-    id="topbar"
-    class="d-flex align-items-center justify-content-between px-lg-3 h-100"
-  >
-    <nav id="breadcrumb" aria-label="Breadcrumb">
-      
-
-      
-        
-          
-            <span>
-              <a href="/">Home</a>
-            </span>
-
-          
-        
-          
-            
-              <span>Tools</span>
-            
-
-          
-        
-      
-    </nav>
-    <!-- endof #breadcrumb -->
-
-    <button type="button" id="sidebar-trigger" class="btn btn-link">
-      <i class="fas fa-bars fa-fw"></i>
-    </button>
-
-    <div id="topbar-title">
-      Tools
-    </div>
-
-    <button type="button" id="search-trigger" class="btn btn-link">
-      <i class="fas fa-search fa-fw"></i>
-    </button>
-
-   
-    <button type="button" class="btn btn-link text-decoration-none" id="search-cancel">Cancel</button>
-  </div>
-</header>
-
+        <!--  include topbar.html lang=lang -->
 
         <div class="row flex-grow-1">
           <main aria-label="Main Content" class="col-12 col-lg-11 col-xl-9 px-md-4">
@@ -453,6 +385,205 @@
 
 
 
+
+  
+  
+
+  
+    
+      
+      
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+
+    <!-- take out classes -->
+    
+
+    
+    
+
+    
+
+    
+      
+    
+
+    <!-- lazy-load images -->
+    
+
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
+
+      
+        <!-- create the image wrapper -->
+        
+
+        
+        
+      
+    
+
+    <!-- combine -->
+    
+  
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+
+    <!-- take out classes -->
+    
+
+    
+    
+
+    
+
+    
+      
+    
+
+    <!-- lazy-load images -->
+    
+
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
+
+      
+        <!-- create the image wrapper -->
+        
+
+        
+        
+      
+    
+
+    <!-- combine -->
+    
+  
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+
+    <!-- take out classes -->
+    
+
+    
+    
+
+    
+
+    
+      
+    
+
+    <!-- lazy-load images -->
+    
+
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
+
+      
+        <!-- create the image wrapper -->
+        
+
+        
+        
+      
+    
+
+    <!-- combine -->
+    
+  
+
+  
 
 
 <!-- Add header for code snippets -->
@@ -493,35 +624,265 @@
 
 
 
-<article class="px-1">
-  
-    
-    
-    <h1 class="dynamic-title">
-      Tools
-    </h1>
-    <div class="content">
-      <p>I’ve wrote a lot of tools and participated in a lot of projects, here is a short overview:</p>
 
-<h3>My hacking tools</h3>
-<ul>
-    <li><a href="https://www.github.com/NullBrunk/CVE-2011-2523">CVE-2011-2523 </a>: VsFTPd 2.3.4 Backdoor Command Execution tool</li>
-    <li><a href="https://www.github.com/NullBrunk/arpspoofer">ARPspoofer</a>: ARP Cache Poisoning tool</li>
-    <li><a href="https://www.github.com/NullBrunk/wpsh">WPsh</a>: WordPress reverse shell exploit script</li>
-    <li><a href="https://www.github.com/NullBrunk/FTPy">FTPy</a>: Python3 FTP client </li>
-</ul>
 
-<h3>My web projects</h3>
-<ul>
-    <li><a href="https://github.com/NullBrunk/Todo.js">Todo.js </a>:  Todo-list built with React &amp; localStorage API</li>
-    <li><a href="https://github.com/NullBrunk/CyberShop">E-Commerce</a>:  E-Commerce webapp written in Laravel </li>
-    <li><a href="https://www.github.com/NullBrunk/wpsh">Chat.php</a>:  Interactive webchat written in PHP/JS with AJAX</li>
-</ul>
+<header id="topbar-wrapper" aria-label="Top Bar">
+    <div id="topbar" class="d-flex align-items-center justify-content-between h-100" >
+        <nav id="breadcrumb" aria-label="Breadcrumb">
+            <span><a href="/">Home</a></span>
+             
 
+            
+
+             
+             
+            
+
+            
+             
+            
+            <span>Tools</span>
+        </nav>
     </div>
-  
-</article>
+</header>
 
+
+<div id="post-list" class="flex-grow-1 px-xl-1">
+    
+        
+    
+        
+            <article class="card-wrapper card">
+                <div onclick="window.location.href = '/posts/wpsh/'" class="post-preview row g-0 flex-md-row-reverse" style="cursor: pointer;">
+                    
+
+                    
+                        
+                        
+
+                        
+
+                        
+
+                        
+
+                        <div class="col-md-5">
+                            <a href="/assets/img/projects/wpsh.png" class="popup img-link  shimmer"><img src="/assets/img/projects/wpsh.png" alt="Preview Image"  loading="lazy"></a>
+                        </div>
+
+                        
+                    
+
+                    <div class="col-md-7">
+                        <div class="card-body d-flex flex-column">
+                            <h1 class="card-title my-2 mt-md-0">wpsh</h1>
+
+                            <div class="card-text content mt-0 mb-3">
+                                <p>WordPress reverse shell exploit</p>
+                            </div>
+
+                            <div class="post-meta flex-grow-1 d-flex align-items-end">
+                                <div class="me-auto">
+                                    <!-- posted date -->
+                                    <i class="far fa-calendar fa-fw me-1"></i>
+                                    <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1735142400"
+  data-df="ll"
+  
+>
+  Dec 25, 2024
+</time>
+
+
+                                    <!-- categories -->
+                                    
+                                        <i class="far fa-folder-open fa-fw me-1"></i>
+                                        <span class="categories">
+                                        
+                                            
+                                                Hacking tools,
+                                        
+                                            
+                                                Python
+                                        
+                                        </span>
+                                    
+                                </div>
+                            </div>
+                            <!-- .post-meta -->
+                        </div>
+                        <!-- .card-body -->
+                    </div>
+                </div>
+            </article>
+        
+    
+        
+            <article class="card-wrapper card">
+                <div onclick="window.location.href = '/posts/arpspoofer/'" class="post-preview row g-0 flex-md-row-reverse" style="cursor: pointer;">
+                    
+
+                    
+                        
+                        
+
+                        
+
+                        
+
+                        
+
+                        <div class="col-md-5">
+                            <a href="/assets/img/projects/arpspoofer.png" class="popup img-link  shimmer"><img src="/assets/img/projects/arpspoofer.png" alt="Preview Image"  loading="lazy"></a>
+                        </div>
+
+                        
+                    
+
+                    <div class="col-md-7">
+                        <div class="card-body d-flex flex-column">
+                            <h1 class="card-title my-2 mt-md-0">arpspoofer</h1>
+
+                            <div class="card-text content mt-0 mb-3">
+                                <p>ARP Cache Poisoning tool</p>
+                            </div>
+
+                            <div class="post-meta flex-grow-1 d-flex align-items-end">
+                                <div class="me-auto">
+                                    <!-- posted date -->
+                                    <i class="far fa-calendar fa-fw me-1"></i>
+                                    <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1732809600"
+  data-df="ll"
+  
+>
+  Nov 28, 2024
+</time>
+
+
+                                    <!-- categories -->
+                                    
+                                        <i class="far fa-folder-open fa-fw me-1"></i>
+                                        <span class="categories">
+                                        
+                                            
+                                                Hacking tools,
+                                        
+                                            
+                                                Python
+                                        
+                                        </span>
+                                    
+                                </div>
+                            </div>
+                            <!-- .post-meta -->
+                        </div>
+                        <!-- .card-body -->
+                    </div>
+                </div>
+            </article>
+        
+    
+        
+    
+        
+            <article class="card-wrapper card">
+                <div onclick="window.location.href = '/posts/ftpy/'" class="post-preview row g-0 flex-md-row-reverse" style="cursor: pointer;">
+                    
+
+                    
+                        
+                        
+
+                        
+
+                        
+
+                        
+
+                        <div class="col-md-5">
+                            <a href="/assets/img/projects/ftpy.png" class="popup img-link  shimmer"><img src="/assets/img/projects/ftpy.png" alt="Preview Image"  loading="lazy"></a>
+                        </div>
+
+                        
+                    
+
+                    <div class="col-md-7">
+                        <div class="card-body d-flex flex-column">
+                            <h1 class="card-title my-2 mt-md-0">FTPy</h1>
+
+                            <div class="card-text content mt-0 mb-3">
+                                <p>FTP client written in Python3</p>
+                            </div>
+
+                            <div class="post-meta flex-grow-1 d-flex align-items-end">
+                                <div class="me-auto">
+                                    <!-- posted date -->
+                                    <i class="far fa-calendar fa-fw me-1"></i>
+                                    <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1683820800"
+  data-df="ll"
+  
+>
+  May 11, 2023
+</time>
+
+
+                                    <!-- categories -->
+                                    
+                                        <i class="far fa-folder-open fa-fw me-1"></i>
+                                        <span class="categories">
+                                        
+                                            
+                                                Hacking tools,
+                                        
+                                            
+                                                Python
+                                        
+                                        </span>
+                                    
+                                </div>
+                            </div>
+                            <!-- .post-meta -->
+                        </div>
+                        <!-- .card-body -->
+                    </div>
+                </div>
+            </article>
+        
+    
+        
+    
+        
+    
+</div>
 
             
           </main>
@@ -566,7 +927,7 @@
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/thm-cyberlens/">TryHackMe | CyberLens</a>
+          <a href="/posts/thm-cyberlens/">CyberLens</a>
         </li>
       
         
@@ -580,7 +941,7 @@
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/todo-js/">Todo.js</a>
+          <a href="/posts/todojs/">Todo.js</a>
         </li>
       
     </ul>
@@ -609,30 +970,6 @@
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
       
         
         
@@ -696,11 +1033,6 @@
     
     
     
-  
-    
-    
-    
-    
       
         
         
@@ -716,58 +1048,6 @@
     
     
       
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
     
   
     
@@ -803,18 +1083,6 @@
     
     
       
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
     
   
     
@@ -853,16 +1121,10 @@
     <div class="d-flex flex-wrap mt-3 mb-1 me-3">
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/programming/">programming</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/hacking/">hacking</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/hacking-tools/">hacking-tools</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/metasploit/">metasploit</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/networking/">networking</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/tryhackme/">tryhackme</a>
@@ -956,30 +1218,6 @@
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
       
         
         
@@ -1043,11 +1281,6 @@
     
     
     
-  
-    
-    
-    
-    
       
         
         
@@ -1063,58 +1296,6 @@
     
     
       
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
     
   
     
@@ -1150,18 +1331,6 @@
     
     
       
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
     
   
     
@@ -1200,16 +1369,10 @@
     <div class="d-flex flex-wrap mt-3 mb-1 me-3">
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/programming/">programming</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/hacking/">hacking</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/hacking-tools/">hacking-tools</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/metasploit/">metasploit</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/networking/">networking</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/tryhackme/">tryhackme</a>

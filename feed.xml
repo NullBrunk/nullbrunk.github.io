@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>NullBrunk</title>
   <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
-  <updated>2024-12-28T02:15:26+00:00</updated>
+  <updated>2024-12-28T21:07:46+00:00</updated>
   <author>
     <name>Anas</name>
     <uri>http://localhost:4000/</uri>
@@ -20,8 +20,8 @@
 
   
   <entry>
-    <title>TryHackMe | CyberLens</title>
-    <link href="http://localhost:4000/posts/thm-cyberlens/" rel="alternate" type="text/html" title="TryHackMe | CyberLens" />
+    <title>CyberLens</title>
+    <link href="http://localhost:4000/posts/thm-cyberlens/" rel="alternate" type="text/html" title="CyberLens" />
     <published>2024-12-26T16:00:00+00:00</published>
   
     <updated>2024-12-26T16:00:00+00:00</updated>
@@ -40,7 +40,7 @@
     
   
 
-  <summary>Walkthrough</summary>
+  <summary>Can you exploit the CyberLens web server and discover the hidden flags?</summary>
 
   </entry>
 
@@ -60,9 +60,9 @@
 
   
     
-    <category term="Programming" />
-    
     <category term="Hacking tools" />
+    
+    <category term="Python" />
     
   
 
@@ -86,9 +86,9 @@
 
   
     
-    <category term="Programming" />
-    
     <category term="Hacking tools" />
+    
+    <category term="Python" />
     
   
 
@@ -99,22 +99,22 @@
   
   <entry>
     <title>Todo.js</title>
-    <link href="http://localhost:4000/posts/todo-js/" rel="alternate" type="text/html" title="Todo.js" />
+    <link href="http://localhost:4000/posts/todojs/" rel="alternate" type="text/html" title="Todo.js" />
     <published>2024-07-04T16:00:00+00:00</published>
   
     <updated>2024-07-04T16:00:00+00:00</updated>
   
-    <id>http://localhost:4000/posts/todo-js/</id>
-    <content type="text/html" src="http://localhost:4000/posts/todo-js/" />
+    <id>http://localhost:4000/posts/todojs/</id>
+    <content type="text/html" src="http://localhost:4000/posts/todojs/" />
     <author>
       <name>anas</name>
     </author>
 
   
     
-    <category term="Programming" />
-    
     <category term="Web Dev" />
+    
+    <category term="React" />
     
   
 
@@ -138,9 +138,9 @@
 
   
     
-    <category term="Programming" />
+    <category term="Hacking tools" />
     
-    <category term="Networking" />
+    <category term="Python" />
     
   
 

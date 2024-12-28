@@ -30,11 +30,11 @@
 
   <!-- Begin Jekyll SEO tag v2.8.0 -->
 <meta name="generator" content="Jekyll v4.3.4" />
-<meta property="og:title" content="TryHackMe CyberLens" />
+<meta property="og:title" content="CyberLens" />
 <meta name="author" content="Anas" />
 <meta property="og:locale" content="en" />
-<meta name="description" content="Walkthrough" />
-<meta property="og:description" content="Walkthrough" />
+<meta name="description" content="Can you exploit the CyberLens web server and discover the hidden flags?" />
+<meta property="og:description" content="Can you exploit the CyberLens web server and discover the hidden flags?" />
 <link rel="canonical" href="http://localhost:4000/posts/thm-cyberlens/" />
 <meta property="og:url" content="http://localhost:4000/posts/thm-cyberlens/" />
 <meta property="og:site_name" content="NullBrunk" />
@@ -43,13 +43,13 @@
 <meta property="article:published_time" content="2024-12-26T16:00:00+00:00" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta property="twitter:image" content="http://localhost:4000/assets/img/writeups/thm/cyberlens/cyberlens_main.svg" />
-<meta property="twitter:title" content="TryHackMe CyberLens" />
+<meta property="twitter:title" content="CyberLens" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Anas","url":"https://github.com/NullBrunk/"},"dateModified":"2024-12-26T16:00:00+00:00","datePublished":"2024-12-26T16:00:00+00:00","description":"Walkthrough","headline":"TryHackMe CyberLens","image":"http://localhost:4000/assets/img/writeups/thm/cyberlens/cyberlens_main.svg","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/thm-cyberlens/"},"url":"http://localhost:4000/posts/thm-cyberlens/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Anas","url":"https://github.com/NullBrunk/"},"dateModified":"2024-12-26T16:00:00+00:00","datePublished":"2024-12-26T16:00:00+00:00","description":"Can you exploit the CyberLens web server and discover the hidden flags?","headline":"CyberLens","image":"http://localhost:4000/assets/img/writeups/thm/cyberlens/cyberlens_main.svg","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/thm-cyberlens/"},"url":"http://localhost:4000/posts/thm-cyberlens/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
-  <title>TryHackMe | CyberLens | NullBrunk
+  <title>CyberLens | NullBrunk
   </title>
 
   <!--
@@ -274,44 +274,55 @@
       </li>
       <!-- the real tabs -->
       
-        <li class="nav-item">
-          <a href="/categories/" class="nav-link">
-            <i class="fa-fw fas fa-stream"></i>
-            
+          
+          <li class="nav-item">
+            <a href="/tools/" class="nav-link">
+              <i class="fa-fw fas fas fa-code"></i>
+              
 
-            <span>CATEGORIES</span>
-          </a>
-        </li>
+              <span>TOOLS</span>
+            </a>
+          </li>
+        
         <!-- .nav-item -->
       
-        <li class="nav-item">
-          <a href="/tags/" class="nav-link">
-            <i class="fa-fw fas fa-tags"></i>
-            
+          
+          <li class="nav-item">
+            <a href="/prog/" class="nav-link">
+              <i class="fa-fw fas fa-screwdriver-wrench"></i>
+              
 
-            <span>TAGS</span>
-          </a>
-        </li>
+              <span>PROG</span>
+            </a>
+          </li>
+        
         <!-- .nav-item -->
       
-        <li class="nav-item">
-          <a href="/tools/" class="nav-link">
-            <i class="fa-fw fas fa-screwdriver-wrench"></i>
-            
+          
+          <li class="nav-item">
+            <a href="/tags/" class="nav-link">
+              <i class="fa-fw fas fa-tags"></i>
+              
 
-            <span>TOOLS</span>
-          </a>
-        </li>
+              <span>TAGS</span>
+            </a>
+          </li>
+        
         <!-- .nav-item -->
       
-        <li class="nav-item">
-          <a href="/about/" class="nav-link">
-            <i class="fa-fw fas fa-info-circle"></i>
-            
+          
+          <li class="nav-item">
+            <a href="/about/" class="nav-link">
+              <i class="fa-fw fas fa-info-circle"></i>
+              
 
-            <span>ABOUT</span>
-          </a>
-        </li>
+              <span>ABOUT</span>
+            </a>
+          </li>
+        
+        <!-- .nav-item -->
+      
+        
         <!-- .nav-item -->
       
     </ul>
@@ -419,55 +430,7 @@
 
     <div id="main-wrapper" class="d-flex justify-content-center">
       <div class="container d-flex flex-column px-xxl-5">
-        <!-- The Top Bar -->
-
-<header id="topbar-wrapper" aria-label="Top Bar">
-  <div
-    id="topbar"
-    class="d-flex align-items-center justify-content-between px-lg-3 h-100"
-  >
-    <nav id="breadcrumb" aria-label="Breadcrumb">
-      
-
-      
-        
-          
-            <span>
-              <a href="/">Home</a>
-            </span>
-
-          
-        
-          
-        
-          
-            
-              <span>TryHackMe | CyberLens</span>
-            
-
-          
-        
-      
-    </nav>
-    <!-- endof #breadcrumb -->
-
-    <button type="button" id="sidebar-trigger" class="btn btn-link">
-      <i class="fas fa-bars fa-fw"></i>
-    </button>
-
-    <div id="topbar-title">
-      Post
-    </div>
-
-    <button type="button" id="search-trigger" class="btn btn-link">
-      <i class="fas fa-search fa-fw"></i>
-    </button>
-
-   
-    <button type="button" class="btn btn-link text-decoration-none" id="search-cancel">Cancel</button>
-  </div>
-</header>
-
+        <!--  include topbar.html lang=lang -->
 
         <div class="row flex-grow-1">
           <main aria-label="Main Content" class="col-12 col-lg-11 col-xl-9 px-md-4">
@@ -1169,11 +1132,39 @@
 
 
 
+<header id="topbar-wrapper" aria-label="Top Bar">
+    <div id="topbar" class="d-flex align-items-center justify-content-between h-100" >
+        <nav id="breadcrumb" aria-label="Breadcrumb">
+            <span><a href="/">Home</a></span>
+             
+
+            
+                <span>
+                 <a href="/categories/writeups/">Writeups</a>
+                </span>
+            
+                <span>
+                 <a href="/categories/tryhackme/">TryHackMe</a>
+                </span>
+            
+
+             
+             
+            
+
+            
+             
+            
+            <span>CyberLens</span>
+        </nav>
+    </div>
+</header>
+
 <article class="px-1" data-toc="true">
   <header>
-    <h1 data-toc-skip>TryHackMe | CyberLens</h1>
+    <h1 data-toc-skip>CyberLens</h1>
     
-      <p class="post-desc fw-light mb-4">Walkthrough</p>
+      <p class="post-desc fw-light mb-4">Can you exploit the CyberLens web server and discover the hidden flags?</p>
     
 
     <div class="post-meta text-muted">
@@ -1268,7 +1259,7 @@
 
   
     <div id="toc-bar" class="d-flex align-items-center justify-content-between invisible">
-      <span class="label text-truncate">TryHackMe | CyberLens</span>
+      <span class="label text-truncate">CyberLens</span>
       <button type="button" class="toc-trigger btn me-1">
         <i class="fa-solid fa-list-ul fa-fw"></i>
       </button>
@@ -1281,7 +1272,7 @@
 
     <dialog id="toc-popup" class="p-0">
       <div class="header d-flex flex-row align-items-center justify-content-between">
-        <div class="label text-truncate py-2 ms-4">TryHackMe | CyberLens</div>
+        <div class="label text-truncate py-2 ms-4">CyberLens</div>
         <button id="toc-popup-close" type="button" class="btn mx-1 my-1 opacity-75">
           <i class="fas fa-close"></i>
         </button>
@@ -1606,21 +1597,21 @@ msf6 exploit<span class="o">(</span>windows/local/always_install_elevated<span c
 
       
 
-      <a href="https://twitter.com/intent/tweet?text=TryHackMe%20%7C%20CyberLens%20-%20NullBrunk&url=http%3A%2F%2Flocalhost%3A4000%2Fposts%2Fthm-cyberlens%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
+      <a href="https://twitter.com/intent/tweet?text=CyberLens%20-%20NullBrunk&url=http%3A%2F%2Flocalhost%3A4000%2Fposts%2Fthm-cyberlens%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
         <i class="fa-fw fa-brands fa-square-x-twitter"></i>
       </a>
     
 
       
 
-      <a href="https://www.facebook.com/sharer/sharer.php?title=TryHackMe%20%7C%20CyberLens%20-%20NullBrunk&u=http%3A%2F%2Flocalhost%3A4000%2Fposts%2Fthm-cyberlens%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
+      <a href="https://www.facebook.com/sharer/sharer.php?title=CyberLens%20-%20NullBrunk&u=http%3A%2F%2Flocalhost%3A4000%2Fposts%2Fthm-cyberlens%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
         <i class="fa-fw fab fa-facebook-square"></i>
       </a>
     
 
       
 
-      <a href="https://t.me/share/url?url=http%3A%2F%2Flocalhost%3A4000%2Fposts%2Fthm-cyberlens%2F&text=TryHackMe%20%7C%20CyberLens%20-%20NullBrunk" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
+      <a href="https://t.me/share/url?url=http%3A%2F%2Flocalhost%3A4000%2Fposts%2Fthm-cyberlens%2F&text=CyberLens%20-%20NullBrunk" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
         <i class="fa-fw fab fa-telegram"></i>
       </a>
     
@@ -1689,7 +1680,7 @@ msf6 exploit<span class="o">(</span>windows/local/always_install_elevated<span c
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/thm-cyberlens/">TryHackMe | CyberLens</a>
+          <a href="/posts/thm-cyberlens/">CyberLens</a>
         </li>
       
         
@@ -1703,7 +1694,7 @@ msf6 exploit<span class="o">(</span>windows/local/always_install_elevated<span c
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/todo-js/">Todo.js</a>
+          <a href="/posts/todojs/">Todo.js</a>
         </li>
       
     </ul>
@@ -1732,30 +1723,6 @@ msf6 exploit<span class="o">(</span>windows/local/always_install_elevated<span c
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
       
         
         
@@ -1819,11 +1786,6 @@ msf6 exploit<span class="o">(</span>windows/local/always_install_elevated<span c
     
     
     
-  
-    
-    
-    
-    
       
         
         
@@ -1839,58 +1801,6 @@ msf6 exploit<span class="o">(</span>windows/local/always_install_elevated<span c
     
     
       
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
     
   
     
@@ -1926,18 +1836,6 @@ msf6 exploit<span class="o">(</span>windows/local/always_install_elevated<span c
     
     
       
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
     
   
     
@@ -1976,16 +1874,10 @@ msf6 exploit<span class="o">(</span>windows/local/always_install_elevated<span c
     <div class="d-flex flex-wrap mt-3 mb-1 me-3">
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/programming/">programming</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/hacking/">hacking</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/hacking-tools/">hacking-tools</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/metasploit/">metasploit</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/networking/">networking</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/tryhackme/">tryhackme</a>
@@ -2070,31 +1962,6 @@ msf6 exploit<span class="o">(</span>windows/local/always_install_elevated<span c
 
 
             
-              
-              <!-- Navigation buttons at the bottom of the post. -->
-
-<nav class="post-navigation d-flex justify-content-between" aria-label="Post Navigation">
-  
-  
-
-  
-    <a
-      href="/posts/wpsh/"
-      class="btn btn-outline-primary"
-      aria-label="Older"
-    >
-      <p>wpsh</p>
-    </a>
-  
-
-  
-    <div class="btn btn-outline-primary disabled" aria-label="Newer">
-      <p>-</p>
-    </div>
-  
-</nav>
-
-            
 
             <!-- The Footer -->
 
@@ -2161,30 +2028,6 @@ msf6 exploit<span class="o">(</span>windows/local/always_install_elevated<span c
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
       
         
         
@@ -2248,11 +2091,6 @@ msf6 exploit<span class="o">(</span>windows/local/always_install_elevated<span c
     
     
     
-  
-    
-    
-    
-    
       
         
         
@@ -2268,58 +2106,6 @@ msf6 exploit<span class="o">(</span>windows/local/always_install_elevated<span c
     
     
       
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
     
   
     
@@ -2355,18 +2141,6 @@ msf6 exploit<span class="o">(</span>windows/local/always_install_elevated<span c
     
     
       
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
     
   
     
@@ -2405,16 +2179,10 @@ msf6 exploit<span class="o">(</span>windows/local/always_install_elevated<span c
     <div class="d-flex flex-wrap mt-3 mb-1 me-3">
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/programming/">programming</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/hacking/">hacking</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/hacking-tools/">hacking-tools</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/metasploit/">metasploit</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/networking/">networking</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/tryhackme/">tryhackme</a>

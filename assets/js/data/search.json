@@ -1,7 +1,7 @@
 [
   
   {
-    "title": "TryHackMe | CyberLens",
+    "title": "CyberLens",
     "url": "/posts/thm-cyberlens/",
     "categories": "Writeups, TryHackMe",
     "tags": "writeups, tryhackme, windows, windows-privesc, metasploit",
@@ -20,8 +20,8 @@
   {
     "title": "wpsh",
     "url": "/posts/wpsh/",
-    "categories": "Programming, Hacking tools",
-    "tags": "programming, hacking",
+    "categories": "Hacking tools, Python",
+    "tags": "hacking-tools",
     "date": "2024-12-25 16:00:00 +0000",
     
 
@@ -37,8 +37,8 @@
   {
     "title": "arpspoofer",
     "url": "/posts/arpspoofer/",
-    "categories": "Programming, Hacking tools",
-    "tags": "programming, hacking",
+    "categories": "Hacking tools, Python",
+    "tags": "hacking-tools",
     "date": "2024-11-28 16:00:00 +0000",
     
 
@@ -53,9 +53,9 @@
   
   {
     "title": "Todo.js",
-    "url": "/posts/todo-js/",
-    "categories": "Programming, Web Dev",
-    "tags": "programming",
+    "url": "/posts/todojs/",
+    "categories": "Web Dev, React",
+    "tags": "",
     "date": "2024-07-04 16:00:00 +0000",
     
 
@@ -71,8 +71,8 @@
   {
     "title": "FTPy",
     "url": "/posts/ftpy/",
-    "categories": "Programming, Networking",
-    "tags": "programming, networking",
+    "categories": "Hacking tools, Python",
+    "tags": "hacking-tools",
     "date": "2023-05-11 16:00:00 +0000",
     
 
@@ -88,8 +88,8 @@
   {
     "title": "Laravel Cybershop",
     "url": "/posts/laravel-ecommerce/",
-    "categories": "Programming, Web Dev",
-    "tags": "programming",
+    "categories": "Web Dev, Laravel",
+    "tags": "",
     "date": "2023-04-23 16:00:00 +0000",
     
 
@@ -105,8 +105,8 @@
   {
     "title": "PHP Chat",
     "url": "/posts/php-webchat/",
-    "categories": "Programming, Web Dev",
-    "tags": "programming",
+    "categories": "Web Dev, PHP",
+    "tags": "",
     "date": "2023-02-16 16:00:00 +0000",
     
 
