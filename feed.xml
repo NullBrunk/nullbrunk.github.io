@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>NullBrunk</title>
   <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
-  <updated>2024-12-28T22:23:53+00:00</updated>
+  <updated>2024-12-29T20:35:00+00:00</updated>
   <author>
     <name>Anas</name>
     <uri>http://localhost:4000/</uri>
@@ -17,6 +17,32 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>Blog</title>
+    <link href="http://localhost:4000/posts/thm-blog/" rel="alternate" type="text/html" title="Blog" />
+    <published>2024-12-28T16:00:00+00:00</published>
+  
+    <updated>2024-12-28T16:00:00+00:00</updated>
+  
+    <id>http://localhost:4000/posts/thm-blog/</id>
+    <content type="text/html" src="http://localhost:4000/posts/thm-blog/" />
+    <author>
+      <name>anas</name>
+    </author>
+
+  
+    
+    <category term="Writeups" />
+    
+    <category term="TryHackMe" />
+    
+  
+
+  <summary>Billy Joel made a Wordpress blog!</summary>
+
+  </entry>
 
   
   <entry>
@@ -119,32 +145,6 @@
   
 
   <summary>React dynamic to-do list, tailwind frontend, localstorage DB</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>FTPy</title>
-    <link href="http://localhost:4000/posts/ftpy/" rel="alternate" type="text/html" title="FTPy" />
-    <published>2023-05-11T16:00:00+00:00</published>
-  
-    <updated>2024-12-28T21:28:39+00:00</updated>
-  
-    <id>http://localhost:4000/posts/ftpy/</id>
-    <content type="text/html" src="http://localhost:4000/posts/ftpy/" />
-    <author>
-      <name>anas</name>
-    </author>
-
-  
-    
-    <category term="Hacking tools" />
-    
-    <category term="Python" />
-    
-  
-
-  <summary>FTP client written in Python3</summary>
 
   </entry>
 

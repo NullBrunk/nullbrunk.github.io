@@ -1271,7 +1271,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="846 words"
+  title="812 words"
 >
   <em>4 min</em> read</span>
 
@@ -1360,7 +1360,8 @@ Service Info: OS: Windows<span class="p">;</span> CPE: cpe:/o:microsoft:windows
 </ul>
 
 <h3 id="smb-139-445"><span class="me-2">SMB (139, 445)</span><a href="#smb-139-445" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
-<p>I like to start by enumerating SMB because it’s relatively quick. So I ran:</p>
+<p>I like to start by enumerating SMB because it’s relatively quick, and we always find juicy files. So I ran:</p>
+
 <div class="language-bash highlighter-rouge"><div class="code-header">
         <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span>
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
@@ -1368,7 +1369,7 @@ Service Info: OS: Windows<span class="p">;</span> CPE: cpe:/o:microsoft:windows
 3
 4
 </pre></td><td class="rouge-code"><pre>┌──<span class="o">(</span>kali㉿kali<span class="o">)</span>-[~]
-└─<span class="nv">$ </span>smbclient <span class="nt">-L</span> <span class="s2">"</span><span class="se">\\\\</span><span class="nv">$TARGET_IP</span><span class="se">\\</span><span class="s2">"</span>
+└─<span class="nv">$ </span>smbclient <span class="nt">-L</span> <span class="s2">"//</span><span class="nv">$TARGET_IP</span><span class="s2">/"</span>
 Password <span class="k">for</span> <span class="o">[</span>WORKGROUP<span class="se">\k</span>ali]:
 session setup failed: NT_STATUS_ACCESS_DENIED
 </pre></td></tr></tbody></table></code></div></div>
@@ -1539,9 +1540,6 @@ msf6 exploit<span class="o">(</span>windows/local/always_install_elevated<span c
 <p><a href="/assets/img/writeups/thm/cyberlens/root.txt.png" class="popup img-link  shimmer"><img src="/assets/img/writeups/thm/cyberlens/root.txt.png" alt="exploit_root" loading="lazy"></a>
 <em>And we rooted the room</em></p>
 
-<h1 id="conclusion">Conclusion</h1>
-
-<p>In conclusion, this was a great room for beginners. We started with basic enumeration, then we exploited the Windows server (by targeting an outdated version of Apache Tika, leveraging a version disclosure) and performed privilege escalation with Metasploit’s <code class="language-plaintext highlighter-rouge">local_exploit_suggester</code>.</p>
 
   </div>
 
@@ -1760,6 +1758,114 @@ msf6 exploit<span class="o">(</span>windows/local/always_install_elevated<span c
     
     
     
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
         
         
@@ -1781,29 +1887,6 @@ msf6 exploit<span class="o">(</span>windows/local/always_install_elevated<span c
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
   
     
     
@@ -1830,6 +1913,106 @@ msf6 exploit<span class="o">(</span>windows/local/always_install_elevated<span c
     
     
     
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
     
   
@@ -1859,6 +2042,23 @@ msf6 exploit<span class="o">(</span>windows/local/always_install_elevated<span c
     
     
       
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
     
   
     
@@ -1906,13 +2106,25 @@ msf6 exploit<span class="o">(</span>windows/local/always_install_elevated<span c
         <a class="post-tag btn btn-outline-primary" href="/tags/tryhackme/">tryhackme</a>
       
         
+        <a class="post-tag btn btn-outline-primary" href="/tags/writeups/">writeups</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/linux-privesc/">linux-privesc</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/pwncat/">pwncat</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/tags/windows-privesc/">windows-privesc</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/windows/">windows</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/writeups/">writeups</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/wordpress/">wordpress</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/wpscan/">wpscan</a>
       
     </div>
   </section>
@@ -1973,6 +2185,17 @@ msf6 exploit<span class="o">(</span>windows/local/always_install_elevated<span c
 
   
     
+  
+
+  
+
+  
+
+  
+
+  
+
+  
 
 
 
@@ -1982,6 +2205,43 @@ msf6 exploit<span class="o">(</span>windows/local/always_install_elevated<span c
 
 
 
+
+
+  <aside id="related-posts" aria-labelledby="related-label">
+    <h3 class="mb-4" id="related-label">Further Reading</h3>
+    <nav class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 mb-4">
+      
+        <article class="col">
+          <a href="/posts/thm-blog/" class="post-preview card h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1735401600"
+  data-df="ll"
+  
+>
+  Dec 28, 2024
+</time>
+
+              <h4 class="pt-0 my-2">Blog</h4>
+              <div class="text-muted">
+                <p>Billy Joel made a Wordpress blog!</p>
+              </div>
+            </div>
+          </a>
+        </article>
+      
+    </nav>
+  </aside>
+  <!-- #related-posts -->
 
 
             
@@ -2065,6 +2325,114 @@ msf6 exploit<span class="o">(</span>windows/local/always_install_elevated<span c
     
     
     
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
         
         
@@ -2086,29 +2454,6 @@ msf6 exploit<span class="o">(</span>windows/local/always_install_elevated<span c
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
   
     
     
@@ -2135,6 +2480,106 @@ msf6 exploit<span class="o">(</span>windows/local/always_install_elevated<span c
     
     
     
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
     
   
@@ -2164,6 +2609,23 @@ msf6 exploit<span class="o">(</span>windows/local/always_install_elevated<span c
     
     
       
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
     
   
     
@@ -2211,13 +2673,25 @@ msf6 exploit<span class="o">(</span>windows/local/always_install_elevated<span c
         <a class="post-tag btn btn-outline-primary" href="/tags/tryhackme/">tryhackme</a>
       
         
+        <a class="post-tag btn btn-outline-primary" href="/tags/writeups/">writeups</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/linux-privesc/">linux-privesc</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/pwncat/">pwncat</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/tags/windows-privesc/">windows-privesc</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/windows/">windows</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/writeups/">writeups</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/wordpress/">wordpress</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/wpscan/">wpscan</a>
       
     </div>
   </section>
