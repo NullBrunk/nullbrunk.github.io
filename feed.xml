@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>NullBrunk</title>
   <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
-  <updated>2024-12-29T20:40:53+00:00</updated>
+  <updated>2024-12-30T19:37:19+00:00</updated>
   <author>
     <name>Anas</name>
     <uri>http://localhost:4000/</uri>
@@ -17,6 +17,32 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>Attacktive Directory</title>
+    <link href="http://localhost:4000/posts/thm-attacktivedirectory/" rel="alternate" type="text/html" title="Attacktive Directory" />
+    <published>2024-12-29T16:00:00+00:00</published>
+  
+    <updated>2024-12-29T16:00:00+00:00</updated>
+  
+    <id>http://localhost:4000/posts/thm-attacktivedirectory/</id>
+    <content type="text/html" src="http://localhost:4000/posts/thm-attacktivedirectory/" />
+    <author>
+      <name>anas</name>
+    </author>
+
+  
+    
+    <category term="Writeups" />
+    
+    <category term="TryHackMe" />
+    
+  
+
+  <summary>99% of Corporate networks run off of AD. But can you exploit a vulnerable Domain Controller?</summary>
+
+  </entry>
 
   
   <entry>
@@ -119,32 +145,6 @@
   
 
   <summary>ARP Cache Poisoning tool</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>Todo.js</title>
-    <link href="http://localhost:4000/posts/todojs/" rel="alternate" type="text/html" title="Todo.js" />
-    <published>2024-07-04T16:00:00+00:00</published>
-  
-    <updated>2024-07-04T16:00:00+00:00</updated>
-  
-    <id>http://localhost:4000/posts/todojs/</id>
-    <content type="text/html" src="http://localhost:4000/posts/todojs/" />
-    <author>
-      <name>anas</name>
-    </author>
-
-  
-    
-    <category term="Web Dev" />
-    
-    <category term="React" />
-    
-  
-
-  <summary>React dynamic to-do list, tailwind frontend, localstorage DB</summary>
 
   </entry>
 
