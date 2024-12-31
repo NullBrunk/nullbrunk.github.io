@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>NullBrunk</title>
   <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
-  <updated>2024-12-30T19:37:19+00:00</updated>
+  <updated>2024-12-31T01:16:18+00:00</updated>
   <author>
     <name>Anas</name>
     <uri>http://localhost:4000/</uri>
@@ -17,6 +17,32 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>xsserve</title>
+    <link href="http://localhost:4000/posts/arpspoofer-copy/" rel="alternate" type="text/html" title="xsserve" />
+    <published>2024-12-30T16:00:00+00:00</published>
+  
+    <updated>2024-12-30T16:00:00+00:00</updated>
+  
+    <id>http://localhost:4000/posts/arpspoofer-copy/</id>
+    <content type="text/html" src="http://localhost:4000/posts/arpspoofer-copy/" />
+    <author>
+      <name>anas</name>
+    </author>
+
+  
+    
+    <category term="Hacking tools" />
+    
+    <category term="Python" />
+    
+  
+
+  <summary>Simplify XSS exploitation</summary>
+
+  </entry>
 
   
   <entry>
@@ -50,7 +76,7 @@
     <link href="http://localhost:4000/posts/thm-blog/" rel="alternate" type="text/html" title="Blog" />
     <published>2024-12-28T16:00:00+00:00</published>
   
-    <updated>2024-12-29T20:38:39+00:00</updated>
+    <updated>2024-12-30T19:38:20+00:00</updated>
   
     <id>http://localhost:4000/posts/thm-blog/</id>
     <content type="text/html" src="http://localhost:4000/posts/thm-blog/" />
@@ -76,7 +102,7 @@
     <link href="http://localhost:4000/posts/thm-cyberlens/" rel="alternate" type="text/html" title="CyberLens" />
     <published>2024-12-26T16:00:00+00:00</published>
   
-    <updated>2024-12-29T20:38:39+00:00</updated>
+    <updated>2024-12-30T19:38:20+00:00</updated>
   
     <id>http://localhost:4000/posts/thm-cyberlens/</id>
     <content type="text/html" src="http://localhost:4000/posts/thm-cyberlens/" />
@@ -102,7 +128,7 @@
     <link href="http://localhost:4000/posts/wpsh/" rel="alternate" type="text/html" title="wpsh" />
     <published>2024-12-25T16:00:00+00:00</published>
   
-    <updated>2024-12-28T21:28:39+00:00</updated>
+    <updated>2024-12-30T19:38:20+00:00</updated>
   
     <id>http://localhost:4000/posts/wpsh/</id>
     <content type="text/html" src="http://localhost:4000/posts/wpsh/" />
@@ -119,32 +145,6 @@
   
 
   <summary>WordPress reverse shell exploit</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>arpspoofer</title>
-    <link href="http://localhost:4000/posts/arpspoofer/" rel="alternate" type="text/html" title="arpspoofer" />
-    <published>2024-11-28T16:00:00+00:00</published>
-  
-    <updated>2024-12-28T21:28:39+00:00</updated>
-  
-    <id>http://localhost:4000/posts/arpspoofer/</id>
-    <content type="text/html" src="http://localhost:4000/posts/arpspoofer/" />
-    <author>
-      <name>anas</name>
-    </author>
-
-  
-    
-    <category term="Hacking tools" />
-    
-    <category term="Python" />
-    
-  
-
-  <summary>ARP Cache Poisoning tool</summary>
 
   </entry>
 
