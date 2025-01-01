@@ -588,61 +588,6 @@
 
       
     
-
-    <!-- take out classes -->
-    
-
-    
-    
-
-    
-
-    
-      
-    
-
-    <!-- lazy-load images -->
-    
-
-    
-      <!-- make sure the `<img>` is wrapped by `<a>` -->
-      
-
-      
-        <!-- create the image wrapper -->
-        
-
-        
-        
-      
-    
-
-    <!-- combine -->
-    
-  
-    
-
-    
-    
-
-    
-
-    
-    
-
-    
-    
-    
-
-    
-      
-
-      
-      
-      
-
-      
-    
       
 
       
@@ -705,61 +650,6 @@
       
 
       
-    
-      
-
-      
-      
-      
-
-      
-    
-
-    <!-- take out classes -->
-    
-
-    
-    
-
-    
-
-    
-      
-    
-
-    <!-- lazy-load images -->
-    
-
-    
-      <!-- make sure the `<img>` is wrapped by `<a>` -->
-      
-
-      
-        <!-- create the image wrapper -->
-        
-
-        
-        
-      
-    
-
-    <!-- combine -->
-    
-  
-    
-
-    
-    
-
-    
-
-    
-    
-
-    
-    
-    
-
     
       
 
@@ -840,6 +730,85 @@
 
       
     
+      
+
+      
+      
+      
+
+      
+    
+
+    <!-- take out classes -->
+    
+
+    
+    
+
+    
+
+    
+      
+    
+
+    <!-- lazy-load images -->
+    
+
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
+
+      
+        <!-- create the image wrapper -->
+        
+
+        
+        
+      
+    
+
+    <!-- combine -->
+    
+  
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
 
     <!-- take out classes -->
     
@@ -903,6 +872,14 @@
 
       
     
+      
+
+      
+      
+      
+
+      
+    
 
     <!-- take out classes -->
     
@@ -949,6 +926,85 @@
     
     
 
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+
+    <!-- take out classes -->
+    
+
+    
+    
+
+    
+
+    
+      
+    
+
+    <!-- lazy-load images -->
+    
+
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
+
+      
+        <!-- create the image wrapper -->
+        
+
+        
+        
+      
+    
+
+    <!-- combine -->
+    
+  
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+
+      
+      
+      
+
+      
     
       
 
@@ -1261,7 +1317,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="807 words"
+  title="805 words"
 >
   <em>4 min</em> read</span>
 
@@ -1380,16 +1436,14 @@ Service Info: OS: Windows<span class="p">;</span> CPE: cpe:/o:microsoft:windows
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
-4
 </pre></td><td class="rouge-code"><pre>┌──<span class="o">(</span>kali㉿kali<span class="o">)</span>-[~]
-└─<span class="nv">$ </span>smbclient <span class="nt">-L</span> <span class="s2">"//</span><span class="nv">$TARGET_IP</span><span class="s2">/"</span>
-Password <span class="k">for</span> <span class="o">[</span>WORKGROUP<span class="se">\k</span>ali]:
+└─<span class="nv">$ </span>smbclient <span class="nt">-L</span> <span class="s2">"//</span><span class="nv">$TARGET_IP</span><span class="s2">/"</span> <span class="nt">-U</span> <span class="s2">"%"</span>
 session setup failed: NT_STATUS_ACCESS_DENIED
 </pre></td></tr></tbody></table></code></div></div>
 <p>Unfortunately, nothing interesting came up.</p>
 
 <h2 id="http-80"><span class="me-2">HTTP (80)</span><a href="#http-80" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
-<p><a href="/assets/img/writeups/thm/cyberlens/interesting_page.png" class="popup img-link  shimmer"><img src="/assets/img/writeups/thm/cyberlens/interesting_page.png" alt="http" loading="lazy"></a></p>
+<p><a href="/assets/img/writeups/thm/cyberlens/interesting_page.png" class="popup img-link radius-shadow shimmer"><img src="/assets/img/writeups/thm/cyberlens/interesting_page.png" alt="http"  loading="lazy"></a></p>
 
 <p>The main functionality of this server is to provide image metadata extraction. However, pressing <code class="language-plaintext highlighter-rouge">Ctrl + U</code> revealed no form in the HTML source code:</p>
 <div class="language-html highlighter-rouge"><div class="code-header">
@@ -1449,12 +1503,12 @@ session setup failed: NT_STATUS_ACCESS_DENIED
 <p>As you can see, the JavaScript sends the file we uploaded on port <code class="language-plaintext highlighter-rouge">61777</code>. So the service responsible for the metadata handling is effectively running on port <code class="language-plaintext highlighter-rouge">61777</code>.</p>
 
 <h2 id="http-61777"><span class="me-2">HTTP (61777)</span><a href="#http-61777" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
-<p><a href="/assets/img/writeups/thm/cyberlens/tika.png" class="popup img-link  shimmer"><img src="/assets/img/writeups/thm/cyberlens/tika.png" alt="tika" loading="lazy"></a>
+<p><a href="/assets/img/writeups/thm/cyberlens/tika.png" class="popup img-link radius-shadow shimmer"><img src="/assets/img/writeups/thm/cyberlens/tika.png" alt="tika"  loading="lazy"></a>
 <em>This seems to be a version disclosure</em></p>
 
 <p>Let’s take advantage of this significant version disclosure by running <a href="https://www.kali.org/tools/exploitdb/">searchsploit</a> on this Tika version:</p>
 
-<p><a href="/assets/img/writeups/thm/cyberlens/searchsploit.png" class="popup img-link  shimmer"><img src="/assets/img/writeups/thm/cyberlens/searchsploit.png" alt="searchsploit" loading="lazy"></a>
+<p><a href="/assets/img/writeups/thm/cyberlens/searchsploit.png" class="popup img-link radius-shadow shimmer"><img src="/assets/img/writeups/thm/cyberlens/searchsploit.png" alt="searchsploit"  loading="lazy"></a>
 <em>Searchsploit found a Metasploit module that matches the Tika version</em></p>
 
 <h1 id="exploitation">Exploitation</h1>
@@ -1462,7 +1516,7 @@ session setup failed: NT_STATUS_ACCESS_DENIED
 <h2 id="metasploit"><span class="me-2">Metasploit</span><a href="#metasploit" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 <p>Let’s start by launching <a href="https://www.kali.org/tools/metasploit-framework/">Metasploit</a> and searching for the Tika exploit we identified in the enumeration part.</p>
 
-<p><a href="/assets/img/writeups/thm/cyberlens/metasploit.png" class="popup img-link  shimmer"><img src="/assets/img/writeups/thm/cyberlens/metasploit.png" alt="metasploit" loading="lazy"></a>
+<p><a href="/assets/img/writeups/thm/cyberlens/metasploit.png" class="popup img-link radius-shadow shimmer"><img src="/assets/img/writeups/thm/cyberlens/metasploit.png" alt="metasploit"  loading="lazy"></a>
 <em>Metasploit exploit module for Tika 1.17</em></p>
 
 <p>After typing <code class="language-plaintext highlighter-rouge">show options</code>, we notice that some parameters need to be configured.</p>
@@ -1492,7 +1546,7 @@ msf6 exploit<span class="o">(</span>windows/http/apache_tika_jp2_jscript<span cl
 
 <p>Within a few seconds, we’re greeted with a meterpreter session.</p>
 
-<p><a href="/assets/img/writeups/thm/cyberlens/user.txt.png" class="popup img-link  shimmer"><img src="/assets/img/writeups/thm/cyberlens/user.txt.png" alt="metasploit" loading="lazy"></a>
+<p><a href="/assets/img/writeups/thm/cyberlens/user.txt.png" class="popup img-link radius-shadow shimmer"><img src="/assets/img/writeups/thm/cyberlens/user.txt.png" alt="metasploit"  loading="lazy"></a>
 <em>And we get our first flag !</em></p>
 
 <h1 id="privesc">Privesc</h1>
@@ -1512,7 +1566,7 @@ msf6 post<span class="o">(</span>multi/recon/local_exploit_suggester<span class=
 
 <p>This is essentially a post-exploitation module that automatically tries different methods to identify a way to escalate our privileges. You can read more about it <a href="https://github.com/rapid7/metasploit-framework/blob/master/documentation/modules/post/multi/recon/local_exploit_suggester.md">here</a>.</p>
 
-<p><a href="/assets/img/writeups/thm/cyberlens/privesc_enum.png" class="popup img-link  shimmer"><img src="/assets/img/writeups/thm/cyberlens/privesc_enum.png" alt="privesc_enum" loading="lazy"></a>
+<p><a href="/assets/img/writeups/thm/cyberlens/privesc_enum.png" class="popup img-link radius-shadow shimmer"><img src="/assets/img/writeups/thm/cyberlens/privesc_enum.png" alt="privesc_enum"  loading="lazy"></a>
 <em>Metasploit’s local_exploit_suggester in action</em></p>
 
 <p>The scan reveals several vulnerabilities, but only one is explicitly marked as “vulnerable” <em>(and not as “appears to be vulnerable”)</em>. You can learn more about the “Always Install Elevated” feature on the <a href="https://learn.microsoft.com/en-us/windows/win32/msi/alwaysinstallelevated">Microsoft official doc</a> and read <a href="https://dmcxblue.gitbook.io/red-team-notes/privesc/unquoted-service-path">this ressource</a> for an <em>Attacker perspective</em>.</p>
@@ -1547,7 +1601,7 @@ msf6 exploit<span class="o">(</span>windows/local/always_install_elevated<span c
 msf6 exploit<span class="o">(</span>windows/local/always_install_elevated<span class="o">)</span> <span class="o">&gt;</span> <span class="nb">set </span>LPORT 9999
 msf6 exploit<span class="o">(</span>windows/local/always_install_elevated<span class="o">)</span> <span class="o">&gt;</span> run
 </pre></td></tr></tbody></table></code></div></div>
-<p><a href="/assets/img/writeups/thm/cyberlens/root.txt.png" class="popup img-link  shimmer"><img src="/assets/img/writeups/thm/cyberlens/root.txt.png" alt="exploit_root" loading="lazy"></a>
+<p><a href="/assets/img/writeups/thm/cyberlens/root.txt.png" class="popup img-link radius-shadow shimmer"><img src="/assets/img/writeups/thm/cyberlens/root.txt.png" alt="exploit_root"  loading="lazy"></a>
 <em>And we’ve rooted the room</em></p>
 
 <h1 id="reverse-footnote">Reverse footnote</h1>
@@ -1837,82 +1891,6 @@ msf6 exploit<span class="o">(</span>windows/local/always_install_elevated<span c
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -1967,6 +1945,58 @@ msf6 exploit<span class="o">(</span>windows/local/always_install_elevated<span c
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
         
         
@@ -2011,7 +2041,66 @@ msf6 exploit<span class="o">(</span>windows/local/always_install_elevated<span c
     
     
     
+  
+    
+    
+    
+    
       
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
     
   
     
@@ -2198,10 +2287,10 @@ msf6 exploit<span class="o">(</span>windows/local/always_install_elevated<span c
         <a class="post-tag btn btn-outline-primary" href="/tags/golden-ticket/">golden-ticket</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/impacket/">impacket</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/hacking/">hacking</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/kerberos/">kerberos</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/impacket/">impacket</a>
       
     </div>
   </section>
@@ -2373,7 +2462,7 @@ msf6 exploit<span class="o">(</span>windows/local/always_install_elevated<span c
   "
 >
   <p>©
-    <time>2024</time>
+    <time>2025</time>
 
     
       <a href="https://github.com/NullBrunk">Anas</a>.
@@ -2502,82 +2591,6 @@ msf6 exploit<span class="o">(</span>windows/local/always_install_elevated<span c
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -2632,6 +2645,58 @@ msf6 exploit<span class="o">(</span>windows/local/always_install_elevated<span c
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
         
         
@@ -2676,7 +2741,66 @@ msf6 exploit<span class="o">(</span>windows/local/always_install_elevated<span c
     
     
     
+  
+    
+    
+    
+    
       
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
     
   
     
@@ -2863,10 +2987,10 @@ msf6 exploit<span class="o">(</span>windows/local/always_install_elevated<span c
         <a class="post-tag btn btn-outline-primary" href="/tags/golden-ticket/">golden-ticket</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/impacket/">impacket</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/hacking/">hacking</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/kerberos/">kerberos</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/impacket/">impacket</a>
       
     </div>
   </section>
