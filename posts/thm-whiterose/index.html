@@ -45,7 +45,7 @@
 <meta property="twitter:image" content="http://localhost:4000/assets/img/writeups/thm/whiterose/whiterose.png" />
 <meta property="twitter:title" content="Whiterose" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Anas","url":"https://github.com/NullBrunk/"},"dateModified":"2025-01-01T16:00:00+00:00","datePublished":"2025-01-01T16:00:00+00:00","description":"Yet another Mr. Robot themed challenge.","headline":"Whiterose","image":"http://localhost:4000/assets/img/writeups/thm/whiterose/whiterose.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/thm-whiterose/"},"url":"http://localhost:4000/posts/thm-whiterose/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Anas","url":"https://github.com/NullBrunk/"},"dateModified":"2025-01-02T19:31:15+00:00","datePublished":"2025-01-01T16:00:00+00:00","description":"Yet another Mr. Robot themed challenge.","headline":"Whiterose","image":"http://localhost:4000/assets/img/writeups/thm/whiterose/whiterose.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/thm-whiterose/"},"url":"http://localhost:4000/posts/thm-whiterose/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -2233,6 +2233,29 @@
 
       <!-- lastmod date -->
       
+        <span>
+          Updated
+          <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1735846275"
+  data-df="ll"
+  
+    data-bs-toggle="tooltip" data-bs-placement="bottom"
+  
+>
+  Jan  2, 2025
+</time>
+
+        </span>
+      
 
       
         
@@ -2287,7 +2310,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="1378 words"
+  title="1381 words"
 >
   <em>7 min</em> read</span>
 
@@ -2332,7 +2355,7 @@
       <li><a href="#http-80">HTTP (80)</a>
         <ul>
           <li><a href="#directory-fuzzing">Directory Fuzzing</a></li>
-          <li><a href="#subdomain-fuzzing">Subdomain fuzzing</a></li>
+          <li><a href="#virtual-host-fuzzing">Virtual Host fuzzing</a></li>
           <li><a href="#admin-subdomain">Admin Subdomain</a>
             <ul>
               <li><a href="#user-access">User access</a></li>
@@ -2439,9 +2462,9 @@ index.html              <span class="o">[</span>Status: 200, Size: 252, Words: 1
 
 <p>I tried the <a href="https://github.com/v0re/dirb/blob/master/wordlists/common.txt">common.txt</a> and <a href="https://github.com/v0re/dirb/blob/master/wordlists/big.txt">big.txt</a> wordlists from <code class="language-plaintext highlighter-rouge">dirb</code>, but I still didn’t find anything.</p>
 
-<h3 id="subdomain-fuzzing"><span class="me-2">Subdomain fuzzing</span><a href="#subdomain-fuzzing" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<h3 id="virtual-host-fuzzing"><span class="me-2">Virtual Host fuzzing</span><a href="#virtual-host-fuzzing" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
-<p>Since we have a domain name, trying <a href="https://www.thehacker.recipes/web/recon/virtual-host-fuzzing">subdomain fuzzing</a> might be a good idea. I’ll go with <a href="https://www.kali.org/tools/wfuzz/">wfuzz</a> but you can use ffuf or gobuster as mentioned in the article.</p>
+<p>Since we have a domain name, trying <a href="https://www.thehacker.recipes/web/recon/virtual-host-fuzzing">virtual host fuzzing</a> might be a good idea. I’ll go with <a href="https://www.kali.org/tools/wfuzz/">wfuzz</a> but you can use ffuf or gobuster as mentioned in the article.</p>
 
 <div class="language-bash highlighter-rouge"><div class="code-header">
         <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span>
@@ -2966,6 +2989,13 @@ index.html              <span class="o">[</span>Status: 200, Size: 252, Words: 1
         
         
         <li class="text-truncate lh-lg">
+          <a href="/posts/thm-whiterose/">Whiterose</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
           <a href="/posts/thm-cyberlens/">CyberLens</a>
         </li>
       
@@ -2988,13 +3018,6 @@ index.html              <span class="o">[</span>Status: 200, Size: 252, Words: 1
         
         <li class="text-truncate lh-lg">
           <a href="/posts/ftpy/">FTPy</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/posts/arpspoofer/">arpspoofer</a>
         </li>
       
     </ul>
