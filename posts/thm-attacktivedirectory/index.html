@@ -45,7 +45,7 @@
 <meta property="twitter:image" content="http://localhost:4000/assets/img/writeups/thm/attacktivedirectory/attacktive_main.png" />
 <meta property="twitter:title" content="Attacktive Directory" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Anas","url":"https://github.com/NullBrunk/"},"dateModified":"2024-12-29T16:00:00+00:00","datePublished":"2024-12-29T16:00:00+00:00","description":"99% of Corporate networks run off of AD. But can you exploit a vulnerable Domain Controller?","headline":"Attacktive Directory","image":"http://localhost:4000/assets/img/writeups/thm/attacktivedirectory/attacktive_main.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/thm-attacktivedirectory/"},"url":"http://localhost:4000/posts/thm-attacktivedirectory/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Anas","url":"https://github.com/NullBrunk/"},"dateModified":"2025-01-01T21:11:42+00:00","datePublished":"2024-12-29T16:00:00+00:00","description":"99% of Corporate networks run off of AD. But can you exploit a vulnerable Domain Controller?","headline":"Attacktive Directory","image":"http://localhost:4000/assets/img/writeups/thm/attacktivedirectory/attacktive_main.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/thm-attacktivedirectory/"},"url":"http://localhost:4000/posts/thm-attacktivedirectory/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -1540,6 +1540,29 @@
 
       <!-- lastmod date -->
       
+        <span>
+          Updated
+          <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1735765902"
+  data-df="ll"
+  
+    data-bs-toggle="tooltip" data-bs-placement="bottom"
+  
+>
+  Jan  1, 2025
+</time>
+
+        </span>
+      
 
       
         
@@ -1594,7 +1617,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="1427 words"
+  title="1421 words"
 >
   <em>7 min</em> read</span>
 
@@ -1666,15 +1689,15 @@
 <h1 id="enumeration">Enumeration</h1>
 
 <h2 id="portscan"><span class="me-2">Portscan</span><a href="#portscan" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
-<p>It’s not asked but let’s start with a port scan. As always, I use <a href="https://github.com/RustScan/RustScan">rustscan</a> and specify the nmap options with the <code class="language-plaintext highlighter-rouge">-- NMAP_OPTIONS</code> syntax. In this case, we’re scanning for service versions and outputting the result to a file named <code class="language-plaintext highlighter-rouge">all_ports</code>.</p>
+<p>It’s not asked but let’s start with a port scan. As always, I use <a href="https://github.com/RustScan/RustScan">rustscan</a> and specify the nmap options with the <code class="language-plaintext highlighter-rouge">-- NMAP_OPTIONS</code> syntax. In this case, we’re scanning for service versions and outputting the result to a file named <code class="language-plaintext highlighter-rouge">all_ports.txt</code>.</p>
 
 <div class="language-bash highlighter-rouge"><div class="code-header">
         <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span>
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>rustscan <span class="nt">-a</span> <span class="nv">$TARGET_IP</span> <span class="nt">--</span> <span class="nt">-sV</span> <span class="nt">-oN</span> all_ports
+</pre></td><td class="rouge-code"><pre>rustscan <span class="nt">-a</span> <span class="nv">$TARGET_IP</span> <span class="nt">--</span> <span class="nt">-sV</span> <span class="nt">-oN</span> all_ports.txt
 </pre></td></tr></tbody></table></code></div></div>
-<div class="language-bash highlighter-rouge"><div class="code-header">
-        <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span>
+<div file="all_ports.txt" class="language-bash highlighter-rouge"><div class="code-header">
+        <span data-label-text="all_ports.txt"><i class="far fa-file-code fa-fw"></i></span>
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
@@ -1689,11 +1712,7 @@
 12
 13
 14
-15
-16
-</pre></td><td class="rouge-code"><pre>┌──<span class="o">(</span>kali㉿kali<span class="o">)</span>-[~]
-└─<span class="nv">$ </span><span class="nb">cat </span>all_ports
-PORT      STATE SERVICE       REASON  VERSION
+</pre></td><td class="rouge-code"><pre>PORT      STATE SERVICE       REASON  VERSION
 53/tcp    open  domain        syn-ack Simple DNS Plus
 80/tcp    open  http          syn-ack Microsoft IIS httpd 10.0
 88/tcp    open  kerberos-sec  syn-ack Microsoft Windows Kerberos <span class="o">(</span>server <span class="nb">time</span>: 2024-12-29 12:52:00Z<span class="o">)</span>
@@ -2168,11 +2187,6 @@ S-1-5-21-3591857110-2884097990-301047963
           >tryhackme</a>
         
           <a
-            href="/tags/windows/"
-            class="post-tag no-text-decoration"
-          >windows</a>
-        
-          <a
             href="/tags/active-directory/"
             class="post-tag no-text-decoration"
           >active-directory</a>
@@ -2372,70 +2386,6 @@ S-1-5-21-3591857110-2884097990-301047963
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -2470,46 +2420,6 @@ S-1-5-21-3591857110-2884097990-301047963
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
       
     
   
@@ -2532,15 +2442,6 @@ S-1-5-21-3591857110-2884097990-301047963
     
     
     
-  
-    
-    
-    
-    
-      
-        
-        
-
   
     
     
@@ -2615,6 +2516,53 @@ S-1-5-21-3591857110-2884097990-301047963
     
     
     
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -2661,6 +2609,215 @@ S-1-5-21-3591857110-2884097990-301047963
     
     
     
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
     
   
     
@@ -2732,53 +2889,6 @@ S-1-5-21-3591857110-2884097990-301047963
     
     
       
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
     
   
     
@@ -2812,10 +2922,13 @@ S-1-5-21-3591857110-2884097990-301047963
         <a class="post-tag btn btn-outline-primary" href="/tags/writeups/">writeups</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/metasploit/">metasploit</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/web/">web</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/windows/">windows</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/linux-privesc/">linux-privesc</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/metasploit/">metasploit</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/active-directory/">active-directory</a>
@@ -2824,13 +2937,10 @@ S-1-5-21-3591857110-2884097990-301047963
         <a class="post-tag btn btn-outline-primary" href="/tags/asreproast/">asreproast</a>
       
         
+        <a class="post-tag btn btn-outline-primary" href="/tags/ejs/">ejs</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/tags/golden-ticket/">golden-ticket</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/hacking/">hacking</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/impacket/">impacket</a>
       
     </div>
   </section>
@@ -2915,6 +3025,18 @@ S-1-5-21-3591857110-2884097990-301047963
 
   
     
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
 
 
 
@@ -2930,7 +3052,7 @@ S-1-5-21-3591857110-2884097990-301047963
     <nav class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 mb-4">
       
         <article class="col">
-          <a href="/posts/thm-cyberlens/" class="post-preview card h-100">
+          <a href="/posts/thm-whiterose/" class="post-preview card h-100">
             <div class="card-body">
               <!--
   Date format snippet
@@ -2942,16 +3064,16 @@ S-1-5-21-3591857110-2884097990-301047963
 
 <time
   
-  data-ts="1735228800"
+  data-ts="1735747200"
   data-df="ll"
   
 >
-  Dec 26, 2024
+  Jan  1, 2025
 </time>
 
-              <h4 class="pt-0 my-2">CyberLens</h4>
+              <h4 class="pt-0 my-2">Whiterose</h4>
               <div class="text-muted">
-                <p>Can you exploit the CyberLens web server and discover the hidden flags?</p>
+                <p>Yet another Mr. Robot themed challenge.</p>
               </div>
             </div>
           </a>
@@ -2980,6 +3102,34 @@ S-1-5-21-3591857110-2884097990-301047963
               <h4 class="pt-0 my-2">Blog</h4>
               <div class="text-muted">
                 <p>Billy Joel made a Wordpress blog!</p>
+              </div>
+            </div>
+          </a>
+        </article>
+      
+        <article class="col">
+          <a href="/posts/thm-cyberlens/" class="post-preview card h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1735228800"
+  data-df="ll"
+  
+>
+  Dec 26, 2024
+</time>
+
+              <h4 class="pt-0 my-2">CyberLens</h4>
+              <div class="text-muted">
+                <p>Can you exploit the CyberLens web server and discover the hidden flags?</p>
               </div>
             </div>
           </a>
@@ -3072,70 +3222,6 @@ S-1-5-21-3591857110-2884097990-301047963
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -3170,46 +3256,6 @@ S-1-5-21-3591857110-2884097990-301047963
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
       
     
   
@@ -3232,15 +3278,6 @@ S-1-5-21-3591857110-2884097990-301047963
     
     
     
-  
-    
-    
-    
-    
-      
-        
-        
-
   
     
     
@@ -3315,6 +3352,53 @@ S-1-5-21-3591857110-2884097990-301047963
     
     
     
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -3361,6 +3445,215 @@ S-1-5-21-3591857110-2884097990-301047963
     
     
     
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
     
   
     
@@ -3432,53 +3725,6 @@ S-1-5-21-3591857110-2884097990-301047963
     
     
       
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
     
   
     
@@ -3512,10 +3758,13 @@ S-1-5-21-3591857110-2884097990-301047963
         <a class="post-tag btn btn-outline-primary" href="/tags/writeups/">writeups</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/metasploit/">metasploit</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/web/">web</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/windows/">windows</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/linux-privesc/">linux-privesc</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/metasploit/">metasploit</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/active-directory/">active-directory</a>
@@ -3524,13 +3773,10 @@ S-1-5-21-3591857110-2884097990-301047963
         <a class="post-tag btn btn-outline-primary" href="/tags/asreproast/">asreproast</a>
       
         
+        <a class="post-tag btn btn-outline-primary" href="/tags/ejs/">ejs</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/tags/golden-ticket/">golden-ticket</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/hacking/">hacking</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/impacket/">impacket</a>
       
     </div>
   </section>

@@ -45,7 +45,7 @@
 <meta property="twitter:image" content="http://localhost:4000/assets/img/writeups/thm/cyberlens/cyberlens_main.svg" />
 <meta property="twitter:title" content="CyberLens" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Anas","url":"https://github.com/NullBrunk/"},"dateModified":"2024-12-30T19:38:20+00:00","datePublished":"2024-12-26T16:00:00+00:00","description":"Can you exploit the CyberLens web server and discover the hidden flags?","headline":"CyberLens","image":"http://localhost:4000/assets/img/writeups/thm/cyberlens/cyberlens_main.svg","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/thm-cyberlens/"},"url":"http://localhost:4000/posts/thm-cyberlens/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Anas","url":"https://github.com/NullBrunk/"},"dateModified":"2025-01-01T21:11:42+00:00","datePublished":"2024-12-26T16:00:00+00:00","description":"Can you exploit the CyberLens web server and discover the hidden flags?","headline":"CyberLens","image":"http://localhost:4000/assets/img/writeups/thm/cyberlens/cyberlens_main.svg","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/thm-cyberlens/"},"url":"http://localhost:4000/posts/thm-cyberlens/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -1252,13 +1252,13 @@
 
 <time
   
-  data-ts="1735587500"
+  data-ts="1735765902"
   data-df="ll"
   
     data-bs-toggle="tooltip" data-bs-placement="bottom"
   
 >
-  Dec 30, 2024
+  Jan  1, 2025
 </time>
 
         </span>
@@ -1317,7 +1317,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="805 words"
+  title="799 words"
 >
   <em>4 min</em> read</span>
 
@@ -1382,15 +1382,15 @@
 <h1 id="enumeration">Enumeration</h1>
 
 <h2 id="portscan"><span class="me-2">Portscan</span><a href="#portscan" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
-<p>As always, I like to begin with a basic <a href="https://github.com/RustScan/RustScan">rustscan</a> port scan, followed by an nmap scan with identification of services version, and output the result to a file named <code class="language-plaintext highlighter-rouge">all_ports</code>.</p>
+<p>As always, I like to begin with a basic <a href="https://github.com/RustScan/RustScan">rustscan</a> port scan, followed by an nmap scan with identification of services version, and output the result to a file named <code class="language-plaintext highlighter-rouge">all_ports.txt</code>.</p>
 
 <div class="language-bash highlighter-rouge"><div class="code-header">
         <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span>
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>rustscan <span class="nt">-a</span> <span class="nv">$TARGET_IP</span> <span class="nt">--</span> <span class="nt">-sV</span> <span class="nt">-oN</span> all_ports
+</pre></td><td class="rouge-code"><pre>rustscan <span class="nt">-a</span> <span class="nv">$TARGET_IP</span> <span class="nt">--</span> <span class="nt">-sV</span> <span class="nt">-oN</span> all_ports.txt
 </pre></td></tr></tbody></table></code></div></div>
-<div class="language-bash highlighter-rouge"><div class="code-header">
-        <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span>
+<div file="all_ports.txt" class="language-bash highlighter-rouge"><div class="code-header">
+        <span data-label-text="all_ports.txt"><i class="far fa-file-code fa-fw"></i></span>
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
@@ -1403,11 +1403,7 @@
 10
 11
 12
-13
-14
-</pre></td><td class="rouge-code"><pre>┌──<span class="o">(</span>kali㉿kali<span class="o">)</span>-[~]
-└─<span class="nv">$ </span><span class="nb">cat </span>all_ports
-PORT        STATE SERVICE       REASON  VERSION
+</pre></td><td class="rouge-code"><pre>PORT        STATE SERVICE       REASON  VERSION
 80/tcp      open  http          syn-ack Apache httpd 2.4.57 <span class="o">((</span>Win64<span class="o">))</span>
 135/tcp     open  msrpc         syn-ack Microsoft Windows RPC
 139/tcp     open  netbios-ssn   syn-ack Microsoft Windows netbios-ssn
@@ -1643,14 +1639,14 @@ msf6 exploit<span class="o">(</span>windows/local/always_install_elevated<span c
           >tryhackme</a>
         
           <a
+            href="/tags/web/"
+            class="post-tag no-text-decoration"
+          >web</a>
+        
+          <a
             href="/tags/metasploit/"
             class="post-tag no-text-decoration"
           >metasploit</a>
-        
-          <a
-            href="/tags/windows/"
-            class="post-tag no-text-decoration"
-          >windows</a>
         
           <a
             href="/tags/windows-privesc/"
@@ -1832,70 +1828,6 @@ msf6 exploit<span class="o">(</span>windows/local/always_install_elevated<span c
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -1930,46 +1862,6 @@ msf6 exploit<span class="o">(</span>windows/local/always_install_elevated<span c
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
       
     
   
@@ -1992,15 +1884,6 @@ msf6 exploit<span class="o">(</span>windows/local/always_install_elevated<span c
     
     
     
-  
-    
-    
-    
-    
-      
-        
-        
-
   
     
     
@@ -2075,6 +1958,53 @@ msf6 exploit<span class="o">(</span>windows/local/always_install_elevated<span c
     
     
     
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -2121,6 +2051,215 @@ msf6 exploit<span class="o">(</span>windows/local/always_install_elevated<span c
     
     
     
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
     
   
     
@@ -2192,53 +2331,6 @@ msf6 exploit<span class="o">(</span>windows/local/always_install_elevated<span c
     
     
       
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
     
   
     
@@ -2272,10 +2364,13 @@ msf6 exploit<span class="o">(</span>windows/local/always_install_elevated<span c
         <a class="post-tag btn btn-outline-primary" href="/tags/writeups/">writeups</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/metasploit/">metasploit</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/web/">web</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/windows/">windows</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/linux-privesc/">linux-privesc</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/metasploit/">metasploit</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/active-directory/">active-directory</a>
@@ -2284,13 +2379,10 @@ msf6 exploit<span class="o">(</span>windows/local/always_install_elevated<span c
         <a class="post-tag btn btn-outline-primary" href="/tags/asreproast/">asreproast</a>
       
         
+        <a class="post-tag btn btn-outline-primary" href="/tags/ejs/">ejs</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/tags/golden-ticket/">golden-ticket</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/hacking/">hacking</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/impacket/">impacket</a>
       
     </div>
   </section>
@@ -2375,6 +2467,18 @@ msf6 exploit<span class="o">(</span>windows/local/always_install_elevated<span c
 
   
 
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
 
 
 
@@ -2388,34 +2492,6 @@ msf6 exploit<span class="o">(</span>windows/local/always_install_elevated<span c
   <aside id="related-posts" aria-labelledby="related-label">
     <h3 class="mb-4" id="related-label">Further Reading</h3>
     <nav class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 mb-4">
-      
-        <article class="col">
-          <a href="/posts/thm-attacktivedirectory/" class="post-preview card h-100">
-            <div class="card-body">
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1735488000"
-  data-df="ll"
-  
->
-  Dec 29, 2024
-</time>
-
-              <h4 class="pt-0 my-2">Attacktive Directory</h4>
-              <div class="text-muted">
-                <p>99% of Corporate networks run off of AD. But can you exploit a vulnerable Domain Controller?</p>
-              </div>
-            </div>
-          </a>
-        </article>
       
         <article class="col">
           <a href="/posts/thm-blog/" class="post-preview card h-100">
@@ -2440,6 +2516,62 @@ msf6 exploit<span class="o">(</span>windows/local/always_install_elevated<span c
               <h4 class="pt-0 my-2">Blog</h4>
               <div class="text-muted">
                 <p>Billy Joel made a Wordpress blog!</p>
+              </div>
+            </div>
+          </a>
+        </article>
+      
+        <article class="col">
+          <a href="/posts/thm-whiterose/" class="post-preview card h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1735747200"
+  data-df="ll"
+  
+>
+  Jan  1, 2025
+</time>
+
+              <h4 class="pt-0 my-2">Whiterose</h4>
+              <div class="text-muted">
+                <p>Yet another Mr. Robot themed challenge.</p>
+              </div>
+            </div>
+          </a>
+        </article>
+      
+        <article class="col">
+          <a href="/posts/thm-attacktivedirectory/" class="post-preview card h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1735488000"
+  data-df="ll"
+  
+>
+  Dec 29, 2024
+</time>
+
+              <h4 class="pt-0 my-2">Attacktive Directory</h4>
+              <div class="text-muted">
+                <p>99% of Corporate networks run off of AD. But can you exploit a vulnerable Domain Controller?</p>
               </div>
             </div>
           </a>
@@ -2532,70 +2664,6 @@ msf6 exploit<span class="o">(</span>windows/local/always_install_elevated<span c
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -2630,46 +2698,6 @@ msf6 exploit<span class="o">(</span>windows/local/always_install_elevated<span c
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
       
     
   
@@ -2692,15 +2720,6 @@ msf6 exploit<span class="o">(</span>windows/local/always_install_elevated<span c
     
     
     
-  
-    
-    
-    
-    
-      
-        
-        
-
   
     
     
@@ -2775,6 +2794,53 @@ msf6 exploit<span class="o">(</span>windows/local/always_install_elevated<span c
     
     
     
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -2821,6 +2887,215 @@ msf6 exploit<span class="o">(</span>windows/local/always_install_elevated<span c
     
     
     
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
     
   
     
@@ -2892,53 +3167,6 @@ msf6 exploit<span class="o">(</span>windows/local/always_install_elevated<span c
     
     
       
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
     
   
     
@@ -2972,10 +3200,13 @@ msf6 exploit<span class="o">(</span>windows/local/always_install_elevated<span c
         <a class="post-tag btn btn-outline-primary" href="/tags/writeups/">writeups</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/metasploit/">metasploit</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/web/">web</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/windows/">windows</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/linux-privesc/">linux-privesc</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/metasploit/">metasploit</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/active-directory/">active-directory</a>
@@ -2984,13 +3215,10 @@ msf6 exploit<span class="o">(</span>windows/local/always_install_elevated<span c
         <a class="post-tag btn btn-outline-primary" href="/tags/asreproast/">asreproast</a>
       
         
+        <a class="post-tag btn btn-outline-primary" href="/tags/ejs/">ejs</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/tags/golden-ticket/">golden-ticket</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/hacking/">hacking</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/impacket/">impacket</a>
       
     </div>
   </section>

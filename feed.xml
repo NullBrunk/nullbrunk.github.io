@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>NullBrunk</title>
   <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
-  <updated>2025-01-01T21:10:53+00:00</updated>
+  <updated>2025-01-02T19:28:54+00:00</updated>
   <author>
     <name>Anas</name>
     <uri>http://localhost:4000/</uri>
@@ -20,11 +20,37 @@
 
   
   <entry>
+    <title>Whiterose</title>
+    <link href="http://localhost:4000/posts/thm-whiterose/" rel="alternate" type="text/html" title="Whiterose" />
+    <published>2025-01-01T16:00:00+00:00</published>
+  
+    <updated>2025-01-01T16:00:00+00:00</updated>
+  
+    <id>http://localhost:4000/posts/thm-whiterose/</id>
+    <content type="text/html" src="http://localhost:4000/posts/thm-whiterose/" />
+    <author>
+      <name>anas</name>
+    </author>
+
+  
+    
+    <category term="Writeups" />
+    
+    <category term="TryHackMe" />
+    
+  
+
+  <summary>Yet another Mr. Robot themed challenge.</summary>
+
+  </entry>
+
+  
+  <entry>
     <title>xsserve</title>
     <link href="http://localhost:4000/posts/xsserve/" rel="alternate" type="text/html" title="xsserve" />
     <published>2024-12-30T16:00:00+00:00</published>
   
-    <updated>2024-12-30T16:00:00+00:00</updated>
+    <updated>2025-01-01T21:11:42+00:00</updated>
   
     <id>http://localhost:4000/posts/xsserve/</id>
     <content type="text/html" src="http://localhost:4000/posts/xsserve/" />
@@ -50,7 +76,7 @@
     <link href="http://localhost:4000/posts/thm-attacktivedirectory/" rel="alternate" type="text/html" title="Attacktive Directory" />
     <published>2024-12-29T16:00:00+00:00</published>
   
-    <updated>2024-12-29T16:00:00+00:00</updated>
+    <updated>2025-01-01T21:11:42+00:00</updated>
   
     <id>http://localhost:4000/posts/thm-attacktivedirectory/</id>
     <content type="text/html" src="http://localhost:4000/posts/thm-attacktivedirectory/" />
@@ -76,7 +102,7 @@
     <link href="http://localhost:4000/posts/thm-blog/" rel="alternate" type="text/html" title="Blog" />
     <published>2024-12-28T16:00:00+00:00</published>
   
-    <updated>2024-12-30T19:38:20+00:00</updated>
+    <updated>2025-01-01T21:11:42+00:00</updated>
   
     <id>http://localhost:4000/posts/thm-blog/</id>
     <content type="text/html" src="http://localhost:4000/posts/thm-blog/" />
@@ -102,7 +128,7 @@
     <link href="http://localhost:4000/posts/thm-cyberlens/" rel="alternate" type="text/html" title="CyberLens" />
     <published>2024-12-26T16:00:00+00:00</published>
   
-    <updated>2024-12-30T19:38:20+00:00</updated>
+    <updated>2025-01-01T21:11:42+00:00</updated>
   
     <id>http://localhost:4000/posts/thm-cyberlens/</id>
     <content type="text/html" src="http://localhost:4000/posts/thm-cyberlens/" />
@@ -119,32 +145,6 @@
   
 
   <summary>Can you exploit the CyberLens web server and discover the hidden flags?</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>wpsh</title>
-    <link href="http://localhost:4000/posts/wpsh/" rel="alternate" type="text/html" title="wpsh" />
-    <published>2024-12-25T16:00:00+00:00</published>
-  
-    <updated>2024-12-30T19:38:20+00:00</updated>
-  
-    <id>http://localhost:4000/posts/wpsh/</id>
-    <content type="text/html" src="http://localhost:4000/posts/wpsh/" />
-    <author>
-      <name>anas</name>
-    </author>
-
-  
-    
-    <category term="Hacking tools" />
-    
-    <category term="Python" />
-    
-  
-
-  <summary>WordPress reverse shell exploit</summary>
 
   </entry>
 

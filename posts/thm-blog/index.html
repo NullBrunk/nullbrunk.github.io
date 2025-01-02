@@ -45,7 +45,7 @@
 <meta property="twitter:image" content="http://localhost:4000/assets/img/writeups/thm/blog/blog_main.png" />
 <meta property="twitter:title" content="Blog" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Anas","url":"https://github.com/NullBrunk/"},"dateModified":"2024-12-30T19:38:20+00:00","datePublished":"2024-12-28T16:00:00+00:00","description":"Billy Joel made a Wordpress blog!","headline":"Blog","image":"http://localhost:4000/assets/img/writeups/thm/blog/blog_main.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/thm-blog/"},"url":"http://localhost:4000/posts/thm-blog/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Anas","url":"https://github.com/NullBrunk/"},"dateModified":"2025-01-01T21:11:42+00:00","datePublished":"2024-12-28T16:00:00+00:00","description":"Billy Joel made a Wordpress blog!","headline":"Blog","image":"http://localhost:4000/assets/img/writeups/thm/blog/blog_main.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/thm-blog/"},"url":"http://localhost:4000/posts/thm-blog/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -1957,13 +1957,13 @@
 
 <time
   
-  data-ts="1735587500"
+  data-ts="1735765902"
   data-df="ll"
   
     data-bs-toggle="tooltip" data-bs-placement="bottom"
   
 >
-  Dec 30, 2024
+  Jan  1, 2025
 </time>
 
         </span>
@@ -2022,7 +2022,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="1635 words"
+  title="1629 words"
 >
   <em>9 min</em> read</span>
 
@@ -2100,26 +2100,22 @@
 <h2 id="portscan"><span class="me-2">Portscan</span><a href="#portscan" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 <p>First the room asks us to map the <code class="language-plaintext highlighter-rouge">blog.thm</code> domain name to the <code class="language-plaintext highlighter-rouge">$TARGET_IP</code> in /etc/hosts, so I started by doing that.</p>
 
-<p>As always, I like to begin with a port scan. For this I use <a href="https://github.com/RustScan/RustScan">rustscan</a>. It’s basically a Rust-based port scanner that detects open ports, and then launches an nmap scan only on the discovered ports. You can specify options to the subsequent nmap scan by using the <code class="language-plaintext highlighter-rouge">-- NMAP_OPTIONS</code> syntax. I like to go with <code class="language-plaintext highlighter-rouge">-sV</code> for identification of services version, and <code class="language-plaintext highlighter-rouge">-oN ports</code> to save the result to a file named <code class="language-plaintext highlighter-rouge">ports</code>.</p>
+<p>As always, I like to begin with a port scan. For this I use <a href="https://github.com/RustScan/RustScan">rustscan</a>. It’s basically a Rust-based port scanner that detects open ports, and then launches an nmap scan only on the discovered ports. You can specify options to the subsequent nmap scan by using the <code class="language-plaintext highlighter-rouge">-- NMAP_OPTIONS</code> syntax. I like to go with <code class="language-plaintext highlighter-rouge">-sV</code> for identification of services version, and <code class="language-plaintext highlighter-rouge">-oN ports</code> to save the result to a file named <code class="language-plaintext highlighter-rouge">all_ports.txt</code>.</p>
 
 <div class="language-bash highlighter-rouge"><div class="code-header">
         <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span>
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>rustscan <span class="nt">-a</span> <span class="nv">$TARGET_IP</span> <span class="nt">--</span> <span class="nt">-sV</span> <span class="nt">-oN</span> ports
+</pre></td><td class="rouge-code"><pre>rustscan <span class="nt">-a</span> <span class="nv">$TARGET_IP</span> <span class="nt">--</span> <span class="nt">-sV</span> <span class="nt">-oN</span> all_ports.txt
 </pre></td></tr></tbody></table></code></div></div>
-<div class="language-bash highlighter-rouge"><div class="code-header">
-        <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span>
+<div file="all_ports.txt" class="language-bash highlighter-rouge"><div class="code-header">
+        <span data-label-text="all_ports.txt"><i class="far fa-file-code fa-fw"></i></span>
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
 5
 6
-7
-8
-</pre></td><td class="rouge-code"><pre>┌──<span class="o">(</span>kali㉿kali<span class="o">)</span>-[~]
-└─<span class="nv">$ </span><span class="nb">cat </span>ports
-PORT    STATE SERVICE     REASON  VERSION
+</pre></td><td class="rouge-code"><pre>PORT    STATE SERVICE     REASON  VERSION
 22/tcp  open  ssh         syn-ack OpenSSH 7.6p1 Ubuntu 4ubuntu0.3 <span class="o">(</span>Ubuntu Linux<span class="p">;</span> protocol 2.0<span class="o">)</span>
 80/tcp  open  http        syn-ack Apache httpd 2.4.29 <span class="o">((</span>Ubuntu<span class="o">))</span>
 139/tcp open  netbios-ssn syn-ack Samba smbd 3.X - 4.X <span class="o">(</span>workgroup: WORKGROUP<span class="o">)</span>
@@ -2563,6 +2559,11 @@ Time for automated enumeration I guess.</p>
           >tryhackme</a>
         
           <a
+            href="/tags/web/"
+            class="post-tag no-text-decoration"
+          >web</a>
+        
+          <a
             href="/tags/wordpress/"
             class="post-tag no-text-decoration"
           >wordpress</a>
@@ -2767,70 +2768,6 @@ Time for automated enumeration I guess.</p>
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -2865,46 +2802,6 @@ Time for automated enumeration I guess.</p>
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
       
     
   
@@ -2927,15 +2824,6 @@ Time for automated enumeration I guess.</p>
     
     
     
-  
-    
-    
-    
-    
-      
-        
-        
-
   
     
     
@@ -3010,6 +2898,53 @@ Time for automated enumeration I guess.</p>
     
     
     
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -3056,6 +2991,215 @@ Time for automated enumeration I guess.</p>
     
     
     
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
     
   
     
@@ -3127,53 +3271,6 @@ Time for automated enumeration I guess.</p>
     
     
       
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
     
   
     
@@ -3207,10 +3304,13 @@ Time for automated enumeration I guess.</p>
         <a class="post-tag btn btn-outline-primary" href="/tags/writeups/">writeups</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/metasploit/">metasploit</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/web/">web</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/windows/">windows</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/linux-privesc/">linux-privesc</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/metasploit/">metasploit</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/active-directory/">active-directory</a>
@@ -3219,13 +3319,10 @@ Time for automated enumeration I guess.</p>
         <a class="post-tag btn btn-outline-primary" href="/tags/asreproast/">asreproast</a>
       
         
+        <a class="post-tag btn btn-outline-primary" href="/tags/ejs/">ejs</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/tags/golden-ticket/">golden-ticket</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/hacking/">hacking</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/impacket/">impacket</a>
       
     </div>
   </section>
@@ -3310,6 +3407,18 @@ Time for automated enumeration I guess.</p>
 
   
 
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
 
 
 
@@ -3323,6 +3432,34 @@ Time for automated enumeration I guess.</p>
   <aside id="related-posts" aria-labelledby="related-label">
     <h3 class="mb-4" id="related-label">Further Reading</h3>
     <nav class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 mb-4">
+      
+        <article class="col">
+          <a href="/posts/thm-whiterose/" class="post-preview card h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1735747200"
+  data-df="ll"
+  
+>
+  Jan  1, 2025
+</time>
+
+              <h4 class="pt-0 my-2">Whiterose</h4>
+              <div class="text-muted">
+                <p>Yet another Mr. Robot themed challenge.</p>
+              </div>
+            </div>
+          </a>
+        </article>
       
         <article class="col">
           <a href="/posts/thm-cyberlens/" class="post-preview card h-100">
@@ -3467,70 +3604,6 @@ Time for automated enumeration I guess.</p>
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -3565,46 +3638,6 @@ Time for automated enumeration I guess.</p>
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
       
     
   
@@ -3627,15 +3660,6 @@ Time for automated enumeration I guess.</p>
     
     
     
-  
-    
-    
-    
-    
-      
-        
-        
-
   
     
     
@@ -3710,6 +3734,53 @@ Time for automated enumeration I guess.</p>
     
     
     
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -3756,6 +3827,215 @@ Time for automated enumeration I guess.</p>
     
     
     
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
     
   
     
@@ -3827,53 +4107,6 @@ Time for automated enumeration I guess.</p>
     
     
       
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
     
   
     
@@ -3907,10 +4140,13 @@ Time for automated enumeration I guess.</p>
         <a class="post-tag btn btn-outline-primary" href="/tags/writeups/">writeups</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/metasploit/">metasploit</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/web/">web</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/windows/">windows</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/linux-privesc/">linux-privesc</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/metasploit/">metasploit</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/active-directory/">active-directory</a>
@@ -3919,13 +4155,10 @@ Time for automated enumeration I guess.</p>
         <a class="post-tag btn btn-outline-primary" href="/tags/asreproast/">asreproast</a>
       
         
+        <a class="post-tag btn btn-outline-primary" href="/tags/ejs/">ejs</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/tags/golden-ticket/">golden-ticket</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/hacking/">hacking</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/impacket/">impacket</a>
       
     </div>
   </section>
