@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>NullBrunk</title>
   <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
-  <updated>2025-01-02T19:28:54+00:00</updated>
+  <updated>2025-01-02T19:30:59+00:00</updated>
   <author>
     <name>Anas</name>
     <uri>http://localhost:4000/</uri>
@@ -76,7 +76,7 @@
     <link href="http://localhost:4000/posts/thm-attacktivedirectory/" rel="alternate" type="text/html" title="Attacktive Directory" />
     <published>2024-12-29T16:00:00+00:00</published>
   
-    <updated>2025-01-01T21:11:42+00:00</updated>
+    <updated>2025-01-02T19:29:42+00:00</updated>
   
     <id>http://localhost:4000/posts/thm-attacktivedirectory/</id>
     <content type="text/html" src="http://localhost:4000/posts/thm-attacktivedirectory/" />
@@ -102,7 +102,7 @@
     <link href="http://localhost:4000/posts/thm-blog/" rel="alternate" type="text/html" title="Blog" />
     <published>2024-12-28T16:00:00+00:00</published>
   
-    <updated>2025-01-01T21:11:42+00:00</updated>
+    <updated>2025-01-02T19:29:42+00:00</updated>
   
     <id>http://localhost:4000/posts/thm-blog/</id>
     <content type="text/html" src="http://localhost:4000/posts/thm-blog/" />
@@ -128,7 +128,7 @@
     <link href="http://localhost:4000/posts/thm-cyberlens/" rel="alternate" type="text/html" title="CyberLens" />
     <published>2024-12-26T16:00:00+00:00</published>
   
-    <updated>2025-01-01T21:11:42+00:00</updated>
+    <updated>2025-01-02T19:29:42+00:00</updated>
   
     <id>http://localhost:4000/posts/thm-cyberlens/</id>
     <content type="text/html" src="http://localhost:4000/posts/thm-cyberlens/" />
