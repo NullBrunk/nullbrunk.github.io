@@ -30,26 +30,24 @@
 
   <!-- Begin Jekyll SEO tag v2.8.0 -->
 <meta name="generator" content="Jekyll v4.3.4" />
-<meta property="og:title" content="Laravel Cybershop" />
+<meta property="og:title" content="LFI" />
 <meta name="author" content="Anas" />
 <meta property="og:locale" content="en" />
-<meta name="description" content="E-Commerce webapp written with Laravel and Livewire" />
-<meta property="og:description" content="E-Commerce webapp written with Laravel and Livewire" />
-<link rel="canonical" href="http://localhost:4000/posts/laravel-ecommerce/" />
-<meta property="og:url" content="http://localhost:4000/posts/laravel-ecommerce/" />
+<meta name="description" content="Essential paths and files for Local File Inclusion." />
+<meta property="og:description" content="Essential paths and files for Local File Inclusion." />
+<link rel="canonical" href="http://localhost:4000/posts/lfi-cheatsheet/" />
+<meta property="og:url" content="http://localhost:4000/posts/lfi-cheatsheet/" />
 <meta property="og:site_name" content="NullBrunk" />
-<meta property="og:image" content="http://localhost:4000/assets/img/projects/ecommerce.png" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2023-04-23T16:00:00+00:00" />
-<meta name="twitter:card" content="summary_large_image" />
-<meta property="twitter:image" content="http://localhost:4000/assets/img/projects/ecommerce.png" />
-<meta property="twitter:title" content="Laravel Cybershop" />
+<meta property="article:published_time" content="2025-01-02T16:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="LFI" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Anas","url":"https://github.com/NullBrunk/"},"dateModified":"2024-12-28T21:28:39+00:00","datePublished":"2023-04-23T16:00:00+00:00","description":"E-Commerce webapp written with Laravel and Livewire","headline":"Laravel Cybershop","image":"http://localhost:4000/assets/img/projects/ecommerce.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/laravel-ecommerce/"},"url":"http://localhost:4000/posts/laravel-ecommerce/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Anas","url":"https://github.com/NullBrunk/"},"dateModified":"2025-01-02T16:00:00+00:00","datePublished":"2025-01-02T16:00:00+00:00","description":"Essential paths and files for Local File Inclusion.","headline":"LFI","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/lfi-cheatsheet/"},"url":"http://localhost:4000/posts/lfi-cheatsheet/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
-  <title>Laravel Cybershop | NullBrunk
+  <title>LFI | NullBrunk
   </title>
 
   <!--
@@ -463,103 +461,6 @@
 
 
 
-  
-  
-
-  
-    
-      
-      
-    
-
-    
-    
-
-    
-
-    
-    
-
-    
-    
-    
-
-    
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-      
-
-      
-    
-
-    <!-- take out classes -->
-    
-
-    
-    
-
-    
-
-    
-      
-    
-
-    <!-- lazy-load images -->
-    
-
-    
-      <!-- make sure the `<img>` is wrapped by `<a>` -->
-      
-
-      
-        <!-- create the image wrapper -->
-        
-
-        
-        
-      
-    
-
-    <!-- combine -->
-    
-  
-
-  
-
 
 <!-- Add header for code snippets -->
 
@@ -575,6 +476,70 @@
   
 
   
+
+  
+  
+
+  
+    
+    
+
+    
+      
+        
+        
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+
+    
+  
+
+  
+  
+
+  
     
     
 
@@ -670,18 +635,52 @@
 
       
     
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
 
     
-  
-
-  
-  
-
-  
-
-  
-  
-
   
 
   
@@ -711,11 +710,7 @@
 
             
                 <span>
-                 <a href="/categories/web-dev/">Web Dev</a>
-                </span>
-            
-                <span>
-                 <a href="/categories/laravel/">Laravel</a>
+                 <a href="/categories/cheatsheet/">CheatSheet</a>
                 </span>
             
 
@@ -726,16 +721,16 @@
             
              
             
-            <span>Laravel Cybershop</span>
+            <span>LFI</span>
         </nav>
     </div>
 </header>
 
 <article class="px-1" data-toc="true">
   <header>
-    <h1 data-toc-skip>Laravel Cybershop</h1>
+    <h1 data-toc-skip>LFI</h1>
     
-      <p class="post-desc fw-light mb-4">E-Commerce webapp written with Laravel and Livewire</p>
+      <p class="post-desc fw-light mb-4">Essential paths and files for Local File Inclusion.</p>
     
 
     <div class="post-meta text-muted">
@@ -752,52 +747,20 @@
 
 <time
   
-  data-ts="1682265600"
+  data-ts="1735833600"
   data-df="ll"
   
     data-bs-toggle="tooltip" data-bs-placement="bottom"
   
 >
-  Apr 23, 2023
+  Jan  2, 2025
 </time>
 
       </span>
 
       <!-- lastmod date -->
       
-        <span>
-          Updated
-          <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
 
-
-
-
-<time
-  
-  data-ts="1735421319"
-  data-df="ll"
-  
-    data-bs-toggle="tooltip" data-bs-placement="bottom"
-  
->
-  Dec 28, 2024
-</time>
-
-        </span>
-      
-
-      
-        
-        
-        
-
-        
-
-        <div class="mt-3 mb-3">
-          <a href="/assets/img/projects/ecommerce.png" class="popup img-link preview-img shimmer"><img src="/assets/img/projects/ecommerce.png"  alt="Preview Image" width="1200" height="630"  loading="lazy"></a></div>
       
 
       <div class="d-flex justify-content-between">
@@ -842,9 +805,9 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="436 words"
+  title="284 words"
 >
-  <em>2 min</em> read</span>
+  <em>1 min</em> read</span>
 
         </div>
       </div>
@@ -853,7 +816,7 @@
 
   
     <div id="toc-bar" class="d-flex align-items-center justify-content-between invisible">
-      <span class="label text-truncate">Laravel Cybershop</span>
+      <span class="label text-truncate">LFI</span>
       <button type="button" class="toc-trigger btn me-1">
         <i class="fa-solid fa-list-ul fa-fw"></i>
       </button>
@@ -866,7 +829,7 @@
 
     <dialog id="toc-popup" class="p-0">
       <div class="header d-flex flex-row align-items-center justify-content-between">
-        <div class="label text-truncate py-2 ms-4">Laravel Cybershop</div>
+        <div class="label text-truncate py-2 ms-4">LFI</div>
         <button id="toc-popup-close" type="button" class="btn mx-1 my-1 opacity-75">
           <i class="fas fa-close"></i>
         </button>
@@ -876,110 +839,262 @@
   
 
   <div class="content">
-    <p>This project was my first project with the Laravel framework. I wanted to create a dynamic E-Commerce website, so I choose to use the Laravel/Livewire tech stack. Additionally, I used vanilla JS, some library like HTMX and Swiper, and Bootstrap for the front end part. 
-I also used the Pusher websocket to create real-time notifications.</p>
+    <ol>
+  <li>Log poisoning
+    <ul>
+      <li><a href="#ssh">SSH</a></li>
+      <li><a href="#proftpd">ProFTPd</a></li>
+      <li><a href="#vsftpd">vsFTPd</a></li>
+      <li><a href="#apache">Apache</a></li>
+    </ul>
+  </li>
+  <li>Proc files
+    <ul>
+      <li><a href="#procselfcwd">/proc/self/cwd/</a></li>
+      <li><a href="#procselfcmdline">/proc/self/cmdline</a></li>
+      <li><a href="#procselfcomm">/proc/self/comm</a></li>
+      <li><a href="#procselfenviron">/proc/self/environ</a></li>
+      <li><a href="#procselfstatus">/proc/self/status</a></li>
+    </ul>
+  </li>
+  <li>Interesting files
+    <ul>
+      <li><a href="#etcpasswd">/etc/passwd</a></li>
+      <li><a href="#shell-history">Shell history</a></li>
+      <li><a href="#private-ssh-keys">Private SSH keys</a></li>
+      <li><a href="#varlogsyslog">/var/log/syslog</a></li>
+      <li><a href="#etccrontab">/etc/crontab</a></li>
+    </ul>
+  </li>
+  <li>Misc
+    <ul>
+      <li><a href="#filter-base64">Filter base64</a></li>
+      <li><a href="#-to-bypass-restrictions"># to bypass restrictions</a></li>
+    </ul>
+  </li>
+</ol>
+
+<h1 id="log-poisoning">Log poisoning</h1>
+
+<h4 id="ssh"><span class="me-2">SSH</span><a href="#ssh" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
+
+<p><strong>Conf is located in:</strong></p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">/etc/ssh/sshd_config</code></li>
+</ul>
+
+<p><strong>Logs can be located in:</strong></p>
+
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Path</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">/var/log/auth.log</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">/var/log/secure</code></td>
+    </tr>
+  </tbody>
+</table></div>
+
+<hr />
+<p><br /></p>
+
+<h4 id="proftpd"><span class="me-2">ProFTPd</span><a href="#proftpd" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
+
+<p><strong>Conf is located in:</strong></p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">/etc/proftpd/proftpd.conf</code></li>
+</ul>
+
+<p><strong>Logs can be located in:</strong></p>
+
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Path</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">/var/log/proftpd/access.log</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">/var/log/proftpd/ftp.log</code></td>
+    </tr>
+  </tbody>
+</table></div>
+
+<hr />
 
 <p><br /></p>
 
-<h2 id="general-overview"><span class="me-2">General overview</span><a href="#general-overview" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<h3 id="vsftpd"><span class="me-2">vsFTPd</span><a href="#vsftpd" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
-<p>The products are sorted by categories. Each category has its own search bar, and there is a general search bar that searches across all categories. 
-<br />
-On the product display pages, you can see the products, their names, categories, prices, and average rating.</p>
+<p><strong>Conf is located in:</strong></p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">/etc/vsftpd.conf</code></li>
+</ul>
 
-<p>
-  <video class="embed-video file embed-video-custom" src="https://github.com/NullBrunk/CyberShop/assets/125673909/bb256fa4-6ef4-47b1-a745-e0b5a1dc62ae" controls="">
-    
-  </video>
-  
-</p>
+<p><strong>Logs can be located in:</strong></p>
+
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Path</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">/var/log/vsftpd.log</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">/var/log/vsftpd/vsftpd_access.log</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">/var/log/vsftpd/xferlog</code></td>
+    </tr>
+  </tbody>
+</table></div>
+
+<hr />
 
 <p><br /></p>
 
-<h2 id="login"><span class="me-2">Login</span><a href="#login" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<h3 id="apache"><span class="me-2">Apache</span><a href="#apache" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
-<p>You can create an account with whatever email address you want, but you’ll need to validate it by clicking on the link sent by email. You can reset your password using the same email address.
-<br /></p>
+<p><strong>Conf can be located in:</strong></p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">/etc/apache2/apache.conf</code></li>
+  <li><code class="language-plaintext highlighter-rouge">/etc/apache2/apache2.conf</code></li>
+  <li><code class="language-plaintext highlighter-rouge">/etc/httpd/conf/httpd.conf</code></li>
+  <li><code class="language-plaintext highlighter-rouge">/etc/httpd/conf.d/apache.conf</code></li>
+  <li><code class="language-plaintext highlighter-rouge">/etc/httpd/conf/extra/apache.conf</code></li>
+</ul>
 
-<p>
-  <video class="embed-video file embed-video-custom" src="https://github.com/NullBrunk/CyberShop/assets/125673909/a15e4a32-3035-49fa-99bc-f834218a315c" controls="">
-    
-  </video>
-  
-</p>
+<p><strong>Access logs can be located in:</strong></p>
 
-<p>As you can see, livewire is used for the dynamic validation here.</p>
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Path</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">/var/log/apache2/access.log</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">/var/log/apache2/access_log</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">/var/log/httpd/access.log</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">/var/log/httpd/access_log</code></td>
+    </tr>
+  </tbody>
+</table></div>
 
-<p><br /></p>
+<p><strong>Error logs can be located in:</strong></p>
 
-<h2 id="product"><span class="me-2">Product</span><a href="#product" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Path</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">/var/log/apache2/error.log</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">/var/log/httpd/error_log</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">/var/log/httpd/error_log</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">/var/log/apache2/error_log</code></td>
+    </tr>
+  </tbody>
+</table></div>
 
-<p>You can sell a product by adding it in the “market” section. Give it a name, a price, a category, and a main image. You can also add secondary images. 
-<br />
-Finally, a MD-like editor is available for the product description (bold, italic, list, strikethrough text, links and so on).</p>
+<h1 id="proc-files">Proc files</h1>
 
-<p>The drag &amp; drop functionnality is done with filepond.js.</p>
+<h4 id="procselfcwd"><span class="me-2">/proc/self/cwd/</span><a href="#procselfcwd" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
 
-<p>
-  <video class="embed-video file embed-video-custom" src="https://github.com/NullBrunk/CyberShop/assets/125673909/7ed51d3a-2cf4-4c0e-b333-465cd6b7f975" controls="">
-    
-  </video>
-  
-</p>
+<p>Symbolic link that represents the <span class="easy">current working directory</span> of the process accessing it.
+Useful in some CTF where you can try to include <code class="language-plaintext highlighter-rouge">/proc/self/cwd/flag.txt</code>.</p>
 
-<h2 id="comments"><span class="me-2">Comments</span><a href="#comments" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<h4 id="procselfcmdline"><span class="me-2">/proc/self/cmdline</span><a href="#procselfcmdline" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
 
-<p>You can leave a comment on any product by adding a title, a rating, and your comment. Again, a markdown-like editor is available to help you style your text. Finally, you can “heart” other people’s comments.</p>
+<p>Contains the <span class="easy">command line arguments</span> that were used to start the process accessing it.</p>
 
-<p>
-  <video class="embed-video file embed-video-custom" src="https://github.com/NullBrunk/CyberShop/assets/125673909/0465e9bc-2540-4ce4-a304-d05e39500112" controls="">
-    
-  </video>
-  
-</p>
+<h4 id="procselfcomm"><span class="me-2">/proc/self/comm</span><a href="#procselfcomm" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
+<p>Contains the name of the <span class="easy">current executable</span> (the command that started the process)</p>
 
-<h2 id="settings"><span class="me-2">Settings</span><a href="#settings" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<h4 id="procselfenviron"><span class="me-2">/proc/self/environ</span><a href="#procselfenviron" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
 
-<p>You can customize your profile by changing your profile picture, email, or password. There is also a profile page displaying the products you are selling, the number of hearts your comments have received, your average product rating, the number of comments you have made, and a list of your recent comments.</p>
+<p>Contains the <span class="easy">environment</span> variables of the process accessing it.</p>
 
-<p>
-  <video class="embed-video file embed-video-custom" src="https://github.com/NullBrunk/CyberShop/assets/125673909/4c6b2c51-15af-4138-8fd4-639f08370a90" controls="">
-    
-  </video>
-  
-</p>
+<h4 id="procselfstatus"><span class="me-2">/proc/self/status</span><a href="#procselfstatus" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
 
-<h2 id="payment"><span class="me-2">Payment</span><a href="#payment" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<p>Contains various details about the process, including the <span class="easy">UID/GID</span> of the user running the process</p>
 
-<p>When you add a product to your cart, it appears in the small dynamic cart icon in the navbar. Clicking on this cart icon takes you to a more detailed page where you also have the option to buy by making the payment (we have chosen to use Stripe).</p>
+<h1 id="interesting-files">Interesting files</h1>
 
-<p>
-  <video class="embed-video file embed-video-custom" src="https://github.com/NullBrunk/CyberShop/assets/125673909/75af32a3-3840-4cac-a018-9f6a3c27a972" controls="">
-    
-  </video>
-  
-</p>
+<h4 id="etcpasswd"><span class="me-2">/etc/passwd</span><a href="#etcpasswd" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
+<p>Contains user account information: username, UID, GID, home directory, and the shell used by each user.</p>
 
-<p>I chose Livewire for the dynamic cart page.</p>
+<h4 id="shell-history"><span class="me-2">Shell history</span><a href="#shell-history" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
 
-<h2 id="chatbox"><span class="me-2">Chatbox</span><a href="#chatbox" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<div class="language-bash highlighter-rouge"><div class="code-header">
+        <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>/home/<span class="k">${</span><span class="nv">USER</span><span class="k">}</span>/.<span class="k">${</span><span class="nv">CONNECTION_SHELL</span><span class="k">}</span>_history
+</pre></td></tr></tbody></table></code></div></div>
+<p><em>You can find <code class="language-plaintext highlighter-rouge">${USER}</code> and <code class="language-plaintext highlighter-rouge">${CONNECTION_SHELL}</code> in <code class="language-plaintext highlighter-rouge">/etc/passwd</code></em></p>
 
-<p>There is a chat that allows you to interact with sellers or other clients. It is dynamic and supports sending messages as well as images. Additionally, the notification component in the navbar uses WebSockets, making it real-time. Therefore, you will receive notifications instantly as they happen.</p>
+<h4 id="private-ssh-keys"><span class="me-2">Private SSH keys</span><a href="#private-ssh-keys" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
 
-<p>
-  <video class="embed-video file embed-video-custom" src="https://github.com/NullBrunk/CyberShop/assets/125673909/574b7ca6-082b-4857-97e0-82db359b1f99" controls="">
-    
-  </video>
-  
-</p>
+<div class="language-bash highlighter-rouge"><div class="code-header">
+        <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>/home/<span class="k">${</span><span class="nv">USER</span><span class="k">}</span>/.ssh/id_rsa
+</pre></td></tr></tbody></table></code></div></div>
 
-<p>The dynamic notification component is updated using livewire + pusher.js websocket.</p>
+<p><em>You can find <code class="language-plaintext highlighter-rouge">${USER}</code> in <code class="language-plaintext highlighter-rouge">/etc/passwd</code></em></p>
 
-<h2 id="source"><span class="me-2">Source</span><a href="#source" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
-<p>The source code and installation instructions are accessible <a href="https://github.com/NullBrunk/CyberShop" target="_blank">here</a>.</p>
+<h4 id="varlogsyslog"><span class="me-2">/var/log/syslog</span><a href="#varlogsyslog" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
+<p>Contains general system log messages, including information about system events, services, and applications</p>
 
-<p>You’ll also find a docker-compose file there if you want to test the application locally.</p>
+<h4 id="etccrontab"><span class="me-2">/etc/crontab</span><a href="#etccrontab" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
+<p>Contains system-wide cron job definitions along with the user under which they should execute.</p>
 
+<h1 id="misc">Misc</h1>
+
+<h3 id="filter-base64"><span class="me-2">Filter base64</span><a href="#filter-base64" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<div file="LFI" class="language-php highlighter-rouge"><div class="code-header">
+        <span data-label-text="LFI"><i class="far fa-file-code fa-fw"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="n">php</span><span class="o">://</span><span class="n">filter</span><span class="o">/</span><span class="n">convert</span><span class="mf">.</span><span class="n">base64</span><span class="o">-</span><span class="n">encode</span><span class="o">/</span><span class="n">resource</span><span class="o">=</span><span class="no">FILENAME</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<h3 id="-to-bypass-restrictions"><span class="me-2"># to bypass restrictions</span><a href="#-to-bypass-restrictions" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<p>Sometimes you can use the # symbol to bypass verification:</p>
+<div file="LFI" class="language-php highlighter-rouge"><div class="code-header">
+        <span data-label-text="LFI"><i class="far fa-file-code fa-fw"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre><span class="o">?</span><span class="n">filename</span><span class="o">=</span><span class="n">file</span><span class="o">:///</span><span class="n">etc</span><span class="o">/</span><span class="n">passwd</span><span class="c1">#https</span>
+<span class="o">?</span><span class="n">filename</span><span class="o">=</span><span class="n">http</span><span class="o">://</span><span class="n">mywebsite</span><span class="mf">.</span><span class="n">com</span><span class="o">/</span><span class="c1">#https</span>
+</pre></td></tr></tbody></table></code></div></div>
 
   </div>
 
@@ -989,12 +1104,21 @@ Finally, a MD-like editor is available for the product description (bold, italic
       <div class="post-meta mb-3">
         <i class="far fa-folder-open fa-fw me-1"></i>
         
-          <a href="/categories/web-dev/">Web Dev</a>,
-          <a href="/categories/laravel/">Laravel</a>
+          <a href="/categories/cheatsheet/">CheatSheet</a>
       </div>
     
 
     <!-- tags -->
+    
+      <div class="post-tags">
+        <i class="fa fa-tags fa-fw me-1"></i>
+        
+          <a
+            href="/tags/cheatsheet/"
+            class="post-tag no-text-decoration"
+          >cheatsheet</a>
+        
+      </div>
     
 
     <div
@@ -1028,21 +1152,21 @@ Finally, a MD-like editor is available for the product description (bold, italic
 
       
 
-      <a href="https://twitter.com/intent/tweet?text=Laravel%20Cybershop%20-%20NullBrunk&url=http%3A%2F%2Flocalhost%3A4000%2Fposts%2Flaravel-ecommerce%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
+      <a href="https://twitter.com/intent/tweet?text=LFI%20-%20NullBrunk&url=http%3A%2F%2Flocalhost%3A4000%2Fposts%2Flfi-cheatsheet%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
         <i class="fa-fw fa-brands fa-square-x-twitter"></i>
       </a>
     
 
       
 
-      <a href="https://www.facebook.com/sharer/sharer.php?title=Laravel%20Cybershop%20-%20NullBrunk&u=http%3A%2F%2Flocalhost%3A4000%2Fposts%2Flaravel-ecommerce%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
+      <a href="https://www.facebook.com/sharer/sharer.php?title=LFI%20-%20NullBrunk&u=http%3A%2F%2Flocalhost%3A4000%2Fposts%2Flfi-cheatsheet%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
         <i class="fa-fw fab fa-facebook-square"></i>
       </a>
     
 
       
 
-      <a href="https://t.me/share/url?url=http%3A%2F%2Flocalhost%3A4000%2Fposts%2Flaravel-ecommerce%2F&text=Laravel%20Cybershop%20-%20NullBrunk" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
+      <a href="https://t.me/share/url?url=http%3A%2F%2Flocalhost%3A4000%2Fposts%2Flfi-cheatsheet%2F&text=LFI%20-%20NullBrunk" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
         <i class="fa-fw fab fa-telegram"></i>
       </a>
     
@@ -1813,30 +1937,7 @@ Finally, a MD-like editor is available for the product description (bold, italic
   
 
   
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
     
-  
-
-  
-
-  
-
-  
-
-  
-
-  
 
 
 
@@ -1846,71 +1947,6 @@ Finally, a MD-like editor is available for the product description (bold, italic
 
 
 
-
-
-  <aside id="related-posts" aria-labelledby="related-label">
-    <h3 class="mb-4" id="related-label">Further Reading</h3>
-    <nav class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 mb-4">
-      
-        <article class="col">
-          <a href="/posts/todojs/" class="post-preview card h-100">
-            <div class="card-body">
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1720108800"
-  data-df="ll"
-  
->
-  Jul  4, 2024
-</time>
-
-              <h4 class="pt-0 my-2">Todo.js</h4>
-              <div class="text-muted">
-                <p>React dynamic to-do list, tailwind frontend, localstorage DB</p>
-              </div>
-            </div>
-          </a>
-        </article>
-      
-        <article class="col">
-          <a href="/posts/php-webchat/" class="post-preview card h-100">
-            <div class="card-body">
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1676563200"
-  data-df="ll"
-  
->
-  Feb 16, 2023
-</time>
-
-              <h4 class="pt-0 my-2">PHP Chat</h4>
-              <div class="text-muted">
-                <p>Interactive webchat written in PHP/JS with AJAX</p>
-              </div>
-            </div>
-          </a>
-        </article>
-      
-    </nav>
-  </aside>
-  <!-- #related-posts -->
 
 
             
