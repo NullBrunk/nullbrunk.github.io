@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>NullBrunk</title>
   <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
-  <updated>2025-01-03T15:28:01+00:00</updated>
+  <updated>2025-01-04T13:37:38+00:00</updated>
   <author>
     <name>Anas</name>
     <uri>http://localhost:4000/</uri>
@@ -17,6 +17,32 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>Opacity</title>
+    <link href="http://localhost:4000/posts/thm-opacity/" rel="alternate" type="text/html" title="Opacity" />
+    <published>2025-01-02T16:00:00+00:00</published>
+  
+    <updated>2025-01-02T16:00:00+00:00</updated>
+  
+    <id>http://localhost:4000/posts/thm-opacity/</id>
+    <content type="text/html" src="http://localhost:4000/posts/thm-opacity/" />
+    <author>
+      <name>anas</name>
+    </author>
+
+  
+    
+    <category term="Writeups" />
+    
+    <category term="TryHackMe" />
+    
+  
+
+  <summary>Opacity is a Boot2Root made for pentesters and cybersecurity enthusiasts.</summary>
+
+  </entry>
 
   
   <entry>
@@ -117,32 +143,6 @@
   
 
   <summary>99% of Corporate networks run off of AD. But can you exploit a vulnerable Domain Controller?</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>Blog</title>
-    <link href="http://localhost:4000/posts/thm-blog/" rel="alternate" type="text/html" title="Blog" />
-    <published>2024-12-28T16:00:00+00:00</published>
-  
-    <updated>2025-01-02T19:29:42+00:00</updated>
-  
-    <id>http://localhost:4000/posts/thm-blog/</id>
-    <content type="text/html" src="http://localhost:4000/posts/thm-blog/" />
-    <author>
-      <name>anas</name>
-    </author>
-
-  
-    
-    <category term="Writeups" />
-    
-    <category term="TryHackMe" />
-    
-  
-
-  <summary>Billy Joel made a Wordpress blog!</summary>
 
   </entry>
 
