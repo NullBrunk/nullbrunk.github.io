@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>NullBrunk</title>
   <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
-  <updated>2025-01-04T14:02:04+00:00</updated>
+  <updated>2025-01-04T15:16:10+00:00</updated>
   <author>
     <name>Anas</name>
     <uri>http://localhost:4000/</uri>
@@ -41,30 +41,6 @@
   
 
   <summary>Opacity is a Boot2Root made for pentesters and cybersecurity enthusiasts.</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>LFI</title>
-    <link href="http://localhost:4000/posts/lfi-cheatsheet/" rel="alternate" type="text/html" title="LFI" />
-    <published>2025-01-02T16:00:00+00:00</published>
-  
-    <updated>2025-01-02T16:00:00+00:00</updated>
-  
-    <id>http://localhost:4000/posts/lfi-cheatsheet/</id>
-    <content type="text/html" src="http://localhost:4000/posts/lfi-cheatsheet/" />
-    <author>
-      <name>anas</name>
-    </author>
-
-  
-    
-    <category term="CheatSheet" />
-    
-  
-
-  <summary>Essential paths and files for Local File Inclusion.</summary>
 
   </entry>
 
@@ -143,6 +119,32 @@
   
 
   <summary>99% of Corporate networks run off of AD. But can you exploit a vulnerable Domain Controller?</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>Blog</title>
+    <link href="http://localhost:4000/posts/thm-blog/" rel="alternate" type="text/html" title="Blog" />
+    <published>2024-12-28T16:00:00+00:00</published>
+  
+    <updated>2025-01-02T19:29:42+00:00</updated>
+  
+    <id>http://localhost:4000/posts/thm-blog/</id>
+    <content type="text/html" src="http://localhost:4000/posts/thm-blog/" />
+    <author>
+      <name>anas</name>
+    </author>
+
+  
+    
+    <category term="Writeups" />
+    
+    <category term="TryHackMe" />
+    
+  
+
+  <summary>Billy Joel made a Wordpress blog!</summary>
 
   </entry>
 

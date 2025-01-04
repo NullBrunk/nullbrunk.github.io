@@ -18,23 +18,6 @@
   },
   
   {
-    "title": "LFI",
-    "url": "/posts/lfi-cheatsheet/",
-    "categories": "CheatSheet",
-    "tags": "cheatsheet",
-    "date": "2025-01-02 16:00:00 +0000",
-    
-
-
-
-
-
-    
-    "snippet": "  Log poisoning          SSH      ProFTPd      vsFTPd      Apache        Proc files          /proc/self/cwd/      /proc/self/cmdline      /proc/self/comm      /proc/self/environ      /proc/self/sta...",
-    "content": "  Log poisoning          SSH      ProFTPd      vsFTPd      Apache        Proc files          /proc/self/cwd/      /proc/self/cmdline      /proc/self/comm      /proc/self/environ      /proc/self/status        Interesting files          /etc/passwd      Shell history      Private SSH keys      /var/log/syslog      /etc/crontab        Misc          Filter base64      # to bypass restrictions      Log poisoningSSHConf is located in:  /etc/ssh/sshd_configLogs can be located in:            Path                  /var/log/auth.log              /var/log/secure      ProFTPdConf is located in:  /etc/proftpd/proftpd.confLogs can be located in:            Path                  /var/log/proftpd/access.log              /var/log/proftpd/ftp.log      vsFTPdConf is located in:  /etc/vsftpd.confLogs can be located in:            Path                  /var/log/vsftpd.log              /var/log/vsftpd/vsftpd_access.log              /var/log/vsftpd/xferlog      ApacheConf can be located in:  /etc/apache2/apache.conf  /etc/apache2/apache2.conf  /etc/httpd/conf/httpd.conf  /etc/httpd/conf.d/apache.conf  /etc/httpd/conf/extra/apache.confAccess logs can be located in:            Path                  /var/log/apache2/access.log              /var/log/apache2/access_log              /var/log/httpd/access.log              /var/log/httpd/access_log      Error logs can be located in:            Path                  /var/log/apache2/error.log              /var/log/httpd/error_log              /var/log/httpd/error_log              /var/log/apache2/error_log      Proc files/proc/self/cwd/Symbolic link that represents the current working directory of the process accessing it.Useful in some CTF where you can try to include /proc/self/cwd/flag.txt./proc/self/cmdlineContains the command line arguments that were used to start the process accessing it./proc/self/commContains the name of the current executable (the command that started the process)/proc/self/environContains the environment variables of the process accessing it./proc/self/statusContains various details about the process, including the UID/GID of the user running the processInteresting files/etc/passwdContains user account information: username, UID, GID, home directory, and the shell used by each user.Shell history/home/${USER}/.${CONNECTION_SHELL}_historyYou can find ${USER} and ${CONNECTION_SHELL} in /etc/passwdPrivate SSH keys/home/${USER}/.ssh/id_rsaYou can find ${USER} in /etc/passwd/var/log/syslogContains general system log messages, including information about system events, services, and applications/etc/crontabContains system-wide cron job definitions along with the user under which they should execute.MiscFilter base64php://filter/convert.base64-encode/resource=FILENAME# to bypass restrictionsSometimes you can use the # symbol to bypass verification:?filename=file:///etc/passwd#https?filename=http://mywebsite.com/#https"
-  },
-  
-  {
     "title": "Whiterose",
     "url": "/posts/thm-whiterose/",
     "categories": "Writeups, TryHackMe",
@@ -207,8 +190,8 @@
   {
     "title": "CVE-2011-2523 POC",
     "url": "/posts/cve-2011-2523/",
-    "categories": "Programming, Hacking tools",
-    "tags": "programming, hacking",
+    "categories": "Hacking tools, Python",
+    "tags": "hacking-tools, poc",
     "date": "2022-06-02 16:00:00 +0000",
     
 
