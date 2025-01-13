@@ -1178,77 +1178,6 @@
     <!-- combine -->
     
   
-    
-
-    
-    
-
-    
-
-    
-    
-
-    
-    
-    
-
-    
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-      
-
-      
-    
-
-    <!-- take out classes -->
-    
-
-    
-    
-
-    
-
-    
-      
-    
-
-    <!-- lazy-load images -->
-    
-
-    
-      <!-- make sure the `<img>` is wrapped by `<a>` -->
-      
-
-      
-        <!-- create the image wrapper -->
-        
-
-        
-        
-      
-    
-
-    <!-- combine -->
-    
-  
 
   
 
@@ -1543,7 +1472,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="2606 words"
+  title="2560 words"
 >
   <em>14 min</em> read</span>
 
@@ -1755,11 +1684,11 @@ We know <em>(from the <a href="#schemaprisma">Schema.prisma</a>)</em> that each 
 <p><a href="/assets/img/writeups/uoftctf/dontstartswith8.png" class="popup img-link radius-shadow shimmer"><img src="/assets/img/writeups/uoftctf/dontstartswith8.png" alt="!image"  loading="lazy"></a></p>
 
 <p>As you can see nothing is returned, that means that the Bob’s password don’t start with <code class="language-plaintext highlighter-rouge">a</code>. 
-I tried b, c, d … And got a hit with 8:</p>
+I tried b, c, d … And got a hit with 8, meaning that Bob’s password starts with 8 !</p>
 
 <p><a href="/assets/img/writeups/uoftctf/startsWith8.png" class="popup img-link radius-shadow shimmer"><img src="/assets/img/writeups/uoftctf/startsWith8.png" alt="image"  loading="lazy"></a></p>
 
-<p>So know we can try <code class="language-plaintext highlighter-rouge">8a</code>, <code class="language-plaintext highlighter-rouge">8b</code>, <code class="language-plaintext highlighter-rouge">8c</code> and so on … Let’s automate that with python.</p>
+<p>So know we can try <code class="language-plaintext highlighter-rouge">8a</code>, <code class="language-plaintext highlighter-rouge">8b</code>, <code class="language-plaintext highlighter-rouge">8c</code> and so on … Let’s automate this with python.</p>
 
 <h3 id="scripting-case-unsensitive"><span class="me-2">Scripting (case unsensitive)</span><a href="#scripting-case-unsensitive" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
@@ -1824,45 +1753,17 @@ I tried b, c, d … And got a hit with 8:</p>
 <p>I launched the script, waited a bit …
 <a href="/assets/img/writeups/uoftctf/onlycaps.png" class="popup img-link radius-shadow shimmer"><img src="/assets/img/writeups/uoftctf/onlycaps.png" alt="image"  loading="lazy"></a></p>
 
-<p>After a few minutes (yes my network is that bad …) the script ended with this password: <code class="language-plaintext highlighter-rouge">8AXCGMISH5ZN59RSXJM</code>. Let’s login to the <code class="language-plaintext highlighter-rouge">/api/login</code> endpoitn with it !</p>
+<p>After a few minutes (yes my network is that bad …) the script told me “Bob’s password is <code class="language-plaintext highlighter-rouge">8AXCGMISH5ZN59RSXJM</code> !”. 
+So let’s try to login to the <code class="language-plaintext highlighter-rouge">/api/login</code> endpoint with it !</p>
 
 <p><a href="/assets/img/writeups/uoftctf/nah.png" class="popup img-link radius-shadow shimmer"><img src="/assets/img/writeups/uoftctf/nah.png" alt="image"  loading="lazy"></a></p>
-
-<p>What ? Maybe our password is not correct, let’s try this request to double check:</p>
-
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">http://TARGET_URL/api/posts?author[name]=Bob&amp;author[password][startsWith]=8AXCGMISH5ZN59RSXJM&amp;author[password][endsWith]=8AXCGMISH5ZN59RSXJM</code></li>
-</ul>
-
-<p>That will be converted to</p>
-<div class="language-json highlighter-rouge"><div class="code-header">
-        <span data-label-text="JSON"><i class="fas fa-code fa-fw small"></i></span>
-      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-</pre></td><td class="rouge-code"><pre><span class="nl">"author"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-	</span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bob"</span><span class="p">,</span><span class="w">
-	</span><span class="nl">"password"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-		</span><span class="nl">"startsWith"</span><span class="p">:</span><span class="w"> </span><span class="s2">"8AXCGMISH5ZN59RSXJM"</span><span class="p">,</span><span class="w">
-		</span><span class="nl">"endWith"</span><span class="p">:</span><span class="w"> </span><span class="s2">"8AXCGMISH5ZN59RSXJM"</span><span class="w">
-	</span><span class="p">}</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></pre></td></tr></tbody></table></code></div></div>
-
-<p><a href="/assets/img/writeups/uoftctf/long.png" class="popup img-link radius-shadow shimmer"><img src="/assets/img/writeups/uoftctf/long.png" alt="image"  loading="lazy"></a></p>
-
-<p>What ??? The <strong>Bob</strong>’s password <strong>starts</strong> and <strong>ends</strong> with <code class="language-plaintext highlighter-rouge">8AXCGMISH5ZN59RSXJM</code> but we cannot login with it ? Why ?</p>
 
 <p>Did you noticed something ? There is no lowercases in our password. So I guess the <code class="language-plaintext highlighter-rouge">startsWith</code> and <code class="language-plaintext highlighter-rouge">endsWith</code> are <strong>case-insensitive</strong>.
 Let’s try a different operator:</p>
 
 <p><a href="/assets/img/writeups/uoftctf/equalsno.png" class="popup img-link radius-shadow shimmer"><img src="/assets/img/writeups/uoftctf/equalsno.png" alt="image"  loading="lazy"></a></p>
 
-<p>Trying with the <code class="language-plaintext highlighter-rouge">equals</code> it doesn’t return anything ! So I guess <code class="language-plaintext highlighter-rouge">equals</code> is <strong>case-sensitive</strong> as well as the <code class="language-plaintext highlighter-rouge">/api/login</code> endpoint ! We need to find a way to detect if each character is lowercase or uppercase, but how ?</p>
+<p>When I put <code class="language-plaintext highlighter-rouge">equals</code>, it doesn’t return anything ! So I guess <code class="language-plaintext highlighter-rouge">equals</code> is <strong>case-sensitive</strong> as well as the <code class="language-plaintext highlighter-rouge">/api/login</code> endpoint ! We need to find a way to detect if each character is lowercase or uppercase, but how ?</p>
 
 <h3 id="scripting-case-sensitive"><span class="me-2">Scripting (case sensitive)</span><a href="#scripting-case-sensitive" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
