@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>NullBrunk</title>
   <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
-  <updated>2025-01-13T03:02:24+00:00</updated>
+  <updated>2025-01-13T03:37:45+00:00</updated>
   <author>
     <name>Anas</name>
     <uri>http://localhost:4000/</uri>
@@ -20,37 +20,11 @@
 
   
   <entry>
-    <title>Opacity</title>
-    <link href="http://localhost:4000/posts/thm-opacity/" rel="alternate" type="text/html" title="Opacity" />
-    <published>2025-01-02T16:00:00+00:00</published>
-  
-    <updated>2025-01-02T16:00:00+00:00</updated>
-  
-    <id>http://localhost:4000/posts/thm-opacity/</id>
-    <content type="text/html" src="http://localhost:4000/posts/thm-opacity/" />
-    <author>
-      <name>anas</name>
-    </author>
-
-  
-    
-    <category term="Writeups" />
-    
-    <category term="TryHackMe" />
-    
-  
-
-  <summary>Opacity is a Boot2Root made for pentesters and cybersecurity enthusiasts.</summary>
-
-  </entry>
-
-  
-  <entry>
     <title>Introduction</title>
     <link href="http://localhost:4000/posts/uofctf-introduction/" rel="alternate" type="text/html" title="Introduction" />
-    <published>2025-01-01T16:00:00+00:00</published>
+    <published>2025-01-12T16:00:00+00:00</published>
   
-    <updated>2025-01-01T16:00:00+00:00</updated>
+    <updated>2025-01-12T16:00:00+00:00</updated>
   
     <id>http://localhost:4000/posts/uofctf-introduction/</id>
     <content type="text/html" src="http://localhost:4000/posts/uofctf-introduction/" />
@@ -78,14 +52,14 @@ I managed to finish 161 on 897 solo with my this CTFtime team … Not real...</s
 
   
   <entry>
-    <title>Whiterose</title>
-    <link href="http://localhost:4000/posts/thm-whiterose/" rel="alternate" type="text/html" title="Whiterose" />
-    <published>2025-01-01T16:00:00+00:00</published>
+    <title>Misc Category</title>
+    <link href="http://localhost:4000/posts/UofTCTF2025-misc/" rel="alternate" type="text/html" title="Misc Category" />
+    <published>2025-01-12T16:00:00+00:00</published>
   
-    <updated>2025-01-02T21:29:07+00:00</updated>
+    <updated>2025-01-12T16:00:00+00:00</updated>
   
-    <id>http://localhost:4000/posts/thm-whiterose/</id>
-    <content type="text/html" src="http://localhost:4000/posts/thm-whiterose/" />
+    <id>http://localhost:4000/posts/UofTCTF2025-misc/</id>
+    <content type="text/html" src="http://localhost:4000/posts/UofTCTF2025-misc/" />
     <author>
       <name>anas</name>
     </author>
@@ -94,11 +68,37 @@ I managed to finish 161 on 897 solo with my this CTFtime team … Not real...</s
     
     <category term="Writeups" />
     
-    <category term="TryHackMe" />
+    <category term="UofTCTF2025" />
     
   
 
-  <summary>Yet another Mr. Robot themed challenge.</summary>
+  <summary>The misc category</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>Pwn Category</title>
+    <link href="http://localhost:4000/posts/UofTCTF2025-babypwn/" rel="alternate" type="text/html" title="Pwn Category" />
+    <published>2025-01-12T16:00:00+00:00</published>
+  
+    <updated>2025-01-12T16:00:00+00:00</updated>
+  
+    <id>http://localhost:4000/posts/UofTCTF2025-babypwn/</id>
+    <content type="text/html" src="http://localhost:4000/posts/UofTCTF2025-babypwn/" />
+    <author>
+      <name>anas</name>
+    </author>
+
+  
+    
+    <category term="Writeups" />
+    
+    <category term="UofTCTF2025" />
+    
+  
+
+  <summary>BabyPwn 1 and 2</summary>
 
   </entry>
 
@@ -106,9 +106,9 @@ I managed to finish 161 on 897 solo with my this CTFtime team … Not real...</s
   <entry>
     <title>Prismatic Blogs</title>
     <link href="http://localhost:4000/posts/UofTCTF2025-prismatic/" rel="alternate" type="text/html" title="Prismatic Blogs" />
-    <published>2025-01-01T16:00:00+00:00</published>
+    <published>2025-01-11T16:00:00+00:00</published>
   
-    <updated>2025-01-01T16:00:00+00:00</updated>
+    <updated>2025-01-11T16:00:00+00:00</updated>
   
     <id>http://localhost:4000/posts/UofTCTF2025-prismatic/</id>
     <content type="text/html" src="http://localhost:4000/posts/UofTCTF2025-prismatic/" />
@@ -160,14 +160,14 @@ I managed to finish 161 on 897 solo with my this CTFtime team … Not real...</s
 
   
   <entry>
-    <title>Pwn</title>
-    <link href="http://localhost:4000/posts/UofTCTF2025-babypwn/" rel="alternate" type="text/html" title="Pwn" />
-    <published>2025-01-01T16:00:00+00:00</published>
+    <title>Opacity</title>
+    <link href="http://localhost:4000/posts/thm-opacity/" rel="alternate" type="text/html" title="Opacity" />
+    <published>2025-01-02T16:00:00+00:00</published>
   
-    <updated>2025-01-01T16:00:00+00:00</updated>
+    <updated>2025-01-02T16:00:00+00:00</updated>
   
-    <id>http://localhost:4000/posts/UofTCTF2025-babypwn/</id>
-    <content type="text/html" src="http://localhost:4000/posts/UofTCTF2025-babypwn/" />
+    <id>http://localhost:4000/posts/thm-opacity/</id>
+    <content type="text/html" src="http://localhost:4000/posts/thm-opacity/" />
     <author>
       <name>anas</name>
     </author>
@@ -176,11 +176,11 @@ I managed to finish 161 on 897 solo with my this CTFtime team … Not real...</s
     
     <category term="Writeups" />
     
-    <category term="UofTCTF2025" />
+    <category term="TryHackMe" />
     
   
 
-  <summary>BabyPwn 1 and 2</summary>
+  <summary>Opacity is a Boot2Root made for pentesters and cybersecurity enthusiasts.</summary>
 
   </entry>
 
