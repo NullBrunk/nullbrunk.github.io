@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>NullBrunk</title>
   <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
-  <updated>2025-01-13T03:39:04+00:00</updated>
+  <updated>2025-01-13T04:07:14+00:00</updated>
   <author>
     <name>Anas</name>
     <uri>http://localhost:4000/</uri>
@@ -56,7 +56,7 @@ I managed to finish 161 on 897 solo with my this CTFtime team … Not real...</s
     <link href="http://localhost:4000/posts/UofTCTF2025-misc/" rel="alternate" type="text/html" title="Misc Category" />
     <published>2025-01-12T16:00:00+00:00</published>
   
-    <updated>2025-01-12T16:00:00+00:00</updated>
+    <updated>2025-01-13T03:39:08+00:00</updated>
   
     <id>http://localhost:4000/posts/UofTCTF2025-misc/</id>
     <content type="text/html" src="http://localhost:4000/posts/UofTCTF2025-misc/" />
@@ -126,6 +126,7 @@ I managed to finish 161 on 897 solo with my this CTFtime team … Not real...</s
 
   <summary>Source Code
     
+      Reading source code
       Interesting points
       Identifying vulnerabilities
     
@@ -141,20 +142,22 @@ I managed to finish 161 on 897 solo with my this CTFtime team … Not real...</s
   Code
     
       Final script
-      Application Source code
-        
-          Seed.js
-          Index.js
-          Schema.prisma
-        
-      
     
   
 
 
 
 
-...</summary>
+Source Code
+
+Reading source code
+
+Here is the application source code:
+
+
+  index.js
+
+  imp...</summary>
 
   </entry>
 

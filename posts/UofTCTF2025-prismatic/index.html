@@ -33,8 +33,8 @@
 <meta property="og:title" content="Prismatic Blogs" />
 <meta name="author" content="Anas" />
 <meta property="og:locale" content="en" />
-<meta name="description" content="Source Code Interesting points Identifying vulnerabilities" />
-<meta property="og:description" content="Source Code Interesting points Identifying vulnerabilities" />
+<meta name="description" content="Source Code Reading source code Interesting points Identifying vulnerabilities" />
+<meta property="og:description" content="Source Code Reading source code Interesting points Identifying vulnerabilities" />
 <link rel="canonical" href="http://localhost:4000/posts/UofTCTF2025-prismatic/" />
 <meta property="og:url" content="http://localhost:4000/posts/UofTCTF2025-prismatic/" />
 <meta property="og:site_name" content="NullBrunk" />
@@ -43,7 +43,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Prismatic Blogs" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Anas","url":"https://github.com/NullBrunk/"},"dateModified":"2025-01-13T03:38:22+00:00","datePublished":"2025-01-11T16:00:00+00:00","description":"Source Code Interesting points Identifying vulnerabilities","headline":"Prismatic Blogs","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/UofTCTF2025-prismatic/"},"url":"http://localhost:4000/posts/UofTCTF2025-prismatic/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Anas","url":"https://github.com/NullBrunk/"},"dateModified":"2025-01-13T03:38:22+00:00","datePublished":"2025-01-11T16:00:00+00:00","description":"Source Code Reading source code Interesting points Identifying vulnerabilities","headline":"Prismatic Blogs","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/UofTCTF2025-prismatic/"},"url":"http://localhost:4000/posts/UofTCTF2025-prismatic/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -1306,39 +1306,6 @@
 
       
     
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
 
     
   
@@ -1495,7 +1462,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="2565 words"
+  title="2561 words"
 >
   <em>14 min</em> read</span>
 
@@ -1532,6 +1499,7 @@
     <ol>
   <li>Source Code
     <ul>
+      <li><a href="#reading-source-code">Reading source code</a></li>
       <li><a href="#interesting-points">Interesting points</a></li>
       <li><a href="#identifying-vulnerabilities">Identifying vulnerabilities</a></li>
     </ul>
@@ -1547,13 +1515,6 @@
   <li>Code
     <ul>
       <li><a href="#final-script">Final script</a></li>
-      <li><a href="#application-source-code">Application Source code</a>
-        <ul>
-          <li><a href="#seedjs">Seed.js</a></li>
-          <li><a href="#indexjs">Index.js</a></li>
-          <li><a href="#schemaprisma">Schema.prisma</a></li>
-        </ul>
-      </li>
     </ul>
   </li>
 </ol>
@@ -1562,7 +1523,450 @@
 
 <h1 id="source-code">Source Code</h1>
 
-<p><a href="#application-source-code">You can read the source code here</a></p>
+<h2 id="reading-source-code"><span class="me-2">Reading source code</span><a href="#reading-source-code" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+
+<p>Here is the application source code:</p>
+
+<details id="indexjs">
+  <summary>index.js</summary>
+
+  <div file="index.js" class="language-js highlighter-rouge"><div class="code-header">
+        <span data-label-text="index.js"><i class="far fa-file-code fa-fw"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+</pre></td><td class="rouge-code"><pre><span class="k">import</span> <span class="nx">express</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">express</span><span class="dl">"</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">PrismaClient</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">@prisma/client</span><span class="dl">"</span><span class="p">;</span>
+
+<span class="kd">const</span> <span class="nx">app</span> <span class="o">=</span> <span class="nf">express</span><span class="p">();</span>
+<span class="nx">app</span><span class="p">.</span><span class="nf">use</span><span class="p">(</span><span class="nx">express</span><span class="p">.</span><span class="nf">json</span><span class="p">())</span>
+
+<span class="kd">const</span> <span class="nx">prisma</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">PrismaClient</span><span class="p">();</span>
+
+<span class="kd">const</span> <span class="nx">PORT</span> <span class="o">=</span> <span class="mi">3000</span><span class="p">;</span>
+
+<span class="nx">app</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span>
+  <span class="dl">"</span><span class="s2">/api/posts</span><span class="dl">"</span><span class="p">,</span>
+  <span class="k">async </span><span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="k">try</span> <span class="p">{</span>
+      <span class="kd">let</span> <span class="nx">query</span> <span class="o">=</span> <span class="nx">req</span><span class="p">.</span><span class="nx">query</span><span class="p">;</span>
+      <span class="nx">query</span><span class="p">.</span><span class="nx">published</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+      <span class="kd">let</span> <span class="nx">posts</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">prisma</span><span class="p">.</span><span class="nx">post</span><span class="p">.</span><span class="nf">findMany</span><span class="p">({</span><span class="na">where</span><span class="p">:</span> <span class="nx">query</span><span class="p">});</span>
+      <span class="nx">res</span><span class="p">.</span><span class="nf">json</span><span class="p">({</span><span class="na">success</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="nx">posts</span><span class="p">})</span>
+    <span class="p">}</span> <span class="k">catch </span><span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">res</span><span class="p">.</span><span class="nf">json</span><span class="p">({</span> <span class="na">success</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span> <span class="nx">error</span> <span class="p">});</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">);</span>
+
+<span class="nx">app</span><span class="p">.</span><span class="nf">post</span><span class="p">(</span>
+    <span class="dl">"</span><span class="s2">/api/login</span><span class="dl">"</span><span class="p">,</span>
+    <span class="k">async </span><span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+        <span class="k">try</span> <span class="p">{</span>
+            <span class="kd">let</span> <span class="p">{</span><span class="nx">name</span><span class="p">,</span> <span class="nx">password</span><span class="p">}</span> <span class="o">=</span> <span class="nx">req</span><span class="p">.</span><span class="nx">body</span><span class="p">;</span>
+            <span class="kd">let</span> <span class="nx">user</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">prisma</span><span class="p">.</span><span class="nx">user</span><span class="p">.</span><span class="nf">findUnique</span><span class="p">({</span><span class="na">where</span><span class="p">:{</span>
+                    <span class="na">name</span><span class="p">:</span> <span class="nx">name</span>
+                <span class="p">},</span>
+                <span class="na">include</span><span class="p">:{</span>
+                    <span class="na">posts</span><span class="p">:</span> <span class="kc">true</span>
+                <span class="p">}</span>
+            <span class="p">});</span>
+            <span class="k">if </span><span class="p">(</span><span class="nx">user</span><span class="p">.</span><span class="nx">password</span> <span class="o">===</span> <span class="nx">password</span><span class="p">)</span> <span class="p">{</span> 
+                <span class="nx">res</span><span class="p">.</span><span class="nf">json</span><span class="p">({</span><span class="na">success</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="na">posts</span><span class="p">:</span> <span class="nx">user</span><span class="p">.</span><span class="nx">posts</span><span class="p">});</span>
+            <span class="p">}</span>
+            <span class="k">else</span> <span class="p">{</span>
+                <span class="nx">res</span><span class="p">.</span><span class="nf">json</span><span class="p">({</span><span class="na">success</span><span class="p">:</span> <span class="kc">false</span><span class="p">});</span>
+            <span class="p">}</span>
+        <span class="p">}</span> <span class="k">catch </span><span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">res</span><span class="p">.</span><span class="nf">json</span><span class="p">({</span><span class="na">success</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span> <span class="nx">error</span><span class="p">});</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">)</span>
+
+<span class="nx">app</span><span class="p">.</span><span class="nf">listen</span><span class="p">(</span><span class="nx">PORT</span><span class="p">,</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="s2">`Server is running on http://localhost:</span><span class="p">${</span><span class="nx">PORT</span><span class="p">}</span><span class="s2">`</span><span class="p">);</span>
+<span class="p">});</span>
+</pre></td></tr></tbody></table></code></div>  </div>
+
+</details>
+
+<details id="seedjs">
+  <summary>seed.js</summary>
+
+  <div file="seed.js" class="language-js highlighter-rouge"><div class="code-header">
+        <span data-label-text="seed.js"><i class="far fa-file-code fa-fw"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+</pre></td><td class="rouge-code"><pre><span class="k">import</span> <span class="p">{</span> <span class="nx">PrismaClient</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">@prisma/client</span><span class="dl">"</span><span class="p">;</span>
+
+<span class="kd">const</span> <span class="nx">prisma</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">PrismaClient</span><span class="p">();</span>
+
+<span class="kd">const</span> <span class="nx">FLAG</span> <span class="o">=</span> <span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">FLAG</span> <span class="o">||</span> <span class="dl">"</span><span class="s2">uoftctf{FAKEFLAGFAKEFLAG}</span><span class="dl">"</span>
+
+<span class="kd">function</span> <span class="nf">generateString</span><span class="p">(</span><span class="nx">length</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">const</span> <span class="nx">characters</span> <span class="o">=</span><span class="dl">'</span><span class="s1">ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789</span><span class="dl">'</span><span class="p">;</span>
+    <span class="kd">let</span> <span class="nx">result</span> <span class="o">=</span> <span class="dl">''</span><span class="p">;</span>
+    <span class="kd">const</span> <span class="nx">charactersLength</span> <span class="o">=</span> <span class="nx">characters</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span>
+    <span class="k">for </span><span class="p">(</span> <span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span> <span class="p">)</span> <span class="p">{</span>
+        <span class="nx">result</span> <span class="o">+=</span> <span class="nx">characters</span><span class="p">.</span><span class="nf">charAt</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nf">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nf">random</span><span class="p">()</span> <span class="o">*</span> <span class="nx">charactersLength</span><span class="p">));</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="nx">result</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">const</span> <span class="nx">USERS</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">{</span>
+        <span class="na">name</span><span class="p">:</span> <span class="dl">"</span><span class="s2">White</span><span class="dl">"</span><span class="p">,</span>
+        <span class="na">password</span><span class="p">:</span> <span class="nf">generateString</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nf">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nf">random</span><span class="p">()</span><span class="o">*</span><span class="mi">10</span><span class="p">)</span><span class="o">+</span><span class="mi">15</span><span class="p">),</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="na">name</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Bob</span><span class="dl">"</span><span class="p">,</span>
+        <span class="na">password</span><span class="p">:</span> <span class="nf">generateString</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nf">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nf">random</span><span class="p">()</span><span class="o">*</span><span class="mi">10</span><span class="p">)</span><span class="o">+</span><span class="mi">15</span><span class="p">),</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="na">name</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Tommy</span><span class="dl">"</span><span class="p">,</span>
+        <span class="na">password</span><span class="p">:</span> <span class="nf">generateString</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nf">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nf">random</span><span class="p">()</span><span class="o">*</span><span class="mi">10</span><span class="p">)</span><span class="o">+</span><span class="mi">15</span><span class="p">),</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="na">name</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Sam</span><span class="dl">"</span><span class="p">,</span>
+        <span class="na">password</span><span class="p">:</span> <span class="nf">generateString</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nf">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nf">random</span><span class="p">()</span><span class="o">*</span><span class="mi">10</span><span class="p">)</span><span class="o">+</span><span class="mi">15</span><span class="p">),</span>
+    <span class="p">},</span>
+<span class="p">];</span>
+
+<span class="kd">const</span> <span class="nx">NUM_USERS</span> <span class="o">=</span> <span class="nx">USERS</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> 
+
+<span class="c1">// all chatGPT generated cause im lazy</span>
+<span class="kd">const</span> <span class="nx">POSTS</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">{</span>
+    <span class="na">title</span><span class="p">:</span> <span class="s2">`Why Cybersecurity is Everyone's Responsibility`</span><span class="p">,</span>
+    <span class="na">body</span><span class="p">:</span> <span class="s2">`In today's digital age, cybersecurity isn't just an IT concern—it's everyone's responsibility. From clicking suspicious links to using weak passwords, small mistakes can lead to big vulnerabilities. Simple habits like enabling two-factor authentication, updating software, and being mindful of phishing emails can protect not just yourself but your entire organization. Cybersecurity starts with awareness—how are you contributing to a safer digital world?`</span><span class="p">,</span>
+    <span class="na">authorId</span><span class="p">:</span> <span class="nb">Math</span><span class="p">.</span><span class="nf">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nf">random</span><span class="p">()</span><span class="o">*</span><span class="nx">NUM_USERS</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span>
+    <span class="na">published</span><span class="p">:</span> <span class="kc">true</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="na">title</span><span class="p">:</span> <span class="s2">`Boosting Productivity with Time Blocking`</span><span class="p">,</span>
+        <span class="na">body</span><span class="p">:</span> <span class="s2">`Struggling to get things done? Time blocking might be your answer. By dividing your day into focused chunks of work, you can minimize distractions and maximize efficiency. Start by identifying your most important tasks, assign specific time slots, and stick to them. Bonus tip: leave buffer time for unexpected interruptions. Time blocking isn’t just about scheduling—it’s about creating space for what truly matters.`</span><span class="p">,</span>
+        <span class="na">authorId</span><span class="p">:</span> <span class="nb">Math</span><span class="p">.</span><span class="nf">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nf">random</span><span class="p">()</span><span class="o">*</span><span class="nx">NUM_USERS</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span>
+        <span class="na">published</span><span class="p">:</span> <span class="kc">true</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="na">title</span><span class="p">:</span> <span class="s2">`3 Easy Tips to Save Energy at Home`</span><span class="p">,</span>
+        <span class="na">body</span><span class="p">:</span> <span class="s2">`Reducing your energy footprint doesn’t have to be complicated. Start small:
+
+Switch to LED bulbs—they last longer and use less power.
+Unplug electronics when not in use—they still draw power even when off.
+Use a programmable thermostat to optimize heating and cooling.
+These simple changes save money and help the planet—win-win!`</span><span class="p">,</span>
+        <span class="na">authorId</span><span class="p">:</span> <span class="nb">Math</span><span class="p">.</span><span class="nf">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nf">random</span><span class="p">()</span><span class="o">*</span><span class="nx">NUM_USERS</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span>
+        <span class="na">published</span><span class="p">:</span> <span class="kc">true</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="na">title</span><span class="p">:</span> <span class="s2">`How to Start Your Fitness Journey Today`</span><span class="p">,</span>
+        <span class="na">body</span><span class="p">:</span> <span class="s2">`Getting fit can feel overwhelming, but it doesn’t have to be. Start small: commit to a 10-minute walk daily or try a beginner-friendly workout video. Focus on consistency over intensity. Remember, progress takes time, so celebrate small wins along the way. Your future self will thank you for taking that first step today!`</span><span class="p">,</span>
+        <span class="na">authorId</span><span class="p">:</span> <span class="nb">Math</span><span class="p">.</span><span class="nf">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nf">random</span><span class="p">()</span><span class="o">*</span><span class="nx">NUM_USERS</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span>
+        <span class="na">published</span><span class="p">:</span> <span class="kc">true</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="na">title</span><span class="p">:</span> <span class="s2">`The Magic of Morning Routines`</span><span class="p">,</span>
+        <span class="na">body</span><span class="p">:</span> <span class="s2">`What do successful people have in common? A solid morning routine. Whether it’s journaling, meditating, or a quick workout, starting your day intentionally sets the tone for productivity and positivity. Don’t overthink it—pick one activity that energizes you and stick with it. Mornings are your power hour; how will you use yours?`</span><span class="p">,</span>
+        <span class="na">authorId</span><span class="p">:</span> <span class="nb">Math</span><span class="p">.</span><span class="nf">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nf">random</span><span class="p">()</span><span class="o">*</span><span class="nx">NUM_USERS</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span>
+        <span class="na">published</span><span class="p">:</span> <span class="kc">true</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="na">title</span><span class="p">:</span> <span class="s2">`5 Quick Ways to Declutter Your Space`</span><span class="p">,</span>
+        <span class="na">body</span><span class="p">:</span> <span class="s2">`A cluttered space can lead to a cluttered mind. Here’s how to simplify:
+
+Apply the “one in, one out” rule for new purchases.
+Dedicate 10 minutes a day to tidying up.
+Donate items you haven’t used in a year.
+Invest in smart storage solutions.
+Remember: less is more.
+Decluttering isn’t just about cleaning—it’s about creating a space that inspires calm and focus.`</span><span class="p">,</span>
+        <span class="na">authorId</span><span class="p">:</span> <span class="nb">Math</span><span class="p">.</span><span class="nf">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nf">random</span><span class="p">()</span><span class="o">*</span><span class="nx">NUM_USERS</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span>
+        <span class="na">published</span><span class="p">:</span> <span class="kc">true</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="na">title</span><span class="p">:</span> <span class="s2">`Why Soft Skills Are the Secret to Career Growth`</span><span class="p">,</span>
+        <span class="na">body</span><span class="p">:</span> <span class="s2">`Technical skills may get your foot in the door, but soft skills will take you further. Communication, adaptability, and emotional intelligence are increasingly valued in today’s workplace. Why? Because they foster collaboration and help you navigate challenges effectively. Want to stand out in your career? Work on your soft skills—they’re just as crucial as hard ones.`</span><span class="p">,</span>
+        <span class="na">authorId</span><span class="p">:</span> <span class="nb">Math</span><span class="p">.</span><span class="nf">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nf">random</span><span class="p">()</span><span class="o">*</span><span class="nx">NUM_USERS</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span>
+        <span class="na">published</span><span class="p">:</span> <span class="kc">true</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="na">title</span><span class="p">:</span> <span class="s2">`3 Reasons You Should Start Journaling`</span><span class="p">,</span>
+        <span class="na">body</span><span class="p">:</span> <span class="s2">`Feeling overwhelmed? Journaling might be the outlet you need. It helps you:
+
+Clarify your thoughts and emotions.
+Track personal growth and progress.
+Spark creativity by putting ideas to paper.
+You don’t need fancy notebooks or hours of time—just a few minutes a day can make a big difference. Start writing and see where it takes you!`</span><span class="p">,</span>
+        <span class="na">authorId</span><span class="p">:</span> <span class="nb">Math</span><span class="p">.</span><span class="nf">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nf">random</span><span class="p">()</span><span class="o">*</span><span class="nx">NUM_USERS</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span>
+        <span class="na">published</span><span class="p">:</span> <span class="kc">true</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="na">title</span><span class="p">:</span> <span class="s2">`How to Beat Procrastination for Good`</span><span class="p">,</span>
+        <span class="na">body</span><span class="p">:</span> <span class="s2">`Procrastination affects us all, but overcoming it is possible. Start by breaking tasks into smaller, manageable chunks. Use techniques like the Pomodoro timer to stay focused, and reward yourself for completing milestones. Most importantly, don’t aim for perfection—progress is what counts. The best time to start? Right now.`</span><span class="p">,</span>
+        <span class="na">authorId</span><span class="p">:</span> <span class="nb">Math</span><span class="p">.</span><span class="nf">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nf">random</span><span class="p">()</span><span class="o">*</span><span class="nx">NUM_USERS</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span>
+        <span class="na">published</span><span class="p">:</span> <span class="kc">true</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="na">title</span><span class="p">:</span> <span class="s2">`The Future of Remote Work`</span><span class="p">,</span>
+        <span class="na">body</span><span class="p">:</span> <span class="s2">`The shift to remote work has changed the way we view the workplace. Flexibility and work-life balance are now top priorities for employees, while companies are investing in tools to keep teams connected. But with this freedom comes challenges—like maintaining productivity and avoiding burnout. The future of work is hybrid, but how can we make it truly sustainable for everyone?`</span><span class="p">,</span>
+        <span class="na">authorId</span><span class="p">:</span> <span class="nb">Math</span><span class="p">.</span><span class="nf">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nf">random</span><span class="p">()</span><span class="o">*</span><span class="nx">NUM_USERS</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span>
+        <span class="na">published</span><span class="p">:</span> <span class="kc">true</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="na">title</span><span class="p">:</span> <span class="s2">`The Flag`</span><span class="p">,</span>
+        <span class="na">body</span><span class="p">:</span> <span class="s2">`This is a secret blog I am still working on. The secret keyword for this blog is </span><span class="p">${</span><span class="nx">FLAG</span><span class="p">}</span><span class="s2">`</span><span class="p">,</span>
+        <span class="na">authorId</span><span class="p">:</span> <span class="nb">Math</span><span class="p">.</span><span class="nf">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nf">random</span><span class="p">()</span><span class="o">*</span><span class="nx">NUM_USERS</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span>
+        <span class="na">published</span><span class="p">:</span> <span class="kc">false</span>
+    <span class="p">}</span>
+<span class="p">];</span>
+
+<span class="p">(</span><span class="k">async </span><span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="k">await</span> <span class="nx">prisma</span><span class="p">.</span><span class="nx">user</span><span class="p">.</span><span class="nf">createMany</span><span class="p">({</span><span class="na">data</span><span class="p">:</span> <span class="nx">USERS</span><span class="p">});</span>
+    <span class="k">await</span> <span class="nx">prisma</span><span class="p">.</span><span class="nx">post</span><span class="p">.</span><span class="nf">createMany</span><span class="p">({</span><span class="na">data</span><span class="p">:</span> <span class="nx">POSTS</span><span class="p">});</span>
+<span class="p">})();</span>
+</pre></td></tr></tbody></table></code></div>  </div>
+
+</details>
+
+<details id="schemaprisma">
+  <summary>schema.prisma</summary>
+
+  <div file="schema.prisma" class="language-plaintext highlighter-rouge"><div class="code-header">
+        <span data-label-text="schema.prisma"><i class="far fa-file-code fa-fw"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+</pre></td><td class="rouge-code"><pre>datasource db {
+  provider = "sqlite"
+  url      = "file:./database.db"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model User {
+  id        Int      @id @default(autoincrement())
+  createdAt DateTime @default(now())
+  name      String   @unique
+  password  String
+  posts     Post[]
+}
+
+model Post {
+  id        Int      @id @default(autoincrement())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  published Boolean  @default(false)
+  title     String   
+  body      String
+  author    User    @relation(fields: [authorId], references: [id])
+  authorId  Int
+}
+</pre></td></tr></tbody></table></code></div>  </div>
+
+</details>
 
 <h3 id="interesting-points"><span class="me-2">Interesting Points</span><a href="#interesting-points" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
@@ -2023,438 +2427,6 @@ We can repeat the operation for every character. So I scripted it:</p>
 <span class="n">log</span><span class="p">.</span><span class="nf">success</span><span class="p">(</span><span class="sh">"</span><span class="s">Password with correct case is: </span><span class="sh">"</span> <span class="o">+</span> <span class="n">to_test</span><span class="p">)</span>
 </pre></td></tr></tbody></table></code></div></div>
 
-<h2 id="application-source-code"><span class="me-2">Application Source code</span><a href="#application-source-code" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
-
-<h3 id="seedjs"><span class="me-2">Seed.js</span><a href="#seedjs" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
-
-<div class="language-js highlighter-rouge"><div class="code-header">
-        <span data-label-text="JavaScript"><i class="fas fa-code fa-fw small"></i></span>
-      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-33
-34
-35
-36
-37
-38
-39
-40
-41
-42
-43
-44
-45
-46
-47
-48
-49
-50
-51
-52
-53
-54
-55
-56
-57
-58
-59
-60
-61
-62
-63
-64
-65
-66
-67
-68
-69
-70
-71
-72
-73
-74
-75
-76
-77
-78
-79
-80
-81
-82
-83
-84
-85
-86
-87
-88
-89
-90
-91
-92
-93
-94
-95
-96
-97
-98
-99
-100
-101
-102
-103
-104
-105
-106
-107
-108
-109
-110
-111
-112
-113
-114
-115
-116
-117
-118
-119
-120
-121
-122
-123
-124
-125
-126
-127
-128
-129
-</pre></td><td class="rouge-code"><pre><span class="k">import</span> <span class="p">{</span> <span class="nx">PrismaClient</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">@prisma/client</span><span class="dl">"</span><span class="p">;</span>
-
-<span class="kd">const</span> <span class="nx">prisma</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">PrismaClient</span><span class="p">();</span>
-
-<span class="kd">const</span> <span class="nx">FLAG</span> <span class="o">=</span> <span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">FLAG</span> <span class="o">||</span> <span class="dl">"</span><span class="s2">uoftctf{FAKEFLAGFAKEFLAG}</span><span class="dl">"</span>
-
-<span class="kd">function</span> <span class="nf">generateString</span><span class="p">(</span><span class="nx">length</span><span class="p">)</span> <span class="p">{</span>
-    <span class="kd">const</span> <span class="nx">characters</span> <span class="o">=</span><span class="dl">'</span><span class="s1">ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789</span><span class="dl">'</span><span class="p">;</span>
-    <span class="kd">let</span> <span class="nx">result</span> <span class="o">=</span> <span class="dl">''</span><span class="p">;</span>
-    <span class="kd">const</span> <span class="nx">charactersLength</span> <span class="o">=</span> <span class="nx">characters</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span>
-    <span class="k">for </span><span class="p">(</span> <span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span> <span class="p">)</span> <span class="p">{</span>
-        <span class="nx">result</span> <span class="o">+=</span> <span class="nx">characters</span><span class="p">.</span><span class="nf">charAt</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nf">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nf">random</span><span class="p">()</span> <span class="o">*</span> <span class="nx">charactersLength</span><span class="p">));</span>
-    <span class="p">}</span>
-
-    <span class="k">return</span> <span class="nx">result</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="kd">const</span> <span class="nx">USERS</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="p">{</span>
-        <span class="na">name</span><span class="p">:</span> <span class="dl">"</span><span class="s2">White</span><span class="dl">"</span><span class="p">,</span>
-        <span class="na">password</span><span class="p">:</span> <span class="nf">generateString</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nf">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nf">random</span><span class="p">()</span><span class="o">*</span><span class="mi">10</span><span class="p">)</span><span class="o">+</span><span class="mi">15</span><span class="p">),</span>
-    <span class="p">},</span>
-    <span class="p">{</span>
-        <span class="na">name</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Bob</span><span class="dl">"</span><span class="p">,</span>
-        <span class="na">password</span><span class="p">:</span> <span class="nf">generateString</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nf">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nf">random</span><span class="p">()</span><span class="o">*</span><span class="mi">10</span><span class="p">)</span><span class="o">+</span><span class="mi">15</span><span class="p">),</span>
-    <span class="p">},</span>
-    <span class="p">{</span>
-        <span class="na">name</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Tommy</span><span class="dl">"</span><span class="p">,</span>
-        <span class="na">password</span><span class="p">:</span> <span class="nf">generateString</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nf">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nf">random</span><span class="p">()</span><span class="o">*</span><span class="mi">10</span><span class="p">)</span><span class="o">+</span><span class="mi">15</span><span class="p">),</span>
-    <span class="p">},</span>
-    <span class="p">{</span>
-        <span class="na">name</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Sam</span><span class="dl">"</span><span class="p">,</span>
-        <span class="na">password</span><span class="p">:</span> <span class="nf">generateString</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nf">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nf">random</span><span class="p">()</span><span class="o">*</span><span class="mi">10</span><span class="p">)</span><span class="o">+</span><span class="mi">15</span><span class="p">),</span>
-    <span class="p">},</span>
-<span class="p">];</span>
-
-<span class="kd">const</span> <span class="nx">NUM_USERS</span> <span class="o">=</span> <span class="nx">USERS</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> 
-
-<span class="c1">// all chatGPT generated cause im lazy</span>
-<span class="kd">const</span> <span class="nx">POSTS</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="p">{</span>
-      <span class="na">title</span><span class="p">:</span> <span class="s2">`Why Cybersecurity is Everyone's Responsibility`</span><span class="p">,</span>
-      <span class="na">body</span><span class="p">:</span> <span class="s2">`In today's digital age, cybersecurity isn't just an IT concern—it's everyone's responsibility. From clicking suspicious links to using weak passwords, small mistakes can lead to big vulnerabilities. Simple habits like enabling two-factor authentication, updating software, and being mindful of phishing emails can protect not just yourself but your entire organization. Cybersecurity starts with awareness—how are you contributing to a safer digital world?`</span><span class="p">,</span>
-      <span class="na">authorId</span><span class="p">:</span> <span class="nb">Math</span><span class="p">.</span><span class="nf">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nf">random</span><span class="p">()</span><span class="o">*</span><span class="nx">NUM_USERS</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span>
-      <span class="na">published</span><span class="p">:</span> <span class="kc">true</span>
-    <span class="p">},</span>
-    <span class="p">{</span>
-        <span class="na">title</span><span class="p">:</span> <span class="s2">`Boosting Productivity with Time Blocking`</span><span class="p">,</span>
-        <span class="na">body</span><span class="p">:</span> <span class="s2">`Struggling to get things done? Time blocking might be your answer. By dividing your day into focused chunks of work, you can minimize distractions and maximize efficiency. Start by identifying your most important tasks, assign specific time slots, and stick to them. Bonus tip: leave buffer time for unexpected interruptions. Time blocking isn’t just about scheduling—it’s about creating space for what truly matters.`</span><span class="p">,</span>
-        <span class="na">authorId</span><span class="p">:</span> <span class="nb">Math</span><span class="p">.</span><span class="nf">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nf">random</span><span class="p">()</span><span class="o">*</span><span class="nx">NUM_USERS</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span>
-        <span class="na">published</span><span class="p">:</span> <span class="kc">true</span>
-    <span class="p">},</span>
-    <span class="p">{</span>
-        <span class="na">title</span><span class="p">:</span> <span class="s2">`3 Easy Tips to Save Energy at Home`</span><span class="p">,</span>
-        <span class="na">body</span><span class="p">:</span> <span class="s2">`Reducing your energy footprint doesn’t have to be complicated. Start small:
-
-Switch to LED bulbs—they last longer and use less power.
-Unplug electronics when not in use—they still draw power even when off.
-Use a programmable thermostat to optimize heating and cooling.
-These simple changes save money and help the planet—win-win!`</span><span class="p">,</span>
-        <span class="na">authorId</span><span class="p">:</span> <span class="nb">Math</span><span class="p">.</span><span class="nf">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nf">random</span><span class="p">()</span><span class="o">*</span><span class="nx">NUM_USERS</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span>
-        <span class="na">published</span><span class="p">:</span> <span class="kc">true</span>
-    <span class="p">},</span>
-    <span class="p">{</span>
-        <span class="na">title</span><span class="p">:</span> <span class="s2">`How to Start Your Fitness Journey Today`</span><span class="p">,</span>
-        <span class="na">body</span><span class="p">:</span> <span class="s2">`Getting fit can feel overwhelming, but it doesn’t have to be. Start small: commit to a 10-minute walk daily or try a beginner-friendly workout video. Focus on consistency over intensity. Remember, progress takes time, so celebrate small wins along the way. Your future self will thank you for taking that first step today!`</span><span class="p">,</span>
-        <span class="na">authorId</span><span class="p">:</span> <span class="nb">Math</span><span class="p">.</span><span class="nf">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nf">random</span><span class="p">()</span><span class="o">*</span><span class="nx">NUM_USERS</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span>
-        <span class="na">published</span><span class="p">:</span> <span class="kc">true</span>
-    <span class="p">},</span>
-    <span class="p">{</span>
-        <span class="na">title</span><span class="p">:</span> <span class="s2">`The Magic of Morning Routines`</span><span class="p">,</span>
-        <span class="na">body</span><span class="p">:</span> <span class="s2">`What do successful people have in common? A solid morning routine. Whether it’s journaling, meditating, or a quick workout, starting your day intentionally sets the tone for productivity and positivity. Don’t overthink it—pick one activity that energizes you and stick with it. Mornings are your power hour; how will you use yours?`</span><span class="p">,</span>
-        <span class="na">authorId</span><span class="p">:</span> <span class="nb">Math</span><span class="p">.</span><span class="nf">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nf">random</span><span class="p">()</span><span class="o">*</span><span class="nx">NUM_USERS</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span>
-        <span class="na">published</span><span class="p">:</span> <span class="kc">true</span>
-    <span class="p">},</span>
-    <span class="p">{</span>
-        <span class="na">title</span><span class="p">:</span> <span class="s2">`5 Quick Ways to Declutter Your Space`</span><span class="p">,</span>
-        <span class="na">body</span><span class="p">:</span> <span class="s2">`A cluttered space can lead to a cluttered mind. Here’s how to simplify:
-
-Apply the “one in, one out” rule for new purchases.
-Dedicate 10 minutes a day to tidying up.
-Donate items you haven’t used in a year.
-Invest in smart storage solutions.
-Remember: less is more.
-Decluttering isn’t just about cleaning—it’s about creating a space that inspires calm and focus.`</span><span class="p">,</span>
-        <span class="na">authorId</span><span class="p">:</span> <span class="nb">Math</span><span class="p">.</span><span class="nf">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nf">random</span><span class="p">()</span><span class="o">*</span><span class="nx">NUM_USERS</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span>
-        <span class="na">published</span><span class="p">:</span> <span class="kc">true</span>
-    <span class="p">},</span>
-    <span class="p">{</span>
-        <span class="na">title</span><span class="p">:</span> <span class="s2">`Why Soft Skills Are the Secret to Career Growth`</span><span class="p">,</span>
-        <span class="na">body</span><span class="p">:</span> <span class="s2">`Technical skills may get your foot in the door, but soft skills will take you further. Communication, adaptability, and emotional intelligence are increasingly valued in today’s workplace. Why? Because they foster collaboration and help you navigate challenges effectively. Want to stand out in your career? Work on your soft skills—they’re just as crucial as hard ones.`</span><span class="p">,</span>
-        <span class="na">authorId</span><span class="p">:</span> <span class="nb">Math</span><span class="p">.</span><span class="nf">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nf">random</span><span class="p">()</span><span class="o">*</span><span class="nx">NUM_USERS</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span>
-        <span class="na">published</span><span class="p">:</span> <span class="kc">true</span>
-    <span class="p">},</span>
-    <span class="p">{</span>
-        <span class="na">title</span><span class="p">:</span> <span class="s2">`3 Reasons You Should Start Journaling`</span><span class="p">,</span>
-        <span class="na">body</span><span class="p">:</span> <span class="s2">`Feeling overwhelmed? Journaling might be the outlet you need. It helps you:
-
-Clarify your thoughts and emotions.
-Track personal growth and progress.
-Spark creativity by putting ideas to paper.
-You don’t need fancy notebooks or hours of time—just a few minutes a day can make a big difference. Start writing and see where it takes you!`</span><span class="p">,</span>
-        <span class="na">authorId</span><span class="p">:</span> <span class="nb">Math</span><span class="p">.</span><span class="nf">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nf">random</span><span class="p">()</span><span class="o">*</span><span class="nx">NUM_USERS</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span>
-        <span class="na">published</span><span class="p">:</span> <span class="kc">true</span>
-    <span class="p">},</span>
-    <span class="p">{</span>
-        <span class="na">title</span><span class="p">:</span> <span class="s2">`How to Beat Procrastination for Good`</span><span class="p">,</span>
-        <span class="na">body</span><span class="p">:</span> <span class="s2">`Procrastination affects us all, but overcoming it is possible. Start by breaking tasks into smaller, manageable chunks. Use techniques like the Pomodoro timer to stay focused, and reward yourself for completing milestones. Most importantly, don’t aim for perfection—progress is what counts. The best time to start? Right now.`</span><span class="p">,</span>
-        <span class="na">authorId</span><span class="p">:</span> <span class="nb">Math</span><span class="p">.</span><span class="nf">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nf">random</span><span class="p">()</span><span class="o">*</span><span class="nx">NUM_USERS</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span>
-        <span class="na">published</span><span class="p">:</span> <span class="kc">true</span>
-    <span class="p">},</span>
-    <span class="p">{</span>
-        <span class="na">title</span><span class="p">:</span> <span class="s2">`The Future of Remote Work`</span><span class="p">,</span>
-        <span class="na">body</span><span class="p">:</span> <span class="s2">`The shift to remote work has changed the way we view the workplace. Flexibility and work-life balance are now top priorities for employees, while companies are investing in tools to keep teams connected. But with this freedom comes challenges—like maintaining productivity and avoiding burnout. The future of work is hybrid, but how can we make it truly sustainable for everyone?`</span><span class="p">,</span>
-        <span class="na">authorId</span><span class="p">:</span> <span class="nb">Math</span><span class="p">.</span><span class="nf">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nf">random</span><span class="p">()</span><span class="o">*</span><span class="nx">NUM_USERS</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span>
-        <span class="na">published</span><span class="p">:</span> <span class="kc">true</span>
-    <span class="p">},</span>
-    <span class="p">{</span>
-        <span class="na">title</span><span class="p">:</span> <span class="s2">`The Flag`</span><span class="p">,</span>
-        <span class="na">body</span><span class="p">:</span> <span class="s2">`This is a secret blog I am still working on. The secret keyword for this blog is </span><span class="p">${</span><span class="nx">FLAG</span><span class="p">}</span><span class="s2">`</span><span class="p">,</span>
-        <span class="na">authorId</span><span class="p">:</span> <span class="nb">Math</span><span class="p">.</span><span class="nf">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nf">random</span><span class="p">()</span><span class="o">*</span><span class="nx">NUM_USERS</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span>
-        <span class="na">published</span><span class="p">:</span> <span class="kc">false</span>
-    <span class="p">}</span>
-<span class="p">];</span>
-
-<span class="p">(</span><span class="k">async </span><span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
-    <span class="k">await</span> <span class="nx">prisma</span><span class="p">.</span><span class="nx">user</span><span class="p">.</span><span class="nf">createMany</span><span class="p">({</span><span class="na">data</span><span class="p">:</span> <span class="nx">USERS</span><span class="p">});</span>
-    <span class="k">await</span> <span class="nx">prisma</span><span class="p">.</span><span class="nx">post</span><span class="p">.</span><span class="nf">createMany</span><span class="p">({</span><span class="na">data</span><span class="p">:</span> <span class="nx">POSTS</span><span class="p">});</span>
-  <span class="p">})();</span>
-</pre></td></tr></tbody></table></code></div></div>
-
-<h3 id="indexjs"><span class="me-2">Index.js</span><a href="#indexjs" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
-
-<div class="language-js highlighter-rouge"><div class="code-header">
-        <span data-label-text="JavaScript"><i class="fas fa-code fa-fw small"></i></span>
-      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-33
-34
-35
-36
-37
-38
-39
-40
-41
-42
-43
-44
-45
-46
-47
-48
-49
-50
-51
-</pre></td><td class="rouge-code"><pre><span class="k">import</span> <span class="nx">express</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">express</span><span class="dl">"</span><span class="p">;</span>
-<span class="k">import</span> <span class="p">{</span> <span class="nx">PrismaClient</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">@prisma/client</span><span class="dl">"</span><span class="p">;</span>
-
-<span class="kd">const</span> <span class="nx">app</span> <span class="o">=</span> <span class="nf">express</span><span class="p">();</span>
-<span class="nx">app</span><span class="p">.</span><span class="nf">use</span><span class="p">(</span><span class="nx">express</span><span class="p">.</span><span class="nf">json</span><span class="p">())</span>
-
-<span class="kd">const</span> <span class="nx">prisma</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">PrismaClient</span><span class="p">();</span>
-
-<span class="kd">const</span> <span class="nx">PORT</span> <span class="o">=</span> <span class="mi">3000</span><span class="p">;</span>
-
-<span class="nx">app</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span>
-  <span class="dl">"</span><span class="s2">/api/posts</span><span class="dl">"</span><span class="p">,</span>
-  <span class="k">async </span><span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
-    <span class="k">try</span> <span class="p">{</span>
-      <span class="kd">let</span> <span class="nx">query</span> <span class="o">=</span> <span class="nx">req</span><span class="p">.</span><span class="nx">query</span><span class="p">;</span>
-      <span class="nx">query</span><span class="p">.</span><span class="nx">published</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
-      <span class="kd">let</span> <span class="nx">posts</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">prisma</span><span class="p">.</span><span class="nx">post</span><span class="p">.</span><span class="nf">findMany</span><span class="p">({</span><span class="na">where</span><span class="p">:</span> <span class="nx">query</span><span class="p">});</span>
-      <span class="nx">res</span><span class="p">.</span><span class="nf">json</span><span class="p">({</span><span class="na">success</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="nx">posts</span><span class="p">})</span>
-    <span class="p">}</span> <span class="k">catch </span><span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
-      <span class="nx">res</span><span class="p">.</span><span class="nf">json</span><span class="p">({</span> <span class="na">success</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span> <span class="nx">error</span> <span class="p">});</span>
-    <span class="p">}</span>
-  <span class="p">}</span>
-<span class="p">);</span>
-
-<span class="nx">app</span><span class="p">.</span><span class="nf">post</span><span class="p">(</span>
-    <span class="dl">"</span><span class="s2">/api/login</span><span class="dl">"</span><span class="p">,</span>
-    <span class="k">async </span><span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
-        <span class="k">try</span> <span class="p">{</span>
-            <span class="kd">let</span> <span class="p">{</span><span class="nx">name</span><span class="p">,</span> <span class="nx">password</span><span class="p">}</span> <span class="o">=</span> <span class="nx">req</span><span class="p">.</span><span class="nx">body</span><span class="p">;</span>
-            <span class="kd">let</span> <span class="nx">user</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">prisma</span><span class="p">.</span><span class="nx">user</span><span class="p">.</span><span class="nf">findUnique</span><span class="p">({</span><span class="na">where</span><span class="p">:{</span>
-                    <span class="na">name</span><span class="p">:</span> <span class="nx">name</span>
-                <span class="p">},</span>
-                <span class="na">include</span><span class="p">:{</span>
-                    <span class="na">posts</span><span class="p">:</span> <span class="kc">true</span>
-                <span class="p">}</span>
-            <span class="p">});</span>
-            <span class="k">if </span><span class="p">(</span><span class="nx">user</span><span class="p">.</span><span class="nx">password</span> <span class="o">===</span> <span class="nx">password</span><span class="p">)</span> <span class="p">{</span> 
-                <span class="nx">res</span><span class="p">.</span><span class="nf">json</span><span class="p">({</span><span class="na">success</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="na">posts</span><span class="p">:</span> <span class="nx">user</span><span class="p">.</span><span class="nx">posts</span><span class="p">});</span>
-            <span class="p">}</span>
-            <span class="k">else</span> <span class="p">{</span>
-                <span class="nx">res</span><span class="p">.</span><span class="nf">json</span><span class="p">({</span><span class="na">success</span><span class="p">:</span> <span class="kc">false</span><span class="p">});</span>
-            <span class="p">}</span>
-        <span class="p">}</span> <span class="k">catch </span><span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
-            <span class="nx">res</span><span class="p">.</span><span class="nf">json</span><span class="p">({</span><span class="na">success</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span> <span class="nx">error</span><span class="p">});</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
-<span class="p">)</span>
-
-<span class="nx">app</span><span class="p">.</span><span class="nf">listen</span><span class="p">(</span><span class="nx">PORT</span><span class="p">,</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="s2">`Server is running on http://localhost:</span><span class="p">${</span><span class="nx">PORT</span><span class="p">}</span><span class="s2">`</span><span class="p">);</span>
-<span class="p">});</span>
-</pre></td></tr></tbody></table></code></div></div>
-
-<h3 id="schemaprisma"><span class="me-2">Schema.prisma</span><a href="#schemaprisma" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
-<div class="language-plaintext highlighter-rouge"><div class="code-header">
-        <span data-label-text="Plaintext"><i class="fas fa-code fa-fw small"></i></span>
-      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-</pre></td><td class="rouge-code"><pre>datasource db {
-  provider = "sqlite"
-  url      = "file:./database.db"
-}
-
-generator client {
-  provider = "prisma-client-js"
-}
-
-model User {
-  id        Int      @id @default(autoincrement())
-  createdAt DateTime @default(now())
-  name      String   @unique
-  password  String
-  posts     Post[]
-}
-
-model Post {
-  id        Int      @id @default(autoincrement())
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-  published Boolean  @default(false)
-  title     String   
-  body      String
-  author    User    @relation(fields: [authorId], references: [id])
-  authorId  Int
-}
-</pre></td></tr></tbody></table></code></div></div>
 
   </div>
 
@@ -2612,6 +2584,13 @@ model Post {
         
         
         <li class="text-truncate lh-lg">
+          <a href="/posts/UofTCTF2025-misc/">Misc Category</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
           <a href="/posts/UofTCTF2025-prismatic/">Prismatic Blogs</a>
         </li>
       
@@ -2627,13 +2606,6 @@ model Post {
         
         <li class="text-truncate lh-lg">
           <a href="/posts/uofctf-introduction/">Introduction</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/posts/UofTCTF2025-misc/">Misc Category</a>
         </li>
       
         
