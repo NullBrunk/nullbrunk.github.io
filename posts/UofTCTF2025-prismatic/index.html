@@ -1532,7 +1532,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="2495 words"
+  title="2500 words"
 >
   <em>13 min</em> read</span>
 
@@ -1647,12 +1647,12 @@
 
 <p>Our query is taken, then the published parameter is passed to true, so in the <strong>SQL query</strong> a <code class="language-plaintext highlighter-rouge">WHERE published = true</code> we’ll be added. I tried googling around, but it seems that we can’t bypass that to display the flag …</p>
 
-<p><strong>BUT</strong> there’s still a problem ! The user query is <strong>directly passed to prisma</strong> without any sanitization. It means that we can send JSON through the URL to trick the ORM ! We can use a request like this:</p>
+<p><strong>BUT</strong> there’s still a problem ! The user query is <strong>directly passed to prisma</strong> without any sanitization. It means that we can send JSON through the URL to trick the ORM ! After reading the <a href="https://www.prisma.io/docs/orm/prisma-client/queries/filtering-and-sorting">prisma doc</a> I made this ur:</p>
 <ul>
   <li><code class="language-plaintext highlighter-rouge">http://TARGET_URL/api/posts?author[name]=Bob</code></li>
 </ul>
 
-<p>That’ll be translated to this JSON:</p>
+<p>The query string will be translated to this JSON:</p>
 <div class="language-json highlighter-rouge"><div class="code-header">
         <span data-label-text="JSON"><i class="fas fa-code fa-fw small"></i></span>
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
@@ -1663,7 +1663,7 @@
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></div></div>
 
-<p>Then JavaScript will execute this ORM request:</p>
+<p>So JavaScript will execute this ORM request:</p>
 <div class="language-js highlighter-rouge"><div class="code-header">
         <span data-label-text="JavaScript"><i class="fas fa-code fa-fw small"></i></span>
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
@@ -1680,7 +1680,7 @@
 <span class="p">}});</span>
 </pre></td></tr></tbody></table></code></div></div>
 
-<p>We basically have control over the where condition, we can put whataver we wan’t in it !</p>
+<p>We basically have control over the where condition, we can put whatever we wan’t in it !</p>
 
 <p><a href="/assets/img/writeups/uoftctf/vuln.png" class="popup img-link radius-shadow shimmer"><img src="/assets/img/writeups/uoftctf/vuln.png" alt="image"  loading="lazy"></a>
 <em>We can show posts associated to Bob for example !</em></p>
