@@ -1214,17 +1214,6 @@
 
       
     
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
 
     
   
@@ -1462,7 +1451,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="2574 words"
+  title="2570 words"
 >
   <em>14 min</em> read</span>
 
@@ -1510,11 +1499,6 @@
       <li><a href="#scripting-case-unsensitive">Scripting (case unsensitive)</a></li>
       <li><a href="#scripting-case-sensitive">Scripting (case sensitive)</a></li>
       <li><a href="#getting-the-flag">Getting the flag</a></li>
-    </ul>
-  </li>
-  <li>Code
-    <ul>
-      <li><a href="#final-script">Final script</a></li>
     </ul>
   </li>
 </ol>
@@ -2307,13 +2291,13 @@ We can repeat the operation for every character. So I scripted it:</p>
 </pre></td><td class="rouge-code"><pre>uoftctf{u51n6_0rm5_d035_n07_m34n_1nj3c710n5_c4n7_h4pp3n}
 </pre></td></tr></tbody></table></code></div></div>
 
-<h1 id="code">Code</h1>
+<p>Here is the final script:</p>
 
-<h2 id="script"><span class="me-2">Script</span><a href="#script" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<details>
 
-<p>Here is the final scripts:</p>
+  <summary>exploit.py</summary>
 
-<div file="exploit.py" class="language-py highlighter-rouge"><div class="code-header">
+  <div file="exploit.py" class="language-py highlighter-rouge"><div class="code-header">
         <span data-label-text="exploit.py"><i class="far fa-file-code fa-fw"></i></span>
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
@@ -2425,8 +2409,9 @@ We can repeat the operation for every character. So I scripted it:</p>
 		<span class="n">to_test</span> <span class="o">+=</span> <span class="n">char</span><span class="p">.</span><span class="nf">upper</span><span class="p">()</span>
 
 <span class="n">log</span><span class="p">.</span><span class="nf">success</span><span class="p">(</span><span class="sh">"</span><span class="s">Password with correct case is: </span><span class="sh">"</span> <span class="o">+</span> <span class="n">to_test</span><span class="p">)</span>
-</pre></td></tr></tbody></table></code></div></div>
+</pre></td></tr></tbody></table></code></div>  </div>
 
+</details>
 
   </div>
 

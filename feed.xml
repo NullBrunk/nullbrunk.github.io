@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>NullBrunk</title>
   <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
-  <updated>2025-01-13T04:08:33+00:00</updated>
+  <updated>2025-01-13T04:09:46+00:00</updated>
   <author>
     <name>Anas</name>
     <uri>http://localhost:4000/</uri>
@@ -139,11 +139,6 @@ I managed to finish 161 on 897 solo with my this CTFtime team … Not real...</s
       Getting the flag
     
   
-  Code
-    
-      Final script
-    
-  
 
 
 
@@ -157,7 +152,8 @@ Here is the application source code:
 
   index.js
 
-  imp...</summary>
+  import express from &amp;quot;express&amp;quot;;
+import { Pr...</summary>
 
   </entry>
 
