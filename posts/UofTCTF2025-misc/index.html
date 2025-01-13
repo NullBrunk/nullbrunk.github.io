@@ -1126,7 +1126,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="629 words"
+  title="632 words"
 >
   <em>3 min</em> read</span>
 
@@ -1175,7 +1175,11 @@
 
 <h2 id="race-condition-1"><span class="me-2">Race Condition 1</span><a href="#race-condition-1" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 
-<div class="language-c highlighter-rouge"><div class="code-header">
+<details>
+
+  <summary>chal.c</summary>
+
+  <div class="language-c highlighter-rouge"><div class="code-header">
         <span data-label-text="C"><i class="fas fa-code fa-fw small"></i></span>
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
@@ -1261,13 +1265,19 @@
         <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
     <span class="p">}</span>
 <span class="p">}</span>
-</pre></td></tr></tbody></table></code></div></div>
+</pre></td></tr></tbody></table></code></div>  </div>
+
+</details>
 
 <p><a href="/assets/img/writeups/uoftctf/fkag.png" class="popup img-link radius-shadow shimmer"><img src="/assets/img/writeups/uoftctf/fkag.png" alt="FKAG"  loading="lazy"></a></p>
 
 <h2 id="race-condition-2"><span class="me-2">Race Condition 2</span><a href="#race-condition-2" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 
-<div class="language-c highlighter-rouge"><div class="code-header">
+<details>
+
+  <summary>chal.c</summary>
+
+  <div class="language-c highlighter-rouge"><div class="code-header">
         <span data-label-text="C"><i class="fas fa-code fa-fw small"></i></span>
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
@@ -1317,9 +1327,13 @@
         <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
     <span class="p">}</span>
 <span class="p">}</span>
-</pre></td></tr></tbody></table></code></div></div>
+</pre></td></tr></tbody></table></code></div>  </div>
 
-<p><a href="https://repository.root-me.org/Programmation/C%20-%20C++/EN%20-%20Secure%20Coding%20in%20C%20and%20C++%20Race%20Conditions.pdf">This</a> doc was really interesting !</p>
+</details>
+
+<p><br /></p>
+
+<p><a href="https://repository.root-me.org/Programmation/C%20-%20C++/EN%20-%20Secure%20Coding%20in%20C%20and%20C++%20Race%20Conditions.pdf">This</a> doc was really interesting.</p>
 
 <ul>
   <li>First we create the <code class="language-plaintext highlighter-rouge">/home/user/permitted</code> file, where we have RW permission</li>
@@ -1343,7 +1357,11 @@
 
 <p><a href="/assets/img/writeups/uoftctf/asked.png" class="popup img-link radius-shadow shimmer"><img src="/assets/img/writeups/uoftctf/asked.png" alt="FKAG"  loading="lazy"></a></p>
 
-<div file="exploit.py" class="language-py highlighter-rouge"><div class="code-header">
+<details>
+
+  <summary>exploit.py</summary>
+
+  <div file="exploit.py" class="language-py highlighter-rouge"><div class="code-header">
         <span data-label-text="exploit.py"><i class="far fa-file-code fa-fw"></i></span>
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
@@ -1411,32 +1429,35 @@
     <span class="n">s</span><span class="p">.</span><span class="nf">recvline</span><span class="p">()</span>
 
     <span class="nf">main</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
-</pre></td></tr></tbody></table></code></div></div>
+</pre></td></tr></tbody></table></code></div>  </div>
 
-<p><a href="/assets/img/writeups/uoftctf/flagged_math.png" class="popup img-link radius-shadow shimmer"><img src="/assets/img/writeups/uoftctf/flagged_math.png" alt="FKAG"  loading="lazy"></a></p>
+  <p>&lt;/summary&gt;</p>
 
-<h2 id="surgery"><span class="me-2">Surgery</span><a href="#surgery" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+  <p><a href="/assets/img/writeups/uoftctf/flagged_math.png" class="popup img-link radius-shadow shimmer"><img src="/assets/img/writeups/uoftctf/flagged_math.png" alt="FKAG"  loading="lazy"></a></p>
 
-<blockquote>
-  <p>I was thinking of getting some facial contouring plastic surgery done, but didn’t know who to go to. My friend said they had a recommendation for a doctor specializing in that, but only sent me this photo of some building. Who’s the doctor? Before submitting, wrap the doctor’s name in uoftctf{}. Special characters allowed, [First] [Last] format.
+  <h2 id="surgery"><span class="me-2">Surgery</span><a href="#surgery" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+
+  <blockquote>
+    <p>I was thinking of getting some facial contouring plastic surgery done, but didn’t know who to go to. My friend said they had a recommendation for a doctor specializing in that, but only sent me this photo of some building. Who’s the doctor? Before submitting, wrap the doctor’s name in uoftctf{}. Special characters allowed, [First] [Last] format.
 <br />
 For example, if the name was Jean-Pierre Brehier, the flag would be uoftctf{Jean-Pierre Brehier}</p>
-</blockquote>
+  </blockquote>
 
-<p><a href="/assets/img/writeups/uoftctf/image.png" class="popup img-link radius-shadow shimmer"><img src="/assets/img/writeups/uoftctf/image.png" alt="FKAG"  loading="lazy"></a></p>
+  <p><a href="/assets/img/writeups/uoftctf/image.png" class="popup img-link radius-shadow shimmer"><img src="/assets/img/writeups/uoftctf/image.png" alt="FKAG"  loading="lazy"></a></p>
 
-<p>Simple google reverse image:
+  <p>Simple google reverse image:
 <a href="/assets/img/writeups/uoftctf/ohoo.png" class="popup img-link radius-shadow shimmer"><img src="/assets/img/writeups/uoftctf/ohoo.png" alt="FKAG"  loading="lazy"></a></p>
 
-<p>So now you can search “JK Plastic Surgery” on google, you’ll find the <a href="https://www.jkplastic.com/en/about-us/our-value/doctors.asp">official website</a> with staff and their name.
+  <p>So now you can search “JK Plastic Surgery” on google, you’ll find the <a href="https://www.jkplastic.com/en/about-us/our-value/doctors.asp">official website</a> with staff and their name.
 The first doctor we see is “Joo Kwon”, but it doesn’t contains any special character. The second one is “Kim, Sung-Sik”. So I tested:</p>
-<div class="language-plaintext highlighter-rouge"><div class="code-header">
+  <div class="language-plaintext highlighter-rouge"><div class="code-header">
         <span data-label-text="Plaintext"><i class="fas fa-code fa-fw small"></i></span>
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 </pre></td><td class="rouge-code"><pre>uoftctf{Sung-Sik Kim}
-</pre></td></tr></tbody></table></code></div></div>
+</pre></td></tr></tbody></table></code></div>  </div>
 
-<p>And it worked !</p>
+  <p>And it worked !</p>
+</details>
 
   </div>
 
