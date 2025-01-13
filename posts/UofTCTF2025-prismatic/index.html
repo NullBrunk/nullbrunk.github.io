@@ -1532,7 +1532,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="2483 words"
+  title="2495 words"
 >
   <em>13 min</em> read</span>
 
@@ -1622,15 +1622,15 @@
   </li>
 </ol>
 
-<p>So we can:</p>
+<p>So we can either:</p>
 <ul>
-  <li>Try to hack the SQL query to display unpublished posts</li>
-  <li>Try to hack the accounts to login and see their posts</li>
+  <li>Try to “hack” the SQL query to display unpublished posts</li>
+  <li>Try to “hack” the accounts to login and see their posts</li>
 </ul>
 
 <h3 id="identifying-vulnerabilities"><span class="me-2">Identifying vulnerabilities</span><a href="#identifying-vulnerabilities" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
-<p>Here is an interesting thing in the <code class="language-plaintext highlighter-rouge">/api/posts</code> code:</p>
+<p>I was looking at the <code class="language-plaintext highlighter-rouge">/api/posts</code> code:</p>
 <div class="language-js highlighter-rouge"><div class="code-header">
         <span data-label-text="JavaScript"><i class="fas fa-code fa-fw small"></i></span>
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
@@ -1645,9 +1645,9 @@
 <span class="nx">res</span><span class="p">.</span><span class="nf">json</span><span class="p">({</span><span class="na">success</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="nx">posts</span><span class="p">})</span>
 </pre></td></tr></tbody></table></code></div></div>
 
-<p>Our query is taken, then the published parameter is passed to true, so in the <code class="language-plaintext highlighter-rouge">SQL query</code> a <code class="language-plaintext highlighter-rouge">WHERE published = true</code> we’ll be added. We canno’t bypass that.</p>
+<p>Our query is taken, then the published parameter is passed to true, so in the <strong>SQL query</strong> a <code class="language-plaintext highlighter-rouge">WHERE published = true</code> we’ll be added. I tried googling around, but it seems that we can’t bypass that to display the flag …</p>
 
-<p><strong>BUT</strong> there is a problem ! The user query is <strong>directly passed to prisma</strong> without any sanitization. It means that we can send JSON through the URL to trick the ORM ! We can use a request like this:</p>
+<p><strong>BUT</strong> there’s still a problem ! The user query is <strong>directly passed to prisma</strong> without any sanitization. It means that we can send JSON through the URL to trick the ORM ! We can use a request like this:</p>
 <ul>
   <li><code class="language-plaintext highlighter-rouge">http://TARGET_URL/api/posts?author[name]=Bob</code></li>
 </ul>
