@@ -1767,7 +1767,7 @@ Let’s try a different operator:</p>
 
 <h3 id="scripting-case-sensitive"><span class="me-2">Scripting (case sensitive)</span><a href="#scripting-case-sensitive" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
-<p>Fortunately we can put whatever we wan’t in the were clause cause there is no sanitization… So basically we have an <strong>SQL</strong> query with <code class="language-plaintext highlighter-rouge">WHERE X</code> and the <code class="language-plaintext highlighter-rouge">X</code> is entirely controlled by us ! 
+<p>Fortunately we can put whatever we wan’t in the were clause cause there is no sanitization… So basically we have an <strong>SQL</strong> query with <code class="language-plaintext highlighter-rouge">WHERE X AND published=true</code> and the <code class="language-plaintext highlighter-rouge">X</code> is entirely controlled by us ! 
 And fortunately, prisma comes with a ton of operator. To mitigate the case-insne… insin… The <strong>case that is not sensitive</strong> problem, we can use the <code class="language-plaintext highlighter-rouge">gt</code> (greater than) and <code class="language-plaintext highlighter-rouge">lt</code> (lower than) operators !</p>
 
 <p>Using this request we can test wether the character is lowercase or uppercase:</p>
@@ -1796,10 +1796,10 @@ And fortunately, prisma comes with a ton of operator. To mitigate the case-insne
 
 <p>Let’s take a look:
 <a href="/assets/img/writeups/uoftctf/so_its_not_caps.png" class="popup img-link radius-shadow shimmer"><img src="/assets/img/writeups/uoftctf/so_its_not_caps.png" alt="image"  loading="lazy"></a>
-<em>Check if the character is between a and z (= check if the character is lowercase)</em></p>
+<em>Check if the character is between a and z (<strong>check if the character is lowercase</strong>)</em></p>
 
 <p><a href="/assets/img/writeups/uoftctf/so_its_upper.png" class="popup img-link radius-shadow shimmer"><img src="/assets/img/writeups/uoftctf/so_its_upper.png" alt="image"  loading="lazy"></a>
-<em>Check if the character is between A and Z (= check is the character is uppercase)</em></p>
+<em>Check if the character is between A and Z (<strong>check is the character is uppercase</strong>)</em></p>
 
 <p>As you can see the second request returns something, that means that the <code class="language-plaintext highlighter-rouge">z</code> character is between <code class="language-plaintext highlighter-rouge">A</code> and <code class="language-plaintext highlighter-rouge">Z</code>. Therefore, it’s uppercase.
 We can repeat the operation for every character. So I’ve scripted it:</p>
