@@ -1586,7 +1586,7 @@
 <span class="nx">res</span><span class="p">.</span><span class="nf">json</span><span class="p">({</span><span class="na">success</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="nx">posts</span><span class="p">})</span>
 </pre></td></tr></tbody></table></code></div></div>
 
-<p>Our query is taken, then the published parameter is passed to true, so in the <strong>SQL query</strong> a <code class="language-plaintext highlighter-rouge">WHERE published = true</code> we’ll be added. I tried googling around, but it seems that we can’t bypass that to display the flag …</p>
+<p>Our query is taken, then the published parameter is passed to true, so in the <strong>SQL query</strong> a <code class="language-plaintext highlighter-rouge">WHERE published = true</code> will be added. I tried googling around, but it seems that we can’t bypass that to display the flag …</p>
 
 <p><strong>BUT</strong> there’s still a problem ! The user query is <strong>directly passed to prisma</strong> without any sanitization. It means that we can send JSON through the URL to trick the ORM ! After reading the <a href="https://www.prisma.io/docs/orm/">prisma doc</a> I made this url:</p>
 <ul>
