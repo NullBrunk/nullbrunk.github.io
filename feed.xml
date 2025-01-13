@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>NullBrunk</title>
   <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
-  <updated>2025-01-13T04:51:37+00:00</updated>
+  <updated>2025-01-13T05:04:46+00:00</updated>
   <author>
     <name>Anas</name>
     <uri>http://localhost:4000/</uri>
@@ -46,7 +46,7 @@
    Link to the event 
 
 
-I managed to finish 161 on 897 solo with my this CTFtime team … Not real...</summary>
+I managed to flag 9 challenges and to finish 161 on 897 solo with my per...</summary>
 
   </entry>
 
@@ -82,7 +82,7 @@ I managed to finish 161 on 897 solo with my this CTFtime team … Not real...</s
     <link href="http://localhost:4000/posts/UofTCTF2025-babypwn/" rel="alternate" type="text/html" title="Pwn Category" />
     <published>2025-01-12T16:00:00+00:00</published>
   
-    <updated>2025-01-13T04:47:54+00:00</updated>
+    <updated>2025-01-13T04:51:40+00:00</updated>
   
     <id>http://localhost:4000/posts/UofTCTF2025-babypwn/</id>
     <content type="text/html" src="http://localhost:4000/posts/UofTCTF2025-babypwn/" />
@@ -163,7 +163,7 @@ import { Pr...</summary>
     <link href="http://localhost:4000/posts/thm-opacity/" rel="alternate" type="text/html" title="Opacity" />
     <published>2025-01-02T16:00:00+00:00</published>
   
-    <updated>2025-01-02T16:00:00+00:00</updated>
+    <updated>2025-01-13T04:51:40+00:00</updated>
   
     <id>http://localhost:4000/posts/thm-opacity/</id>
     <content type="text/html" src="http://localhost:4000/posts/thm-opacity/" />
