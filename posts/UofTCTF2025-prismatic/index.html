@@ -1462,7 +1462,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="2561 words"
+  title="2574 words"
 >
   <em>14 min</em> read</span>
 
@@ -1992,13 +1992,13 @@ model Post {
 
 <p>So we can either:</p>
 <ul>
-  <li>Try to “hack” the SQL query to display unpublished posts</li>
-  <li>Try to “hack” the accounts to login and see their posts</li>
+  <li>Try to “hack” <strong>the SQL query</strong> to display unpublished posts</li>
+  <li>Try to “hack” <strong>the accounts</strong> to login and see their posts</li>
 </ul>
 
 <h3 id="identifying-vulnerabilities"><span class="me-2">Identifying vulnerabilities</span><a href="#identifying-vulnerabilities" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
-<p>I was looking at the <code class="language-plaintext highlighter-rouge">/api/posts</code> code:</p>
+<p>I started by looking at the <code class="language-plaintext highlighter-rouge">/api/posts</code> code to look for vulnerabilities in the SQL query. This part is interesting:</p>
 <div class="language-js highlighter-rouge"><div class="code-header">
         <span data-label-text="JavaScript"><i class="fas fa-code fa-fw small"></i></span>
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
