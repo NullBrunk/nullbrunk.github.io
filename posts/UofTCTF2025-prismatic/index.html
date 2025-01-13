@@ -1647,7 +1647,7 @@
 
 <p>Our query is taken, then the published parameter is passed to true, so in the <strong>SQL query</strong> a <code class="language-plaintext highlighter-rouge">WHERE published = true</code> we’ll be added. I tried googling around, but it seems that we can’t bypass that to display the flag …</p>
 
-<p><strong>BUT</strong> there’s still a problem ! The user query is <strong>directly passed to prisma</strong> without any sanitization. It means that we can send JSON through the URL to trick the ORM ! After reading the <a href="https://www.prisma.io/docs/orm/prisma-client/queries/filtering-and-sorting">prisma doc</a> I made this ur:</p>
+<p><strong>BUT</strong> there’s still a problem ! The user query is <strong>directly passed to prisma</strong> without any sanitization. It means that we can send JSON through the URL to trick the ORM ! After reading the <a href="https://www.prisma.io/docs/orm/">prisma doc</a> I made this url:</p>
 <ul>
   <li><code class="language-plaintext highlighter-rouge">http://TARGET_URL/api/posts?author[name]=Bob</code></li>
 </ul>
@@ -1691,7 +1691,7 @@
 <p>Ok but what next ?</p>
 
 <p>Reading the <a href="https://www.prisma.io/docs/orm/prisma-client/queries/filtering-and-sorting">Prisma doc</a> we find a lot of interesting operators that we could use. 
-We know (from the seeder.js) that the post is associated with a user, and that this user have a password. We could simply try to exfiltrate this password character by character, using the <code class="language-plaintext highlighter-rouge">startsWith</code> operator !</p>
+We know <em>(from the <a href="#seederjs">seeder.js</a>)</em> that the post is associated with a user, and that this user have a password. We could simply try to exfiltrate this password character by character, using the <code class="language-plaintext highlighter-rouge">startsWith</code> operator !</p>
 
 <ul>
   <li><code class="language-plaintext highlighter-rouge">http://TARGET_URL/api/posts?author[name]=Bob&amp;author[password][startsWith]=a</code></li>
