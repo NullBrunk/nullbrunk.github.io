@@ -1021,7 +1021,7 @@ Enter some text:
 </pre></td></tr></tbody></table></code></div></div>
 <hr />
 
-<p>So basically there is an interesting function that is never called at address <code class="language-plaintext highlighter-rouge">0x401166</code> and we wan’t to jump on it.</p>
+<p>So basically there is an interesting function that is never called at address <code class="language-plaintext highlighter-rouge">0x401166</code> and we want to jump on it.</p>
 
 <p>Reading the code we see a Buffer Overflow at this line:</p>
 <div class="language-c highlighter-rouge"><div class="code-header">
@@ -1036,7 +1036,7 @@ Enter some text:
 <ul>
   <li>fill the buffer[64] (64 byte buffer)</li>
   <li>fill RBP (8 byte)</li>
-  <li>overwrite the <code class="language-plaintext highlighter-rouge">return adresse</code> with the function we wan’t to jump on</li>
+  <li>overwrite the <code class="language-plaintext highlighter-rouge">return adresse</code> with the function we want to jump on</li>
 </ul>
 
 <p>First we need to convert the function address in it’s little endian representation on 8 bytes:</p>
