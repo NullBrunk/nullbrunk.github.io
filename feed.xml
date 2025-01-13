@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>NullBrunk</title>
   <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
-  <updated>2025-01-13T02:23:00+00:00</updated>
+  <updated>2025-01-13T02:27:55+00:00</updated>
   <author>
     <name>Anas</name>
     <uri>http://localhost:4000/</uri>
@@ -66,11 +66,10 @@
     
   
 
-  <summary>Manages to finish 161st/897 solo with my Team earn 955 points
+  <summary>I managed to finish 161 on 897 solo with my Team … Not really a team since I’m the only member
 
-https://ctftime.org/event/2570
 
-!image {: .radius-shadow }</summary>
+   Link to the event</summary>
 
   </entry>
 
