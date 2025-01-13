@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>NullBrunk</title>
   <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
-  <updated>2025-01-13T02:01:06+00:00</updated>
+  <updated>2025-01-13T02:04:58+00:00</updated>
   <author>
     <name>Anas</name>
     <uri>http://localhost:4000/</uri>
@@ -139,7 +139,7 @@ https://ctftime.org/event/2570
   Code
     
       Final script
-      Source code
+      Application Source code
         
           Seed.js
           Index.js
@@ -153,7 +153,7 @@ https://ctftime.org/event/2570
 
 Source Code
 
-You can read the source...</summary>
+You can rea...</summary>
 
   </entry>
 

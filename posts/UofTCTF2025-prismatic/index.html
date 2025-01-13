@@ -1532,7 +1532,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="2475 words"
+  title="2484 words"
 >
   <em>13 min</em> read</span>
 
@@ -1584,7 +1584,7 @@
   <li>Code
     <ul>
       <li><a href="#final-script">Final script</a></li>
-      <li><a href="#source-code-1">Source code</a>
+      <li><a href="#application-source-code">Application Source code</a>
         <ul>
           <li><a href="#seedjs">Seed.js</a></li>
           <li><a href="#indexjs">Index.js</a></li>
@@ -1598,21 +1598,27 @@
 
 <h1 id="source-code">Source Code</h1>
 
-<p><a href="#source-code-1">You can read the source code here</a></p>
+<p><a href="#application-source-code">You can read the source code here</a></p>
 
 <h3 id="interesting-points"><span class="me-2">Interesting Points</span><a href="#interesting-points" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
-<p>Lot of interesting things going here :</p>
+<p>After reading the source I noticed some interesting things:</p>
 
 <ol>
-  <li><a href="#seedjs">Seed.js</a>: <strong>4 usernames</strong> <em>(White, Bob, Tommy, Sam)</em> and the <strong>set of characters used</strong> to make their passwords</li>
-  <li>
-    <p><a href="#seedjs">Seed.js</a>: Flag is a <strong>private post of a randomly chosen users</strong></p>
+  <li><a href="#seedjs">Seed.js</a>:
+    <ul>
+      <li>Their are <strong>4 users</strong> <em>(White, Bob, Tommy and Sam)</em> with random generated passwords, but we have the <strong>set of characters used</strong> to make their passwords</li>
+      <li>Flag is a <strong>private post of a randomly chosen users</strong></li>
+    </ul>
   </li>
-  <li><a href="#indexjs">Index.js</a>: Our query is directly passed to Prisma <strong>without sanitization</strong> in <code class="language-plaintext highlighter-rouge">/api/posts</code></li>
-  <li><a href="#indexjs">Index.js</a>: Only <strong>2 routes</strong> (<code class="language-plaintext highlighter-rouge">/api/posts</code> and <code class="language-plaintext highlighter-rouge">/api/login</code>)</li>
-  <li><a href="#indexjs">Index.js</a>: You can see <strong>all posts</strong> (<strong>EXCEPT</strong> unpublished ones) in <code class="language-plaintext highlighter-rouge">/api/posts</code></li>
-  <li><a href="#indexjs">Index.js</a>: You can see <strong>all posts</strong> (<strong>EVEN</strong> unpublished ones) written by the author after login in <code class="language-plaintext highlighter-rouge">/api/login</code></li>
+  <li><a href="#indexjs">Index.js</a>:
+    <ul>
+      <li>Our query is directly passed to Prisma <strong>without sanitization</strong> in <code class="language-plaintext highlighter-rouge">/api/posts</code></li>
+      <li>Only <strong>2 routes</strong> (<code class="language-plaintext highlighter-rouge">/api/posts</code> and <code class="language-plaintext highlighter-rouge">/api/login</code>)</li>
+      <li>You can see <strong>all posts</strong> (<strong>EXCEPT</strong> unpublished ones) in <code class="language-plaintext highlighter-rouge">/api/posts</code></li>
+      <li>You can see <strong>all posts</strong> (<strong>EVEN</strong> unpublished ones) written by the author after login in <code class="language-plaintext highlighter-rouge">/api/login</code></li>
+    </ul>
+  </li>
 </ol>
 
 <p>So we can:</p>
@@ -2079,7 +2085,7 @@ Actualy I didn’t, I started by bruteforcing the password of <code class="langu
 <span class="n">log</span><span class="p">.</span><span class="nf">success</span><span class="p">(</span><span class="sh">"</span><span class="s">Password with correct case is: </span><span class="sh">"</span> <span class="o">+</span> <span class="n">to_test</span><span class="p">)</span>
 </pre></td></tr></tbody></table></code></div></div>
 
-<h2 id="source-code-1"><span class="me-2">Source code</span><a href="#source-code-1" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<h2 id="application-source-code"><span class="me-2">Application Source code</span><a href="#application-source-code" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 
 <h3 id="seedjs"><span class="me-2">Seed.js</span><a href="#seedjs" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
