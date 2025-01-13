@@ -829,7 +829,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="597 words"
+  title="599 words"
 >
   <em>3 min</em> read</span>
 
@@ -1007,10 +1007,10 @@ Enter some text:
 
 <p><a href="/assets/img/writeups/uoftctf/stack_executable.png" class="popup img-link radius-shadow shimmer"><img src="/assets/img/writeups/uoftctf/stack_executable.png" alt="image"  loading="lazy"></a></p>
 
-<p>Seems like the stack is executable ! Since the binary leaks the stack address and is vulnerable to a Buffer Overflow we can</p>
+<p>Seems like the stack is executable ! Since the binary leaks the stack address, and since it’s still vulnerable to the same Buffer Overflow we can</p>
 
 <ul>
-  <li>fill the buffer[64] with out shellcode + NOP (64 bytes)</li>
+  <li>fill buffer[64] with our shellcode + NOP (64 bytes)</li>
   <li>fill RBP (8 bytes)</li>
   <li>overwrite <code class="language-plaintext highlighter-rouge">return address</code> with the stack address</li>
 </ul>
