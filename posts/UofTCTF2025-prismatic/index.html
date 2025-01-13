@@ -1399,6 +1399,17 @@
 
       
     
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
 
     
   
@@ -1532,9 +1543,9 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="2500 words"
+  title="2610 words"
 >
-  <em>13 min</em> read</span>
+  <em>14 min</em> read</span>
 
         </div>
       </div>
@@ -1588,6 +1599,7 @@
         <ul>
           <li><a href="#seedjs">Seed.js</a></li>
           <li><a href="#indexjs">Index.js</a></li>
+          <li><a href="#schemaprisma">Schema.prisma</a></li>
         </ul>
       </li>
     </ul>
@@ -1691,8 +1703,7 @@
 <p>Ok but what next ?</p>
 
 <p>Reading the <a href="https://www.prisma.io/docs/orm/prisma-client/queries/filtering-and-sorting">Prisma doc</a> we find a lot of interesting operators that we could use. 
-We know <em>(from the <a href="#seederjs">seeder.js</a>)</em> that the post is associated with a user, and that this user have a password. We could simply try to exfiltrate this password character by character, using the <code class="language-plaintext highlighter-rouge">startsWith</code> operator !</p>
-
+We know <em>(from the <a href="#schemaprisma">Schema.prisma</a>)</em> that each post is associated with a user (the author), and that this user have a password. We could simply try to exfiltrate this password from the posts table by going on the author, then testing things with it’s password character. Let’s use the <code class="language-plaintext highlighter-rouge">startsWith</code> operator for example:</p>
 <ul>
   <li><code class="language-plaintext highlighter-rouge">http://TARGET_URL/api/posts?author[name]=Bob&amp;author[password][startsWith]=a</code></li>
 </ul>
@@ -2458,6 +2469,65 @@ You don’t need fancy notebooks or hours of time—just a few minutes a day can
 <span class="nx">app</span><span class="p">.</span><span class="nf">listen</span><span class="p">(</span><span class="nx">PORT</span><span class="p">,</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="s2">`Server is running on http://localhost:</span><span class="p">${</span><span class="nx">PORT</span><span class="p">}</span><span class="s2">`</span><span class="p">);</span>
 <span class="p">});</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<h3 id="schemaprisma"><span class="me-2">Schema.prisma</span><a href="#schemaprisma" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<div class="language-plaintext highlighter-rouge"><div class="code-header">
+        <span data-label-text="Plaintext"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+</pre></td><td class="rouge-code"><pre>datasource db {
+  provider = "sqlite"
+  url      = "file:./database.db"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model User {
+  id        Int      @id @default(autoincrement())
+  createdAt DateTime @default(now())
+  name      String   @unique
+  password  String
+  posts     Post[]
+}
+
+model Post {
+  id        Int      @id @default(autoincrement())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  published Boolean  @default(false)
+  title     String   
+  body      String
+  author    User    @relation(fields: [authorId], references: [id])
+  authorId  Int
+}
 </pre></td></tr></tbody></table></code></div></div>
 
   </div>
