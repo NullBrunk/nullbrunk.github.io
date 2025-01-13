@@ -1543,7 +1543,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="2610 words"
+  title="2606 words"
 >
   <em>14 min</em> read</span>
 
@@ -1703,7 +1703,7 @@
 <p>Ok but what next ?</p>
 
 <p>Reading the <a href="https://www.prisma.io/docs/orm/prisma-client/queries/filtering-and-sorting">Prisma doc</a> we find a lot of interesting operators that we could use. 
-We know <em>(from the <a href="#schemaprisma">Schema.prisma</a>)</em> that each post is associated with a user (the author), and that this user have a password. We could simply try to exfiltrate this password from the posts table by going on the author, then testing things with it’s password character. Let’s use the <code class="language-plaintext highlighter-rouge">startsWith</code> operator for example:</p>
+We know <em>(from the <a href="#schemaprisma">Schema.prisma</a>)</em> that each post is associated with a user (the author), and that this user have a password. We could simply try to exfiltrate this password from the posts table by taking the author, then grabbing it’s password. Let’s use the <code class="language-plaintext highlighter-rouge">startsWith</code> operator for example:</p>
 <ul>
   <li><code class="language-plaintext highlighter-rouge">http://TARGET_URL/api/posts?author[name]=Bob&amp;author[password][startsWith]=a</code></li>
 </ul>
