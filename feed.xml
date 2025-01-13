@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>NullBrunk</title>
   <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
-  <updated>2025-01-13T02:34:32+00:00</updated>
+  <updated>2025-01-13T02:36:26+00:00</updated>
   <author>
     <name>Anas</name>
     <uri>http://localhost:4000/</uri>
@@ -66,10 +66,13 @@
     
   
 
-  <summary>I managed to finish 161 on 897 solo with my Team … Not really a team since I’m the only member
+  <summary>UofTCTF 2025 is the annual capture-the-flag competition organized by the UofTCTF team. This year’s event took place online from January 10, 2025, at 7:00 PM EST to January 12, 2025, at 7:00 PM EST. It was a jeopardy-style CTF with classic categories like web, pwn, crypto, rev, forensics, and misc.
 
 
-   Link to the event</summary>
+   Link to the event 
+
+
+I managed to finish 161 on 897 solo with my this CTFtime team … Not real...</summary>
 
   </entry>
 
