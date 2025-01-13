@@ -2042,7 +2042,7 @@ model Post {
 <h3 id="exploiting-the-vulnerability"><span class="me-2">Exploiting the vulnerability</span><a href="#exploiting-the-vulnerability" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 <p>Ok but what next ?</p>
 
-<p>Reading the <a href="https://www.prisma.io/docs/orm/prisma-client/queries/filtering-and-sorting">Prisma doc</a> we find a lot of interesting operators that we could use. 
+<p>Reading the <a href="https://www.prisma.io/docs/orm/prisma-client/queries/filtering-and-sorting">Prisma doc</a> I found a lot of interesting operators that we could use. 
 We know <em>(from the <a href="#schemaprisma">Schema.prisma</a>)</em> that each post is associated with a user (the author), and that this user have a password. We could simply try to exfiltrate this password from the posts table by taking the author, then grabbing it’s password. Let’s use the <code class="language-plaintext highlighter-rouge">startsWith</code> operator for example:</p>
 <ul>
   <li><code class="language-plaintext highlighter-rouge">http://TARGET_URL/api/posts?author[name]=Bob&amp;author[password][startsWith]=a</code></li>
