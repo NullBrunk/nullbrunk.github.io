@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>NullBrunk</title>
   <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
-  <updated>2025-01-13T02:36:26+00:00</updated>
+  <updated>2025-01-13T02:59:13+00:00</updated>
   <author>
     <name>Anas</name>
     <uri>http://localhost:4000/</uri>
@@ -104,14 +104,40 @@ I managed to finish 161 on 897 solo with my this CTFtime team … Not real...</s
 
   
   <entry>
-    <title>Prismatic Blogs</title>
-    <link href="http://localhost:4000/posts/UofTCTF2025-prismatic/" rel="alternate" type="text/html" title="Prismatic Blogs" />
+    <title>Pwn</title>
+    <link href="http://localhost:4000/posts/UofTCTF2025-prismatic-copy-2/" rel="alternate" type="text/html" title="Pwn" />
     <published>2025-01-01T16:00:00+00:00</published>
   
     <updated>2025-01-01T16:00:00+00:00</updated>
   
-    <id>http://localhost:4000/posts/UofTCTF2025-prismatic/</id>
-    <content type="text/html" src="http://localhost:4000/posts/UofTCTF2025-prismatic/" />
+    <id>http://localhost:4000/posts/UofTCTF2025-prismatic-copy-2/</id>
+    <content type="text/html" src="http://localhost:4000/posts/UofTCTF2025-prismatic-copy-2/" />
+    <author>
+      <name>anas</name>
+    </author>
+
+  
+    
+    <category term="Writeups" />
+    
+    <category term="UofTCTF2025" />
+    
+  
+
+  <summary>BabyPwn 1 and 2</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>Prismatic Blogs</title>
+    <link href="http://localhost:4000/posts/UofTCTF2025-babypwn2/" rel="alternate" type="text/html" title="Prismatic Blogs" />
+    <published>2025-01-01T16:00:00+00:00</published>
+  
+    <updated>2025-01-01T16:00:00+00:00</updated>
+  
+    <id>http://localhost:4000/posts/UofTCTF2025-babypwn2/</id>
+    <content type="text/html" src="http://localhost:4000/posts/UofTCTF2025-babypwn2/" />
     <author>
       <name>anas</name>
     </author>
@@ -155,32 +181,6 @@ I managed to finish 161 on 897 solo with my this CTFtime team … Not real...</s
 
 
 ...</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>xsserve</title>
-    <link href="http://localhost:4000/posts/xsserve/" rel="alternate" type="text/html" title="xsserve" />
-    <published>2024-12-30T16:00:00+00:00</published>
-  
-    <updated>2025-01-01T21:11:42+00:00</updated>
-  
-    <id>http://localhost:4000/posts/xsserve/</id>
-    <content type="text/html" src="http://localhost:4000/posts/xsserve/" />
-    <author>
-      <name>anas</name>
-    </author>
-
-  
-    
-    <category term="Hacking tools" />
-    
-    <category term="Python" />
-    
-  
-
-  <summary>Simplify XSS exploitation</summary>
 
   </entry>
 
