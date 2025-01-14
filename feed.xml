@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>NullBrunk</title>
   <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
-  <updated>2025-01-13T05:04:46+00:00</updated>
+  <updated>2025-01-14T10:02:46+00:00</updated>
   <author>
     <name>Anas</name>
     <uri>http://localhost:4000/</uri>
@@ -24,7 +24,7 @@
     <link href="http://localhost:4000/posts/uofctf-introduction/" rel="alternate" type="text/html" title="Introduction" />
     <published>2025-01-12T16:00:00+00:00</published>
   
-    <updated>2025-01-13T03:38:22+00:00</updated>
+    <updated>2025-01-13T05:05:02+00:00</updated>
   
     <id>http://localhost:4000/posts/uofctf-introduction/</id>
     <content type="text/html" src="http://localhost:4000/posts/uofctf-introduction/" />
@@ -35,6 +35,8 @@
   
     
     <category term="Writeups" />
+    
+    <category term="CTFTime" />
     
     <category term="UofTCTF2025" />
     
@@ -68,6 +70,8 @@ I managed to flag 9 challenges and to finish 161 on 897 solo with my per...</sum
     
     <category term="Writeups" />
     
+    <category term="CTFTime" />
+    
     <category term="UofTCTF2025" />
     
   
@@ -94,6 +98,8 @@ I managed to flag 9 challenges and to finish 161 on 897 solo with my per...</sum
     
     <category term="Writeups" />
     
+    <category term="CTFTime" />
+    
     <category term="UofTCTF2025" />
     
   
@@ -119,6 +125,8 @@ I managed to flag 9 challenges and to finish 161 on 897 solo with my per...</sum
   
     
     <category term="Writeups" />
+    
+    <category term="CTFTime" />
     
     <category term="UofTCTF2025" />
     

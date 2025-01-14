@@ -3,7 +3,7 @@
   {
     "title": "Introduction",
     "url": "/posts/uofctf-introduction/",
-    "categories": "Writeups, UofTCTF2025",
+    "categories": "Writeups, CTFTime, UofTCTF2025",
     "tags": "writeups",
     "date": "2025-01-12 16:00:00 +0000",
     
@@ -20,7 +20,7 @@
   {
     "title": "Misc Category",
     "url": "/posts/UofTCTF2025-misc/",
-    "categories": "Writeups, UofTCTF2025",
+    "categories": "Writeups, CTFTime, UofTCTF2025",
     "tags": "writeups, category, misc, race-condition, python, osint",
     "date": "2025-01-12 16:00:00 +0000",
     
@@ -37,7 +37,7 @@
   {
     "title": "Pwn Category",
     "url": "/posts/UofTCTF2025-babypwn/",
-    "categories": "Writeups, UofTCTF2025",
+    "categories": "Writeups, CTFTime, UofTCTF2025",
     "tags": "writeups, category, pwn, buffer-overflow, shellcode, python, pwntools",
     "date": "2025-01-12 16:00:00 +0000",
     
@@ -54,7 +54,7 @@
   {
     "title": "Prismatic Blogs",
     "url": "/posts/UofTCTF2025-prismatic/",
-    "categories": "Writeups, UofTCTF2025",
+    "categories": "Writeups, CTFTime, UofTCTF2025",
     "tags": "writeups, challenge, web, express, json-injection, orm-injection, prisma, python",
     "date": "2025-01-11 16:00:00 +0000",
     
