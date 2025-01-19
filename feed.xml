@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>NullBrunk</title>
   <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
-  <updated>2025-01-19T13:04:08+00:00</updated>
+  <updated>2025-01-19T19:58:17+00:00</updated>
   <author>
     <name>Anas</name>
     <uri>http://localhost:4000/</uri>
@@ -20,11 +20,66 @@
 
   
   <entry>
+    <title>Srdnlen CTF - Speed</title>
+    <link href="http://localhost:4000/posts/SrdnlenCTF2025-racecondition/" rel="alternate" type="text/html" title="Srdnlen CTF - Speed" />
+    <published>2025-01-18T16:00:00+00:00</published>
+  
+    <updated>2025-01-18T16:00:00+00:00</updated>
+  
+    <id>http://localhost:4000/posts/SrdnlenCTF2025-racecondition/</id>
+    <content type="text/html" src="http://localhost:4000/posts/SrdnlenCTF2025-racecondition/" />
+    <author>
+      <name>anas</name>
+    </author>
+
+  
+    
+    <category term="Writeups" />
+    
+    <category term="CTFTime2025" />
+    
+    <category term="Srdnlen" />
+    
+  
+
+  <summary>Introduction
+    
+      Srdnlen CTF 2025
+    
+  
+  Source Code
+    
+      Reading source code
+      Interesting points
+      Identifying vulnerabilities
+    
+  
+  Exploitation
+    
+      Exploiting the vulnerability
+      Scripting
+      Getting the flag
+    
+  
+
+
+
+
+Introduction
+
+Srdnlen CTF 2025
+
+Srdnlen CTF is a Jeopardy-style Capture-The-Flag competition hosted by the members of Srdnlen, an ...</summary>
+
+  </entry>
+
+  
+  <entry>
     <title>UofTCTF - Prismatic Blogs</title>
     <link href="http://localhost:4000/posts/UofTCTF2025-prismatic/" rel="alternate" type="text/html" title="UofTCTF - Prismatic Blogs" />
     <published>2025-01-11T16:00:00+00:00</published>
   
-    <updated>2025-01-14T10:04:12+00:00</updated>
+    <updated>2025-01-19T13:04:28+00:00</updated>
   
     <id>http://localhost:4000/posts/UofTCTF2025-prismatic/</id>
     <content type="text/html" src="http://localhost:4000/posts/UofTCTF2025-prismatic/" />
@@ -149,32 +204,6 @@ UofTCTF 2025 is the annual capture-the-flag competitio...</summary>
   
 
   <summary>Simplify XSS exploitation</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>Attacktive Directory</title>
-    <link href="http://localhost:4000/posts/thm-attacktivedirectory/" rel="alternate" type="text/html" title="Attacktive Directory" />
-    <published>2024-12-29T16:00:00+00:00</published>
-  
-    <updated>2025-01-13T04:51:40+00:00</updated>
-  
-    <id>http://localhost:4000/posts/thm-attacktivedirectory/</id>
-    <content type="text/html" src="http://localhost:4000/posts/thm-attacktivedirectory/" />
-    <author>
-      <name>anas</name>
-    </author>
-
-  
-    
-    <category term="Writeups" />
-    
-    <category term="TryHackMe" />
-    
-  
-
-  <summary>99% of Corporate networks run off of AD. But can you exploit a vulnerable Domain Controller?</summary>
 
   </entry>
 
