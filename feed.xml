@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>NullBrunk</title>
   <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
-  <updated>2025-01-14T10:02:46+00:00</updated>
+  <updated>2025-01-19T13:04:08+00:00</updated>
   <author>
     <name>Anas</name>
     <uri>http://localhost:4000/</uri>
@@ -20,101 +20,11 @@
 
   
   <entry>
-    <title>Introduction</title>
-    <link href="http://localhost:4000/posts/uofctf-introduction/" rel="alternate" type="text/html" title="Introduction" />
-    <published>2025-01-12T16:00:00+00:00</published>
-  
-    <updated>2025-01-13T05:05:02+00:00</updated>
-  
-    <id>http://localhost:4000/posts/uofctf-introduction/</id>
-    <content type="text/html" src="http://localhost:4000/posts/uofctf-introduction/" />
-    <author>
-      <name>anas</name>
-    </author>
-
-  
-    
-    <category term="Writeups" />
-    
-    <category term="CTFTime" />
-    
-    <category term="UofTCTF2025" />
-    
-  
-
-  <summary>UofTCTF 2025 is the annual capture-the-flag competition organized by the UofTCTF team. This year’s event took place online from January 10, 2025, at 7:00 PM EST to January 12, 2025, at 7:00 PM EST. It was a jeopardy-style CTF with classic categories like web, pwn, crypto, rev, forensics, and misc.
-
-
-   Link to the event 
-
-
-I managed to flag 9 challenges and to finish 161 on 897 solo with my per...</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>Misc Category</title>
-    <link href="http://localhost:4000/posts/UofTCTF2025-misc/" rel="alternate" type="text/html" title="Misc Category" />
-    <published>2025-01-12T16:00:00+00:00</published>
-  
-    <updated>2025-01-13T04:47:54+00:00</updated>
-  
-    <id>http://localhost:4000/posts/UofTCTF2025-misc/</id>
-    <content type="text/html" src="http://localhost:4000/posts/UofTCTF2025-misc/" />
-    <author>
-      <name>anas</name>
-    </author>
-
-  
-    
-    <category term="Writeups" />
-    
-    <category term="CTFTime" />
-    
-    <category term="UofTCTF2025" />
-    
-  
-
-  <summary>The misc category</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>Pwn Category</title>
-    <link href="http://localhost:4000/posts/UofTCTF2025-babypwn/" rel="alternate" type="text/html" title="Pwn Category" />
-    <published>2025-01-12T16:00:00+00:00</published>
-  
-    <updated>2025-01-13T04:51:40+00:00</updated>
-  
-    <id>http://localhost:4000/posts/UofTCTF2025-babypwn/</id>
-    <content type="text/html" src="http://localhost:4000/posts/UofTCTF2025-babypwn/" />
-    <author>
-      <name>anas</name>
-    </author>
-
-  
-    
-    <category term="Writeups" />
-    
-    <category term="CTFTime" />
-    
-    <category term="UofTCTF2025" />
-    
-  
-
-  <summary>BabyPwn 1 and 2</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>Prismatic Blogs</title>
-    <link href="http://localhost:4000/posts/UofTCTF2025-prismatic/" rel="alternate" type="text/html" title="Prismatic Blogs" />
+    <title>UofTCTF - Prismatic Blogs</title>
+    <link href="http://localhost:4000/posts/UofTCTF2025-prismatic/" rel="alternate" type="text/html" title="UofTCTF - Prismatic Blogs" />
     <published>2025-01-11T16:00:00+00:00</published>
   
-    <updated>2025-01-13T04:51:12+00:00</updated>
+    <updated>2025-01-14T10:04:12+00:00</updated>
   
     <id>http://localhost:4000/posts/UofTCTF2025-prismatic/</id>
     <content type="text/html" src="http://localhost:4000/posts/UofTCTF2025-prismatic/" />
@@ -126,13 +36,18 @@ I managed to flag 9 challenges and to finish 161 on 897 solo with my per...</sum
     
     <category term="Writeups" />
     
-    <category term="CTFTime" />
+    <category term="CTFTime2025" />
     
     <category term="UofTCTF2025" />
     
   
 
-  <summary>Source Code
+  <summary>Introduction
+    
+      UofTCTF 2025
+    
+  
+  Source Code
     
       Reading source code
       Interesting points
@@ -151,17 +66,11 @@ I managed to flag 9 challenges and to finish 161 on 897 solo with my per...</sum
 
 
 
-Source Code
+Introduction
 
-Reading source code
+UofTCTF 2025
 
-Here is the application source code:
-
-
-  index.js
-
-  import express from &amp;quot;express&amp;quot;;
-import { Pr...</summary>
+UofTCTF 2025 is the annual capture-the-flag competitio...</summary>
 
   </entry>
 
@@ -188,6 +97,84 @@ import { Pr...</summary>
   
 
   <summary>Opacity is a Boot2Root made for pentesters and cybersecurity enthusiasts.</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>Whiterose</title>
+    <link href="http://localhost:4000/posts/thm-whiterose/" rel="alternate" type="text/html" title="Whiterose" />
+    <published>2025-01-01T16:00:00+00:00</published>
+  
+    <updated>2025-01-02T21:29:07+00:00</updated>
+  
+    <id>http://localhost:4000/posts/thm-whiterose/</id>
+    <content type="text/html" src="http://localhost:4000/posts/thm-whiterose/" />
+    <author>
+      <name>anas</name>
+    </author>
+
+  
+    
+    <category term="Writeups" />
+    
+    <category term="TryHackMe" />
+    
+  
+
+  <summary>Yet another Mr. Robot themed challenge.</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>xsserve</title>
+    <link href="http://localhost:4000/posts/xsserve/" rel="alternate" type="text/html" title="xsserve" />
+    <published>2024-12-30T16:00:00+00:00</published>
+  
+    <updated>2025-01-01T21:11:42+00:00</updated>
+  
+    <id>http://localhost:4000/posts/xsserve/</id>
+    <content type="text/html" src="http://localhost:4000/posts/xsserve/" />
+    <author>
+      <name>anas</name>
+    </author>
+
+  
+    
+    <category term="Hacking tools" />
+    
+    <category term="Python" />
+    
+  
+
+  <summary>Simplify XSS exploitation</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>Attacktive Directory</title>
+    <link href="http://localhost:4000/posts/thm-attacktivedirectory/" rel="alternate" type="text/html" title="Attacktive Directory" />
+    <published>2024-12-29T16:00:00+00:00</published>
+  
+    <updated>2025-01-13T04:51:40+00:00</updated>
+  
+    <id>http://localhost:4000/posts/thm-attacktivedirectory/</id>
+    <content type="text/html" src="http://localhost:4000/posts/thm-attacktivedirectory/" />
+    <author>
+      <name>anas</name>
+    </author>
+
+  
+    
+    <category term="Writeups" />
+    
+    <category term="TryHackMe" />
+    
+  
+
+  <summary>99% of Corporate networks run off of AD. But can you exploit a vulnerable Domain Controller?</summary>
 
   </entry>
 
