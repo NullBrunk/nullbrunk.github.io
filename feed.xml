@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>NullBrunk</title>
   <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
-  <updated>2025-01-19T23:55:26+00:00</updated>
+  <updated>2025-01-20T00:00:51+00:00</updated>
   <author>
     <name>Anas</name>
     <uri>http://localhost:4000/</uri>
@@ -24,7 +24,7 @@
     <link href="http://localhost:4000/posts/SrdnlenCTF2025-racecondition/" rel="alternate" type="text/html" title="Srdnlen CTF - Speed" />
     <published>2025-01-18T16:00:00+00:00</published>
   
-    <updated>2025-01-19T23:50:43+00:00</updated>
+    <updated>2025-01-20T00:00:48+00:00</updated>
   
     <id>http://localhost:4000/posts/SrdnlenCTF2025-racecondition/</id>
     <content type="text/html" src="http://localhost:4000/posts/SrdnlenCTF2025-racecondition/" />
