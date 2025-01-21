@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>NullBrunk</title>
   <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
-  <updated>2025-01-20T00:00:51+00:00</updated>
+  <updated>2025-01-21T01:45:47+00:00</updated>
   <author>
     <name>Anas</name>
     <uri>http://localhost:4000/</uri>
@@ -70,6 +70,34 @@ Introduction
 Srdnlen CTF 2025
 
 Srdnlen CTF is a Jeopardy-style Capture-The-Flag competition hosted by the members of Srdnlen, an ...</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>Pointer Overflow CTF</title>
+    <link href="http://localhost:4000/posts/PoCTF2025/" rel="alternate" type="text/html" title="Pointer Overflow CTF" />
+    <published>2025-01-18T16:00:00+00:00</published>
+  
+    <updated>2025-01-18T16:00:00+00:00</updated>
+  
+    <id>http://localhost:4000/posts/PoCTF2025/</id>
+    <content type="text/html" src="http://localhost:4000/posts/PoCTF2025/" />
+    <author>
+      <name>anas</name>
+    </author>
+
+  
+    
+    <category term="Writeups" />
+    
+    <category term="CTFTime2025" />
+    
+    <category term="Srdnlen" />
+    
+  
+
+  <summary>The Color Drained from His Face</summary>
 
   </entry>
 
@@ -178,32 +206,6 @@ UofTCTF 2025 is the annual capture-the-flag competitio...</summary>
   
 
   <summary>Yet another Mr. Robot themed challenge.</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>xsserve</title>
-    <link href="http://localhost:4000/posts/xsserve/" rel="alternate" type="text/html" title="xsserve" />
-    <published>2024-12-30T16:00:00+00:00</published>
-  
-    <updated>2025-01-01T21:11:42+00:00</updated>
-  
-    <id>http://localhost:4000/posts/xsserve/</id>
-    <content type="text/html" src="http://localhost:4000/posts/xsserve/" />
-    <author>
-      <name>anas</name>
-    </author>
-
-  
-    
-    <category term="Hacking tools" />
-    
-    <category term="Python" />
-    
-  
-
-  <summary>Simplify XSS exploitation</summary>
 
   </entry>
 
