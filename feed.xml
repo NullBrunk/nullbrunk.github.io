@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>NullBrunk</title>
   <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
-  <updated>2025-01-21T06:58:19+00:00</updated>
+  <updated>2025-01-21T20:16:55+00:00</updated>
   <author>
     <name>Anas</name>
     <uri>http://localhost:4000/</uri>
@@ -17,6 +17,117 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>KnightCTF - Luana</title>
+    <link href="http://localhost:4000/posts/KnightCTF2025_lua/" rel="alternate" type="text/html" title="KnightCTF - Luana" />
+    <published>2025-01-20T16:00:00+00:00</published>
+  
+    <updated>2025-01-20T16:00:00+00:00</updated>
+  
+    <id>http://localhost:4000/posts/KnightCTF2025_lua/</id>
+    <content type="text/html" src="http://localhost:4000/posts/KnightCTF2025_lua/" />
+    <author>
+      <name>anas</name>
+    </author>
+
+  
+    
+    <category term="Writeups" />
+    
+    <category term="CTFTime2025" />
+    
+    <category term="Knightctf" />
+    
+  
+
+  <summary>Introduction
+    
+      Knight CTF
+    
+  
+  Enumeration
+    
+      Index page
+      Redis
+    
+  
+  Exploitation
+    
+      Getting RCE
+      Getting flag
+    
+  
+
+
+
+
+Introduction
+
+KnightCTF
+
+KnightCTF 2025 is an online jeopardy style Capture the Flag (CTF) competition hosted by the Knight Squad community from Bangladesh. This is the first international CTF from Bangladesh.
+
+
+   Link to the ev...</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>KnightCTF - Baby Injection</title>
+    <link href="http://localhost:4000/posts/KnightCTF2025-baby_injection/" rel="alternate" type="text/html" title="KnightCTF - Baby Injection" />
+    <published>2025-01-20T16:00:00+00:00</published>
+  
+    <updated>2025-01-20T16:00:00+00:00</updated>
+  
+    <id>http://localhost:4000/posts/KnightCTF2025-baby_injection/</id>
+    <content type="text/html" src="http://localhost:4000/posts/KnightCTF2025-baby_injection/" />
+    <author>
+      <name>anas</name>
+    </author>
+
+  
+    
+    <category term="Writeups" />
+    
+    <category term="CTFTime2025" />
+    
+    <category term="Knightctf" />
+    
+  
+
+  <summary>Introduction
+    
+      KnightCTF
+    
+  
+  Enumeration
+    
+      Enumerating website
+    
+  
+  Exploitation
+    
+      Getting RCE
+      Getting flag
+    
+  
+
+
+
+
+Introduction
+
+KnightCTF
+
+KnightCTF 2025 is an online jeopardy style Capture the Flag (CTF) competition hosted by the Knight Squad community from Bangladesh. This is the first international CTF from Bangladesh.
+
+
+   Link to the event ...</summary>
+
+  </entry>
 
   
   <entry>
@@ -93,7 +204,7 @@ Srdnlen CTF is a Jeopardy-style Capture-The-Flag competition hosted by the membe
     
     <category term="CTFTime2025" />
     
-    <category term="Srdnlen" />
+    <category term="PoCTF" />
     
   
 
@@ -104,13 +215,13 @@ Srdnlen CTF is a Jeopardy-style Capture-The-Flag competition hosted by the membe
   
   <entry>
     <title>UofTCTF - Prismatic Blogs</title>
-    <link href="http://localhost:4000/posts/UofTCTF2025-prismatic/" rel="alternate" type="text/html" title="UofTCTF - Prismatic Blogs" />
+    <link href="http://localhost:4000/posts/UofTCTF2025-prismatic-copy/" rel="alternate" type="text/html" title="UofTCTF - Prismatic Blogs" />
     <published>2025-01-11T16:00:00+00:00</published>
   
-    <updated>2025-01-19T13:04:28+00:00</updated>
+    <updated>2025-01-11T16:00:00+00:00</updated>
   
-    <id>http://localhost:4000/posts/UofTCTF2025-prismatic/</id>
-    <content type="text/html" src="http://localhost:4000/posts/UofTCTF2025-prismatic/" />
+    <id>http://localhost:4000/posts/UofTCTF2025-prismatic-copy/</id>
+    <content type="text/html" src="http://localhost:4000/posts/UofTCTF2025-prismatic-copy/" />
     <author>
       <name>anas</name>
     </author>
@@ -154,58 +265,6 @@ Introduction
 UofTCTF 2025
 
 UofTCTF 2025 is the annual capture-the-flag competitio...</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>Opacity</title>
-    <link href="http://localhost:4000/posts/thm-opacity/" rel="alternate" type="text/html" title="Opacity" />
-    <published>2025-01-02T16:00:00+00:00</published>
-  
-    <updated>2025-01-13T04:51:40+00:00</updated>
-  
-    <id>http://localhost:4000/posts/thm-opacity/</id>
-    <content type="text/html" src="http://localhost:4000/posts/thm-opacity/" />
-    <author>
-      <name>anas</name>
-    </author>
-
-  
-    
-    <category term="Writeups" />
-    
-    <category term="TryHackMe" />
-    
-  
-
-  <summary>Opacity is a Boot2Root made for pentesters and cybersecurity enthusiasts.</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>Whiterose</title>
-    <link href="http://localhost:4000/posts/thm-whiterose/" rel="alternate" type="text/html" title="Whiterose" />
-    <published>2025-01-01T16:00:00+00:00</published>
-  
-    <updated>2025-01-02T21:29:07+00:00</updated>
-  
-    <id>http://localhost:4000/posts/thm-whiterose/</id>
-    <content type="text/html" src="http://localhost:4000/posts/thm-whiterose/" />
-    <author>
-      <name>anas</name>
-    </author>
-
-  
-    
-    <category term="Writeups" />
-    
-    <category term="TryHackMe" />
-    
-  
-
-  <summary>Yet another Mr. Robot themed challenge.</summary>
 
   </entry>
 

