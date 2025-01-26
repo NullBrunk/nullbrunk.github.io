@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>NullBrunk</title>
   <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
-  <updated>2025-01-26T20:23:12+00:00</updated>
+  <updated>2025-01-26T20:41:11+00:00</updated>
   <author>
     <name>Anas</name>
     <uri>http://localhost:4000/</uri>
@@ -20,8 +20,8 @@
 
   
   <entry>
-    <title>HackDay - Intenal Blog</title>
-    <link href="http://localhost:4000/posts/hackday-2025-internalblog/" rel="alternate" type="text/html" title="HackDay - Intenal Blog" />
+    <title>HackDay - Internal Blog</title>
+    <link href="http://localhost:4000/posts/hackday-2025-internalblog/" rel="alternate" type="text/html" title="HackDay - Internal Blog" />
     <published>2025-01-26T12:00:00+00:00</published>
   
     <updated>2025-01-26T12:00:00+00:00</updated>
@@ -65,10 +65,14 @@
 
 Introduction
 
+HackDay
+
+We finished 39 on 150.  Link to the event 
+
 Description
 
 
-  You’ve received an anonymous tip from the Airship Mail Delivery Company claiming that a seemingly legitimate website is actually a front for trading stolen submarine mecha...</summary>
+  You’ve received an anonymous tip from the Airship Mail Delivery Company claiming that a seemingly legitimate website i...</summary>
 
   </entry>
 
@@ -176,10 +180,16 @@ Introduction
 
 KnightCTF
 
-KnightCTF 2025 is an online jeopardy style Capture the Flag (CTF) competition hosted by the Knight Squad community from Bangladesh. This is the first international CTF from Bangladesh.
+We’ve finished 117 on 759.  Link to the event 
 
+Enumeration
 
-   Link to the event ...</summary>
+Enumerating website
+Let’s start by accessing the index page:
+
+Website index page
+
+We got redirected to / with a strange base64 payload, let’s decod...</summary>
 
   </entry>
 

