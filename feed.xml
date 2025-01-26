@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>NullBrunk</title>
   <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
-  <updated>2025-01-26T22:23:19+00:00</updated>
+  <updated>2025-01-26T23:27:36+00:00</updated>
   <author>
     <name>Anas</name>
     <uri>http://localhost:4000/</uri>
@@ -159,7 +159,7 @@ Description
     
     <category term="CTFTime2025" />
     
-    <category term="Knightctf" />
+    <category term="KnightCTF" />
     
   
 
@@ -205,14 +205,14 @@ Ok so the server ...</summary>
 
   
   <entry>
-    <title>PoCTF - Drained</title>
-    <link href="http://localhost:4000/posts/poctf-2025/" rel="alternate" type="text/html" title="PoCTF - Drained" />
-    <published>2025-01-18T16:00:00+00:00</published>
+    <title>KnightCTF - Luana</title>
+    <link href="http://localhost:4000/posts/knightctf-2025-luana/" rel="alternate" type="text/html" title="KnightCTF - Luana" />
+    <published>2025-01-20T16:00:00+00:00</published>
   
-    <updated>2025-01-18T16:00:00+00:00</updated>
+    <updated>2025-01-20T16:00:00+00:00</updated>
   
-    <id>http://localhost:4000/posts/poctf-2025/</id>
-    <content type="text/html" src="http://localhost:4000/posts/poctf-2025/" />
+    <id>http://localhost:4000/posts/knightctf-2025-luana/</id>
+    <content type="text/html" src="http://localhost:4000/posts/knightctf-2025-luana/" />
     <author>
       <name>anas</name>
     </author>
@@ -223,11 +223,39 @@ Ok so the server ...</summary>
     
     <category term="CTFTime2025" />
     
-    <category term="PoCTF" />
+    <category term="KnightCTF" />
     
   
 
-  <summary>The Color Drained from His Face</summary>
+  <summary>Introduction
+    
+      Knight CTF
+    
+  
+  Enumeration
+    
+      Index page
+      Redis
+    
+  
+  Exploitation
+    
+      Getting RCE
+      Getting flag
+    
+  
+
+
+
+
+Introduction
+
+KnightCTF
+
+KnightCTF 2025 is an online jeopardy style Capture the Flag (CTF) competition hosted by the Knight Squad community from Bangladesh. This is the first international CTF from Bangladesh.
+
+
+   Link to the ev...</summary>
 
   </entry>
 
@@ -237,7 +265,7 @@ Ok so the server ...</summary>
     <link href="http://localhost:4000/posts/SrdnlenCTF2025-racecondition/" rel="alternate" type="text/html" title="Srdnlen CTF - Speed" />
     <published>2025-01-18T16:00:00+00:00</published>
   
-    <updated>2025-01-20T00:00:48+00:00</updated>
+    <updated>2025-01-26T22:23:39+00:00</updated>
   
     <id>http://localhost:4000/posts/SrdnlenCTF2025-racecondition/</id>
     <content type="text/html" src="http://localhost:4000/posts/SrdnlenCTF2025-racecondition/" />
