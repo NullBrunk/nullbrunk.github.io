@@ -4,7 +4,7 @@
     "title": "HackDay - Intenal Blog",
     "url": "/posts/hackday-2025-internalblog/",
     "categories": "Writeups, CTFTime2025, HackDay",
-    "tags": "writeups, web, flask, yaml-injection, unsecure-deserialization, rce",
+    "tags": "writeups, web, xss, javascript",
     "date": "2025-01-26 12:00:00 +0000",
     
 
