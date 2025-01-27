@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>NullBrunk</title>
   <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
-  <updated>2025-01-26T23:34:57+00:00</updated>
+  <updated>2025-01-27T00:52:16+00:00</updated>
   <author>
     <name>Anas</name>
     <uri>http://localhost:4000/</uri>
@@ -21,13 +21,13 @@
   
   <entry>
     <title>HackDay - Verificator 3000</title>
-    <link href="http://localhost:4000/posts/hackday-2025-website-checker-copy/" rel="alternate" type="text/html" title="HackDay - Verificator 3000" />
+    <link href="http://localhost:4000/posts/hackday-2025-website-checker/" rel="alternate" type="text/html" title="HackDay - Verificator 3000" />
     <published>2025-01-26T12:00:00+00:00</published>
   
-    <updated>2025-01-26T12:00:00+00:00</updated>
+    <updated>2025-01-26T23:27:44+00:00</updated>
   
-    <id>http://localhost:4000/posts/hackday-2025-website-checker-copy/</id>
-    <content type="text/html" src="http://localhost:4000/posts/hackday-2025-website-checker-copy/" />
+    <id>http://localhost:4000/posts/hackday-2025-website-checker/</id>
+    <content type="text/html" src="http://localhost:4000/posts/hackday-2025-website-checker/" />
     <author>
       <name>anas</name>
     </author>
@@ -44,6 +44,7 @@
 
   <summary>Introduction
     
+      Hackday
       Description
     
   
@@ -77,7 +78,7 @@ Link to the event
 Description
 
 
-  Our team of brilliant engineers has developed a highly sophi...</summary>
+  Our team of brilliant engineers has developed ...</summary>
 
   </entry>
 
@@ -107,6 +108,7 @@ Description
 
   <summary>Introduction
     
+      Hackday
       Description
     
   
@@ -135,17 +137,17 @@ HackDay
 Description
 
 
-  You’ve received an anonymous tip from the Airship Mail Delivery Company claiming that a seemingly legitimate website is actually a front for ...</summary>
+  You’ve received an anonymous tip from the Airship Mail Delivery Company claiming that a seemingly legitimate website is actuall...</summary>
 
   </entry>
 
   
   <entry>
-    <title>HackDay - Verificator 3000</title>
-    <link href="http://localhost:4000/posts/hackday-2025-finest/" rel="alternate" type="text/html" title="HackDay - Verificator 3000" />
-    <published>2025-01-26T12:00:00+00:00</published>
+    <title>HackDay - Finest</title>
+    <link href="http://localhost:4000/posts/hackday-2025-finest/" rel="alternate" type="text/html" title="HackDay - Finest" />
+    <published>2025-01-25T12:00:00+00:00</published>
   
-    <updated>2025-01-26T12:00:00+00:00</updated>
+    <updated>2025-01-25T12:00:00+00:00</updated>
   
     <id>http://localhost:4000/posts/hackday-2025-finest/</id>
     <content type="text/html" src="http://localhost:4000/posts/hackday-2025-finest/" />
@@ -165,24 +167,79 @@ Description
 
   <summary>Introduction
     
+      Hackday
       Description
     
   
-  Enumeration
+  Source Code
     
-      Enumerating website
+       Reading Source Code
+      JWY Secret Key
+      SQL injection
     
   
   Exploitation
     
-      SSRF
-        
-          Trying to access localhost
-          Exploiting Open Direct
-          Port Scan
-        
-      
-      Getting the flag
+      Understanding the JWT
+      Scripting
+      Getting flag
+    
+  
+
+
+
+
+Introduction
+HackDay
+
+ Link to the event 
+
+Description
+
+
+  You’ve been informed that a website might be serving as a front for a large criminal netwo...</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>KnightCTF - Luana</title>
+    <link href="http://localhost:4000/posts/knightctf-2025-luana/" rel="alternate" type="text/html" title="KnightCTF - Luana" />
+    <published>2025-01-20T16:00:00+00:00</published>
+  
+    <updated>2025-01-20T16:00:00+00:00</updated>
+  
+    <id>http://localhost:4000/posts/knightctf-2025-luana/</id>
+    <content type="text/html" src="http://localhost:4000/posts/knightctf-2025-luana/" />
+    <author>
+      <name>anas</name>
+    </author>
+
+  
+    
+    <category term="Writeups" />
+    
+    <category term="CTFTime2025" />
+    
+    <category term="KnightCTF" />
+    
+  
+
+  <summary>Introduction
+    
+      Knight CTF
+    
+  
+  Enumeration
+    
+      Index page
+      Redis
+    
+  
+  Exploitation
+    
+      Getting RCE
+      Getting flag
     
   
 
@@ -191,14 +248,12 @@ Description
 
 Introduction
 
-HackDay
+KnightCTF
 
-Link to the event 
-
-Description
+KnightCTF 2025 is an online jeopardy style Capture the Flag (CTF) competition hosted by the Knight Squad community from Bangladesh. This is the first international CTF from Bangladesh.
 
 
-  Our team of brilliant engineers has developed a highly sophi...</summary>
+   Link to the ev...</summary>
 
   </entry>
 
@@ -263,62 +318,6 @@ We got redirected to / with a strange base64 payload, let’s decode this:
 
 
 Ok so the server ...</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>KnightCTF - Luana</title>
-    <link href="http://localhost:4000/posts/knightctf-2025-luana/" rel="alternate" type="text/html" title="KnightCTF - Luana" />
-    <published>2025-01-20T16:00:00+00:00</published>
-  
-    <updated>2025-01-20T16:00:00+00:00</updated>
-  
-    <id>http://localhost:4000/posts/knightctf-2025-luana/</id>
-    <content type="text/html" src="http://localhost:4000/posts/knightctf-2025-luana/" />
-    <author>
-      <name>anas</name>
-    </author>
-
-  
-    
-    <category term="Writeups" />
-    
-    <category term="CTFTime2025" />
-    
-    <category term="KnightCTF" />
-    
-  
-
-  <summary>Introduction
-    
-      Knight CTF
-    
-  
-  Enumeration
-    
-      Index page
-      Redis
-    
-  
-  Exploitation
-    
-      Getting RCE
-      Getting flag
-    
-  
-
-
-
-
-Introduction
-
-KnightCTF
-
-KnightCTF 2025 is an online jeopardy style Capture the Flag (CTF) competition hosted by the Knight Squad community from Bangladesh. This is the first international CTF from Bangladesh.
-
-
-   Link to the ev...</summary>
 
   </entry>
 
