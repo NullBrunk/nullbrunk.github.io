@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>NullBrunk</title>
   <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
-  <updated>2025-01-27T00:52:16+00:00</updated>
+  <updated>2025-01-27T14:55:24+00:00</updated>
   <author>
     <name>Anas</name>
     <uri>http://localhost:4000/</uri>
@@ -24,7 +24,7 @@
     <link href="http://localhost:4000/posts/hackday-2025-website-checker/" rel="alternate" type="text/html" title="HackDay - Verificator 3000" />
     <published>2025-01-26T12:00:00+00:00</published>
   
-    <updated>2025-01-26T23:27:44+00:00</updated>
+    <updated>2025-01-27T01:01:49+00:00</updated>
   
     <id>http://localhost:4000/posts/hackday-2025-website-checker/</id>
     <content type="text/html" src="http://localhost:4000/posts/hackday-2025-website-checker/" />
@@ -88,7 +88,7 @@ Description
     <link href="http://localhost:4000/posts/hackday-2025-internalblog/" rel="alternate" type="text/html" title="HackDay - Internal Blog" />
     <published>2025-01-26T12:00:00+00:00</published>
   
-    <updated>2025-01-26T23:27:44+00:00</updated>
+    <updated>2025-01-27T01:01:49+00:00</updated>
   
     <id>http://localhost:4000/posts/hackday-2025-internalblog/</id>
     <content type="text/html" src="http://localhost:4000/posts/hackday-2025-internalblog/" />
@@ -263,7 +263,7 @@ KnightCTF 2025 is an online jeopardy style Capture the Flag (CTF) competition ho
     <link href="http://localhost:4000/posts/knightctf-2025-baby-injection/" rel="alternate" type="text/html" title="KnightCTF - Baby Injection" />
     <published>2025-01-20T16:00:00+00:00</published>
   
-    <updated>2025-01-26T23:27:44+00:00</updated>
+    <updated>2025-01-27T01:01:49+00:00</updated>
   
     <id>http://localhost:4000/posts/knightctf-2025-baby-injection/</id>
     <content type="text/html" src="http://localhost:4000/posts/knightctf-2025-baby-injection/" />
