@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>NullBrunk</title>
   <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
-  <updated>2025-02-02T15:59:31+00:00</updated>
+  <updated>2025-02-02T17:07:50+00:00</updated>
   <author>
     <name>Anas</name>
     <uri>http://localhost:4000/</uri>
@@ -24,7 +24,7 @@
     <link href="http://localhost:4000/posts/nullcon-2025-zoney/" rel="alternate" type="text/html" title="NullCon - ZONEy" />
     <published>2025-02-02T12:00:00+00:00</published>
   
-    <updated>2025-02-02T12:00:00+00:00</updated>
+    <updated>2025-02-02T15:59:41+00:00</updated>
   
     <id>http://localhost:4000/posts/nullcon-2025-zoney/</id>
     <content type="text/html" src="http://localhost:4000/posts/nullcon-2025-zoney/" />
@@ -44,7 +44,6 @@
 
   <summary>Introduction
     
-      NullCon
       Description
     
   
@@ -74,14 +73,10 @@
 
 Introduction
 
-NullCon
-
-Link to the event 
-
 Description
 
 
-  A...</summary>
+  Are you ZONEy.eno out or can you find the fl...</summary>
 
   </entry>
 
@@ -111,7 +106,6 @@ Description
 
   <summary>Introduction
     
-      NullCon
       Description
     
   
@@ -134,14 +128,10 @@ Description
 
 Introduction
 
-NullCon
-
-Link to the event 
-
 Description
 
 
-  The attempted attempt to tempt the untempted into tempting but contemptible scheme was an untempti...</summary>
+  The attempted attempt to tempt the untempted into tempting but contemptible scheme was an untempting temptation that exemplified not only con...</summary>
 
   </entry>
 
@@ -171,7 +161,6 @@ Description
 
   <summary>Introduction
     
-      Hackday
       Description
     
   
@@ -198,14 +187,10 @@ Description
 
 Introduction
 
-HackDay
-
-Link to the event 
-
 Description
 
 
-  Our team of brilliant engineers has developed ...</summary>
+  Our team of brilliant engineers has developed a highly sophisticated website designed to ...</summary>
 
   </entry>
 
@@ -235,7 +220,6 @@ Description
 
   <summary>Introduction
     
-      Hackday
       Description
     
   
@@ -257,14 +241,10 @@ Description
 
 Introduction
 
-HackDay
-
- Link to the event 
-
 Description
 
 
-  You’ve received an anonymous tip from the Airship Mail Delivery Company claiming that a seemingly legitimate website is actuall...</summary>
+  You’ve received an anonymous tip from the Airship Mail Delivery Company claiming that a seemingly legitimate website is actually a front for trading stolen submarine mecha...</summary>
 
   </entry>
 
@@ -294,7 +274,6 @@ Description
 
   <summary>Introduction
     
-      Hackday
       Description
     
   
@@ -317,14 +296,11 @@ Description
 
 
 Introduction
-HackDay
-
- Link to the event 
 
 Description
 
 
-  You’ve been informed that a website might be serving as a front for a large criminal netwo...</summary>
+  You’ve been informed that a website might be serving as a front for a large criminal network. Part of their revenue supposedly comes ...</summary>
 
   </entry>
 
