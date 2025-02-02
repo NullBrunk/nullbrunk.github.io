@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>NullBrunk</title>
   <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
-  <updated>2025-02-02T15:46:51+00:00</updated>
+  <updated>2025-02-02T15:59:31+00:00</updated>
   <author>
     <name>Anas</name>
     <uri>http://localhost:4000/</uri>
@@ -50,8 +50,22 @@
   
   Enumeration
     
-      nmap
-      dig
+      Nmap
+      Querying DNS
+      DNS enumeration
+    
+  
+  Exploitation
+    
+      DNSSEC
+      Zone Walking
+        
+          zoney.eno
+          challenge.zoney.eno
+          hereisthe1337flag.zoney.eno
+        
+      
+      Getting the flag
     
   
 
@@ -67,14 +81,7 @@ Link to the event
 Description
 
 
-  Are you ZONEy.eno out or can you find the flag?
-52.59.124.14:5007 (UDP)
-
-
-Enumeration
-
-Nmap
-This challenge was in the web-category, but the description indicates that the server is running over UDP. HTTP runs over TCP (except fo...</summary>
+  A...</summary>
 
   </entry>
 
@@ -84,7 +91,7 @@ This challenge was in the web-category, but the description indicates that the s
     <link href="http://localhost:4000/posts/nullcon-2025-temptation/" rel="alternate" type="text/html" title="NullCon - Temptation" />
     <published>2025-02-02T12:00:00+00:00</published>
   
-    <updated>2025-02-02T12:00:00+00:00</updated>
+    <updated>2025-02-02T15:47:12+00:00</updated>
   
     <id>http://localhost:4000/posts/nullcon-2025-temptation/</id>
     <content type="text/html" src="http://localhost:4000/posts/nullcon-2025-temptation/" />

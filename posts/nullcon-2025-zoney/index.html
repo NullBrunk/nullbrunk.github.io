@@ -1098,9 +1098,9 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="346 words"
+  title="360 words"
 >
-  <em>1 min</em> read</span>
+  <em>2 min</em> read</span>
 
         </div>
       </div>
@@ -1141,8 +1141,22 @@
   </li>
   <li>Enumeration
     <ul>
-      <li><a href="#nmap">nmap</a></li>
-      <li><a href="#dig">dig</a></li>
+      <li><a href="#nmap">Nmap</a></li>
+      <li><a href="#querying-dns">Querying DNS</a></li>
+      <li><a href="#dns-enumeration">DNS enumeration</a></li>
+    </ul>
+  </li>
+  <li>Exploitation
+    <ul>
+      <li><a href="#dnssec">DNSSEC</a></li>
+      <li><a href="#zone-walking">Zone Walking</a>
+        <ul>
+          <li><a href="#zoneyeno">zoney.eno</a></li>
+          <li><a href="#challengezoneyeno">challenge.zoney.eno</a></li>
+          <li><a href="#hereisthe1337flagzoneyeno">hereisthe1337flag.zoney.eno</a></li>
+        </ul>
+      </li>
+      <li><a href="#getting-the-flag">Getting the flag</a></li>
     </ul>
   </li>
 </ol>
@@ -1190,7 +1204,7 @@ PORT     STATE SERVICE VERSION
 5007/udp open  domain  NLnet Labs NSD
 </pre></td></tr></tbody></table></code></div></div>
 
-<h3 id="dig"><span class="me-2">Dig</span><a href="#dig" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<h3 id="querying-dns"><span class="me-2">Querying DNS</span><a href="#querying-dns" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
 <p><a href="https://www.kali.org/tools/nmap/">Nmap</a> says that a <strong>DNS server</strong> is running on that port. Let’s confirm this statement using <a href="https://www.systutorials.com/docs/linux/man/1-dig/">dig</a> to query for the <code class="language-plaintext highlighter-rouge">ZONEy.eno</code> domain <em>(as mentionned in the <a href="#description">description</a>)</em>:</p>
 
@@ -1200,8 +1214,6 @@ PORT     STATE SERVICE VERSION
 </pre></td><td class="rouge-code"><pre>dig @52.59.124.14 <span class="nt">-p</span> 5007 zoney.eno.
 </pre></td></tr></tbody></table></code></div></div>
 <p><a href="/assets/img/writeups/Zoney/dns_server.png" class="popup img-link radius-shadow shimmer"><img src="/assets/img/writeups/Zoney/dns_server.png" alt="image"  loading="lazy"></a></p>
-
-<h1 id="exploitation">Exploitation</h1>
 
 <h3 id="dns-enumeration"><span class="me-2">DNS enumeration</span><a href="#dns-enumeration" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
@@ -1263,6 +1275,8 @@ PORT     STATE SERVICE VERSION
 </table></div>
 
 <p>I tried querying for <code class="language-plaintext highlighter-rouge">TXT</code>, <code class="language-plaintext highlighter-rouge">CNAME</code> and so on all theses domains but nothing interesting. I tried <code class="language-plaintext highlighter-rouge">AXFR</code> with every domains, still nothing.</p>
+
+<h1 id="exploitation">Exploitation</h1>
 
 <h3 id="dnssec"><span class="me-2">DNSSEC</span><a href="#dnssec" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
@@ -1478,6 +1492,13 @@ PORT     STATE SERVICE VERSION
         
         
         <li class="text-truncate lh-lg">
+          <a href="/posts/nullcon-2025-temptation/">NullCon - Temptation</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
           <a href="/posts/uoftctf2025-prismatic/">UofTCTF - Prismatic Blogs</a>
         </li>
       
@@ -1500,13 +1521,6 @@ PORT     STATE SERVICE VERSION
         
         <li class="text-truncate lh-lg">
           <a href="/posts/hackday-2025-internalblog/">HackDay - Internal Blog</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/posts/hackday-2025-website-checker/">HackDay - Verificator 3000</a>
         </li>
       
     </ul>
