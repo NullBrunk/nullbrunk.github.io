@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>NullBrunk</title>
   <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
-  <updated>2025-02-02T13:14:20+00:00</updated>
+  <updated>2025-02-02T13:15:17+00:00</updated>
   <author>
     <name>Anas</name>
     <uri>http://localhost:4000/</uri>
@@ -81,13 +81,13 @@ Description
   
   <entry>
     <title>HackDay - Verificator 3000</title>
-    <link href="http://localhost:4000/posts/hackday-2025-website-checker-copy/" rel="alternate" type="text/html" title="HackDay - Verificator 3000" />
+    <link href="http://localhost:4000/posts/hackday-2025-website-checker/" rel="alternate" type="text/html" title="HackDay - Verificator 3000" />
     <published>2025-01-26T12:00:00+00:00</published>
   
-    <updated>2025-01-26T12:00:00+00:00</updated>
+    <updated>2025-01-27T01:01:49+00:00</updated>
   
-    <id>http://localhost:4000/posts/hackday-2025-website-checker-copy/</id>
-    <content type="text/html" src="http://localhost:4000/posts/hackday-2025-website-checker-copy/" />
+    <id>http://localhost:4000/posts/hackday-2025-website-checker/</id>
+    <content type="text/html" src="http://localhost:4000/posts/hackday-2025-website-checker/" />
     <author>
       <name>anas</name>
     </author>
