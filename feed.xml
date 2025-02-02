@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>NullBrunk</title>
   <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
-  <updated>2025-02-02T17:07:50+00:00</updated>
+  <updated>2025-02-02T17:10:32+00:00</updated>
   <author>
     <name>Anas</name>
     <uri>http://localhost:4000/</uri>
@@ -24,7 +24,7 @@
     <link href="http://localhost:4000/posts/nullcon-2025-zoney/" rel="alternate" type="text/html" title="NullCon - ZONEy" />
     <published>2025-02-02T12:00:00+00:00</published>
   
-    <updated>2025-02-02T15:59:41+00:00</updated>
+    <updated>2025-02-02T17:08:20+00:00</updated>
   
     <id>http://localhost:4000/posts/nullcon-2025-zoney/</id>
     <content type="text/html" src="http://localhost:4000/posts/nullcon-2025-zoney/" />
@@ -86,7 +86,7 @@ Description
     <link href="http://localhost:4000/posts/nullcon-2025-temptation/" rel="alternate" type="text/html" title="NullCon - Temptation" />
     <published>2025-02-02T12:00:00+00:00</published>
   
-    <updated>2025-02-02T15:47:12+00:00</updated>
+    <updated>2025-02-02T17:08:20+00:00</updated>
   
     <id>http://localhost:4000/posts/nullcon-2025-temptation/</id>
     <content type="text/html" src="http://localhost:4000/posts/nullcon-2025-temptation/" />
@@ -141,7 +141,7 @@ Description
     <link href="http://localhost:4000/posts/hackday-2025-website-checker/" rel="alternate" type="text/html" title="HackDay - Verificator 3000" />
     <published>2025-01-26T12:00:00+00:00</published>
   
-    <updated>2025-02-02T13:15:33+00:00</updated>
+    <updated>2025-02-02T17:08:20+00:00</updated>
   
     <id>http://localhost:4000/posts/hackday-2025-website-checker/</id>
     <content type="text/html" src="http://localhost:4000/posts/hackday-2025-website-checker/" />
@@ -200,7 +200,7 @@ Description
     <link href="http://localhost:4000/posts/hackday-2025-internalblog/" rel="alternate" type="text/html" title="HackDay - Internal Blog" />
     <published>2025-01-26T12:00:00+00:00</published>
   
-    <updated>2025-02-02T13:15:33+00:00</updated>
+    <updated>2025-02-02T17:08:20+00:00</updated>
   
     <id>http://localhost:4000/posts/hackday-2025-internalblog/</id>
     <content type="text/html" src="http://localhost:4000/posts/hackday-2025-internalblog/" />
@@ -254,7 +254,7 @@ Description
     <link href="http://localhost:4000/posts/hackday-2025-finest/" rel="alternate" type="text/html" title="HackDay - Finest" />
     <published>2025-01-25T12:00:00+00:00</published>
   
-    <updated>2025-02-02T13:15:33+00:00</updated>
+    <updated>2025-02-02T17:08:20+00:00</updated>
   
     <id>http://localhost:4000/posts/hackday-2025-finest/</id>
     <content type="text/html" src="http://localhost:4000/posts/hackday-2025-finest/" />
