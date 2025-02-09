@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>NullBrunk</title>
   <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
-  <updated>2025-02-09T13:04:25+00:00</updated>
+  <updated>2025-02-09T13:16:58+00:00</updated>
   <author>
     <name>Anas</name>
     <uri>http://localhost:4000/</uri>
@@ -58,8 +58,11 @@
     
       Verifying SSTI
       Bypassing restriction
-      - Theory
-      - Practive
+        
+          Theory
+          Practive
+        
+      
       Scripting
       Getting the Flag
     
@@ -72,11 +75,7 @@ Introduction
 
 Pragyan CTF 2025
 
-We finished top 10 as a duo with my friend h1tc4t.
-
-
-
-Descr...</summary>
+We finished top 10 as a duo wi...</summary>
 
   </entry>
 
