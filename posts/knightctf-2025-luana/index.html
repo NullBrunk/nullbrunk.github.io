@@ -889,6 +889,11 @@
   
 
   
+
+  
+  
+
+  
     
     
 
@@ -942,11 +947,6 @@
     
 
     
-  
-
-  
-  
-
   
 
   
@@ -1158,12 +1158,12 @@
 
 <h1 id="enumeration">Enumeration</h1>
 
-<h2 id="index-page"><span class="me-2">Index page</span><a href="#index-page" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<h3 id="index-page"><span class="me-2">Index page</span><a href="#index-page" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 <p>Let’s start by accessing the index page:
 <a href="/assets/img/writeups/knightctf_lua/luana.png" class="popup img-link radius-shadow shimmer"><img src="/assets/img/writeups/knightctf_lua/luana.png" alt="index"  loading="lazy"></a>
 <em>Interesting</em></p>
 
-<h2 id="redis"><span class="me-2">Redis</span><a href="#redis" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<h3 id="redis"><span class="me-2">Redis</span><a href="#redis" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
 <p>Usually the port <code class="language-plaintext highlighter-rouge">6379</code> is used for <a href="https://redis.io/">redis</a>. Let’s confirm that the port is executing redis using <a href="https://www.kali.org/tools/nmap/">nmap</a>, then try to connect to the remote server using the <a href="https://redis.io/docs/latest/operate/rs/references/cli-utilities/redis-cli/">redis-cli</a>.</p>
 
@@ -1174,7 +1174,7 @@
 
 <h1 id="exploitation">Exploitation</h1>
 
-<h2 id="getting-rce"><span class="me-2">Getting RCE</span><a href="#getting-rce" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<h3 id="getting-rce"><span class="me-2">Getting RCE</span><a href="#getting-rce" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 <p>The classic technique to get an RCE with redis is to write a PHP payload into a file, then execute the PHP script with the web-server. 
 Unfortunatelly the server is using python, not PHP …
 <a href="/assets/img/writeups/knightctf_lua/no.png" class="popup img-link radius-shadow shimmer"><img src="/assets/img/writeups/knightctf_lua/no.png" alt="index"  loading="lazy"></a></p>
@@ -1193,7 +1193,7 @@ Unfortunatelly the server is using python, not PHP …
 <a href="/assets/img/writeups/knightctf_lua/got_code_execution.png" class="popup img-link radius-shadow shimmer"><img src="/assets/img/writeups/knightctf_lua/got_code_execution.png" alt="index"  loading="lazy"></a>
 <em>We’ve successfully executed the <code class="language-plaintext highlighter-rouge">id</code> command</em></p>
 
-<h2 id="getting-flag"><span class="me-2">Getting flag</span><a href="#getting-flag" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<h3 id="getting-flag"><span class="me-2">Getting flag</span><a href="#getting-flag" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
 <p>Using the same exploit we can <code class="language-plaintext highlighter-rouge">ls</code> and <code class="language-plaintext highlighter-rouge">cat</code> the flag:
 <a href="/assets/img/writeups/knightctf_lua/got_flag.png" class="popup img-link radius-shadow shimmer"><img src="/assets/img/writeups/knightctf_lua/got_flag.png" alt="index"  loading="lazy"></a></p>
@@ -1590,6 +1590,18 @@ Unfortunatelly the server is using python, not PHP …
 
   
 
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
 
 
 
@@ -1681,7 +1693,7 @@ We...</p>
   
   Enumeration
     
-       Reading Source Code
+      Reading Source Code
       JWY Secret Key
       SQL injection
     
@@ -1689,14 +1701,14 @@ We...</p>
   Exploitation
     
       Understanding the JWT
-      Scri...</p>
+      Scrip...</p>
               </div>
             </div>
           </a>
         </article>
       
         <article class="col">
-          <a href="/posts/SrdnlenCTF2025-racecondition/" class="post-preview card h-100">
+          <a href="/posts/SrdnlenCTF2025-racecondition-copy/" class="post-preview card h-100">
             <div class="card-body">
               <!--
   Date format snippet
