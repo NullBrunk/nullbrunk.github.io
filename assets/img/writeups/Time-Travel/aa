@@ -1,0 +1,12 @@
+ Time-Travel 
+
+I am really curious in how this website works maybe its too old
+
+/config
+{"contentserver":"https://timetravel.ctf.prgy.in","timeserver":"https://time.ctf.prgy.in/timestamp"}
+
+/challenge
+JWT that changes every second
+
+/validate
+validates the JWT by comparing xxx x x
