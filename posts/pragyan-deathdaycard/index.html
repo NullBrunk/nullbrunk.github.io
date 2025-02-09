@@ -43,7 +43,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Pragyan - Deathday Card" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Anas","url":"https://github.com/NullBrunk/"},"dateModified":"2025-02-09T13:17:09+00:00","datePublished":"2025-02-08T16:00:00+00:00","description":"Introduction Pragyan CTF 2025 Description Enumeration Reading Source Code Identifying vulnerabilities","headline":"Pragyan - Deathday Card","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/pragyan-deathdaycard/"},"url":"http://localhost:4000/posts/pragyan-deathdaycard/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Anas","url":"https://github.com/NullBrunk/"},"dateModified":"2025-02-09T13:19:34+00:00","datePublished":"2025-02-08T16:00:00+00:00","description":"Introduction Pragyan CTF 2025 Description Enumeration Reading Source Code Identifying vulnerabilities","headline":"Pragyan - Deathday Card","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/pragyan-deathdaycard/"},"url":"http://localhost:4000/posts/pragyan-deathdaycard/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -1267,7 +1267,7 @@
 
 <time
   
-  data-ts="1739107029"
+  data-ts="1739107174"
   data-df="ll"
   
     data-bs-toggle="tooltip" data-bs-placement="bottom"
@@ -1323,7 +1323,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="1457 words"
+  title="1447 words"
 >
   <em>8 min</em> read</span>
 
@@ -1397,7 +1397,9 @@
 
 <h3 id="description"><span class="me-2">Description</span><a href="#description" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
-<p>you could have done some work around for birthday but not this………..</p>
+<blockquote>
+  <p>you could have done some work around for birthday but not this………..</p>
+</blockquote>
 
 <h1 id="enumeration">Enumeration</h1>
 
@@ -1772,7 +1774,7 @@
        <span class="k">return</span> <span class="bp">False</span>
 </pre></td></tr></tbody></table></code></div></div>
 
-<p>Ok so we clearly have an SSTI, but with <strong>maximum 50 chars by input</strong> and we <strong>can’t type “os”</strong> in our payload. Or can we ?</p>
+<p>Ok so we clearly have an SSTI, but with <strong>maximum 50 chars by input</strong> and we <strong>can’t have “os”</strong> in our payload. Or can we ?</p>
 
 <h1 id="exploitation">Exploitation</h1>
 
@@ -1788,7 +1790,7 @@
 
 <h3 id="bypassing-restriction"><span class="me-2">Bypassing restriction</span><a href="#bypassing-restriction" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
-<p>The first validation is quite annoying, but can easily be bypassed since we have 4 inputs. Problem is: <code class="language-plaintext highlighter-rouge">{{ x }}</code> will basically be replaced by <code class="language-plaintext highlighter-rouge">print(x)</code>, and in python you can’t <strong>assign variables</strong> in a print statement:</p>
+<p>The <strong>second validation</strong> <em>(length)</em> is quite annoying, but can easily be bypassed since we have 4 inputs. Problem is: <code class="language-plaintext highlighter-rouge">{{ x }}</code> will basically be replaced by <code class="language-plaintext highlighter-rouge">print(x)</code>, and in python you can’t <strong>assign variables</strong> in a print statement:</p>
 
 <div class="language-py highlighter-rouge"><div class="code-header">
         <span data-label-text="Python"><i class="fas fa-code fa-fw small"></i></span>
@@ -1814,11 +1816,7 @@
 </pre></td><td class="rouge-code"><pre><span class="p">{{</span> <span class="n">config</span><span class="p">.</span><span class="n">myvariable</span> <span class="p">}}</span>
 </pre></td></tr></tbody></table></code></div></div>
 
-<blockquote>
-  <p>Wait, that’s just a clear loss of characters!</p>
-</blockquote>
-
-<p>Yes, but actually, no. This trick can be combined with another one: <strong>storing a variable from a GET parameter</strong> <em>(aka from the URL)</em> using:</p>
+<p>And this trick can be combined with another one: <strong>storing a variable from a GET parameter</strong> <em>(aka from the URL)</em> using:</p>
 
 <div class="language-py highlighter-rouge"><div class="code-header">
         <span data-label-text="Python"><i class="fas fa-code fa-fw small"></i></span>
