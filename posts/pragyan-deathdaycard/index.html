@@ -43,7 +43,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Pragyan - Deathday Card" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Anas","url":"https://github.com/NullBrunk/"},"dateModified":"2025-02-08T16:00:00+00:00","datePublished":"2025-02-08T16:00:00+00:00","description":"Introduction Pragyan CTF 2025 Description Enumeration Reading Source Code Identifying vulnerabilities","headline":"Pragyan - Deathday Card","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/pragyan-deathdaycard/"},"url":"http://localhost:4000/posts/pragyan-deathdaycard/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Anas","url":"https://github.com/NullBrunk/"},"dateModified":"2025-02-09T13:17:09+00:00","datePublished":"2025-02-08T16:00:00+00:00","description":"Introduction Pragyan CTF 2025 Description Enumeration Reading Source Code Identifying vulnerabilities","headline":"Pragyan - Deathday Card","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/pragyan-deathdaycard/"},"url":"http://localhost:4000/posts/pragyan-deathdaycard/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -1255,6 +1255,29 @@
 
       <!-- lastmod date -->
       
+        <span>
+          Updated
+          <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1739107029"
+  data-df="ll"
+  
+    data-bs-toggle="tooltip" data-bs-placement="bottom"
+  
+>
+  Feb  9, 2025
+</time>
+
+        </span>
+      
 
       
 
@@ -1988,7 +2011,7 @@ Next using the “Recipient’s Name” input, we can claim up to the <code clas
     <span class="n">log</span><span class="p">.</span><span class="nf">success</span><span class="p">(</span><span class="n">message_final</span><span class="p">)</span>
 </pre></td></tr></tbody></table></code></div></div>
 
-<p>Now, we can execute whatever command we want !</p>
+<p>Now, we can execute any command we want !</p>
 
 <h3 id="getting-the-flag"><span class="me-2">Getting the Flag</span><a href="#getting-the-flag" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
@@ -1997,12 +2020,12 @@ Next using the “Recipient’s Name” input, we can claim up to the <code clas
 <p><a href="/assets/img/writeups/DeathdayCard/strange.png" class="popup img-link radius-shadow shimmer"><img src="/assets/img/writeups/DeathdayCard/strange.png" alt="index"  loading="lazy"></a>
 <em>What ?</em></p>
 
-<p>So apparently we can’t use <code class="language-plaintext highlighter-rouge">cat</code> or <code class="language-plaintext highlighter-rouge">ls</code>, meaning that the <a href="https://wiki.debian.org/coreutils">coreutils</a> are not installed in this container. Let’s take a look at installed binaries:</p>
+<p>So, apparently we can’t use <code class="language-plaintext highlighter-rouge">cat</code> or <code class="language-plaintext highlighter-rouge">ls</code>, meaning the <a href="https://wiki.debian.org/coreutils">coreutils</a> are probably not installed in this container. Let’s take a look at the installed binaries:</p>
 
 <p><a href="/assets/img/writeups/DeathdayCard/no_ls.png" class="popup img-link radius-shadow shimmer"><img src="/assets/img/writeups/DeathdayCard/no_ls.png" alt="index"  loading="lazy"></a>
-<em>Basically, nothing is installed</em></p>
+<em>nothing …</em></p>
 
-<p>Not a big deal since <strong>python</strong> is installed. We can use it for arbitrary file read. Let’s use <a href="https://gtfobins.github.io/gtfobins/python/#file-read">the GTFObins command</a>.</p>
+<p>Not a big deal since <strong>python</strong> is installed. We can use it for <strong>arbitrary file read</strong>. I’ll go with <a href="https://gtfobins.github.io/gtfobins/python/#file-read">the GTFObins command</a>.</p>
 
 <p><a href="/assets/img/writeups/DeathdayCard/leaking_app.png" class="popup img-link radius-shadow shimmer"><img src="/assets/img/writeups/DeathdayCard/leaking_app.png" alt="index"  loading="lazy"></a>
 <em>GGs !</em></p>
