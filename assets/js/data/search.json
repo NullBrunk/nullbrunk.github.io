@@ -4,7 +4,7 @@
     "title": "Pragyan - Deathday Card",
     "url": "/posts/pragyan-deathdaycard/",
     "categories": "Writeups, CTFTime2025, Pragyan",
-    "tags": "writeups, web, ssti, flask, jinja, python",
+    "tags": "writeups, web, ssti, flask, jinja, python-scripting",
     "date": "2025-02-08 16:00:00 +0000",
     
 
@@ -55,7 +55,7 @@
     "title": "HackDay - Verificator 3000",
     "url": "/posts/hackday-2025-website-checker/",
     "categories": "Writeups, CTFTime2025, HackDay",
-    "tags": "writeups, web, ssrf, open-redirect, python",
+    "tags": "writeups, web, ssrf, open-redirect, python-scripting",
     "date": "2025-01-26 12:00:00 +0000",
     
 
@@ -72,7 +72,7 @@
     "title": "HackDay - Internal Blog",
     "url": "/posts/hackday-2025-internalblog/",
     "categories": "Writeups, CTFTime2025, HackDay",
-    "tags": "writeups, web, xss, javascript, python",
+    "tags": "writeups, web, xss, javascript, python-scripting",
     "date": "2025-01-26 12:00:00 +0000",
     
 
@@ -89,7 +89,7 @@
     "title": "HackDay - Finest",
     "url": "/posts/hackday-2025-finest/",
     "categories": "Writeups, CTFTime2025, HackDay",
-    "tags": "writeups, web, jwt, flask, python",
+    "tags": "writeups, web, jwt, flask, python-scripting",
     "date": "2025-01-25 12:00:00 +0000",
     
 
@@ -137,10 +137,10 @@
   },
   
   {
-    "title": "Srdnlen CTF - Speed",
+    "title": "Srdnlen - Speed",
     "url": "/posts/SrdnlenCTF2025-racecondition-copy/",
     "categories": "Writeups, CTFTime2025, Srdnlen",
-    "tags": "writeups, web, express, nosql-injection, mongodb, race-condition, python",
+    "tags": "writeups, web, express, nosql-injection, mongodb, race-condition, python-scripting",
     "date": "2025-01-18 16:00:00 +0000",
     
 
@@ -157,7 +157,7 @@
     "title": "UofTCTF - Prismatic Blogs",
     "url": "/posts/uoftctf2025-prismatic/",
     "categories": "Writeups, CTFTime2025, UofTCTF2025",
-    "tags": "writeups, web, express, json-injection, orm-injection, prisma, python",
+    "tags": "writeups, web, express, json-injection, orm-injection, prisma, python-scripting",
     "date": "2025-01-11 16:00:00 +0000",
     
 
