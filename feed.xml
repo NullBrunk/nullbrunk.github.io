@@ -1,17 +1,17 @@
 
 
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <id>http://localhost:4000/</id>
+  <id>https://github.com/NullBrunk/</id>
   <title>NullBrunk</title>
   <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
-  <updated>2025-07-18T10:58:24+00:00</updated>
+  <updated>2025-07-18T11:04:08+00:00</updated>
   <author>
     <name>Anas</name>
-    <uri>http://localhost:4000/</uri>
+    <uri>https://github.com/NullBrunk/</uri>
   </author>
-  <link rel="self" type="application/atom+xml" href="http://localhost:4000/feed.xml"/>
+  <link rel="self" type="application/atom+xml" href="https://github.com/NullBrunk/feed.xml"/>
   <link rel="alternate" type="text/html" hreflang="en"
-    href="http://localhost:4000/"/>
+    href="https://github.com/NullBrunk/"/>
   <generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator>
   <rights> © 2025 Anas </rights>
   <icon>/assets/img/favicons/favicon.ico</icon>
@@ -21,13 +21,13 @@
   
   <entry>
     <title>Pragyan - Deathday Card</title>
-    <link href="http://localhost:4000/posts/pragyan-deathdaycard/" rel="alternate" type="text/html" title="Pragyan - Deathday Card" />
+    <link href="https://github.com/NullBrunk/posts/pragyan-deathdaycard/" rel="alternate" type="text/html" title="Pragyan - Deathday Card" />
     <published>2025-02-08T16:00:00+00:00</published>
   
     <updated>2025-02-09T18:25:45+00:00</updated>
   
-    <id>http://localhost:4000/posts/pragyan-deathdaycard/</id>
-    <content type="text/html" src="http://localhost:4000/posts/pragyan-deathdaycard/" />
+    <id>https://github.com/NullBrunk/posts/pragyan-deathdaycard/</id>
+    <content type="text/html" src="https://github.com/NullBrunk/posts/pragyan-deathdaycard/" />
     <author>
       <name>anas</name>
     </author>
@@ -82,13 +82,13 @@ We finished top 10 as a duo wi...</summary>
   
   <entry>
     <title>NullCon - ZONEy</title>
-    <link href="http://localhost:4000/posts/nullcon-2025-zoney/" rel="alternate" type="text/html" title="NullCon - ZONEy" />
+    <link href="https://github.com/NullBrunk/posts/nullcon-2025-zoney/" rel="alternate" type="text/html" title="NullCon - ZONEy" />
     <published>2025-02-02T12:00:00+00:00</published>
   
     <updated>2025-02-02T17:08:20+00:00</updated>
   
-    <id>http://localhost:4000/posts/nullcon-2025-zoney/</id>
-    <content type="text/html" src="http://localhost:4000/posts/nullcon-2025-zoney/" />
+    <id>https://github.com/NullBrunk/posts/nullcon-2025-zoney/</id>
+    <content type="text/html" src="https://github.com/NullBrunk/posts/nullcon-2025-zoney/" />
     <author>
       <name>anas</name>
     </author>
@@ -144,13 +144,13 @@ Description
   
   <entry>
     <title>NullCon - Temptation</title>
-    <link href="http://localhost:4000/posts/nullcon-2025-temptation/" rel="alternate" type="text/html" title="NullCon - Temptation" />
+    <link href="https://github.com/NullBrunk/posts/nullcon-2025-temptation/" rel="alternate" type="text/html" title="NullCon - Temptation" />
     <published>2025-02-02T12:00:00+00:00</published>
   
     <updated>2025-02-09T18:25:45+00:00</updated>
   
-    <id>http://localhost:4000/posts/nullcon-2025-temptation/</id>
-    <content type="text/html" src="http://localhost:4000/posts/nullcon-2025-temptation/" />
+    <id>https://github.com/NullBrunk/posts/nullcon-2025-temptation/</id>
+    <content type="text/html" src="https://github.com/NullBrunk/posts/nullcon-2025-temptation/" />
     <author>
       <name>anas</name>
     </author>
@@ -199,13 +199,13 @@ Description
   
   <entry>
     <title>HackDay - Verificator 3000</title>
-    <link href="http://localhost:4000/posts/hackday-2025-website-checker/" rel="alternate" type="text/html" title="HackDay - Verificator 3000" />
+    <link href="https://github.com/NullBrunk/posts/hackday-2025-website-checker/" rel="alternate" type="text/html" title="HackDay - Verificator 3000" />
     <published>2025-01-26T12:00:00+00:00</published>
   
     <updated>2025-02-09T18:25:45+00:00</updated>
   
-    <id>http://localhost:4000/posts/hackday-2025-website-checker/</id>
-    <content type="text/html" src="http://localhost:4000/posts/hackday-2025-website-checker/" />
+    <id>https://github.com/NullBrunk/posts/hackday-2025-website-checker/</id>
+    <content type="text/html" src="https://github.com/NullBrunk/posts/hackday-2025-website-checker/" />
     <author>
       <name>anas</name>
     </author>
@@ -258,13 +258,13 @@ Description
   
   <entry>
     <title>HackDay - Internal Blog</title>
-    <link href="http://localhost:4000/posts/hackday-2025-internalblog/" rel="alternate" type="text/html" title="HackDay - Internal Blog" />
+    <link href="https://github.com/NullBrunk/posts/hackday-2025-internalblog/" rel="alternate" type="text/html" title="HackDay - Internal Blog" />
     <published>2025-01-26T12:00:00+00:00</published>
   
     <updated>2025-02-09T18:25:45+00:00</updated>
   
-    <id>http://localhost:4000/posts/hackday-2025-internalblog/</id>
-    <content type="text/html" src="http://localhost:4000/posts/hackday-2025-internalblog/" />
+    <id>https://github.com/NullBrunk/posts/hackday-2025-internalblog/</id>
+    <content type="text/html" src="https://github.com/NullBrunk/posts/hackday-2025-internalblog/" />
     <author>
       <name>anas</name>
     </author>
