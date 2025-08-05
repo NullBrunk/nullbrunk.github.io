@@ -38,11 +38,11 @@
 <meta property="og:url" content="http://localhost:4000/resume/" />
 <meta property="og:site_name" content="NullBrunk" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2025-08-04T09:38:08+00:00" />
+<meta property="article:published_time" content="2025-08-05T11:00:33+00:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Resume" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-08-04T09:38:08+00:00","datePublished":"2025-08-04T09:38:08+00:00","description":"A minimal, responsive and feature-rich Jekyll theme for technical writing.","headline":"Resume","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/resume/"},"url":"http://localhost:4000/resume/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-08-05T11:00:33+00:00","datePublished":"2025-08-05T11:00:33+00:00","description":"A minimal, responsive and feature-rich Jekyll theme for technical writing.","headline":"Resume","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/resume/"},"url":"http://localhost:4000/resume/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -436,13 +436,31 @@
 </header>
 
 <style>
+    
     .flex {
         display: flex;
         flex-direction: row;
         width: 100%
     }
 
-    .subelements {
+    @media(max-width: 825px) {
+        .flex {
+            display: flex;
+            flex-direction: column;
+            width: 100%
+        }
+
+        div.experience {
+            width: 100% !important;
+        }
+
+        .ms-ml {
+            margin-left: 0 !important;
+        }
+    }
+
+    .ms-ml {
+        margin-left: 10%;
     }
 
     div.experience {
@@ -498,16 +516,37 @@
         font-size: 0.95rem;
         margin-bottom: 5px;
         font-weight: 600;
+
+    }
+
+
+    span.company {
+        font-weight: 900;
+        color: var(--link-color);
     }
 
     div.element div.company {
         margin-bottom: 1rem;
         color: var(--link-color);
-
     }
 
     div.element div.company i {
         margin-right: 0.5rem;
+    }
+
+    span.hr {
+        height: 100%;
+        width: 5px;
+    }
+
+    .certif .company {
+        width: 63px;
+        display: inline-block;
+    }
+
+    .certif .graduated {
+        width: 70px;
+        display: inline-block;
     }
 </style>
 
@@ -534,7 +573,7 @@
             </div>
         </div>
 
-        <div class="experience" style="margin-left: 10%;">
+        <div class="experience ms-ml" >
             <h1><i class="fa-solid fa-graduation-cap"></i> Education</h1>
 
             <div class="element">
@@ -561,13 +600,132 @@
     
     <div class="flex">
         <div class="experience">
-            <h1><i class="fa-solid fa-award"></i> Certifications</h1>
+            <h1><i class="fa-solid fa-folder-open"></i> Projects</h1>
+
+            <div class="element">
+                <h2>React.js dynamic To-Do list</h2>
+
+                <div class="mb-3">
+                    <span class="date">Jul 2024</span>
+                    <span class="hr mx-2">&middot;</span>
+                    <a href="/posts/todojs/" target="_blank"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+                
+                <ul>
+                    <li>Developed a responsive to-do list using React.</li>
+                    <li>Styled the interface with Tailwind CSS.</li>
+                    <li>Added data persistence using localStorage.</li>
+                    <li>Implemented dynamic task management features, including mark, add, edit, and delete.</li>
+                  </ul>
+            </div>
+
+
+            <div class="element">
+                <h2>Laravel E-Commerce Platform</h2>
+
+                <div class="mb-3">
+                    <span class="date">May - September 2023</span>
+                    <span class="hr mx-2">&middot;</span>
+                    <a href="/posts/laravel-ecommerce/" target="_blank"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+
+                <ul>
+                    <li>Developed an e-commerce platform using the Laravel framework, following MVC architecture.</li>
+                    <li>Built a dynamic front-end with Livewire and integrated real-time features using PusherJS.</li>
+                    <li>Implemented payment processing using Stripe.</li>
+                    <li>Set up Dockerfile and Docker Compose for deployment and testing.</li>
+                </ul>
+            </div>
+        
+
+            <div class="element">
+                <h2>PHP Dynamic WebChat</h2>
+
+                <div class="mb-3">
+                    <span class="date">Feb - April 2023</span>
+                    <span class="hr mx-2">&middot;</span>
+                    <a href="/posts/php-webchat/" target="_blank"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+
+                <ul>
+                    <li>Developed an interactive web chat application using a PHP API with MySQL database.</li>
+                    <li>Implemented a RESTful API in PHP for backend communication.</li>
+                    <li>Built the frontend with JavaScript and AJAX for a dynamic user experience.</li>
+                    <li>Set up Dockerfile and Docker Compose for deployment and testing.</li>
+                  </ul>
+            </div>
         </div>
 
-        <div class="experience" style="margin-left: 10%;">
-            <h1><i class="fa-solid fa-folder-open"></i> Projects</h1>
+        <div class="experience ms-ml">
+            <h1><i class="fa-solid fa-award"></i> Certifications</h1>
+
+            <div class="element">
+                <h2>Google CyberSecurity Certificate</h2>
+                <div class="date certif">
+                    <span class="company"><i class="fa fa-building"></i> Google</span>
+
+                    <span class="hr mx-2">&middot;</span>
+                    <span class="graduated">July 2025</span> 
+                    <span class="hr mx-2">&middot;</span>
+
+                    <a href="/assets/certifications/Google_CyberSecurity_Certificate.pdf" target="_blank"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div> 
+            </div>
+
+            <div class="element">
+                <h2>CCNA Enterprise Networking, Security & Automation</h2>
+                <div class="date certif">
+                    <span class="company"><i class="fa fa-building"></i> Cisco</span>
+
+                    <span class="hr mx-2">&middot;</span>
+                    <span class="graduated">May 2025</span> 
+                    <span class="hr mx-2">&middot;</span>
+                    
+                    <a href="/assets/certifications/CCNA_Networking_Security_Automation.pdf" target="_blank"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div> 
+            </div>
+
+            <div class="element">
+                <h2>CCNA Switching, Routing, and Wireless Essentials</h2>
+                <div class="date certif">
+                    <span class="company"><i class="fa fa-building"></i> Cisco</span>
+
+                    <span class="hr mx-2">&middot;</span>
+                    <span class="graduated">Feb 2025</span> 
+                    <span class="hr mx-2">&middot;</span>
+                    
+                    <a href="/assets/certifications/CCNA_Switching_Routing_and_Wireless_Essentials.pdf" target="_blank"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div> 
+            </div>
+
+            <div class="element">
+                <h2>CCNA Introduction to Networks</h2>
+                <div class="date certif">
+                    <span class="company"><i class="fa fa-building"></i> Cisco</span>
+
+                    <span class="hr mx-2">&middot;</span>
+                    <span class="graduated">June 2024</span> 
+                    <span class="hr mx-2">&middot;</span>
+                    
+                    <a href="/assets/certifications/CCNA_Introduction_to_Networks.pdf" target="_blank"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div> 
+            </div>
+
+            <div class="element">
+                <h2>Introduction to Cybersecurity</h2>
+                <div class="date certif">
+                    <span class="company"><i class="fa fa-building"></i> Cisco</span>
+                    
+                    <span class="hr mx-2">&middot;</span>
+                    <span class="graduated">Jan 2024</span> 
+                    <span class="hr mx-2">&middot;</span>
+                    
+                    <a href="/assets/certifications/Introduction_to_Cybersecurity.pdf" target="_blank"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div> 
+            </div>
         </div>
     </div>
+    
 </section>
 
 
