@@ -34,15 +34,15 @@
 <meta property="og:locale" content="en" />
 <meta name="description" content="A minimal, responsive and feature-rich Jekyll theme for technical writing." />
 <meta property="og:description" content="A minimal, responsive and feature-rich Jekyll theme for technical writing." />
-<link rel="canonical" href="http://localhost:4000/resume/" />
-<meta property="og:url" content="http://localhost:4000/resume/" />
+<link rel="canonical" href="https://github.com/NullBrunk/resume/" />
+<meta property="og:url" content="https://github.com/NullBrunk/resume/" />
 <meta property="og:site_name" content="NullBrunk" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2025-08-16T18:43:51+00:00" />
+<meta property="article:published_time" content="2025-08-20T11:16:10+00:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Resume" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-08-16T18:43:51+00:00","datePublished":"2025-08-16T18:43:51+00:00","description":"A minimal, responsive and feature-rich Jekyll theme for technical writing.","headline":"Resume","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/resume/"},"url":"http://localhost:4000/resume/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-08-20T11:16:10+00:00","datePublished":"2025-08-20T11:16:10+00:00","description":"A minimal, responsive and feature-rich Jekyll theme for technical writing.","headline":"Resume","mainEntityOfPage":{"@type":"WebPage","@id":"https://github.com/NullBrunk/resume/"},"url":"https://github.com/NullBrunk/resume/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -386,6 +386,10 @@
 
 <style>
     
+    .mt-5-rem {
+        margin-top: 5rem;
+    }
+
     .flex {
         display: flex;
         flex-direction: row;
@@ -409,16 +413,16 @@
     }
 
     .ms-ml {
-        margin-left: 10%;
+        margin-left: 6%;
     }
 
     div.experience {
-        width: 45%;
+        width: 47%;
     }
 
     div.experience h1 {
-        margin-bottom: 1.5rem;
-        font-weight: 800;
+        margin-bottom: 2.5rem;
+        font-weight: 900;
     }
 
     div.experience h1 i {
@@ -428,8 +432,7 @@
 
     div.element {
         padding-left: 1.5rem;
-        border-left: 2px solid color-mix(in srgb, var(--link-color), transparent 80%);
-        margin-bottom: 2rem;
+        margin-bottom: 0px !important;
         position: relative;
         margin-left: 14px;
     }
@@ -440,9 +443,21 @@
         width: 16px;
         height: 16px;
         border-radius: 50%;
-        left: -9px;
-        top: 0;
-        background: var(--link-color);
+        left: -7px;
+        top: 4px;
+        border: 3px solid var(--link-color);
+        background: #1b1b1e;
+    }
+
+    div.element:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: calc(100% - 16px - 12px);
+        left: 0px;
+        top: calc(16px + 10px); /*Height of the before + a little margin*/
+        border-left: 2px solid color-mix(in srgb, var(--link-color), transparent 50%);
+        
     }
 
     div.element ul {
@@ -458,16 +473,14 @@
         font-size: 1.2rem;
         margin-bottom: 0.5rem;
         font-weight: 600;
-
+        margin-top: 0px;
     }
 
     div.element div.date {
         font-size: 0.95rem;
-        margin-bottom: 5px;
         font-weight: 600;
 
     }
-
 
     span.company {
         font-weight: 900;
@@ -477,11 +490,22 @@
     div.element div.company {
         margin-bottom: 1rem;
         color: var(--link-color);
+        font-weight: 900;
     }
 
     div.element div.company i {
         margin-right: 0.5rem;
     }
+
+    div.element div.descr {
+        padding-bottom: 3rem;
+    }
+
+    .experience .element ul { 
+        margin-bottom: 0px !important;
+        padding-bottom: 2.5rem; 
+    }
+
 
     span.hr {
         height: 100%;
@@ -494,8 +518,12 @@
     }
 
     .certif .graduated {
-        width: 70px;
+        width: 90px;
         display: inline-block;
+    }
+
+    .certif-link {
+        padding-bottom: 2.5rem;
     }
 </style>
 
@@ -503,9 +531,11 @@
 <hr>
 <div>A summary of my experience, education, and certifications.</div>
 
-<section>
+<section style="margin-bottom: 20rem;">
+    
     <div class="flex">
-        <div class="experience" >
+        
+        <div class="experience">
             <h1><i class="fa-solid fa-graduation-cap"></i> Education</h1>
 
             <div class="element">
@@ -513,7 +543,7 @@
                 <div class="date">2025 - Present</div>
                 <div class="company"><i class="fa fa-building"></i> University of Franche-Comté</div>
 
-                <div>
+                <div class="descr" >
                     Specialized in CyberSecurity.
                 </div>
             </div>
@@ -523,51 +553,105 @@
                 <div class="date">2023 - 2025</div>
                 <div class="company"><i class="fa fa-building"></i> University of Franche-Comté</div>
 
-                <div>
-                    The first two years of a Bachelor's degree. Specializatied in Cybersecurity. Graduated with highest honors.
+                <div class="descr" style="padding-bottom: 0px;">
+                    The first two years of a Bachelor's degree. <br> 
+                    Specialized in CyberSecurity. <br>
+                    Graduated with highest honors.
                 </div>
             </div>
         </div>
 
         <div class="experience ms-ml">
-            <h1><i class="fa-solid fa-briefcase"></i> Professional Experience</h1>
+            <h1><i class="fa-solid fa-award"></i> Certifications</h1>
 
             <div class="element">
-                <h2>Network Prototyping and Virtualization</h2>
-                <div class="date">April - June 2025</div>
-                <div class="company"><i class="fa fa-building"></i> Black Matrix SASU</div>
+                <h2>Jr. Penetration Tester Certificate</h2>
+                <div class="date certif">
+                    <span class="company certif-link"><i class="fa fa-building"></i> TryHackMe</span>
 
-                <ul>
-                    <li>Designed and deployed complex network lab environments using EVE-NG.</li>
-                    <li>Performed technical validation of client projects involving VRRP, BGP, MPLS, VRF, and GRE Tunnels.</li>
-                    <li>Implemented advanced security services (Syslog, SNMP, RADIUS, Fortigate Firewalls)</li>
-                    <li>Automated infrastructure tasks using Ansible and Python (Infrastructure as Code).</li>
-                </ul>
+                    <span class="hr mx-2">&middot;</span>
+                    <span class="graduated">August 2025</span> 
+                    <span class="hr mx-2">&middot;</span>
+
+                    <a href="https://tryhackme.com/certificate/THM-KN2Z7HSFPM" target="_blank"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div> 
+            </div>
+
+            <div class="element">
+                <h2>Google CyberSecurity Certificate</h2>
+                <div class="date certif">
+                    <span class="company certif-link"><i class="fa fa-building"></i> Google</span>
+
+                    <span class="hr mx-2">&middot;</span>
+                    <span class="graduated">July 2025</span> 
+                    <span class="hr mx-2">&middot;</span>
+
+                    <a href="/assets/certifications/Google_CyberSecurity_Certificate.pdf" target="_blank"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div> 
+            </div>
+
+            <div class="element">
+                <h2>CCNA Enterprise Networking, Security & Automation</h2>
+                <div class="date certif certif-link">
+                    <span class="company"><i class="fa fa-building"></i> Cisco</span>
+
+                    <span class="hr mx-2">&middot;</span>
+                    <span class="graduated">May 2025</span> 
+                    <span class="hr mx-2">&middot;</span>
+                    
+                    <a href="/assets/certifications/CCNA_Networking_Security_Automation.pdf" target="_blank"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div> 
+            </div>
+
+            <div class="element">
+                <h2>CCNA Switching, Routing, and Wireless Essentials</h2>
+                <div class="date certif certif-link">
+                    <span class="company"><i class="fa fa-building"></i> Cisco</span>
+
+                    <span class="hr mx-2">&middot;</span>
+                    <span class="graduated">Feb 2025</span> 
+                    <span class="hr mx-2">&middot;</span>
+                    
+                    <a href="/assets/certifications/CCNA_Switching_Routing_and_Wireless_Essentials.pdf" target="_blank"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div> 
+            </div>
+
+            <div class="element">
+                <h2>CCNAv7 Introduction to Networks</h2>
+                <div class="date certif certif-link" style="padding-bottom: 0px;">
+                    <span class="company"><i class="fa fa-building"></i> Cisco</span>
+
+                    <span class="hr mx-2">&middot;</span>
+                    <span class="graduated">June 2024</span> 
+                    <span class="hr mx-2">&middot;</span>
+                    
+                    <a href="/assets/certifications/CCNA_Introduction_to_Networks.pdf" target="_blank"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div> 
             </div>
         </div>
     </div>
-    
+
+
     <div class="flex">
         <div class="experience">
-            <h1><i class="fa-solid fa-folder-open"></i> Projects</h1>
+            <h1 class="mt-5-rem"><i class="fa-solid fa-briefcase"></i> Professional Experience</h1>
 
             <div class="element">
-                <h2>React.js dynamic To-Do list</h2>
+                <h2>Network Prototyping and Virtualization</h2>
 
                 <div class="mb-3">
-                    <span class="date">Jul 2024</span>
+                    <span class="date">April - June 2025</span>
                     <span class="hr mx-2">&middot;</span>
-                    <a href="/posts/todojs/" target="_blank"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    <span class="company"><i class="fa fa-building"></i> Black Matrix SASU</span>
                 </div>
-                
-                <ul>
-                    <li>Developed a responsive to-do list using React.</li>
-                    <li>Styled the interface with Tailwind CSS.</li>
-                    <li>Added data persistence using localStorage.</li>
-                    <li>Implemented dynamic task management features, including mark, add, edit, and delete.</li>
-                  </ul>
-            </div>
 
+                <ul>
+                    <li>Designed / deployed complex network lab environments using EVE-NG.</li>
+                    <li>Performed technical validation of client projects, involving <strong>BGP filtering</strong>, <strong>OSPF</strong> and <strong>BGP</strong> routing, <strong>BFD</strong>, <strong>MPLS</strong>, <strong>VRF</strong>, <strong>VRRP</strong>, and <strong>GRE</strong> Tunnels.</li>
+                    <li>Implemented advanced security services, including <strong>Syslog</strong>, <strong>SNMP</strong>, <strong>Cacti</strong>, AAA with <strong>FreeRADIUS</strong> and <strong>Fortigate</strong> firewalls.</li>
+                    <li>Automated infrastructure tasks using <strong>Ansible</strong> and <strong>Python</strong>.</li>
+                </ul>
+            </div>
 
             <div class="element">
                 <h2>Laravel E-Commerce Platform</h2>
@@ -579,10 +663,10 @@
                 </div>
 
                 <ul>
-                    <li>Developed an e-commerce platform using the Laravel framework, following MVC architecture.</li>
-                    <li>Built a dynamic front-end with Livewire and integrated real-time features using PusherJS.</li>
-                    <li>Implemented payment processing using Stripe.</li>
-                    <li>Set up Dockerfile and Docker Compose for deployment and testing.</li>
+                    <li>Developed an e-commerce app using <strong>Laravel</strong>, with an MVC architecture.</li>
+                    <li>Built the front-end with <strong>Livewire</strong> and real-time features using <strong>PusherJS</strong>.</li>
+                    <li>Implemented secure payment processing using <strong>Stripe</strong>.</li>
+                    <li>Set up a <strong>Dockerfile</strong> and <strong>Docker-Compose</strong> for deployment and testing.</li>
                 </ul>
             </div>
         
@@ -596,100 +680,20 @@
                     <a href="/posts/php-webchat/" target="_blank"><i class="fa-solid fa-up-right-from-square"></i></a>
                 </div>
 
-                <ul>
-                    <li>Developed an interactive web chat application using a PHP API with MySQL database.</li>
-                    <li>Implemented a RESTful API in PHP for backend communication.</li>
-                    <li>Built the frontend with JavaScript and AJAX for a dynamic user experience.</li>
-                    <li>Set up Dockerfile and Docker Compose for deployment and testing.</li>
-                  </ul>
-            </div>
-        </div>
-
-        <div class="experience ms-ml">
-            <h1><i class="fa-solid fa-award"></i> Certifications</h1>
-
-            <div class="element">
-                <h2>Jr. Penetration Tester Certificate</h2>
-                <div class="date certif">
-                    <span class="company"><i class="fa fa-building"></i> TryHackMe</span>
-
-                    <span class="hr mx-2">&middot;</span>
-                    <span class="graduated">August 2025</span> 
-                    <span class="hr mx-2">&middot;</span>
-
-                    <a href="https://tryhackme.com/certificate/THM-KN2Z7HSFPM" target="_blank"><i class="fa-solid fa-up-right-from-square"></i></a>
-                </div> 
-            </div>
-
-            <div class="element">
-                <h2>Google CyberSecurity Certificate</h2>
-                <div class="date certif">
-                    <span class="company"><i class="fa fa-building"></i> Google</span>
-
-                    <span class="hr mx-2">&middot;</span>
-                    <span class="graduated">July 2025</span> 
-                    <span class="hr mx-2">&middot;</span>
-
-                    <a href="/assets/certifications/Google_CyberSecurity_Certificate.pdf" target="_blank"><i class="fa-solid fa-up-right-from-square"></i></a>
-                </div> 
-            </div>
-
-            <div class="element">
-                <h2>CCNA Enterprise Networking, Security & Automation</h2>
-                <div class="date certif">
-                    <span class="company"><i class="fa fa-building"></i> Cisco</span>
-
-                    <span class="hr mx-2">&middot;</span>
-                    <span class="graduated">May 2025</span> 
-                    <span class="hr mx-2">&middot;</span>
-                    
-                    <a href="/assets/certifications/CCNA_Networking_Security_Automation.pdf" target="_blank"><i class="fa-solid fa-up-right-from-square"></i></a>
-                </div> 
-            </div>
-
-            <div class="element">
-                <h2>CCNA Switching, Routing, and Wireless Essentials</h2>
-                <div class="date certif">
-                    <span class="company"><i class="fa fa-building"></i> Cisco</span>
-
-                    <span class="hr mx-2">&middot;</span>
-                    <span class="graduated">Feb 2025</span> 
-                    <span class="hr mx-2">&middot;</span>
-                    
-                    <a href="/assets/certifications/CCNA_Switching_Routing_and_Wireless_Essentials.pdf" target="_blank"><i class="fa-solid fa-up-right-from-square"></i></a>
-                </div> 
-            </div>
-
-            <div class="element">
-                <h2>CCNA Introduction to Networks</h2>
-                <div class="date certif">
-                    <span class="company"><i class="fa fa-building"></i> Cisco</span>
-
-                    <span class="hr mx-2">&middot;</span>
-                    <span class="graduated">June 2024</span> 
-                    <span class="hr mx-2">&middot;</span>
-                    
-                    <a href="/assets/certifications/CCNA_Introduction_to_Networks.pdf" target="_blank"><i class="fa-solid fa-up-right-from-square"></i></a>
-                </div> 
-            </div>
-
-            <div class="element">
-                <h2>Introduction to Cybersecurity</h2>
-                <div class="date certif">
-                    <span class="company"><i class="fa fa-building"></i> Cisco</span>
-                    
-                    <span class="hr mx-2">&middot;</span>
-                    <span class="graduated">Jan 2024</span> 
-                    <span class="hr mx-2">&middot;</span>
-                    
-                    <a href="/assets/certifications/Introduction_to_Cybersecurity.pdf" target="_blank"><i class="fa-solid fa-up-right-from-square"></i></a>
-                </div> 
+                <ul style="padding-bottom: 0px;">
+                    <li>Developed an interactive web chat using a <strong>PHP API</strong> + <strong>MySQL</strong> database.</li>
+                    <li>Implemented a <strong>RESTful API</strong> in PHP for backend communication.</li>
+                    <li>Built the frontend with <strong>JavaScript</strong> and <strong>AJAX</strong> for a dynamic UX.</li>
+                </ul>
             </div>
         </div>
     </div>
-    
 </section>
 
+<script>
+    elem = document.getElementsByTagName("main")[0]
+    elem.style = "width: 100%; padding-right: 1.5rem !important;"
+</script>
 
             
           </main>
