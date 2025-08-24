@@ -35,15 +35,15 @@
 <meta property="og:locale" content="en" />
 <meta name="description" content="Enumeration Reading source code Interesting points Identifying vulnerabilities" />
 <meta property="og:description" content="Enumeration Reading source code Interesting points Identifying vulnerabilities" />
-<link rel="canonical" href="https://github.com/NullBrunk/posts/SrdnlenCTF2025-racecondition-copy/" />
-<meta property="og:url" content="https://github.com/NullBrunk/posts/SrdnlenCTF2025-racecondition-copy/" />
+<link rel="canonical" href="http://localhost:4000/posts/SrdnlenCTF2025-racecondition/" />
+<meta property="og:url" content="http://localhost:4000/posts/SrdnlenCTF2025-racecondition/" />
 <meta property="og:site_name" content="NullBrunk" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2025-01-18T16:00:00+00:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Srdnlen - Speed" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Anas","url":"https://github.com/NullBrunk/"},"dateModified":"2025-07-18T11:04:54+00:00","datePublished":"2025-01-18T16:00:00+00:00","description":"Enumeration Reading source code Interesting points Identifying vulnerabilities","headline":"Srdnlen - Speed","mainEntityOfPage":{"@type":"WebPage","@id":"https://github.com/NullBrunk/posts/SrdnlenCTF2025-racecondition-copy/"},"url":"https://github.com/NullBrunk/posts/SrdnlenCTF2025-racecondition-copy/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Anas","url":"https://github.com/NullBrunk/"},"dateModified":"2025-02-09T13:04:59+00:00","datePublished":"2025-01-18T16:00:00+00:00","description":"Enumeration Reading source code Interesting points Identifying vulnerabilities","headline":"Srdnlen - Speed","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/SrdnlenCTF2025-racecondition/"},"url":"http://localhost:4000/posts/SrdnlenCTF2025-racecondition/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -1113,13 +1113,13 @@
 
 <time
   
-  data-ts="1752836694"
+  data-ts="1739106299"
   data-df="ll"
   
     data-bs-toggle="tooltip" data-bs-placement="bottom"
   
 >
-  Jul 18, 2025
+  Feb  9, 2025
 </time>
 
         </span>
@@ -1169,7 +1169,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="3242 words"
+  title="3246 words"
 >
   <em>18 min</em> read</span>
 
@@ -2390,15 +2390,19 @@
 
 <p><code class="language-plaintext highlighter-rouge">discountCode</code> is a <code class="language-plaintext highlighter-rouge">GET</code> parameter taken from the URL and directly passed to the <code class="language-plaintext highlighter-rouge">findOne</code> function <em>(from <a href="https://mongoosejs.com/docs/guide.html">mongoose</a>)</em> without any sanitization. After reading  <a href="https://mongoosejs.com/docs/queries.html">this</a> and <a href="https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/NoSQL%20Injection">this</a>, I realized I just need to send this json object through the url:</p>
 
-<div class="language-json highlighter-rouge"><div class="code-header">
-        <span data-label-text="JSON"><i class="fas fa-code fa-fw small"></i></span>
+<div class="language-js highlighter-rouge"><div class="code-header">
+        <span data-label-text="JavaScript"><i class="fas fa-code fa-fw small"></i></span>
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
-</pre></td><td class="rouge-code"><pre><span class="nl">"discountCode"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"$ne"</span><span class="p">:</span><span class="w"> </span><span class="s2">"a"</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></pre></td></tr></tbody></table></code></div></div>
+4
+5
+</pre></td><td class="rouge-code"><pre><span class="p">{</span>
+    <span class="nl">discountCode</span><span class="p">:</span> <span class="p">{</span>
+        <span class="na">$ne</span><span class="p">:</span> <span class="dl">"</span><span class="s2">a</span><span class="dl">"</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></td></tr></tbody></table></code></div></div>
 
 <p>MongoDB will look for all discount codes where the ID is <strong>not equal</strong> to <code class="language-plaintext highlighter-rouge">a</code>. We know from the <a href="#appjs">app.js</a> that:</p>
 <div class="language-js highlighter-rouge"><div class="code-header">
@@ -2582,8 +2586,8 @@ So, maybe we could bypass the <code class="language-plaintext highlighter-rouge"
 
 </pre></td></tr></tbody></table></code></div></div>
 
-<p>As you may have noticed, see the scripts requires a <code class="language-plaintext highlighter-rouge">JWT</code>, so that the server can authenticate the user and give him the credits. 
-To get one, go to the register page, register, then <code class="language-plaintext highlighter-rouge">right click -&gt; inspect -&gt; storage</code>:</p>
+<p>As you may have noticed, the scripts requires a <code class="language-plaintext highlighter-rouge">JWT</code>, so that the server can authenticate the user and give him the credits. 
+To get one, go to the register page, register, then <kbd>Ctrl + Shift + I</kbd>, then <code class="language-plaintext highlighter-rouge">storage</code>:</p>
 
 <p><a href="/assets/img/writeups/srdnlen/get_jwt.png" class="popup img-link radius-shadow shimmer"><img src="/assets/img/writeups/srdnlen/get_jwt.png" alt="image"  loading="lazy"></a>
 <em>You can grab the JWT from here</em></p>
@@ -2651,6 +2655,11 @@ To get one, go to the register page, register, then <code class="language-plaint
           >nosql-injection</a>
         
           <a
+            href="/tags/json-injection/"
+            class="post-tag no-text-decoration"
+          >json-injection</a>
+        
+          <a
             href="/tags/mongodb/"
             class="post-tag no-text-decoration"
           >mongodb</a>
@@ -2699,21 +2708,21 @@ To get one, go to the register page, register, then <code class="language-plaint
 
       
 
-      <a href="https://twitter.com/intent/tweet?text=Srdnlen%20-%20Speed%20-%20NullBrunk&url=https%3A%2F%2Fgithub.com%2FNullBrunk%2Fposts%2FSrdnlenCTF2025-racecondition-copy%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
+      <a href="https://twitter.com/intent/tweet?text=Srdnlen%20-%20Speed%20-%20NullBrunk&url=http%3A%2F%2Flocalhost%3A4000%2Fposts%2FSrdnlenCTF2025-racecondition%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
         <i class="fa-fw fa-brands fa-square-x-twitter"></i>
       </a>
     
 
       
 
-      <a href="https://www.facebook.com/sharer/sharer.php?title=Srdnlen%20-%20Speed%20-%20NullBrunk&u=https%3A%2F%2Fgithub.com%2FNullBrunk%2Fposts%2FSrdnlenCTF2025-racecondition-copy%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
+      <a href="https://www.facebook.com/sharer/sharer.php?title=Srdnlen%20-%20Speed%20-%20NullBrunk&u=http%3A%2F%2Flocalhost%3A4000%2Fposts%2FSrdnlenCTF2025-racecondition%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
         <i class="fa-fw fab fa-facebook-square"></i>
       </a>
     
 
       
 
-      <a href="https://t.me/share/url?url=https%3A%2F%2Fgithub.com%2FNullBrunk%2Fposts%2FSrdnlenCTF2025-racecondition-copy%2F&text=Srdnlen%20-%20Speed%20-%20NullBrunk" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
+      <a href="https://t.me/share/url?url=http%3A%2F%2Flocalhost%3A4000%2Fposts%2FSrdnlenCTF2025-racecondition%2F&text=Srdnlen%20-%20Speed%20-%20NullBrunk" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
         <i class="fa-fw fab fa-telegram"></i>
       </a>
     
@@ -2785,6 +2794,9 @@ To get one, go to the register page, register, then <code class="language-plaint
           
             
             <a class="post-tag btn btn-outline-primary" href="/tags/nosql-injection/">nosql-injection</a>
+          
+            
+            <a class="post-tag btn btn-outline-primary" href="/tags/json-injection/">json-injection</a>
           
             
             <a class="post-tag btn btn-outline-primary" href="/tags/mongodb/">mongodb</a>
@@ -3025,6 +3037,30 @@ To get one, go to the register page, register, then <code class="language-plaint
 
   
 
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
 
 
 
@@ -3107,7 +3143,7 @@ To get one, go to the register page, register, then <code class="language-plaint
   Enumeration
     
       Reading Source Code
-      JWY Secret Key
+      JWT Secret Key
       SQL injection
     
   

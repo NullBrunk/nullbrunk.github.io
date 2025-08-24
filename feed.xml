@@ -1,17 +1,17 @@
 
 
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <id>https://github.com/NullBrunk/</id>
+  <id>http://localhost:4000/</id>
   <title>NullBrunk</title>
   <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
-  <updated>2025-08-20T11:16:10+00:00</updated>
+  <updated>2025-08-23T18:34:11+00:00</updated>
   <author>
     <name>Anas</name>
-    <uri>https://github.com/NullBrunk/</uri>
+    <uri>http://localhost:4000/</uri>
   </author>
-  <link rel="self" type="application/atom+xml" href="https://github.com/NullBrunk/feed.xml"/>
+  <link rel="self" type="application/atom+xml" href="http://localhost:4000/feed.xml"/>
   <link rel="alternate" type="text/html" hreflang="en"
-    href="https://github.com/NullBrunk/"/>
+    href="http://localhost:4000/"/>
   <generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator>
   <rights> © 2025 Anas </rights>
   <icon>/assets/img/favicons/favicon.ico</icon>
@@ -20,14 +20,143 @@
 
   
   <entry>
+    <title>BrunnerCTF - Recipe For Disaster</title>
+    <link href="http://localhost:4000/posts/brunnerctf-recipe-for-disaster/" rel="alternate" type="text/html" title="BrunnerCTF - Recipe For Disaster" />
+    <published>2025-08-22T16:00:00+00:00</published>
+  
+    <updated>2025-08-22T16:00:00+00:00</updated>
+  
+    <id>http://localhost:4000/posts/brunnerctf-recipe-for-disaster/</id>
+    <content type="text/html" src="http://localhost:4000/posts/brunnerctf-recipe-for-disaster/" />
+    <author>
+      <name>anas</name>
+    </author>
+
+  
+    
+    <category term="Writeups" />
+    
+    <category term="CTFTime2025" />
+    
+    <category term="BrunnerCTF" />
+    
+  
+
+  <summary>Introduction
+    
+      Description
+    
+  
+  Enumeration
+    
+      Reading Source Code
+      Identifying vulnerabilities
+    
+  
+  Exploitation
+    
+      Get admin
+      SQLi to RCE
+      Get reverse shell
+      User flag
+    
+  
+  Privesc
+    
+      Stabilizing Shell
+      Abusing /usr/local/bin/cake_logger
+      Root flag
+    
+  
+
+
+
+
+Introduction
+
+Description
+
+  Difficulty: Medium/Hard
+
+
+
+...</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>BrunnerCTF - Cake Architect</title>
+    <link href="http://localhost:4000/posts/brunnerctf-cake-architect/" rel="alternate" type="text/html" title="BrunnerCTF - Cake Architect" />
+    <published>2025-08-22T16:00:00+00:00</published>
+  
+    <updated>2025-08-22T16:00:00+00:00</updated>
+  
+    <id>http://localhost:4000/posts/brunnerctf-cake-architect/</id>
+    <content type="text/html" src="http://localhost:4000/posts/brunnerctf-cake-architect/" />
+    <author>
+      <name>anas</name>
+    </author>
+
+  
+    
+    <category term="Writeups" />
+    
+    <category term="CTFTime2025" />
+    
+    <category term="BrunnerCTF" />
+    
+  
+
+  <summary>Introduction
+    
+      BrunnerCTF
+      Description
+    
+  
+  Enumeration
+    
+      Reading Source Code
+      Identifying vulnerabilities
+    
+  
+  Exploitation
+    
+      Get admin
+      SQLi to RCE
+      Get reverse shell
+      User flag
+    
+  
+  Privesc
+    
+      Stabilizing Shell
+      Abusing /usr/local/bin/cake_logger
+      Root flag
+    
+  
+
+
+
+
+Introduction
+
+BrunnerCTF
+
+I finished to...</summary>
+
+  </entry>
+
+  
+  <entry>
     <title>Pragyan - Deathday Card</title>
-    <link href="https://github.com/NullBrunk/posts/pragyan-deathdaycard/" rel="alternate" type="text/html" title="Pragyan - Deathday Card" />
+    <link href="http://localhost:4000/posts/pragyan-deathdaycard/" rel="alternate" type="text/html" title="Pragyan - Deathday Card" />
     <published>2025-02-08T16:00:00+00:00</published>
   
     <updated>2025-08-04T09:37:29+00:00</updated>
   
-    <id>https://github.com/NullBrunk/posts/pragyan-deathdaycard/</id>
-    <content type="text/html" src="https://github.com/NullBrunk/posts/pragyan-deathdaycard/" />
+    <id>http://localhost:4000/posts/pragyan-deathdaycard/</id>
+    <content type="text/html" src="http://localhost:4000/posts/pragyan-deathdaycard/" />
     <author>
       <name>anas</name>
     </author>
@@ -82,13 +211,13 @@ We finished top 10 as a duo wi...</summary>
   
   <entry>
     <title>NullCon - ZONEy</title>
-    <link href="https://github.com/NullBrunk/posts/nullcon-2025-zoney/" rel="alternate" type="text/html" title="NullCon - ZONEy" />
+    <link href="http://localhost:4000/posts/nullcon-2025-zoney/" rel="alternate" type="text/html" title="NullCon - ZONEy" />
     <published>2025-02-02T12:00:00+00:00</published>
   
     <updated>2025-02-02T17:08:20+00:00</updated>
   
-    <id>https://github.com/NullBrunk/posts/nullcon-2025-zoney/</id>
-    <content type="text/html" src="https://github.com/NullBrunk/posts/nullcon-2025-zoney/" />
+    <id>http://localhost:4000/posts/nullcon-2025-zoney/</id>
+    <content type="text/html" src="http://localhost:4000/posts/nullcon-2025-zoney/" />
     <author>
       <name>anas</name>
     </author>
@@ -144,13 +273,13 @@ Description
   
   <entry>
     <title>NullCon - Temptation</title>
-    <link href="https://github.com/NullBrunk/posts/nullcon-2025-temptation/" rel="alternate" type="text/html" title="NullCon - Temptation" />
+    <link href="http://localhost:4000/posts/nullcon-2025-temptation/" rel="alternate" type="text/html" title="NullCon - Temptation" />
     <published>2025-02-02T12:00:00+00:00</published>
   
     <updated>2025-02-09T18:25:45+00:00</updated>
   
-    <id>https://github.com/NullBrunk/posts/nullcon-2025-temptation/</id>
-    <content type="text/html" src="https://github.com/NullBrunk/posts/nullcon-2025-temptation/" />
+    <id>http://localhost:4000/posts/nullcon-2025-temptation/</id>
+    <content type="text/html" src="http://localhost:4000/posts/nullcon-2025-temptation/" />
     <author>
       <name>anas</name>
     </author>
@@ -193,119 +322,6 @@ Description
 
 
   The attempted attempt to tempt the untempted into tempting but contemptible scheme was an untempting temptation that exemplified not only con...</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>HackDay - Verificator 3000</title>
-    <link href="https://github.com/NullBrunk/posts/hackday-2025-website-checker/" rel="alternate" type="text/html" title="HackDay - Verificator 3000" />
-    <published>2025-01-26T12:00:00+00:00</published>
-  
-    <updated>2025-02-09T18:25:45+00:00</updated>
-  
-    <id>https://github.com/NullBrunk/posts/hackday-2025-website-checker/</id>
-    <content type="text/html" src="https://github.com/NullBrunk/posts/hackday-2025-website-checker/" />
-    <author>
-      <name>anas</name>
-    </author>
-
-  
-    
-    <category term="Writeups" />
-    
-    <category term="CTFTime2025" />
-    
-    <category term="HackDay" />
-    
-  
-
-  <summary>Introduction
-    
-      Description
-    
-  
-  Enumeration
-    
-      Enumerating website
-    
-  
-  Exploitation
-    
-      SSRF
-        
-          Trying to access localhost
-          Exploiting Open Direct
-          Port Scan
-        
-      
-      Getting the flag
-    
-  
-
-
-
-
-Introduction
-
-Description
-
-
-  Our team of brilliant engineers has developed a highly sophisticated website designed to ...</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>HackDay - Internal Blog</title>
-    <link href="https://github.com/NullBrunk/posts/hackday-2025-internalblog/" rel="alternate" type="text/html" title="HackDay - Internal Blog" />
-    <published>2025-01-26T12:00:00+00:00</published>
-  
-    <updated>2025-02-09T18:25:45+00:00</updated>
-  
-    <id>https://github.com/NullBrunk/posts/hackday-2025-internalblog/</id>
-    <content type="text/html" src="https://github.com/NullBrunk/posts/hackday-2025-internalblog/" />
-    <author>
-      <name>anas</name>
-    </author>
-
-  
-    
-    <category term="Writeups" />
-    
-    <category term="CTFTime2025" />
-    
-    <category term="HackDay" />
-    
-  
-
-  <summary>Introduction
-    
-      Description
-    
-  
-  Enumeration
-    
-      Enumerating website
-    
-  
-  Exploitation
-    
-      Popping alert
-      Stealing Admin Cookie
-      Getting flag
-    
-  
-
-
-
-
-Introduction
-
-Description
-
-
-  You’ve received an anonymous tip from the Airship Mail Delivery Company claiming that a seemingly legitimate website is actually a front for trading stolen submarine mecha...</summary>
 
   </entry>
 

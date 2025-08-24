@@ -35,15 +35,15 @@
 <meta property="og:locale" content="en" />
 <meta name="description" content="Enumeration Reading source code Interesting points Identifying vulnerabilities" />
 <meta property="og:description" content="Enumeration Reading source code Interesting points Identifying vulnerabilities" />
-<link rel="canonical" href="https://github.com/NullBrunk/posts/uoftctf2025-prismatic/" />
-<meta property="og:url" content="https://github.com/NullBrunk/posts/uoftctf2025-prismatic/" />
+<link rel="canonical" href="http://localhost:4000/posts/uoftctf2025-prismatic/" />
+<meta property="og:url" content="http://localhost:4000/posts/uoftctf2025-prismatic/" />
 <meta property="og:site_name" content="NullBrunk" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2025-01-11T16:00:00+00:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="UofTCTF - Prismatic Blogs" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Anas","url":"https://github.com/NullBrunk/"},"dateModified":"2025-02-09T18:25:45+00:00","datePublished":"2025-01-11T16:00:00+00:00","description":"Enumeration Reading source code Interesting points Identifying vulnerabilities","headline":"UofTCTF - Prismatic Blogs","mainEntityOfPage":{"@type":"WebPage","@id":"https://github.com/NullBrunk/posts/uoftctf2025-prismatic/"},"url":"https://github.com/NullBrunk/posts/uoftctf2025-prismatic/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Anas","url":"https://github.com/NullBrunk/"},"dateModified":"2025-02-09T18:25:45+00:00","datePublished":"2025-01-11T16:00:00+00:00","description":"Enumeration Reading source code Interesting points Identifying vulnerabilities","headline":"UofTCTF - Prismatic Blogs","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/uoftctf2025-prismatic/"},"url":"http://localhost:4000/posts/uoftctf2025-prismatic/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -1383,7 +1383,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="2664 words"
+  title="2676 words"
 >
   <em>14 min</em> read</span>
 
@@ -1937,15 +1937,19 @@ model Post {
 </ul>
 
 <p>The query string will be translated to this JSON:</p>
-<div class="language-json highlighter-rouge"><div class="code-header">
-        <span data-label-text="JSON"><i class="fas fa-code fa-fw small"></i></span>
+<div class="language-js highlighter-rouge"><div class="code-header">
+        <span data-label-text="JavaScript"><i class="fas fa-code fa-fw small"></i></span>
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
-</pre></td><td class="rouge-code"><pre><span class="nl">"author"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bob"</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></pre></td></tr></tbody></table></code></div></div>
+4
+5
+</pre></td><td class="rouge-code"><pre><span class="p">{</span>
+    <span class="nl">author</span><span class="p">:</span> <span class="p">{</span>
+        <span class="na">name</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Bob</span><span class="dl">"</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></td></tr></tbody></table></code></div></div>
 
 <p>So JavaScript will execute this ORM request:</p>
 <div class="language-js highlighter-rouge"><div class="code-header">
@@ -1957,10 +1961,10 @@ model Post {
 5
 6
 </pre></td><td class="rouge-code"><pre><span class="kd">let</span> <span class="nx">posts</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">prisma</span><span class="p">.</span><span class="nx">post</span><span class="p">.</span><span class="nf">findMany</span><span class="p">({</span> <span class="na">where</span><span class="p">:</span> <span class="p">{</span>
-    <span class="dl">"</span><span class="s2">author</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
-        <span class="dl">"</span><span class="s2">name</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Bob</span><span class="dl">"</span>
+    <span class="na">author</span><span class="p">:</span> <span class="p">{</span>
+        <span class="na">name</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Bob</span><span class="dl">"</span>
     <span class="p">},</span>
-    <span class="dl">"</span><span class="s2">published</span><span class="dl">"</span><span class="p">:</span> <span class="kc">true</span>
+    <span class="na">published</span><span class="p">:</span> <span class="kc">true</span>
 <span class="p">}});</span>
 </pre></td></tr></tbody></table></code></div></div>
 
@@ -1981,21 +1985,25 @@ We know <em>(from the <a href="#schemaprisma">Schema.prisma</a>)</em> that each 
 </ul>
 
 <p>That’ll be translated to:</p>
-<div class="language-json highlighter-rouge"><div class="code-header">
-        <span data-label-text="JSON"><i class="fas fa-code fa-fw small"></i></span>
+<div class="language-js highlighter-rouge"><div class="code-header">
+        <span data-label-text="JavaScript"><i class="fas fa-code fa-fw small"></i></span>
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
 5
 6
-</pre></td><td class="rouge-code"><pre><span class="nl">"author"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bob"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"password"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="nl">"startsWith"</span><span class="p">:</span><span class="w"> </span><span class="s2">"a"</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></pre></td></tr></tbody></table></code></div></div>
+7
+8
+</pre></td><td class="rouge-code"><pre><span class="p">{</span>
+    <span class="nl">author</span><span class="p">:</span> <span class="p">{</span>
+        <span class="na">name</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Bob</span><span class="dl">"</span><span class="p">,</span>
+        <span class="na">password</span><span class="p">:</span> <span class="p">{</span>
+            <span class="na">startsWith</span><span class="p">:</span> <span class="dl">"</span><span class="s2">a</span><span class="dl">"</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></td></tr></tbody></table></code></div></div>
 
 <p>resulting in this Prisma query:</p>
 <div class="language-js highlighter-rouge"><div class="code-header">
@@ -2019,7 +2027,7 @@ We know <em>(from the <a href="#schemaprisma">Schema.prisma</a>)</em> that each 
                 <span class="na">startsWith</span><span class="p">:</span> <span class="dl">"</span><span class="s2">a</span><span class="dl">"</span>
             <span class="p">}</span>
         <span class="p">},</span>
-        <span class="dl">"</span><span class="s2">published</span><span class="dl">"</span><span class="p">:</span> <span class="kc">true</span>
+        <span class="na">published</span><span class="p">:</span> <span class="kc">true</span>
     <span class="p">}</span>
 <span class="p">});</span>
 </pre></td></tr></tbody></table></code></div></div>
@@ -2125,8 +2133,8 @@ And fortunately, prisma comes with a ton of operator. To mitigate the case-insne
 </ul>
 
 <p>That will be converted to</p>
-<div class="language-json highlighter-rouge"><div class="code-header">
-        <span data-label-text="JSON"><i class="fas fa-code fa-fw small"></i></span>
+<div class="language-js highlighter-rouge"><div class="code-header">
+        <span data-label-text="JavaScript"><i class="fas fa-code fa-fw small"></i></span>
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
@@ -2134,14 +2142,18 @@ And fortunately, prisma comes with a ton of operator. To mitigate the case-insne
 5
 6
 7
-</pre></td><td class="rouge-code"><pre><span class="nl">"author"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bob"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"password"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="nl">"gt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"8a"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"lt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"8z"</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></pre></td></tr></tbody></table></code></div></div>
+8
+9
+</pre></td><td class="rouge-code"><pre><span class="p">{</span>
+    <span class="nl">author</span><span class="p">:</span> <span class="p">{</span>
+        <span class="na">name</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Bob</span><span class="dl">"</span><span class="p">,</span>
+        <span class="na">password</span><span class="p">:</span> <span class="p">{</span>
+            <span class="na">gt</span><span class="p">:</span> <span class="dl">"</span><span class="s2">8a</span><span class="dl">"</span><span class="p">,</span>
+            <span class="na">lt</span><span class="p">:</span> <span class="dl">"</span><span class="s2">8z</span><span class="dl">"</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></td></tr></tbody></table></code></div></div>
 
 <p>Let’s take a look:
 <a href="/assets/img/writeups/uoftctf/so_its_not_caps.png" class="popup img-link radius-shadow shimmer"><img src="/assets/img/writeups/uoftctf/so_its_not_caps.png" alt="image"  loading="lazy"></a>
@@ -2433,6 +2445,11 @@ We can repeat the operation for every character. So I scripted it:</p>
           >express</a>
         
           <a
+            href="/tags/nosql-injection/"
+            class="post-tag no-text-decoration"
+          >nosql-injection</a>
+        
+          <a
             href="/tags/json-injection/"
             class="post-tag no-text-decoration"
           >json-injection</a>
@@ -2486,21 +2503,21 @@ We can repeat the operation for every character. So I scripted it:</p>
 
       
 
-      <a href="https://twitter.com/intent/tweet?text=UofTCTF%20-%20Prismatic%20Blogs%20-%20NullBrunk&url=https%3A%2F%2Fgithub.com%2FNullBrunk%2Fposts%2Fuoftctf2025-prismatic%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
+      <a href="https://twitter.com/intent/tweet?text=UofTCTF%20-%20Prismatic%20Blogs%20-%20NullBrunk&url=http%3A%2F%2Flocalhost%3A4000%2Fposts%2Fuoftctf2025-prismatic%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
         <i class="fa-fw fa-brands fa-square-x-twitter"></i>
       </a>
     
 
       
 
-      <a href="https://www.facebook.com/sharer/sharer.php?title=UofTCTF%20-%20Prismatic%20Blogs%20-%20NullBrunk&u=https%3A%2F%2Fgithub.com%2FNullBrunk%2Fposts%2Fuoftctf2025-prismatic%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
+      <a href="https://www.facebook.com/sharer/sharer.php?title=UofTCTF%20-%20Prismatic%20Blogs%20-%20NullBrunk&u=http%3A%2F%2Flocalhost%3A4000%2Fposts%2Fuoftctf2025-prismatic%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
         <i class="fa-fw fab fa-facebook-square"></i>
       </a>
     
 
       
 
-      <a href="https://t.me/share/url?url=https%3A%2F%2Fgithub.com%2FNullBrunk%2Fposts%2Fuoftctf2025-prismatic%2F&text=UofTCTF%20-%20Prismatic%20Blogs%20-%20NullBrunk" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
+      <a href="https://t.me/share/url?url=http%3A%2F%2Flocalhost%3A4000%2Fposts%2Fuoftctf2025-prismatic%2F&text=UofTCTF%20-%20Prismatic%20Blogs%20-%20NullBrunk" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
         <i class="fa-fw fab fa-telegram"></i>
       </a>
     
@@ -2569,6 +2586,9 @@ We can repeat the operation for every character. So I scripted it:</p>
           
             
             <a class="post-tag btn btn-outline-primary" href="/tags/express/">express</a>
+          
+            
+            <a class="post-tag btn btn-outline-primary" href="/tags/nosql-injection/">nosql-injection</a>
           
             
             <a class="post-tag btn btn-outline-primary" href="/tags/json-injection/">json-injection</a>
@@ -2812,6 +2832,30 @@ We can repeat the operation for every character. So I scripted it:</p>
 
   
 
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
 
 
 
@@ -2827,7 +2871,7 @@ We can repeat the operation for every character. So I scripted it:</p>
     <nav class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 mb-4">
       
         <article class="col">
-          <a href="/posts/SrdnlenCTF2025-racecondition-copy/" class="post-preview card h-100">
+          <a href="/posts/SrdnlenCTF2025-racecondition/" class="post-preview card h-100">
             <div class="card-body">
               <!--
   Date format snippet
@@ -2895,7 +2939,7 @@ We can repeat the operation for every character. So I scripted it:</p>
   Enumeration
     
       Reading Source Code
-      JWY Secret Key
+      JWT Secret Key
       SQL injection
     
   
