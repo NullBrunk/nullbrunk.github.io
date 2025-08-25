@@ -4,7 +4,7 @@
   <id>https://github.com/NullBrunk/</id>
   <title>NullBrunk</title>
   <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
-  <updated>2025-08-24T15:20:29+00:00</updated>
+  <updated>2025-08-25T13:25:30+00:00</updated>
   <author>
     <name>Anas</name>
     <uri>https://github.com/NullBrunk/</uri>
@@ -90,7 +90,7 @@ Description
     <link href="https://github.com/NullBrunk/posts/brunnerctf-cake-architect/" rel="alternate" type="text/html" title="BrunnerCTF - Cake Architect" />
     <published>2025-08-22T16:00:00+00:00</published>
   
-    <updated>2025-08-22T16:00:00+00:00</updated>
+    <updated>2025-08-24T15:20:33+00:00</updated>
   
     <id>https://github.com/NullBrunk/posts/brunnerctf-cake-architect/</id>
     <content type="text/html" src="https://github.com/NullBrunk/posts/brunnerctf-cake-architect/" />
