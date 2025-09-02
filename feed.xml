@@ -4,7 +4,7 @@
   <id>https://github.com/NullBrunk/</id>
   <title>NullBrunk</title>
   <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
-  <updated>2025-08-25T13:25:30+00:00</updated>
+  <updated>2025-09-02T14:57:09+00:00</updated>
   <author>
     <name>Anas</name>
     <uri>https://github.com/NullBrunk/</uri>
@@ -110,7 +110,6 @@ Description
 
   <summary>Introduction
     
-      BrunnerCTF
       Description
     
   
@@ -141,9 +140,13 @@ Description
 
 Introduction
 
-BrunnerCTF
+Description
 
-I finished to...</summary>
+  Difficulty: Hard
+
+
+
+  We’ve...</summary>
 
   </entry>
 
