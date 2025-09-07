@@ -1,17 +1,17 @@
 
 
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <id>http://localhost:4000/</id>
+  <id>https://github.com/NullBrunk/</id>
   <title>NullBrunk</title>
   <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
-  <updated>2025-09-07T18:50:41+00:00</updated>
+  <updated>2025-09-07T19:41:08+00:00</updated>
   <author>
     <name>Anas</name>
-    <uri>http://localhost:4000/</uri>
+    <uri>https://github.com/NullBrunk/</uri>
   </author>
-  <link rel="self" type="application/atom+xml" href="http://localhost:4000/feed.xml"/>
+  <link rel="self" type="application/atom+xml" href="https://github.com/NullBrunk/feed.xml"/>
   <link rel="alternate" type="text/html" hreflang="en"
-    href="http://localhost:4000/"/>
+    href="https://github.com/NullBrunk/"/>
   <generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator>
   <rights> © 2025 Anas </rights>
   <icon>/assets/img/favicons/favicon.ico</icon>
@@ -21,13 +21,13 @@
   
   <entry>
     <title>ImaginaryCTF - Codenames 2</title>
-    <link href="http://localhost:4000/posts/imaginaryctf-2025-codenames-2/" rel="alternate" type="text/html" title="ImaginaryCTF - Codenames 2" />
+    <link href="https://github.com/NullBrunk/posts/imaginaryctf-2025-codenames-2/" rel="alternate" type="text/html" title="ImaginaryCTF - Codenames 2" />
     <published>2025-09-06T16:00:00+00:00</published>
   
     <updated>2025-09-06T16:00:00+00:00</updated>
   
-    <id>http://localhost:4000/posts/imaginaryctf-2025-codenames-2/</id>
-    <content type="text/html" src="http://localhost:4000/posts/imaginaryctf-2025-codenames-2/" />
+    <id>https://github.com/NullBrunk/posts/imaginaryctf-2025-codenames-2/</id>
+    <content type="text/html" src="https://github.com/NullBrunk/posts/imaginaryctf-2025-codenames-2/" />
     <author>
       <name>anas</name>
     </author>
@@ -45,6 +45,7 @@
   <summary>Introduction
     
       Description
+      Source code
     
   
   Exploitation
@@ -69,20 +70,20 @@ Introduction
 Description
 
 
-  Codenames is no fun when your teammate sucks… Flag is in the environment variable FLAG_2, and please don’t spawn a lot of bots on remote. T...</summary>
+  Codenames is no fun when your teammate sucks… Flag is in the environment variable FLAG_2, and please don’t spawn a lot of...</summary>
 
   </entry>
 
   
   <entry>
     <title>BrunnerCTF - Recipe For Disaster</title>
-    <link href="http://localhost:4000/posts/brunnerctf-recipe-for-disaster/" rel="alternate" type="text/html" title="BrunnerCTF - Recipe For Disaster" />
+    <link href="https://github.com/NullBrunk/posts/brunnerctf-recipe-for-disaster/" rel="alternate" type="text/html" title="BrunnerCTF - Recipe For Disaster" />
     <published>2025-08-22T16:00:00+00:00</published>
   
     <updated>2025-08-22T16:00:00+00:00</updated>
   
-    <id>http://localhost:4000/posts/brunnerctf-recipe-for-disaster/</id>
-    <content type="text/html" src="http://localhost:4000/posts/brunnerctf-recipe-for-disaster/" />
+    <id>https://github.com/NullBrunk/posts/brunnerctf-recipe-for-disaster/</id>
+    <content type="text/html" src="https://github.com/NullBrunk/posts/brunnerctf-recipe-for-disaster/" />
     <author>
       <name>anas</name>
     </author>
@@ -142,13 +143,13 @@ Description
   
   <entry>
     <title>BrunnerCTF - Cake Architect</title>
-    <link href="http://localhost:4000/posts/brunnerctf-cake-architect/" rel="alternate" type="text/html" title="BrunnerCTF - Cake Architect" />
+    <link href="https://github.com/NullBrunk/posts/brunnerctf-cake-architect/" rel="alternate" type="text/html" title="BrunnerCTF - Cake Architect" />
     <published>2025-08-22T16:00:00+00:00</published>
   
     <updated>2025-09-02T14:57:17+00:00</updated>
   
-    <id>http://localhost:4000/posts/brunnerctf-cake-architect/</id>
-    <content type="text/html" src="http://localhost:4000/posts/brunnerctf-cake-architect/" />
+    <id>https://github.com/NullBrunk/posts/brunnerctf-cake-architect/</id>
+    <content type="text/html" src="https://github.com/NullBrunk/posts/brunnerctf-cake-architect/" />
     <author>
       <name>anas</name>
     </author>
@@ -208,13 +209,13 @@ Description
   
   <entry>
     <title>Pragyan - Deathday Card</title>
-    <link href="http://localhost:4000/posts/pragyan-deathdaycard/" rel="alternate" type="text/html" title="Pragyan - Deathday Card" />
+    <link href="https://github.com/NullBrunk/posts/pragyan-deathdaycard/" rel="alternate" type="text/html" title="Pragyan - Deathday Card" />
     <published>2025-02-08T16:00:00+00:00</published>
   
     <updated>2025-08-04T09:37:29+00:00</updated>
   
-    <id>http://localhost:4000/posts/pragyan-deathdaycard/</id>
-    <content type="text/html" src="http://localhost:4000/posts/pragyan-deathdaycard/" />
+    <id>https://github.com/NullBrunk/posts/pragyan-deathdaycard/</id>
+    <content type="text/html" src="https://github.com/NullBrunk/posts/pragyan-deathdaycard/" />
     <author>
       <name>anas</name>
     </author>
@@ -269,13 +270,13 @@ We finished top 10 as a duo wi...</summary>
   
   <entry>
     <title>NullCon - ZONEy</title>
-    <link href="http://localhost:4000/posts/nullcon-2025-zoney/" rel="alternate" type="text/html" title="NullCon - ZONEy" />
+    <link href="https://github.com/NullBrunk/posts/nullcon-2025-zoney/" rel="alternate" type="text/html" title="NullCon - ZONEy" />
     <published>2025-02-02T12:00:00+00:00</published>
   
     <updated>2025-08-24T12:04:57+00:00</updated>
   
-    <id>http://localhost:4000/posts/nullcon-2025-zoney/</id>
-    <content type="text/html" src="http://localhost:4000/posts/nullcon-2025-zoney/" />
+    <id>https://github.com/NullBrunk/posts/nullcon-2025-zoney/</id>
+    <content type="text/html" src="https://github.com/NullBrunk/posts/nullcon-2025-zoney/" />
     <author>
       <name>anas</name>
     </author>
