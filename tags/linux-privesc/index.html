@@ -24,7 +24,11 @@
   <meta
     name="viewport"
     content="width=device-width, user-scalable=no initial-scale=1, shrink-to-fit=no, viewport-fit=cover"
-  ><!-- Setup Open Graph image -->
+  >
+
+  <script src="/assets/js/mermaid.min.js"></script>
+  <script src="/assets/js/panzoom.min.js"></script>
+  <link rel="stylesheet" href="/assets/css/mermaid.css"><!-- Setup Open Graph image -->
 
   
 
@@ -116,7 +120,6 @@
 
   <!-- Scripts -->
 
-  <script src="/assets/js/dist/theme.min.js"></script>
 
   <!-- JS selector for site. -->
 
@@ -499,10 +502,7 @@
         <div class="d-flex flex-wrap mt-3 mb-1 me-3">
           
             
-            <a class="post-tag btn btn-outline-primary" href="/tags/hacking-tools/">hacking-tools</a>
-          
-            
-            <a class="post-tag btn btn-outline-primary" href="/tags/poc/">poc</a>
+            <a class="post-tag btn btn-outline-primary" href="/tags/test/">test</a>
           
         </div>
       </nav>
@@ -596,6 +596,15 @@
   });
 </script>
 
+
+    <script>
+      mermaid.initialize({
+        startOnLoad: true,
+        theme: 'dark',
+        securityLevel: 'loose',      // autorise les tags HTML dans les labels
+        flowchart: { htmlLabels: true } // parfois utile selon version
+      });    
+    </script>
   </body>
 </html>
 

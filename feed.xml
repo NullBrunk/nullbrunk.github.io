@@ -4,7 +4,7 @@
   <id>https://github.com/NullBrunk/</id>
   <title>NullBrunk</title>
   <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
-  <updated>2025-09-07T19:41:08+00:00</updated>
+  <updated>2025-12-31T17:13:31+00:00</updated>
   <author>
     <name>Anas</name>
     <uri>https://github.com/NullBrunk/</uri>
@@ -17,6 +17,30 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>LFI</title>
+    <link href="https://github.com/NullBrunk/posts/lfi/" rel="alternate" type="text/html" title="LFI" />
+    <published>2025-09-26T16:00:00+00:00</published>
+  
+    <updated>2025-09-26T16:00:00+00:00</updated>
+  
+    <id>https://github.com/NullBrunk/posts/lfi/</id>
+    <content type="text/html" src="https://github.com/NullBrunk/posts/lfi/" />
+    <author>
+      <name>anas</name>
+    </author>
+
+  
+    
+    <category term="Cheatsheet" />
+    
+  
+
+  <summary>LFI cheatsheet</summary>
+
+  </entry>
 
   
   <entry>
@@ -264,68 +288,6 @@ Introduction
 Pragyan CTF 2025
 
 We finished top 10 as a duo wi...</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>NullCon - ZONEy</title>
-    <link href="https://github.com/NullBrunk/posts/nullcon-2025-zoney/" rel="alternate" type="text/html" title="NullCon - ZONEy" />
-    <published>2025-02-02T12:00:00+00:00</published>
-  
-    <updated>2025-08-24T12:04:57+00:00</updated>
-  
-    <id>https://github.com/NullBrunk/posts/nullcon-2025-zoney/</id>
-    <content type="text/html" src="https://github.com/NullBrunk/posts/nullcon-2025-zoney/" />
-    <author>
-      <name>anas</name>
-    </author>
-
-  
-    
-    <category term="Writeups" />
-    
-    <category term="CTFTime2025" />
-    
-    <category term="NullCon" />
-    
-  
-
-  <summary>Introduction
-    
-      Description
-    
-  
-  Enumeration
-    
-      Nmap
-      Querying DNS
-      DNS enumeration
-    
-  
-  Exploitation
-    
-      DNSSEC
-      Zone Walking
-        
-          zoney.eno
-          challenge.zoney.eno
-          hereisthe1337flag.zoney.eno
-        
-      
-      Getting the flag
-    
-  
-
-
-
-
-Introduction
-
-Description
-
-
-  Are you ZONEy.eno out or can you find the fl...</summary>
 
   </entry>
 

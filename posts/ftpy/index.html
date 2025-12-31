@@ -24,7 +24,11 @@
   <meta
     name="viewport"
     content="width=device-width, user-scalable=no initial-scale=1, shrink-to-fit=no, viewport-fit=cover"
-  ><!-- Setup Open Graph image -->
+  >
+
+  <script src="/assets/js/mermaid.min.js"></script>
+  <script src="/assets/js/panzoom.min.js"></script>
+  <link rel="stylesheet" href="/assets/css/mermaid.css"><!-- Setup Open Graph image -->
 
   
 
@@ -45,7 +49,7 @@
 <meta property="twitter:image" content="https://github.com/NullBrunk/assets/img/projects/ftpy.png" />
 <meta property="twitter:title" content="FTPy" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Anas","url":"https://github.com/NullBrunk/"},"dateModified":"2023-05-11T16:00:00+00:00","datePublished":"2023-05-11T16:00:00+00:00","description":"FTP client written in Python3","headline":"FTPy","image":"https://github.com/NullBrunk/assets/img/projects/ftpy.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://github.com/NullBrunk/posts/ftpy/"},"url":"https://github.com/NullBrunk/posts/ftpy/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Anas","url":"https://github.com/NullBrunk/"},"dateModified":"2025-09-24T15:15:52+00:00","datePublished":"2023-05-11T16:00:00+00:00","description":"FTP client written in Python3","headline":"FTPy","image":"https://github.com/NullBrunk/assets/img/projects/ftpy.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://github.com/NullBrunk/posts/ftpy/"},"url":"https://github.com/NullBrunk/posts/ftpy/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -127,7 +131,6 @@
 
   <!-- Scripts -->
 
-  <script src="/assets/js/dist/theme.min.js"></script>
 
   <!-- JS selector for site. -->
 
@@ -708,6 +711,29 @@
 
       <!-- lastmod date -->
       
+        <span>
+          Updated
+          <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1758726952"
+  data-df="ll"
+  
+    data-bs-toggle="tooltip" data-bs-placement="bottom"
+  
+>
+  Sep 24, 2025
+</time>
+
+        </span>
+      
 
       
         
@@ -831,7 +857,6 @@
 
 <h1 id="source">Source</h1>
 <p>The source code and installation instructions are accessible <a href="https://github.com/NullBrunk/FTPy" target="_blank">here</a></p>
-
 
   </div>
 
@@ -1140,10 +1165,7 @@
         <div class="d-flex flex-wrap mt-3 mb-1 me-3">
           
             
-            <a class="post-tag btn btn-outline-primary" href="/tags/hacking-tools/">hacking-tools</a>
-          
-            
-            <a class="post-tag btn btn-outline-primary" href="/tags/poc/">poc</a>
+            <a class="post-tag btn btn-outline-primary" href="/tags/test/">test</a>
           
         </div>
       </nav>
@@ -1242,6 +1264,15 @@
   });
 </script>
 
+
+    <script>
+      mermaid.initialize({
+        startOnLoad: true,
+        theme: 'dark',
+        securityLevel: 'loose',      // autorise les tags HTML dans les labels
+        flowchart: { htmlLabels: true } // parfois utile selon version
+      });    
+    </script>
   </body>
 </html>
 
