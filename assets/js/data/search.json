@@ -241,8 +241,8 @@
   {
     "title": "Retex sur une certification de hacking",
     "url": "/posts/portfolio-jr-pentester/",
-    "categories": "portfolio",
-    "tags": "portfolio",
+    "categories": "certifications",
+    "tags": "certifications",
     "date": "2025-01-11 16:00:00 +0000",
     
 
@@ -256,10 +256,27 @@
   },
   
   {
+    "title": "Renforcement de compétences en cyberdéfense",
+    "url": "/posts/portfolio-google-cyber/",
+    "categories": "certifications",
+    "tags": "certifications",
+    "date": "2025-01-11 16:00:00 +0000",
+    
+
+
+
+
+
+    
+    "snippet": "Lien de certificationDurant ces vacances d’été, j’ai pu remédier à un problème de longue date : je suis très peu compétent dans le domaine de la cybersécurité défensive. C’est problématique, car la...",
+    "content": "Lien de certificationDurant ces vacances d’été, j’ai pu remédier à un problème de longue date : je suis très peu compétent dans le domaine de la cybersécurité défensive. C’est problématique, car la plupart des stages de bac+3 en cyber se font dans ce que l’on nomme communément des SoC (pour Security Operations Center), qui sont des divisions dans les entreprises chargées d’assurer la sécurité et le “monitoring” de l’infrastructure IT.Afin de pallier ce problème, j’ai décidé de monter en compétences dans ce secteur en passant une certification cybersécurité généraliste (mais principalement axée défensive) délivrée par Google, le Google Cybersecurity Certificate.Dans le cadre de cette certification, j’ai appris à me familiariser avec les outils utilisés dans les SoC, tels que les SIEM, le langage SQL, ainsi que le langage Python. J’ai également étudié les normes à respecter, comme le NIST CyberSecurity Framework.Programme de la certificationLe choix de cette certification n’est pas anodin, elle est également un excellent choix si on réfléchit en pure termes financiers:Comparaison des prixCette certification aura plusieurs apports pour ma carrière professionnelle. D’une part, elle permet de monter en compétences dans les apprentissages critiques :  S’informer sur les évolutions et les nouveautés technologiques (AC33.05)  Sécuriser l’environnement numérique d’une application (AC33.06)et donc, in fine, de monter en compétences dans les UE spécifiques à mon parcours (l’UE4 : Sécuriser, et l’UE5 : Surveiller). D’autre part, étant reconnue professionnellement, elle me sera très utile pour ma future recherche de stage de 3ᵉ année."
+  },
+  
+  {
     "title": "Développement d'un outil d'automatisation",
     "url": "/posts/portfolio-developpement/",
-    "categories": "portfolio",
-    "tags": "portfolio",
+    "categories": "certifications",
+    "tags": "certifications",
     "date": "2025-01-11 16:00:00 +0000",
     
 
