@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anas Idiri — DevOps / SRE / Cloud</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" /> 
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+
+<nav class="topbar">
+  <div class="wrap">
+    <div class="logo">anas<span class="dim">@</span>devops<span class="dim">:~$</span></div>
+    <div class="navlinks">
+      <a href="#experience" class="hide-mobile"><span class="lang-fr">Expérience</span><span class="lang-en">Experience</span></a>
+      <a href="#projects" class="hide-mobile"><span class="lang-fr">Projets</span><span class="lang-en">Projects</span></a>
+      <a href="#skills" class="hide-mobile"><span class="lang-fr">Stack</span><span class="lang-en">Stack</span></a>
+      <a href="#certs" class="hide-mobile"><span class="lang-fr">Certifs</span><span class="lang-en">Certs</span></a>
+      <a href="#contact" class="hide-mobile">Contact</a>
+      <div class="langtoggle" role="group" aria-label="Language toggle">
+        <button type="button" data-setlang="fr">FR</button>
+        <button type="button" data-setlang="en" class="active">EN</button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div class="spine" aria-hidden="true">
+  <div class="spine-track">
+    <div class="spine-fill" id="spineFill"></div>
+    <div class="spine-dots" id="spineDots"></div>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <h1>Anas IDIRI<br><span class="accent">DevOps</span></h1>
+      <div class="role">AWS · CI/CD (Jenkins) · k8s · Ansible </div>
+      <p class="desc lang-fr">Jeune ingénieur infrastructure formé au réseau et au cloud, je construis et automatise des systèmes qui tiennent en prod : de la VM à la stack Kubernetes, du script Ansible au pipeline Jenkins.</p>
+      <p class="desc lang-en">Infrastructure engineer trained in networking and cloud, building and automating systems that hold up in production — from the VM to the Kubernetes stack, from Ansible playbooks to Jenkins pipelines.</p>
+      <div class="hero-cta">
+        <a href="#experience" class="btn btn-primary"><span class="lang-fr">Voir le parcours</span><span class="lang-en">View experience</span></a>
+        <a href="https://github.com/nullBrunk" target="_blank" rel="noopener" class="btn btn-ghost">GitHub ↗</a>
+      </div>
+    </div>
+    <div class="term">
+      <div class="term-bar">
+        <div class="term-dot"></div><div class="term-dot"></div><div class="term-dot"></div>
+        <div class="term-title">status.sh</div>
+      </div>
+      <div class="term-body">
+        <div class="ln"><span class="prompt">$</span> whoami</div>
+        <div class="ln val">Anas IDIRI — devops / sre</div>
+        <br>
+        <div class="ln" style="margin-top:16px;"><span class="prompt">$</span> systemctl status stack</div>
+        <div class="ln val">aws · k8s · docker · jenkins · ansible</div>
+        <div class="ln val" style="color:var(--accent);">● active (running)</div>
+        <br>
+
+        <div class="ln" style="margin-top:16px;"><span class="prompt">$</span> <span class="cursor"></span></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ============ EXPERIENCE — BUILD ============ -->
+<section id="experience" data-stage="0" data-stage-fr="Build" data-stage-en="Build">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">01 · BUILD</div>
+      <h2><span class="lang-fr">Expérience professionnelle</span><span class="lang-en">Professional experience</span></h2>
+    </div>
+
+    <div class="job reveal">
+      <div class="job-meta">
+        <span class="range lang-fr">Mars — Juin 2026</span>
+        <span class="range lang-en">March — June 2026</span>
+        <span class="lang-fr">Mulhouse, France · Sur site</span>
+        <span class="lang-en">Mulhouse, France · On-site</span>
+      </div>
+      <div>
+        <div class="job-title lang-fr">Spécialiste DevOps</div>
+        <div class="job-title lang-en">DevOps Specialist</div>
+        <div class="job-org">Novytris · <span class="lang-fr">Stage</span><span class="lang-en">Internship</span> </div>
+        <ul class="job-list">
+          <li>
+            <span class="lang-fr">Conception et déploiement d'une architecture réseau AWS (VPC, subnets, NAT Gateways)</span>
+            <span class="lang-en">Designed and deployed AWS network architecture (VPCs, subnets, NAT Gateways)</span>
+          </li>
+          <li>
+            <span class="lang-fr">Provisioning et maintenance de l'infrastructure cloud (EC2, Security Groups)</span>
+            <span class="lang-en">Provisioned and maintained AWS cloud infrastructure (EC2, Security Groups)</span>
+          </li>
+          <li>
+            <span class="lang-fr">Containerisation d'applications avec Docker Compose et démarrage automatisé des services via systemd</span>
+            <span class="lang-en">Containerized applications with Docker Compose and automated service startup via systemd</span>
+          </li>
+          <li>
+            <span class="lang-fr">Construction de pipelines CI/CD (Jenkins) pour automatiser tests et déploiements sur instances EC2</span>
+            <span class="lang-en">Built CI/CD pipelines (Jenkins) to automate testing and deployments to EC2 instances</span>
+          </li>
+          <li>
+            <span class="lang-fr">Intégration de SonarQube &amp; Trivy pour le contrôle qualité et sécurité</span>
+            <span class="lang-en">Integrated SonarQube &amp; Trivy for quality and security checks</span>
+          </li>
+          <li>
+            <span class="lang-fr">Orchestration de charges de travail conteneurisées avec Kubernetes</span>
+            <span class="lang-en">Orchestrated containerized workloads using Kubernetes</span>
+          </li>
+          <li>
+            <span class="lang-fr">Mise en place de AWS CloudWatch pour le monitoring et la centralisation des logs</span>
+            <span class="lang-en">Implemented AWS CloudWatch for monitoring and centralized logging</span>
+          </li>
+        </ul>
+        <div>
+          <span class="pill">AWS</span>
+          <span class="pill">Kubernetes</span>
+          <span class="pill">Docker</span>
+          <span class="pill">Jenkins</span>
+          <span class="pill">SonarQube</span>
+          <span class="pill">CI/CD</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="job reveal">
+      <div class="job-meta">
+        <span class="range lang-fr">Avril — Juin 2025</span>
+        <span class="range lang-en">April — June 2025</span>
+        <span class="lang-fr">Paris, France · À distance</span>
+        <span class="lang-en">Paris, France · Remote</span>
+      </div>
+      <div>
+        <div class="job-title lang-fr">Prototypage &amp; virtualisation réseau</div>
+        <div class="job-title lang-en">Network Prototyping &amp; Virtualization</div>
+        <div class="job-org">Black Matrix · <span class="lang-fr">Stage</span><span class="lang-en">Internship</span></div>
+        <ul class="job-list">
+          <li>
+            <span class="lang-fr">Conception et déploiement de labs réseau avec EVE-NG</span>
+            <span class="lang-en">Designed and deployed network lab environments using EVE-NG</span>
+          </li>
+          <li>
+            <span class="lang-fr">Validation technique de projets clients (filtrage BGP, routage OSPF/BGP, MPLS, VRF, VRRP, tunnels GRE)</span>
+            <span class="lang-en">Performed technical validation of client projects (BGP filtering, OSPF/BGP routing, MPLS, VRF, VRRP, GRE tunnels)</span>
+          </li>
+          <li>
+            <span class="lang-fr">Mise en place de services de sécurité (Syslog, SNMP, Cacti, AAA avec FreeRADIUS et pare-feux Fortigate)</span>
+            <span class="lang-en">Implemented security services (Syslog, SNMP, Cacti, AAA with FreeRADIUS and Fortigate firewalls)</span>
+          </li>
+          <li>
+            <span class="lang-fr">Automatisation de tâches d'infrastructure (IaC) avec Ansible et Python</span>
+            <span class="lang-en">Automated infrastructure tasks (IaC) using Ansible and Python</span>
+          </li>
+        </ul>
+        <div>
+          <span class="pill">Cisco IOS</span>
+          <span class="pill">Fortinet</span>
+          <span class="pill">Ansible</span>
+          <span class="pill">Python</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROJECTS — TEST ============ -->
+<section id="projects" data-stage="1" data-stage-fr="Test" data-stage-en="Test">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">02 · TEST</div>
+      <h2><span class="lang-fr">Projets</span><span class="lang-en">Projects</span></h2>
+    </div>
+
+    <div class="proj-grid">
+
+      <div class="card reveal">
+        <div class="card-tag">CI/CD</div>
+        <h3 class="lang-fr">Pipelines Jenkins</h3>
+        <h3 class="lang-en">Jenkins pipelines</h3>
+        <p class="lang-fr">Collection de Jenkinsfiles réutilisables : build, tests, SonarQube quality gate, push DockerHub, puis déploiement soit sur AWS soit sur k8s, avec notifications à chaque étape.</p>
+        <p class="lang-en">Collection of reusable Jenkinsfiles: build, tests, SonarQube quality gate, DockerHub push, then deployment to either AWS EC2 or k8s, with notifications at each stage.</p>
+        <div class="card-stack"><span class="pill">Jenkins</span><span class="pill">SonarQube</span><span class="pill">Docker</span><span class="pill">AWS EC2</span><span class="pill">k8s</span></div>
+        <a href="https://github.com/NullBrunk/Jenkins" target="_blank" rel="noopener" class="card-link">GitHub</a>
+      </div>
+
+      <div class="card reveal">
+        <div class="card-tag">Automation</div>
+        <h3 class="lang-fr">Playbooks Ansible</h3>
+        <h3 class="lang-en">Ansible playbooks</h3>
+        <p class="lang-fr">Automatisation de la configuration et du déploiement de serveurs (provisioning, gestion de services) via Ansible.</p>
+        <p class="lang-en">Automated server configuration and deployment (provisioning, service management) through Ansible.</p>
+        <div class="card-stack"><span class="pill">Ansible</span><span class="pill">Linux</span><span class="pill">Bash</span></div>
+        <a href="https://github.com/NullBrunk/Ansible" target="_blank" rel="noopener" class="card-link">GitHub</a>
+      </div>
+
+
+      <div class="card reveal">
+        <div class="card-tag">Scripting</div>
+        <h3>FTPy</h3>
+        <p class="lang-fr">Client FTP en Python3, implémentant le protocole depuis zéro via sockets TCP: supporte l'authentification, listing en mode PASV, et commandes de gestion de fichiers.</p>
+        <p class="lang-en">FTP client in Python3, implementing the protocol from scratch over raw TCP sockets: supports authentication, PASV-mode listing, and file management commands.</p>
+        <div class="card-stack"><span class="pill">Python</span><span class="pill">Sockets</span><span class="pill">FTP Protocol</span></div>
+        <a href="https://github.com/NullBrunk/FTPy" target="_blank" rel="noopener" class="card-link">GitHub</a>
+      </div>
+
+
+      <div class="card reveal">
+        <div class="card-tag">Scripting</div>
+        <h3>Cisco TUI</h3>
+        <p class="lang-fr">Outil en Python3 avec interface TUI pour automatiser la configuration d'équipements Cisco : attribution d'IP, configuration du routage, entre autres tâches réseau répétitives.</p>
+        <p class="lang-en">Python3 tool with a TUI to automate Cisco device configuration: IP addressing, routing setup, and other repetitive networking tasks.</p>
+        <div class="card-stack"><span class="pill">Python</span><span class="pill">Cisco IOS</span><span class="pill">OSPF</span><span class="pill">TUI</span></div>
+        <a href="https://github.com/NullBrunk/cisco-tui" target="_blank" rel="noopener" class="card-link">GitHub</a>
+      </div>
+      
+      <div class="card reveal">
+        <div class="card-tag lang-en">scripting</div>
+        <h3>ARP Spoofer</h3>
+        <p class="lang-fr">Outil Python (Scapy) de démonstration d'attaques man-in-the-middle via ARP cache poisoning entre une victime et une passerelle sur un réseau local.</p>
+        <p class="lang-en">Python tool (Scapy) performing a man-in-the-middle attack via ARP cache poisoning between a victim and a gateway on a local network.</p>
+        <div class="card-stack"><span class="pill">Python</span><span class="pill">Scapy</span><span class="pill">ARP Protocol</span></div>
+        <a href="https://github.com/NullBrunk/arpspoofer" target="_blank" rel="noopener" class="card-link">GitHub</a>
+      </div>
+
+      <div class="card reveal">
+        <div class="card-tag">Web application</div>
+        <h3>CyberShop — Laravel</h3>
+        <p class="lang-fr">Plateforme e-commerce en architecture MVC avec Laravel. Front-end réactif via Livewire et temps réel avec websockets (PusherJS), paiement sécurisé Stripe, et déploiement conteneurisé (Dockerfile + Compose).</p>
+        <p class="lang-en">E-commerce platform with an MVC architecture in Laravel. Reactive front-end with Livewire, real-time features via websockets (PusherJS), secure Stripe payments, and containerized deployment (Dockerfile + Compose).</p>
+        <div class="card-stack"><span class="pill">Laravel</span><span class="pill">Livewire</span><span class="pill">Stripe</span><span class="pill">Docker Compose</span><span class="pill">Docker</span></div>
+        <a href="https://github.com/NullBrunk/CyberShop" target="_blank" rel="noopener" class="card-link">GitHub</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SKILLS — DEPLOY ============ -->
+<section id="skills" data-stage="2" data-stage-fr="Deploy" data-stage-en="Deploy">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">03 · DEPLOY</div>
+      <h2 class="lang-fr">Stack technique</h2>
+      <h2 class="lang-en">Technical stack</h2>
+    </div>
+
+    <div class="skills-grid">
+      <div class="skill-group reveal">
+        <h3 class="lang-fr">Cloud &amp; infrastructure</h3>
+        <h3 class="lang-en">Cloud &amp; infrastructure</h3>
+        <div class="skill-row"><span class="name">AWS (EC2, VPC, Route 53)</span><i class="devicon-amazonwebservices-plain-wordmark colored"></i></div>
+        <div class="skill-row"><span class="name">Kubernetes</span> <i class="devicon-kubernetes-plain colored"></i></div>
+        <div class="skill-row"><span class="name">Docker</span> <i class="devicon-docker-plain colored"></i></div>
+        <div class="skill-row"><span class="name">Vmware ESXI</span> <i class="devicon-vsphere-plain colored"></i></div>
+        <div class="skill-row"><span class="name">Proxmox</span> <i class="devicon-proxmox-plain-wordmark colored"></i></div>
+      </div>
+      <div class="skill-group reveal">
+        <h3 class="lang-fr">Devops &amp; automatisation</h3>
+        <h3 class="lang-en">Devops &amp; automation</h3>
+        <div class="skill-row"><span class="name">CI/CD (Jenkins)</span><i class="devicon-jenkins-plain colored"></i></i></div>
+        <div class="skill-row"><span class="name">SonarQube</span><i class="devicon-sonarqube-original colored"></i></div>
+        <div class="skill-row"><span class="name">Ansible</span><i class="devicon-ansible-plain"></i></div>
+        <div class="skill-row"><span class="name">Git</span><i class="devicon-git-plain colored"></i></div>
+        <div class="skill-row"><span class="name">Bash</span><i class="devicon-bash-plain"></i></div>
+      </div>
+      <div class="skill-group reveal">
+        <h3 class="lang-fr">Monitoring & Optimization</h3>
+        <h3 class="lang-en">Database & Monitoring</h3>
+        <div class="skill-row"><span class="name">AWS Cloudwatch</span><i class="devicon-amazonwebservices-plain-wordmark colored"></i></div>
+        <div class="skill-row"><span class="name">ELK Stack</span><i class="devicon-elasticsearch-plain colored"></i></div>
+        <div class="skill-row"><span class="name">Postgresql</span><i class="devicon-postgresql-plain colored"></i></div>
+        <div class="skill-row"><span class="name">Redis</span><i class="devicon-redis-plain colored"></i></div>
+      </div>
+      <div class="skill-group reveal">
+        <h3 class="lang-fr">Sécurité & Réseau</h3>
+        <h3 class="lang-en">Security & Networking</h3>
+        <div class="skill-row"><span class="name">AWS IAM</span><i class="devicon-amazonwebservices-plain-wordmark colored"></i></div>
+        <div class="skill-row"><span class="name">Fortinet</span><i class="devicon-openstack-original colored"></i></div>
+        <div class="skill-row"><span class="name">PfSense</span><i class="devicon-pfsense-original"></i></div>   
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CERTS — VALIDATE ============ -->
+<section id="certs" data-stage="3" data-stage-fr="Validate" data-stage-en="Validate">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">04 · VALIDATE</div>
+      <h2 class="lang-fr">Certifications &amp; formation</h2>
+      <h2 class="lang-en">Certifications &amp; education</h2>
+    </div>
+
+    <div class="cert-list">
+      <div class="cert reveal">
+        <div class="cert-date lang-fr">En cours</div>
+        <div class="cert-date lang-en">In progress</div>
+        <div><div class="cert-name">AWS Cloud Practitioner / Fundamentals</div><div class="cert-issuer">AWS</div></div>
+        <a style="color:var(--amber);" class="cert-badge" target="_blank" href="about:blank">
+          ···
+        </a>
+      </div>
+      <div class="cert reveal">
+        <div class="cert-date">Jul. 2025</div>
+        <div><div class="cert-name">Google Cybersecurity Certificate</div><div class="cert-issuer">Google</div></div>
+        <a class="cert-badge" target="_blank" href="./certs/Google_CyberSecurity_Certificate.pdf">
+          Cert
+        </a>
+      </div>
+      <div class="cert reveal">
+        <div class="cert-date">May 2025</div>
+        <div><div class="cert-name">CCNA — Enterprise Networking, Security &amp; Automation</div><div class="cert-issuer">Cisco</div></div>
+        <a class="cert-badge" target="_blank" href="./certs/CCNA_Networking_Security_Automation.pdf">
+          Cert
+        </a>
+      </div>
+      <div class="cert reveal">
+        <div class="cert-date">Feb. 2025</div>
+        <div><div class="cert-name">CCNA — Switching, Routing &amp; Wireless Essentials</div><div class="cert-issuer">Cisco</div></div>
+        <a class="cert-badge" target="_blank" href="./certs/CCNA_Switching_Routing_and_Wireless_Essentials.pdf">
+          Cert
+        </a>
+      </div>
+      <div class="cert reveal">
+        <div class="cert-date">Jun. 2024</div>
+        <div><div class="cert-name">CCNAv7 — Introduction to Networks</div><div class="cert-issuer">Cisco</div></div>
+        <a class="cert-badge" target="_blank" href="./certs/CCNA_Introduction_to_Networks.pdf">
+          Cert
+        </a>
+      </div>
+
+    </div>
+
+    <div class="edu-box reveal">
+      <div class="job-meta lang-fr">2022 — 2025</div>
+      <div class="job-meta lang-en">2022 — 2025</div>
+      <div>
+        <div class="job-title lang-fr">BUT Réseaux &amp; Télécommunications</div>
+        <div class="job-title lang-en">B.Sc. (BUT) Networks &amp; Telecommunications</div>
+        <div class="job-org">Université Marie et Louis Pasteur</div>
+        <div class="job-org lang-fr" style="margin-top:6px; color:var(--accent);">Obtenu avec mention Bien</div>
+        <div class="job-org lang-en" style="margin-top:6px; color:var(--accent);">Graduated with honors</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT — MONITOR ============ -->
+<section id="contact" data-stage="4" data-stage-fr="Monitor" data-stage-en="Monitor">
+  <div class="wrap">
+    <div class="contact-panel reveal">
+      <div class="eyebrow" style="justify-content:center;">05 · MONITOR</div>
+      <h2 class="lang-fr">Restons en contact</h2>
+      <h2 class="lang-en">Let's talk</h2>
+      <p class="sub lang-fr">Ouvert aux opportunités en alternance, stage ou poste junior DevOps / SRE / Cloud. N'hésitez pas à me contacter.</p>
+      <p class="sub lang-en">Open to work-study, internship, or junior DevOps / SRE / Cloud opportunities. Feel free to reach out.</p>
+      <div class="contact-links">
+        <a href="https://github.com/nullBrunk" target="_blank" rel="noopener" class="btn btn-primary">GitHub ↗</a>
+        <a href="https://www.linkedin.com/in/anas-idiri-b05733229/" target="_blank" rel="noopener" class="btn btn-ghost">LinkedIn ↗</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>© 2026 Anas Idiri</div>
+    <div class="lang-fr">build passed</div>
+    <div class="lang-en">build passed</div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  // ---- language toggle ----
+  var html = document.documentElement;
+  var buttons = document.querySelectorAll('[data-setlang]');
+  buttons.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var lang = btn.getAttribute('data-setlang');
+      html.setAttribute('data-lang', lang);
+      html.setAttribute('lang', lang);
+      buttons.forEach(function(b){ b.classList.toggle('active', b === btn); });
+    });
+  });
+
+  // ---- pipeline spine ----
+  var stages = Array.prototype.slice.call(document.querySelectorAll('section[data-stage]'));
+  var dotsWrap = document.getElementById('spineDots');
+  var fill = document.getElementById('spineFill');
+
+  stages.forEach(function(sec, i){
+    var dot = document.createElement('div');
+    dot.className = 'spine-dot';
+    dot.style.top = (i / (stages.length - 1) * 100) + '%';
+    dot.style.transform = 'translateY(-50%)';
+    var label = document.createElement('span');
+    label.className = 'stage-label';
+    var labelFr = document.createElement('span');
+    labelFr.className = 'lang-fr';
+    labelFr.textContent = sec.getAttribute('data-stage-fr');
+    var labelEn = document.createElement('span');
+    labelEn.className = 'lang-en';
+    labelEn.textContent = sec.getAttribute('data-stage-en');
+    label.appendChild(labelFr);
+    label.appendChild(labelEn);
+    dot.appendChild(label);
+    dot.addEventListener('click', function(){ sec.scrollIntoView({behavior:'smooth'}); });
+    dotsWrap.appendChild(dot);
+  });
+
+  var dotEls = dotsWrap.querySelectorAll('.spine-dot');
+
+  function updateSpine(){
+    var viewportMid = window.innerHeight * 0.4;
+    var activeIndex = 0;
+    stages.forEach(function(sec, i){
+      var rect = sec.getBoundingClientRect();
+      if (rect.top < viewportMid) activeIndex = i;
+    });
+    dotEls.forEach(function(dot, i){
+      dot.classList.toggle('is-active', i === activeIndex);
+      dot.classList.toggle('is-done', i < activeIndex);
+    });
+    fill.style.height = (activeIndex / (stages.length - 1) * 100) + '%';
+  }
+  window.addEventListener('scroll', updateSpine, {passive:true});
+  window.addEventListener('resize', updateSpine);
+  updateSpine();
+
+  // ---- reveal on scroll ----
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting){
+        entry.target.classList.add('in-view');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+  document.querySelectorAll('.reveal').forEach(function(el){ observer.observe(el); });
+})();
+</script>
+
+</body>
+</html>
