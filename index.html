@@ -15,12 +15,12 @@
 <nav class="topbar">
   <div class="wrap">
     <div class="logo">anas<span class="dim">@</span>devops<span class="dim">:~$</span></div>
-    <!-- <div class="navlinks">
+    <div class="navlinks">
       <a href="#experience" class="hide-mobile"><span class="lang-fr">Expérience</span><span class="lang-en">Experience</span></a>
       <a href="#projects" class="hide-mobile"><span class="lang-fr">Projets</span><span class="lang-en">Projects</span></a>
       <a href="#skills" class="hide-mobile"><span class="lang-fr">Skills</span><span class="lang-en">Skills</span></a>
-      <a href="#education" class="hide-mobile"><span class="lang-fr">Certifs</span><span class="lang-en">education</span></a>
-      <a href="#contact" class="hide-mobile">Contact</a> -->
+      <a href="#education" class="hide-mobile"><span class="lang-fr">formation</span><span class="lang-en">education</span></a>
+      <a href="#contact" class="hide-mobile">Contact</a>
       <div class="langtoggle" role="group" aria-label="Language toggle">
         <button type="button" data-setlang="fr">FR</button>
         <button type="button" data-setlang="en" class="active">EN</button>
@@ -29,19 +29,19 @@
   </div>
 </nav>
 
-<div class="spine" aria-hidden="true">
+<!-- <div class="spine" aria-hidden="true">
   <div class="spine-track">
     <div class="spine-fill" id="spineFill"></div>
     <div class="spine-dots" id="spineDots"></div>
   </div>
-</div>
+</div> -->
 
 <header class="hero">
   <div class="wrap hero-grid">
     <div>
       <h1>Anas IDIRI<br><span class="accent">DevOps & Cloud</span></h1>
-      <p class="desc lang-fr">Étudiant en réseau &amp; cloud, je propose mes services en freelance pour l'admin système et l'infra : Linux, Cloud, k8s, CI/CD et automatisation.</p>
-      <p class="desc lang-en">Networking &amp; cloud student, offering freelance sysadmin and infrastructure services: Linux, Windows Server (AD), Cloud, k8s, CI/CD and automation.</p>      
+      <p class="desc lang-fr">Étudiant en réseau &amp; cloud, je propose mes services en freelance pour l'admin système et l'infra : Cloud (aws), kubernetes, CI/CD, Linux et Windows Server (AD)</p>
+      <p class="desc lang-en">Networking &amp; cloud student, offering freelance sysadmin and infrastructure services: Cloud (aws), kubernetes, CI/CD, Linux et Windows Server (AD).</p>      
       <div class="hero-cta">
         <a href="#experience" class="btn btn-primary"><span class="lang-fr">Voir le parcours</span><span class="lang-en">View experience</span></a>
         <a href="https://github.com/nullBrunk" target="_blank" rel="noopener" class="btn btn-ghost">GitHub ↗</a>
@@ -336,35 +336,61 @@
     <div class="cert-list">
       <div class="cert reveal">
         <div class="cert-date">Aug. 2026</div>
-        <div><div class="cert-name">AWS Cloud Practitioner Essentials</div><div class="cert-issuer">Amazon</div></div>
-        <a class="cert-badge" target="_blank" href="">
+        <div>
+          <div class="cert-name">AWS Cloud Practitioner Essentials</div>
+          <div class="cert-issuer">
+            <span>Amazon</span>
+          </div>
+        </div>
+        <a class="cert-badge" style="color: var(--amber);">
           In progress
         </a>
       </div>
       <div class="cert reveal">
         <div class="cert-date">Jul. 2025</div>
-        <div><div class="cert-name">Google Cybersecurity</div><div class="cert-issuer">Google</div></div>
+        <div>
+          <div class="cert-name">Google Cybersecurity</div>
+          <div class="cert-issuer"> 
+            <span>Google</span>
+          </div>
+        </div>
         <a class="cert-badge" target="_blank" href="https://www.coursera.org/verify/professional-cert/168EQV0PA4O6">
           Cert
         </a>
       </div>
       <div class="cert reveal">
         <div class="cert-date">May 2025</div>
-        <div><div class="cert-name">CCNA — Enterprise Networking, Security &amp; Automation</div><div class="cert-issuer">Cisco</div></div>
+        <div>
+          <div class="cert-name">CCNA — Enterprise Networking, Security &amp; Automation</div>
+          <div class="cert-issuer">
+            <span>Cisco</span>
+          </div>
+        </div>
+
         <a class="cert-badge" target="_blank" href="https://www.credly.com/badges/e9cffb9d-1899-40f6-a589-795b87f41ec8/public_url">
           Cert
         </a>
       </div>
       <div class="cert reveal">
         <div class="cert-date">Feb. 2025</div>
-        <div><div class="cert-name">CCNA — Switching, Routing &amp; Wireless Essentials</div><div class="cert-issuer">Cisco</div></div>
+        <div>
+          <div class="cert-name">CCNA — Switching, Routing &amp; Wireless Essentials</div>
+          <div class="cert-issuer">
+            <span>Cisco</span>
+          </div>
+        </div>
         <a class="cert-badge" target="_blank" href="https://www.credly.com/badges/2b3869d1-6db9-4f3a-bd08-a44739608d2e/public_url">
           Cert
         </a>
       </div>
       <div class="cert reveal">
         <div class="cert-date">Aug. 2026</div>
-        <div><div class="cert-name">LFS101: Introduction to Linux</div><div class="cert-issuer">The Linux Foundation</div></div>
+        <div>
+          <div class="cert-name">LFS101: Introduction to Linux</div>
+          <div class="cert-issuer">
+            <span>The Linux Foundation</span>
+          </div>
+        </div>
         <a class="cert-badge" target="_blank" href="https://www.coursera.org/verify/professional-cert/168EQV0PA4O6">
           Cert
         </a>
@@ -423,49 +449,49 @@
     });
   });
 
-  // ---- pipeline spine ----
-  var stages = Array.prototype.slice.call(document.querySelectorAll('section[data-stage]'));
-  var dotsWrap = document.getElementById('spineDots');
-  var fill = document.getElementById('spineFill');
+  // // ---- pipeline spine ----
+  // var stages = Array.prototype.slice.call(document.querySelectorAll('section[data-stage]'));
+  // var dotsWrap = document.getElementById('spineDots');
+  // var fill = document.getElementById('spineFill');
 
-  stages.forEach(function(sec, i){
-    var dot = document.createElement('div');
-    dot.className = 'spine-dot';
-    dot.style.top = (i / (stages.length - 1) * 100) + '%';
-    dot.style.transform = 'translateY(-50%)';
-    var label = document.createElement('span');
-    label.className = 'stage-label';
-    var labelFr = document.createElement('span');
-    labelFr.className = 'lang-fr';
-    labelFr.textContent = sec.getAttribute('data-stage-fr');
-    var labelEn = document.createElement('span');
-    labelEn.className = 'lang-en';
-    labelEn.textContent = sec.getAttribute('data-stage-en');
-    label.appendChild(labelFr);
-    label.appendChild(labelEn);
-    dot.appendChild(label);
-    dot.addEventListener('click', function(){ sec.scrollIntoView({behavior:'smooth'}); });
-    dotsWrap.appendChild(dot);
-  });
+  // stages.forEach(function(sec, i){
+  //   var dot = document.createElement('div');
+  //   dot.className = 'spine-dot';
+  //   dot.style.top = (i / (stages.length - 1) * 100) + '%';
+  //   dot.style.transform = 'translateY(-50%)';
+  //   var label = document.createElement('span');
+  //   label.className = 'stage-label';
+  //   var labelFr = document.createElement('span');
+  //   labelFr.className = 'lang-fr';
+  //   labelFr.textContent = sec.getAttribute('data-stage-fr');
+  //   var labelEn = document.createElement('span');
+  //   labelEn.className = 'lang-en';
+  //   labelEn.textContent = sec.getAttribute('data-stage-en');
+  //   label.appendChild(labelFr);
+  //   label.appendChild(labelEn);
+  //   dot.appendChild(label);
+  //   dot.addEventListener('click', function(){ sec.scrollIntoView({behavior:'smooth'}); });
+  //   dotsWrap.appendChild(dot);
+  // });
 
-  var dotEls = dotsWrap.querySelectorAll('.spine-dot');
+  // var dotEls = dotsWrap.querySelectorAll('.spine-dot');
 
-  function updateSpine(){
-    var viewportMid = window.innerHeight * 0.4;
-    var activeIndex = 0;
-    stages.forEach(function(sec, i){
-      var rect = sec.getBoundingClientRect();
-      if (rect.top < viewportMid) activeIndex = i;
-    });
-    dotEls.forEach(function(dot, i){
-      dot.classList.toggle('is-active', i === activeIndex);
-      dot.classList.toggle('is-done', i < activeIndex);
-    });
-    fill.style.height = (activeIndex / (stages.length - 1) * 100) + '%';
-  }
-  window.addEventListener('scroll', updateSpine, {passive:true});
-  window.addEventListener('resize', updateSpine);
-  updateSpine();
+  // function updateSpine(){
+  //   var viewportMid = window.innerHeight * 0.4;
+  //   var activeIndex = 0;
+  //   stages.forEach(function(sec, i){
+  //     var rect = sec.getBoundingClientRect();
+  //     if (rect.top < viewportMid) activeIndex = i;
+  //   });
+  //   dotEls.forEach(function(dot, i){
+  //     dot.classList.toggle('is-active', i === activeIndex);
+  //     dot.classList.toggle('is-done', i < activeIndex);
+  //   });
+  //   fill.style.height = (activeIndex / (stages.length - 1) * 100) + '%';
+  // }
+  // window.addEventListener('scroll', updateSpine, {passive:true});
+  // window.addEventListener('resize', updateSpine);
+  // updateSpine();
 
   // ---- reveal on scroll ----
   var observer = new IntersectionObserver(function(entries){
